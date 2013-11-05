@@ -121,12 +121,12 @@ section {
 .alert {
   margin-bottom: 1.5em;
   padding: 8px 35px 8px 14px;
-  background-color: #fcf8e3;
-  border: 1px solid #f2e187;
+  background-color: #fc0000;
+  border: 1px solid #960000;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-size: 1.4rem;
-  color: #9c8611;
+  color: #000000;
 }
 .alert .alert-heading {
   color: inherit;
@@ -797,7 +797,6 @@ sup {
 sub {
   bottom: -0.25em;
 }
-/* Page =================================================== */
 @-webkit-viewport {
   width: device-width;
 }
@@ -814,7 +813,7 @@ sub {
   width: device-width;
 }
 html {
-  background: #bfbfbf;
+  background: #ffffff;
   font-size: 62.5%;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: #ffffff;
@@ -903,4 +902,98 @@ you can use the generic selector below, but it's slower:
 }
 .icon-eye:before {
   content: "\e002";
+}
+.swatch {
+  margin: 0 0 1.5em 0;
+  padding: 0;
+}
+.swatch-row {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+}
+.swatch-row-one {
+  background-color: #000000;
+}
+.swatch-row-two {
+  background-color: #ffffff;
+}
+.swatch-row span {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 50px;
+}
+.swatch-base span:nth-child(1) {
+  background-color: rgba(7, 183, 207, 0.9);
+}
+.swatch-base span:nth-child(2) {
+  background-color: rgba(7, 183, 207, 0.8);
+}
+.swatch-base span:nth-child(3) {
+  background-color: rgba(7, 183, 207, 0.7);
+}
+.swatch-base span:nth-child(4) {
+  background-color: rgba(7, 183, 207, 0.6);
+}
+.swatch-alert span:nth-child(1) {
+  background-color: rgba(250, 0, 0, 0.9);
+}
+.swatch-alert span:nth-child(2) {
+  background-color: rgba(250, 0, 0, 0.8);
+}
+.swatch-alert span:nth-child(3) {
+  background-color: rgba(250, 0, 0, 0.7);
+}
+.swatch-alert span:nth-child(4) {
+  background-color: rgba(250, 0, 0, 0.6);
+}
+.swatch-error span:nth-child(1) {
+  background-color: rgba(218, 78, 73, 0.9);
+}
+.swatch-error span:nth-child(2) {
+  background-color: rgba(218, 78, 73, 0.8);
+}
+.swatch-error span:nth-child(3) {
+  background-color: rgba(218, 78, 73, 0.7);
+}
+.swatch-error span:nth-child(4) {
+  background-color: rgba(218, 78, 73, 0.6);
+}
+.swatch-info span:nth-child(1) {
+  background-color: rgba(217, 237, 247, 0.9);
+}
+.swatch-info span:nth-child(2) {
+  background-color: rgba(217, 237, 247, 0.8);
+}
+.swatch-info span:nth-child(3) {
+  background-color: rgba(217, 237, 247, 0.7);
+}
+.swatch-info span:nth-child(4) {
+  background-color: rgba(217, 237, 247, 0.6);
+}
+.swatch-success span:nth-child(1) {
+  background-color: rgba(92, 183, 92, 0.9);
+}
+.swatch-success span:nth-child(2) {
+  background-color: rgba(92, 183, 92, 0.8);
+}
+.swatch-success span:nth-child(3) {
+  background-color: rgba(92, 183, 92, 0.7);
+}
+.swatch-success span:nth-child(4) {
+  background-color: rgba(92, 183, 92, 0.6);
+}
+.swatch-warning span:nth-child(1) {
+  background-color: rgba(250, 167, 51, 0.9);
+}
+.swatch-warning span:nth-child(2) {
+  background-color: rgba(250, 167, 51, 0.8);
+}
+.swatch-warning span:nth-child(3) {
+  background-color: rgba(250, 167, 51, 0.7);
+}
+.swatch-warning span:nth-child(4) {
+  background-color: rgba(250, 167, 51, 0.6);
 }
