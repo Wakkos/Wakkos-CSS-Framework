@@ -1,0 +1,32 @@
+
+// Variables  //////////////////////
+@linkcolor 		    : @basecolor;
+@linkcolorhover 	: darken(@linkcolor, 10);
+@linkcolorvisited   : @basecolor;
+@linkcolorfocus 	: darken(@linkcolorvisited, 10);
+
+// Elementos  //////////////////////
+
+a { 
+	text-decoration : none;
+	color : @linkcolor; 
+
+	&:visited { 
+		color : @linkcolorvisited; 
+	}
+
+	&:hover { 
+		text-decoration : underline;
+		color : @linkcolorhover; 
+	}
+
+	&:focus { 
+		outline : thin dotted; 
+		color : @linkcolorfocus; 
+	}
+
+	&:hover, 
+	&:active { 
+		outline : 0; 
+	}
+}

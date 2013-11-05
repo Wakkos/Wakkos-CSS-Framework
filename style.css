@@ -1,0 +1,601 @@
+.displayflex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  position: static;
+  clip: auto;
+  height: auto;
+  width: auto;
+  margin: 0;
+  overflow: visible;
+}
+.max-width {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+/* Reset =================================================== */
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: #07b5cd;
+}
+a:visited {
+  color: #07b5cd;
+}
+a:hover {
+  text-decoration: underline;
+  color: #05899c;
+}
+a:focus {
+  outline: thin dotted;
+  color: #05899c;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+/* Buttons =================================================== */
+.btn {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  padding: 4px 11px 4px;
+  margin-bottom: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1.5em;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #07b5cd;
+  border: 1px solid #0752cd;
+  border-bottom-color: #0752cd;
+  border-radius: 4px;
+  cursor: pointer;
+  *margin-left: .3em;
+}
+.btn:visited,
+.btn:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+/* Typography =================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: inherit;
+  font-weight: inherit;
+  color: #000000;
+  text-rendering: optimizelegibility;
+}
+h1 small,
+h2 small {
+  font-weight: normal;
+  color: #bfbfbf;
+}
+h1,
+.h1 {
+  margin-bottom: 0.75em;
+  font-size: 32px;
+  font-size: 3.2rem;
+  line-height: 1.2;
+}
+h2,
+.h2 {
+  margin-bottom: 0.75em;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.2;
+}
+h3,
+.h3 {
+  margin-bottom: 1em;
+  font-size: 21px;
+  font-size: 2.1rem;
+  line-height: 1.3;
+}
+h4,
+.h4 {
+  margin-bottom: 1.5em;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.25;
+}
+h5,
+.h5 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  margin-bottom: 1.5em;
+}
+h6,
+.h6 {
+  margin-bottom: 1.5em;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.header h1,
+.header h2,
+.header h3 {
+  float: left;
+  margin-right: 24px;
+}
+.header h1 a,
+.header h2 a,
+.header h3 a {
+  display: block;
+  position: relative;
+  top: 6px;
+  float: right;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-size: 1.4rem;
+  background-color: #ffffff;
+}
+.header h1:hover,
+.header h2:hover,
+.header h3:hover {
+  background-color: #ffffff;
+}
+.header .a-rss,
+.header .a-rss:hover {
+  float: left;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  background: transparent url(../img/a-rss.png) no-repeat 0 0;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+p,
+ol,
+ul,
+dl,
+address {
+  margin-bottom: 1.5em;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+}
+small {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+ul,
+ol {
+  margin: 0 0 1.5em -24px;
+  padding: 0 0 0 24px;
+}
+li ul,
+li ol {
+  margin: 0;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+blockquote {
+  margin: 0 0 1.5em -24px;
+  padding-left: 24px;
+  border-left: 2px solid #10dbf7;
+  font-family: Cambria, Georgia, Times, "Times New Roman";
+  font-style: normal;
+}
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+cite {
+  font-style: normal;
+}
+dl,
+dd {
+  margin-bottom: 1.5em;
+}
+dt {
+  font-weight: bold;
+}
+.dl-horizontal dt {
+  float: left;
+  clear: left;
+  width: 20.25%;
+  text-align: right;
+}
+.dl-horizontal dd {
+  margin-left: 22.78%;
+}
+abbr[title] {
+  border-bottom: 1px dotted #10dbf7;
+  cursor: help;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+ins {
+  background-color: #ffffff;
+  color: #262626;
+  text-decoration: none;
+}
+mark {
+  background-color: #ffffff;
+  color: #262626;
+  font-style: italic;
+  font-weight: bold;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: Monaco, Courier New, monospace;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+sub,
+sup {
+  position: relative;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 0;
+  vertical-align: baselineheight;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* Page =================================================== */
+@-webkit-viewport {
+  width: device-width;
+}
+@-moz-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+html {
+  background: #bfbfbf;
+  font-size: 62.5%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: #ffffff;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: transparent;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+  color: #262626;
+}
+header {
+  width: 100%;
+  height: 50px;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#404040), to(#000000));
+  background-image: -webkit-linear-gradient(top, #404040, #000000);
+  background-color: #000000;
+  background-image: -moz-linear-gradient(top, #404040, #000000);
+  background-image: -ms-linear-gradient(top, #404040, #000000);
+  background-image: -o-linear-gradient(top, #404040, #000000);
+  background-image: linear-gradient(top, #404040, #000000);
+  background-repeat: repeat-x;
+  box-shadow: 1px 1px 1px #808080;
+  margin-bottom: 24px;
+}
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 13px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 0 0 13px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.55);
+}
+.logo {
+  float: left;
+  width: 30%;
+  margin-top: 0;
+  padding: .3em;
+}
+nav ul li {
+  list-style-type: none;
+  float: right;
+  border-left: 1px #404040 solid;
+  padding: 1em .9em;
+  height: 50px;
+  background-color: #000000;
+}
+nav ul li a {
+  display: block;
+  float: right;
+  margin-left: .3em;
+}
+nav ul li a::before {
+  content: attr(title);
+  margin-left: .3em;
+  color: #10dbf7;
+  width: 100%;
+  display: block;
+  float: right;
+}
+nav ul li a:hover::before {
+  color: #ffffff;
+}
+nav ul i {
+  color: #10dbf7;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: icomoon;
+}
+aside {
+  position: fixed;
+  -webkit-transition: width 0.3s ease;
+  -moz-transition: width 0.3s ease;
+  -ms-transition: width 0.3s ease;
+  -o-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#262626), to(#000000));
+  background-image: -webkit-linear-gradient(top, #262626, #000000);
+  background-color: #000000;
+  background-image: -moz-linear-gradient(top, #262626, #000000);
+  background-image: -ms-linear-gradient(top, #262626, #000000);
+  background-image: -o-linear-gradient(top, #262626, #000000);
+  background-image: linear-gradient(top, #262626, #000000);
+  background-repeat: repeat-x;
+  color: #ffffff;
+  margin: 0;
+  overflow: hidden;
+  top: 20%;
+  right: 10%;
+  border: 2px solid #e6e6e6;
+  border-radius: 2px;
+  width: 300px;
+}
+aside p {
+  display: block;
+  float: left;
+  overflow: hidden;
+  padding: 2em .5em .5em .5em;
+  width: 33.33333%;
+  position: relative;
+}
+aside p::after {
+  content: "";
+  background-image: url(img/sprite_icons_fonts.png);
+  background-repeat: no-repeat;
+  width: 56px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+aside p.fontsize::after {
+  background-position: center 0px;
+}
+aside p.lineheight::after {
+  background-position: center -30px;
+}
+aside p.letterspacing::after {
+  background-position: center -60px;
+}
+aside p.topmargin::after {
+  background-position: center -90px;
+}
+aside p.botommargin::after {
+  background-position: center -120px;
+}
+aside p.fontcolor::after {
+  background-position: center -150px;
+}
+@media only screen and (min-width: 30em) {
+  
+}
+@media only screen and (min-width: 37.5em) {
+  
+}
+@media only screen and (min-width: 48em) {
+  
+}
+@media only screen and (min-width: 56.25em) {
+  
+}
+@media only screen and (min-width: 68.75em) {
+  
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot');
+  src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('fonts/icomoon.woff') format('woff'), url('fonts/icomoon.ttf') format('truetype'), url('fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-cloud-download,
+.icon-cloud-upload,
+.icon-user,
+.icon-css3,
+.icon-eye {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-cloud-download:before {
+  content: "\e009";
+}
+.icon-cloud-upload:before {
+  content: "\e000";
+}
+.icon-user:before {
+  content: "\e001";
+}
+.icon-css3:before {
+  content: "\f13c";
+}
+.icon-eye:before {
+  content: "\e002";
+}
