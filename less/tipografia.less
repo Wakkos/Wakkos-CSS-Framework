@@ -17,7 +17,7 @@ text-rendering : optimizelegibility; }
 h1 small, 
 h2 small {
 font-weight : normal;
-color : @lightgrey; }
+color : @grey; }
 
 h1,
 .h1 { 
@@ -122,12 +122,11 @@ font-style : normal; }
 q { 
 quotes : none; }
 
-blockquote:before, 
-blockquote:after, 
+blockquote p::before, 
+blockquote p::after, 
 q:before, 
 q:after {
-content : '';
-content : none; }
+content : '"'; }
 
 cite {
 font-style : normal; } 

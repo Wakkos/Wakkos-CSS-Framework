@@ -121,12 +121,12 @@ section {
 .alert {
   margin-bottom: 1.5em;
   padding: 8px 35px 8px 14px;
-  background-color: #fc0000;
-  border: 1px solid #960000;
+  background-color: #fce4cf;
+  border: 1px solid #f6ae6f;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-size: 1.4rem;
-  color: #000000;
+  color: #904809;
 }
 .alert .alert-heading {
   color: inherit;
@@ -237,23 +237,23 @@ section {
   color: #ffffff;
 }
 .basegrad {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#07b5cd), to(#05899c));
-  background-image: -webkit-linear-gradient(top, #07b5cd, #05899c);
-  background-color: #05899c;
-  background-image: -moz-linear-gradient(top, #07b5cd, #05899c);
-  background-image: -ms-linear-gradient(top, #07b5cd, #05899c);
-  background-image: -o-linear-gradient(top, #07b5cd, #05899c);
-  background-image: linear-gradient(top, #07b5cd, #05899c);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffa500), to(#cc8400));
+  background-image: -webkit-linear-gradient(top, #ffa500, #cc8400);
+  background-color: #cc8400;
+  background-image: -moz-linear-gradient(top, #ffa500, #cc8400);
+  background-image: -ms-linear-gradient(top, #ffa500, #cc8400);
+  background-image: -o-linear-gradient(top, #ffa500, #cc8400);
+  background-image: linear-gradient(top, #ffa500, #cc8400);
   background-repeat: repeat-x;
 }
 .errorgrad {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#07b5cd), to(#c72f29));
-  background-image: -webkit-linear-gradient(top, #07b5cd, #c72f29);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffa500), to(#c72f29));
+  background-image: -webkit-linear-gradient(top, #ffa500, #c72f29);
   background-color: #c72f29;
-  background-image: -moz-linear-gradient(top, #07b5cd, #c72f29);
-  background-image: -ms-linear-gradient(top, #07b5cd, #c72f29);
-  background-image: -o-linear-gradient(top, #07b5cd, #c72f29);
-  background-image: linear-gradient(top, #07b5cd, #c72f29);
+  background-image: -moz-linear-gradient(top, #ffa500, #c72f29);
+  background-image: -ms-linear-gradient(top, #ffa500, #c72f29);
+  background-image: -o-linear-gradient(top, #ffa500, #c72f29);
+  background-image: linear-gradient(top, #ffa500, #c72f29);
   background-repeat: repeat-x;
 }
 .greygrad {
@@ -327,22 +327,90 @@ section {
 }
 a {
   text-decoration: none;
-  color: #07b5cd;
+  color: #ffa500;
 }
 a:visited {
-  color: #07b5cd;
+  color: #ffa500;
 }
 a:hover {
   text-decoration: underline;
-  color: #05899c;
+  color: #cc8400;
 }
 a:focus {
   outline: thin dotted;
-  color: #05899c;
+  color: #cc8400;
 }
 a:hover,
 a:active {
   outline: 0;
+}
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1.5em;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: transparent;
+}
+table th,
+table td {
+  padding: 8px;
+  vertical-align: top;
+  border-top: 1px solid #ffedcc;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+  text-align: left;
+}
+table th {
+  font-weight: bold;
+}
+table thead th {
+  vertical-align: bottom;
+}
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+table tbody + tbody {
+  border-top: 2px solid #ffedcc;
+}
+table tbody tr td,
+table tbody tr th {
+  -webkit-transition: background-color 0.25s 0 linear;
+  -moz-transition: background-color 0.25s 0 linear;
+  -ms-transition: background-color 0.25s 0 linear;
+  -o-transition: background-color 0.25s 0 linear;
+  transition: background-color 0.25s 0 linear;
+}
+table tbody tr:hover td,
+table tbody tr:hover th {
+  background-color: #ffffff;
+}
+.table-condensed th,
+.table-condensed td {
+  padding: 4px 5px;
+}
+.table-bordered {
+  border: 1px solid #ffedcc;
+  border-left: 0;
+  border-collapse: separate;
+  *border-collapse: collapsed;
+}
+.table-bordered th,
+.table-bordered td {
+  border-left: 1px solid #ffedcc;
+}
+.table-bordered thead:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child th,
+.table-bordered tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+.table-striped tbody tr:nth-child(odd) td,
+.table-striped tbody tr:nth-child(odd) th {
+  background-color: #ffffff;
 }
 /* Botones =================================================== */
 .btn {
@@ -384,13 +452,13 @@ input[type="submit"].btn:hover {
   cursor: default;
 }
 .btn-error {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#07b5cd), to(#c72f29));
-  background-image: -webkit-linear-gradient(top, #07b5cd, #c72f29);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffa500), to(#c72f29));
+  background-image: -webkit-linear-gradient(top, #ffa500, #c72f29);
   background-color: #c72f29;
-  background-image: -moz-linear-gradient(top, #07b5cd, #c72f29);
-  background-image: -ms-linear-gradient(top, #07b5cd, #c72f29);
-  background-image: -o-linear-gradient(top, #07b5cd, #c72f29);
-  background-image: linear-gradient(top, #07b5cd, #c72f29);
+  background-image: -moz-linear-gradient(top, #ffa500, #c72f29);
+  background-image: -ms-linear-gradient(top, #ffa500, #c72f29);
+  background-image: -o-linear-gradient(top, #ffa500, #c72f29);
+  background-image: linear-gradient(top, #ffa500, #c72f29);
   background-repeat: repeat-x;
   border-color: #b22a24;
   border-bottom-color: #9d2520;
@@ -435,16 +503,16 @@ input[type="submit"].btn:hover {
   color: #ffffff;
 }
 .btn-primary {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#07b5cd), to(#05899c));
-  background-image: -webkit-linear-gradient(top, #07b5cd, #05899c);
-  background-color: #05899c;
-  background-image: -moz-linear-gradient(top, #07b5cd, #05899c);
-  background-image: -ms-linear-gradient(top, #07b5cd, #05899c);
-  background-image: -o-linear-gradient(top, #07b5cd, #05899c);
-  background-image: linear-gradient(top, #07b5cd, #05899c);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffa500), to(#cc8400));
+  background-image: -webkit-linear-gradient(top, #ffa500, #cc8400);
+  background-color: #cc8400;
+  background-image: -moz-linear-gradient(top, #ffa500, #cc8400);
+  background-image: -ms-linear-gradient(top, #ffa500, #cc8400);
+  background-image: -o-linear-gradient(top, #ffa500, #cc8400);
+  background-image: linear-gradient(top, #ffa500, #cc8400);
   background-repeat: repeat-x;
-  border-color: #047483;
-  border-bottom-color: #045e6a;
+  border-color: #b37300;
+  border-bottom-color: #996300;
   color: #ffffff;
 }
 .btn-primary:visited,
@@ -607,7 +675,7 @@ h6 {
 h1 small,
 h2 small {
   font-weight: normal;
-  color: #bfbfbf;
+  color: #808080;
 }
 h1,
 .h1 {
@@ -714,19 +782,18 @@ li ol {
 blockquote {
   margin: 0 0 1.5em -24px;
   padding-left: 24px;
-  border-left: 2px solid #10dbf7;
+  border-left: 2px solid #ffb733;
   font-family: Cambria, Georgia, Times, "Times New Roman";
   font-style: normal;
 }
 q {
   quotes: none;
 }
-blockquote:before,
-blockquote:after,
+blockquote p::before,
+blockquote p::after,
 q:before,
 q:after {
-  content: '';
-  content: none;
+  content: '"';
 }
 cite {
   font-style: normal;
@@ -748,7 +815,7 @@ dt {
   margin-left: 22.78%;
 }
 abbr[title] {
-  border-bottom: 1px dotted #10dbf7;
+  border-bottom: 1px dotted #ffb733;
   cursor: help;
 }
 b,
@@ -903,9 +970,13 @@ you can use the generic selector below, but it's slower:
 .icon-eye:before {
   content: "\e002";
 }
+body {
+  padding: 2em;
+}
 .swatch {
-  margin: 0 0 1.5em 0;
+  margin: 0 24px 1.5em 0;
   padding: 0;
+  float: left;
 }
 .swatch-row {
   display: block;
@@ -926,28 +997,52 @@ you can use the generic selector below, but it's slower:
   height: 50px;
 }
 .swatch-base span:nth-child(1) {
-  background-color: rgba(7, 183, 207, 0.9);
+  background-color: rgba(255, 166, 0, 0.9);
 }
 .swatch-base span:nth-child(2) {
-  background-color: rgba(7, 183, 207, 0.8);
+  background-color: rgba(255, 166, 0, 0.8);
 }
 .swatch-base span:nth-child(3) {
-  background-color: rgba(7, 183, 207, 0.7);
+  background-color: rgba(255, 166, 0, 0.7);
 }
 .swatch-base span:nth-child(4) {
-  background-color: rgba(7, 183, 207, 0.6);
+  background-color: rgba(255, 166, 0, 0.6);
+}
+.swatch-secondary span:nth-child(1) {
+  background-color: rgba(0, 89, 255, 0.9);
+}
+.swatch-secondary span:nth-child(2) {
+  background-color: rgba(0, 89, 255, 0.8);
+}
+.swatch-secondary span:nth-child(3) {
+  background-color: rgba(0, 89, 255, 0.7);
+}
+.swatch-secondary span:nth-child(4) {
+  background-color: rgba(0, 89, 255, 0.6);
+}
+.swatch-compcolor span:nth-child(1) {
+  background-color: rgba(218, 130, 47, 0.9);
+}
+.swatch-compcolor span:nth-child(2) {
+  background-color: rgba(218, 130, 47, 0.8);
+}
+.swatch-compcolor span:nth-child(3) {
+  background-color: rgba(218, 130, 47, 0.7);
+}
+.swatch-compcolor span:nth-child(4) {
+  background-color: rgba(218, 130, 47, 0.6);
 }
 .swatch-alert span:nth-child(1) {
-  background-color: rgba(250, 0, 0, 0.9);
+  background-color: rgba(252, 228, 207, 0.9);
 }
 .swatch-alert span:nth-child(2) {
-  background-color: rgba(250, 0, 0, 0.8);
+  background-color: rgba(252, 228, 207, 0.8);
 }
 .swatch-alert span:nth-child(3) {
-  background-color: rgba(250, 0, 0, 0.7);
+  background-color: rgba(252, 228, 207, 0.7);
 }
 .swatch-alert span:nth-child(4) {
-  background-color: rgba(250, 0, 0, 0.6);
+  background-color: rgba(252, 228, 207, 0.6);
 }
 .swatch-error span:nth-child(1) {
   background-color: rgba(218, 78, 73, 0.9);

@@ -1,10 +1,13 @@
 
-
+body {
+	padding: 2em;
+}
 // swatches
 
 .swatch {
-margin : 0 0 @baselineheight 0;
-padding : 0; }
+margin : 0 @gutterwidth @baselineheight 0;
+padding : 0;
+float:left; }
 
 .swatch-row {
 display : block; 
@@ -37,6 +40,36 @@ height : 50px; }
 
 .swatch-base span:nth-child(4) {
 .background-alpha(@basecolor, .6); }
+
+
+// Secondary
+
+.swatch-secondary span:nth-child(1) {
+.background-alpha(@secondary, .9); }
+
+.swatch-secondary span:nth-child(2) {
+.background-alpha(@secondary, .8); }
+
+.swatch-secondary span:nth-child(3) {
+.background-alpha(@secondary, .7); }
+
+.swatch-secondary span:nth-child(4) {
+.background-alpha(@secondary, .6); }
+
+
+// Complementario
+
+.swatch-compcolor span:nth-child(1) {
+.background-alpha(@compcolor, .9); }
+
+.swatch-compcolor span:nth-child(2) {
+.background-alpha(@compcolor, .8); }
+
+.swatch-compcolor span:nth-child(3) {
+.background-alpha(@compcolor, .7); }
+
+.swatch-compcolor span:nth-child(4) {
+.background-alpha(@compcolor, .6); }
 
 // alert
 

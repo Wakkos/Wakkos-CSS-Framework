@@ -22,10 +22,6 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="css/style.css">
 
-<!--[if (lt IE 9) & (!IEMobile)]>
-<script src="js/selectivizr-min.js"></script>
-<![endif]-->
-
 <!-- JavaScript -->
 <script src="js/modernizr-2.5.3-min.js"></script>
 
@@ -36,16 +32,18 @@
 
 <body>
 
-<header role="banner" class="clearfix">
-<h1>Patrones de Estilos <small>Esto vale pa enseñar al cliente =D</small></h1>
+<header role="banner" class="header clearfix">
+<h1>Patrones de Estilos</h1>
 </header>
 
 <div class="content">
 <section>
-<h1 class="h2">Colores</h1>
 
-<h2 class="h3">Color Base</h2>
+<h1 class="h2"> Paleta de Colores</h1>
+
+
 <div class="swatch swatch-base">
+<h2 class="h3">Base <small>@basecolor</small></h2>
 <div class="swatch-row swatch-row-one clearfix">
 <span></span>
 <span></span>
@@ -60,8 +58,40 @@
 </div>
 </div>
 
-<h2 class="h3">Alert</h2>
+<div class="swatch swatch-secondary">
+<h2 class="h3">Secundario <small>@secondary</small></h2>
+<div class="swatch-row swatch-row-one clearfix">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="swatch-row swatch-row-two clearfix">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+
+<div class="swatch swatch-compcolor">
+<h2 class="h3">Comp. <small>@compcolor</small></h2>
+<div class="swatch-row swatch-row-one clearfix">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="swatch-row swatch-row-two clearfix">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+
 <div class="swatch swatch-alert">
+<h2 class="h3">Alerta <small>@alertcolor</small></h2>
 <div class="swatch-row swatch-row-one clearfix">
 <span></span>
 <span></span>
@@ -76,8 +106,9 @@
 </div>
 </div>
 
-<h2 class="h3">Error</h2>
+
 <div class="swatch swatch-error">
+<h2 class="h3">Error <small>@errorcolor</small></h2>
 <div class="swatch-row swatch-row-one clearfix">
 <span></span>
 <span></span>
@@ -92,8 +123,9 @@
 </div>
 </div>
 
-<h2 class="h3">Info</h2>
+
 <div class="swatch swatch-info">
+<h2 class="h3">Info <small>@infocolor</small></h2>
 <div class="swatch-row swatch-row-one clearfix">
 <span></span>
 <span></span>
@@ -108,8 +140,9 @@
 </div>
 </div>
 
-<h2 class="h3">Success</h2>
+
 <div class="swatch swatch-success">
+<h2 class="h3">Success <small>@successcolor</small></h2>
 <div class="swatch-row swatch-row-one clearfix">
 <span></span>
 <span></span>
@@ -124,8 +157,9 @@
 </div>
 </div>
 
-<h2 class="h3">Warning</h2>
+
 <div class="swatch swatch-warning">
+<h2 class="h3">Warning <small>@warningcolor</small></h2>
 <div class="swatch-row swatch-row-one clearfix">
 <span></span>
 <span></span>
@@ -144,28 +178,28 @@
 
 <section>
 
-<h1 class="h2">Typography</h1>
+<h1 class="h2">Typografía <small>@basefont : "Helvetica Neue", Helvetica, Arial, sans-serif;</small></h1>
 
-<ul class="furniture-list">
-<li><h1>Heading 1 <span>(32px)</span></h1></li>
-<li><h2>Heading 2 <span>(24px)</span></h2></li>
-<li><h3>Heading 3 <span>(21px)</span></h3></li>
-<li><h4>Heading 4 <span>(18px)</span></h4></li>
-<li><h5>Heading 5 <span>(16px)</span></h5></li>
-<li><h6>Heading 6 <span>(14px)</span></h6></li>
+<ul>
+<li><h1>Heading 1 - H1 <span>(32px)</span></h1></li>
+<li><h2>Heading 2 - H2 <span>(24px)</span></h2></li>
+<li><h3>Heading 3 - H3 <span>(21px)</span></h3></li>
+<li><h4>Heading 4 - H4 <span>(18px)</span></h4></li>
+<li><h5>Heading 5 - H5 <span>(16px)</span></h5></li>
+<li><h6>Heading 6 - H6 <span>(14px)</span></h6></li>
 </ul>
 
-<h2 class="h3">Paragraphs</h2>
+<h2 class="h3">Párrafos</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-<h2 class="h3">Blockquote</h2>
+<h2 class="h3">Citas</h2>
 <blockquote>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </blockquote>
 
-<h2 class="h3">Text level elements</h2>
+<h2 class="h3">Elementos Textuales</h2>
 
 <table class="table table-bordered table-striped">
 <thead>
@@ -178,32 +212,32 @@
 <tbody>
 <tr>
 <td><code>&lt;strong&gt;</code></td>
-<td>Strong emphasis</td>
+<td><strong>Negrita "semántica"</strong></td>
 </tr>
 
 <tr>
 <td><code>&lt;b&gt;</code></td>
-<td>Presentational bold</td>
+<td><b>Negrita visual</b></td>
 </tr>
 
 <tr>
 <td><code>&lt;em&gt;</code></td>
-<td>Emphasis</td>
+<td><em>Énfasis</em></td>
 </tr>
 
 <tr>
 <td><code>&lt;i&gt;</code></td>
-<td>Presentational italics</td>
+<td><i>Itálica Visual</i></td>
 </tr>
 
 <tr>
 <td><code>&lt;abbr&gt;</code></td>
-<td>Abbreviations and acronyms</td>
+<td><abbr>Acrónimos y abreviaciones</abbr></td>
 </tr>
 
 <tr>
 <td><code>&lt;address&gt;</code></td>
-<td>Content contact information</td>
+<td><address>Información de contácto "semántica"</address></td>
 </tr>
 </tbody>
 </table>
