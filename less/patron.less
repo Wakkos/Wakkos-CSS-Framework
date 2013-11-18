@@ -7,7 +7,11 @@ body {
 .swatch {
 margin : 0 @gutterwidth @baselineheight 0;
 padding : 0;
-float:left; }
+float:left; 
+box-shadow: 0px 0px 5px @black;
+padding: @gutterwidth / 4;
+background-color: @white;
+}
 
 .swatch-row {
 display : block; 
@@ -140,3 +144,11 @@ height : 50px; }
 
 .swatch-warning span:nth-child(4) {
 .background-alpha(@warningcolor, .6); }
+
+section {
+	margin-bottom: 1em;
+	background-color: @lightergrey;
+	padding: 1em;
+	border-radius: 2em;
+}
+

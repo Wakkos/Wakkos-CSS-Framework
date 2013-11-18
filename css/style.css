@@ -185,7 +185,7 @@ section {
   font-weight: bold;
   white-space: nowrap;
   color: #808080;
-  background-color: #e6e6e6;
+  background-color: #f2f2f2;
   -webkit-transition: background-color 0.25s 0 linear;
   -moz-transition: background-color 0.25s 0 linear;
   -ms-transition: background-color 0.25s 0 linear;
@@ -257,13 +257,13 @@ section {
   background-repeat: repeat-x;
 }
 .greygrad {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#d9d9d9));
-  background-image: -webkit-linear-gradient(top, #ffffff, #d9d9d9);
-  background-color: #d9d9d9;
-  background-image: -moz-linear-gradient(top, #ffffff, #d9d9d9);
-  background-image: -ms-linear-gradient(top, #ffffff, #d9d9d9);
-  background-image: -o-linear-gradient(top, #ffffff, #d9d9d9);
-  background-image: linear-gradient(top, #ffffff, #d9d9d9);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e5e5e5));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e5e5e5);
+  background-color: #e5e5e5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e5e5e5);
+  background-image: -ms-linear-gradient(top, #ffffff, #e5e5e5);
+  background-image: -o-linear-gradient(top, #ffffff, #e5e5e5);
+  background-image: linear-gradient(top, #ffffff, #e5e5e5);
   background-repeat: repeat-x;
 }
 .infograd {
@@ -425,12 +425,12 @@ table tbody tr:hover th {
   font-size: 12px;
   font-size: 1.2rem;
   line-height: 1.5em;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
   vertical-align: middle;
-  background-color: #e6e6e6;
-  border: 1px solid #cccccc;
-  border-bottom-color: #b3b3b3;
+  background-color: #f2f2f2;
+  border: 1px solid #d9d9d9;
+  border-bottom-color: #bfbfbf;
   cursor: pointer;
   *margin-left: .3em;
 }
@@ -440,7 +440,7 @@ table tbody tr:hover th {
   text-decoration: none;
 }
 input[type="submit"].btn:hover {
-  border-color: #cccccc;
+  border-color: #d9d9d9;
 }
 .btn:first-child {
   *margin-left: 0;
@@ -977,6 +977,9 @@ body {
   margin: 0 24px 1.5em 0;
   padding: 0;
   float: left;
+  box-shadow: 0px 0px 5px #000000;
+  padding: 6px;
+  background-color: #ffffff;
 }
 .swatch-row {
   display: block;
@@ -1091,4 +1094,10 @@ body {
 }
 .swatch-warning span:nth-child(4) {
   background-color: rgba(250, 167, 51, 0.6);
+}
+section {
+  margin-bottom: 1em;
+  background-color: #f2f2f2;
+  padding: 1em;
+  border-radius: 2em;
 }
