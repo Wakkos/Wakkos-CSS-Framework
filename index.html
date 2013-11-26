@@ -17,6 +17,14 @@
 <!-- CSS Para todos los navegadores -->
 <link rel="stylesheet" href="css/style.css">
 
+<!--[if (lt IE 9) & (!IEMobile)]>
+<script src="js/vendor/selectivizr-min.js"></script>
+<![endif]-->
+
+<!-- JavaScript -->
+<script src="js/vendor/modernizr-2.5.3-min.js"></script>
+
+
 <!-- Iconos -->
 
 <!-- 16x16 -->
@@ -45,13 +53,11 @@
 <h1 class="h1">Wakkos Less framework</h1>
 Añade tu HTML
 
-<!-- Descomenta si usas scripts
+Descomenta si usas scripts
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
-<script src="js/script.js"></script> -->
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3-min.js"><\/script>')</script>
+<script src="js/vendor/script.js"></script>
 
-
-<!-- Y si usas Google Analytics, configura y descomenta.
 
 <script>
 var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
@@ -60,7 +66,7 @@ g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js
 s.parentNode.insertBefore(g,s)}(document,"script"));
 </script>
 
--->
+
 
 </body>
 </html>

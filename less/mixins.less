@@ -9,7 +9,16 @@
 overflow : hidden;
 text-overflow : ellipsis;
 white-space : nowrap; }
- 
+
+  /* The ghost, nudged to maintain perfect centering */
+.vcenter {
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+}
 
 // flexbox, because fuck you, that's why.
  
