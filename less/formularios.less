@@ -41,6 +41,7 @@ button,
 select,
 textarea {
 .font-size(14); 
+border-radius: @radius;
 vertical-align : baseline; 
 *vertical-align : middle; }
 
@@ -76,7 +77,8 @@ border : @inputborderwidth @inputborderstyle @inputborder;
 color : @textcolor; 
 
 &:hover {
-border-color : @inputhover; }
+border-color : @inputhover;
+ }
 }
 
 .input-mini { 
@@ -268,3 +270,13 @@ vertical-align : middle; }
 float : left;
 margin-left : 0;
 margin-right : 3px; }
+
+
+// Validamos los formularios que son "required": http://coolvillage.es/ayuda-al-usuario-a-rellenar-formularios-con-css/
+
+input:required:focus:invalid {
+  background-color:lighten(@alertcolor, 5%);
+}
+input:required:focus:valid {
+  background-color:lighten(@successcolor, 35%);
+}

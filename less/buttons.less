@@ -12,20 +12,23 @@
 	font-family : @basefont;
 	.font-size(12);
 	line-height : @baselineheight;
-	color : @white;
+	color : @textcolor;
 	text-align : center;
 	vertical-align : middle;
+	.vertical(@lightergrey, @white);
 	background-color : @buttonbackground;
 	border : @buttonborderwidth @buttonborderstyle @buttonbordercolor;
 	border-bottom-color : @buttonbottombordercolor;
-	
+	font-weight: bold;
 	cursor : pointer;
 	*margin-left : .3em; 
+	border-radius: @radius;
 
 	&:visited,
 	&:hover, {
-	color : @white;
-	text-decoration : none; 
+	color : @black;
+	text-decoration : none;
+	.vertical(@white, @white);
 	}
 }
 
@@ -142,23 +145,24 @@ position : relative;
 
 .btn-group .btn {
 position : relative;
+border-radius: 0;
 float : left;
 margin-left : -1px;
 }
 
 .btn-group .btn:first-child {
 margin-left : 0;
-.border-radius(0, 0, 4px, 4px); } 
+.border-radius(0, 0, @radius, @radius); } 
 
 .btn-group .btn:last-child {
-.border-radius(4px, 4px, 0, 0); }
+.border-radius(@radius, @radius, 0, 0); }
 
 .btn-group .btn.large:first-child {
 margin-left : 0;
-.border-radius(4px, 0, 4px, 0); }
+.border-radius(@radius, 0, @radius, 0); }
 
 .btn-group .btn.large:last-child {
-.border-radius(0, 4px, 0, 4px); }
+.border-radius(0, @radius, 0, @radius); }
 
 .btn-toolbar {
 clear : both;

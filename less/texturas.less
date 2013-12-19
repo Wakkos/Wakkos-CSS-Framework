@@ -14,6 +14,7 @@ border : @alertborderwidth @alertborderstyle @alertbordercolor;
 font-family : @basefont;
 .font-size(14);
 color : @alerttext;
+border-radius: @radius;
 
 .alert-heading {
 color : inherit; }
@@ -43,6 +44,10 @@ color : @alertwarningtext; }
 background-color : @alerterrorcolor;
 border-color : @alerterrorborder;
 color : @alerterrortext; }
+.alert-info {
+background-color : @alertinfocolor;
+border-color : @alertinfoborder;
+color : @alertinfotext; }
 
 .alert-inverse {
 background-color : @alertinversecolor;
@@ -75,6 +80,7 @@ padding : 1px 9px 2px;
 .font-size(12);
 font-weight : bold;
 white-space : nowrap;
+border-radius: @radius;
 color : @badgecolor;
 background-color : @badgebackground;
 .transition(background-color .25s 0 linear);
@@ -87,29 +93,29 @@ cursor : pointer; }
 
 .badge-error {
 background-color : @errorcolor;
-color : @white;
+
 
 &:hover {
 background-color : darken(@errorcolor, 20%);
-color : @white; }
+ }
 }
 
 .badge-warning {
 background-color : @warningcolor;
-color : @white;
+
 
 &:hover {
 background-color : darken(@warningcolor, 20%);
-color : @white; }
+ }
 }
 
 .badge-success {
 background-color : @successcolor;
-color : @white;
+
 
 &:hover {
 background-color : darken(@successcolor, 20%);
-color : @white; }
+ }
 }
 
 .badge-info {
@@ -159,6 +165,7 @@ color : @white; }
 .well {
 min-height : 21px;
 padding : 11px;
+border-radius: @radius;
 margin-bottom : @baselineheight;
 background-color : @wellbackground;
 border : @wellborderwidth @wellborderstyle @wellbordercolor;

@@ -14,6 +14,9 @@
 @baseline : @baselineheight;
 @gutterwidth : 24px;
 @pagemaxwitdh: 1024px;
+@radius      : 2px;
+@hovertransition : .3s;
+@animationtime : .8s;
 
 
 // Web  
@@ -30,14 +33,14 @@
 @baseheadingfontweight : bold;
 @baseheadingfontcolor : inherit;
  
-@altfont : Cambria, Georgia, Times, "Times New Roman";
+@altfont : Georgia, Times, "Times New Roman";
 @altlineheight : 1.35em;
  
-@codefont : Monaco, Courier New, monospace;
+@codefont : "Courier New", monospace;
 
 
 // Colores Base  //////////////////////
-@basecolor 		: orange;	 
+@basecolor 		: rgb(210,101,7);	 
 @baselight      : lighten(@basecolor, 35%); 
 @secondary      : spin(@basecolor, 180);
 @compcolor 		: rgb(218,128,45); 
@@ -67,7 +70,7 @@
 
 @alertcolor 	: rgb(252,228,207);
 @errorcolor 	: rgb(218,79,73);
-@infocolor 		: rgb(217,237,247);
+@infocolor 		: rgb(165,221,223);
 @inverscolor 	: rgb(65,65,65);
 @successcolor 	: rgb(91,183,91);
 @warningcolor 	: rgb(250,167,50);
@@ -85,8 +88,8 @@
 @alerterrortext 	: @errorcolor; 
 
 // Info
-@alertinfocolor 	: @infocolor;
-@alertinfoborder  	: lighten(@infocolor, 20%);
+@alertinfocolor 	: lighten(@infocolor, 10%);
+@alertinfoborder  	: darken(@infocolor, 10%);
 @alertinfotext 		: darken(@infocolor, 50%);  
 
 // Inverso
@@ -115,8 +118,8 @@
  
 // badges 
  
-@badgebackground    : @lightergrey;
-@badgecolor         : @grey;
+@badgebackground    : @basecolor;
+@badgecolor         : @textcolor;
  
 // botones
  
@@ -148,9 +151,9 @@
 // formularios 
  
 @inputbackground    : @white; 
-@inputborder        : lighten(@basecolor, 40%);
+@inputborder        : @lightgrey;
 @inputborderwidth   : 1px;
 @inputborderstyle   : solid;
-@inputhover         : lighten(@basecolor, 20%);
+@inputhover         : lighten(@black, 50%);
 @inputfocus         : @basecolor, 40%;
-@placeholdercolor   : @lightgrey;
+@placeholdercolor   : @lightergrey;

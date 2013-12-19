@@ -12,11 +12,18 @@ margin : 0;
 font-family : @baseheadingfont;
 font-weight : @baseheadingfontweight;
 color : @baseheadingfontcolor;
-text-rendering : optimizelegibility; }
+text-rendering : optimizelegibility; 
+	&.altheader {
+		color:@grey;
+		text-transform: uppercase;
+	}
+}
 
 h1 small, 
-h2 small {
+h2 small,
+h3 small {
 font-weight : normal;
+display: block;
 color : @grey; }
 
 h1,
@@ -27,34 +34,32 @@ line-height : 1.2; }
 
 h2,
 .h2 { 
-margin-bottom : @baselineheight / 2;
+margin-bottom : @baselineheight / 3;
 .font-size(24);
 line-height : 1.2; }
 
 h3,
 .h3 { 
-margin-bottom : @baselineheight / 1.5;
+margin-bottom : @baselineheight / 4;
 .font-size(21);
 line-height : 1.3; }
 
 h4,
 .h4 { 
-margin-bottom : @baselineheight;
+margin-bottom : @baselineheight / 6;
 .font-size(18);
 line-height : 1.25; }
 
 h5,
 .h5 { 
 .font-size(16);
-margin-bottom : @baselineheight; }
+margin-bottom : @baselineheight / 6; }
 
 h6,
 .h6 { 
-margin-bottom : @baselineheight;
+margin-bottom : @baselineheight / 6;
 .font-size(14); 
-font-weight : normal;
-letter-spacing : 1px;
-text-transform : uppercase; }
+ }
 
 // header
 
@@ -95,7 +100,13 @@ dl,
 address { 
 margin-bottom : @baselineheight; 
 .font-size(14);
-line-height : @baselineheight; }
+line-height : @baselineheight;
+ }
+
+ .intro {
+ 	font-weight: bold;
+ 	.font-size(14);
+ }
 
 small { 
 .font-size(14); }
@@ -117,10 +128,17 @@ margin : 0 0 @baselineheight -@gutterwidth;
 padding-left : @gutterwidth; 
 border-left : 2px solid @bordercolor;
 font-family : @altfont;
-font-style : normal; }
+font-style : normal; 
+p {
+	.font-size(18);
+color:@grey;
+font-style: italic;
+}
+}
 
 q { 
-quotes : none; }
+quotes : none;
+font-style: italic; }
 
 blockquote p::before, 
 blockquote p::after, 
@@ -170,10 +188,8 @@ color : @textcolor;
 text-decoration : none; }
 
 mark { 
-background-color : lighten(@basecolor, 75%); 
-color : @textcolor; 
-font-style : italic; 
-font-weight : bold; }
+background-color : yellow;
+color : @textcolor;  }
 
 pre, 
 code, 
