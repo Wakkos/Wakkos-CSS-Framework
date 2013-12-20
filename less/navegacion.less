@@ -1,0 +1,26 @@
+.nav {
+  	&:extend(.clearfix all);
+  	> li {
+    position: relative;
+    display: block;
+
+	    > a {
+	      position: relative;
+	      display: block;
+	      padding: @navitempadding;
+	      &:hover,
+	      &:focus {
+	        text-decoration: none;
+	        background-color: @bordercolor;
+	      }
+	    }
+	}
+}
+
+.tabs {
+	border-bottom: 1px solid @navtabsbordercolor;
+	> li {
+	    margin-bottom: -1px;
+	    float: left;
+	}
+}

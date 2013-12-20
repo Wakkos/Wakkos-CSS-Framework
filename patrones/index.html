@@ -20,7 +20,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../css/style.css">
 
 <!-- JavaScript -->
 <script src="js/modernizr-2.5.3-min.js"></script>
@@ -31,7 +31,11 @@
 </head>
 
 <body>
-
+<nav>
+	<ul>
+		<li><a href="page.html">Ver Conjunto</a></li>
+	</ul>
+</nav>
 <header role="banner" class="header clearfix">
 <h1>Patrones de Estilos De *proyecto*</h1>
 </header>
@@ -153,7 +157,7 @@
 </ul>
 <ul>
 	<li class="altfont"><b>@altfont</b></li>
-	<li><code><b>@codefont</b></code></li></ul>
+	<li><code class="code"><b>@codefont</b></code></li></ul>
 </section>
 <section>
 
@@ -506,6 +510,35 @@ El usuario acaba de hacer algo con lo que debe llevar cuidado. Pero se lo decimo
 
 </section>
 <section>
+<h2 class="h2">Imágenes</h2>
+<figure>
+	<img src="img/stimpy.png" alt="Draculcat!">
+	<figcaption>
+		Figcaption: Descripción de la imagen.
+	</figcaption>
+</figure>
+
+<figure>
+	<img class="img-rounded" src="img/stimpy.png" alt="Draculcat!">
+	<figcaption>
+		class="img-rounded"
+	</figcaption>
+</figure>
+
+<figure class="img-polaroid">
+	<img src="img/stimpy.png" alt="Draculcat!">
+	<figcaption>
+		class="img-polaroid"
+	</figcaption>
+</figure>
+
+<figure>
+	<img class="img-circle" src="img/stimpy.png" alt="Draculcat!">
+	<figcaption>
+		class="img-circle"
+	</figcaption>
+</figure>
+
 <h2 class="h2">Tables</h2>
 
 
@@ -696,21 +729,8 @@ El usuario acaba de hacer algo con lo que debe llevar cuidado. Pero se lo decimo
 </div><!-- / content -->
 
 <footer role="contentinfo">
-<small>320 and Up, a Fashionably Flexible &#169; responsive web design boilerplate by <a href="http://stuffandnonsense.co.uk">Andy Clarke</a>.</small>
-<small>&#8216;320 and Up&#8217; wouldn&#8217;t be possible without <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>, <a href="http://framelessgrid.com/">Frameless grid</a> and <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>. Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>. The Font Awesome webfont, CSS, and LESS files are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</small>
+<small>Framework creado por <a href="http://twitter.com/wakkos">@Wakkos</a>  para facilitar el setup de proyectos. Basado en <a href="https://www.udemy.com/less-de-cero-a-experto/">LESS</a>.</small>
+<small>Este archivo toma las clases de vuestro CSS para crear una guía de patrones, pero cambia ese CSS a tu gusto. Las variables que aquí se ven, son actualizadas desde LESS con <code>::after</code>. Puedes ir a <a href="page.html">page.html</a> para ver tdos los elementos como un conjunto.</small>
 </footer>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
-
-<script src="js/plugins.js"></script>
-<script src="js/script.js"></script>
-<script src="js/helper.js"></script>
-<script>
-var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
-(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
-s.parentNode.insertBefore(g,s)}(document,"script"));
-</script>
 </body>
 </html>

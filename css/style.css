@@ -26,15 +26,19 @@
   margin-right: auto;
   max-width: 1024px;
 }
-.clearfix {
+.clearfix,
+.nav {
   *zoom: 1;
 }
 .clearfix:before,
-.clearfix:after {
+.clearfix:after,
+.nav:before,
+.nav:after {
   display: table;
   content: "";
 }
-.clearfix:after {
+.clearfix:after,
+.nav:after {
   clear: both;
 }
 /* Reset =================================================== */
@@ -133,11 +137,6 @@ audio,
 canvas,
 video {
   display: inline-block;
-}
-img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: top;
 }
 ul li {
   list-style-type: none;
@@ -925,6 +924,47 @@ input[type="submit"].btn:hover {
   *display: inline;
   *zoom: 1;
 }
+hr {
+  clear: both;
+  display: block;
+  margin: 3em 0;
+  padding: 0;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #f77e15;
+}
+img {
+  max-width: 100%;
+  border-width: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+.img-rounded {
+  border-radius: 8px;
+}
+.img-polaroid {
+  padding: 12px;
+  background-color: #ffffff;
+  border: 1px solid #f77e15;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.img-circle {
+  border-radius: 100%;
+}
+figure {
+  margin-bottom: 1.5em;
+}
+figure img {
+  margin-bottom: 0.375em;
+}
+figure figcaption {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #808080;
+}
 h1,
 h2,
 h3,
@@ -1033,18 +1073,15 @@ ul,
 dl,
 address {
   margin-bottom: 1.5em;
-  font-size: 14px;
-  font-size: 1.4rem;
   line-height: 1.5em;
 }
 .intro {
   font-weight: bold;
-  font-size: 14px;
-  font-size: 1.4rem;
 }
 small {
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 12px;
+  font-size: 1.2rem;
+  color: #808080;
 }
 ul,
 ol {
@@ -1054,8 +1091,6 @@ ol {
 li ul,
 li ol {
   margin: 0;
-  font-size: 16px;
-  font-size: 1.6rem;
 }
 blockquote {
   margin: 0 0 1.5em -24px;
@@ -1146,6 +1181,27 @@ sup {
 }
 sub {
   bottom: -0.25em;
+}
+.nav > li {
+  position: relative;
+  display: block;
+}
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 12px;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: #f77e15;
+}
+.tabs {
+  border-bottom: 1px solid #f77e15;
+}
+.tabs > li {
+  margin-bottom: -1px;
+  float: left;
 }
 form {
   margin: 0 0 1.5em 0;
@@ -1291,7 +1347,6 @@ input[type="file"] {
   line-height: 28px;
 }
 select {
-  width: auto;
   background-color: #ffffff;
   font-size: 13px;
   font-size: 1.3rem;
@@ -1493,7 +1548,7 @@ section:after {
 .altfont::after {
   content: ': Georgia, Times, "Times New Roman"';
 }
-code::after {
+.code::after {
   content: ': "Courier New", monospace';
 }
 .swatch {
@@ -1654,4 +1709,9 @@ code::after {
 .transition::after {
   content: ': 0.8s';
   font-weight: normal;
+}
+figure {
+  width: 24%;
+  float: left;
+  margin-right: 1%;
 }
