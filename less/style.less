@@ -1,18 +1,29 @@
+/*------------------------------------*\
+    $STYLE
+\*------------------------------------*/
+/**
+ * Aquí incluímos todos los módulos (archivos .less) que se can
+ * a compilar en el CSS definitivo: /css/style.css.
+ * Si no usas algún módulo, es recomendable que elimines 
+ * o comentes su inclusión para no tener estilos innecesarios en tu CSS final
+ * y optimizar lo máximo posible.
+ */
+ 
 @import "variables.less";
 
 @import "mixins.less";
 
+@import "helpers.less";
+
 @import "reset.less";
 
-@import "importedFonts.less";
-
-@import "texturas.less";
+@import "fuentes.less";
 
 @import "links.less";
 
 @import "tablas.less";
 
-@import "buttons.less";
+@import "botones.less";
 
 @import "elementos.less";
 
@@ -20,11 +31,15 @@
 
 @import "navegacion.less";
 
+@import "paginacion.less";
+
 @import "formularios.less";
 
 @import "sitio.less";
 
+@import "texturas.less";
+
 @import "breakpoints.less";
 
 
-@import "patron.less"; // Puedes sliminar/comentar esto, se usa solo para patrones.html
+@import "patron.less"; // Deberías eliminar/comentar esto, se usa solo para patrones.html

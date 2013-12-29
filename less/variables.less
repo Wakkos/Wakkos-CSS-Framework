@@ -1,3 +1,7 @@
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+
 
 // Breakpoints
 // "Start with the small screen first, then expand until it looks like shit. Time to insert a breakpoint!"
@@ -8,9 +12,7 @@
 @bp4 : 56.25em;
 @bp5 : 68.75em;
 
-
 // Layout
-
 @baseline : @baselineheight;
 @gutterwidth : 24px;
 @pagemaxwitdh: 1024px;
@@ -18,14 +20,12 @@
 @hovertransition : .3s;
 @animationtime : .8s;
 
-
 // Web  
 @background: 		@white;
 @textcolor: 		@darkergrey;
 @textcolor-strong:	@black;
 
 // Fuentes
- 
 @basefont : "Helvetica Neue", Helvetica, Arial, sans-serif;
 @basefontsize : 16;
 @baselineheight : 1.5em;
@@ -38,16 +38,14 @@
  
 @codefont : "Courier New", monospace;
 
-
 // Colores Base  //////////////////////
-@basecolor 		: rgb(210,101,7);	 
+@basecolor 		: #00a1cb;	 
 @baselight      : lighten(@basecolor, 35%); 
 @secondary      : spin(@basecolor, 180);
 @compcolor 		: rgb(218,128,45); 
 @bordercolor    : lighten(@basecolor, 10);
 
 // Escala de grises  ///////////////
-
 @black 			: rgb(0,0,0);
 @superdark  	: lighten(@black, 10%);
 @darkergrey 	: lighten(@black, 15%);
@@ -59,7 +57,6 @@
 
 
 // Links  //////////////////////
-
 @linkcolor 		    : @basecolor;
 @linkcolorhover 	: darken(@linkcolor, 10);
 @linkcolorvisited   : @basecolor;
@@ -67,7 +64,6 @@
 
 
 // Alertas y popups  ///////////////
-
 @alertcolor 	: rgb(252,228,207);
 @errorcolor 	: rgb(218,79,73);
 @infocolor 		: rgb(165,221,223);
@@ -76,7 +72,6 @@
 @warningcolor 	: rgb(250,167,50);
 
 // Texturas de popups
-
 @alertbordercolor	: darken(@alertcolor, 20%);
 @alertborderwidth 	: 1px;
 @alertborderstyle 	: solid;
@@ -117,12 +112,10 @@
 
  
 // badges 
- 
 @badgebackground    : @basecolor;
 @badgecolor         : @textcolor;
  
-// botones
- 
+// botones 
 @buttonbackground   : @lightergrey;
 @buttonbordercolor  : darken(@buttonbackground, 10%);
 @buttonbottombordercolor : darken(@buttonbordercolor, 10%);
@@ -131,7 +124,6 @@
 @buttonborderstyle  : solid;
  
 // boxes (well)
- 
 @wellbackground     : lighten(@basecolor, 75%);
 @wellbordercolor    : darken(@wellbackground, 20%); 
 @wellborderwidth    : 1px;
@@ -140,7 +132,6 @@
 @wellshadowblur     : 10px;
  
 // tablas 
- 
 @tablebackground    : transparent;
 @tablestripe        : lighten(@basecolor, 60%);
 @tablehover         : lighten(@basecolor, 50%);
@@ -149,7 +140,6 @@
 @tableborderstyle   : solid;
  
 // formularios 
- 
 @inputbackground    : @white; 
 @inputborder        : @lightgrey;
 @inputborderwidth   : 1px;
@@ -160,7 +150,6 @@
 
 
 // Navegación 
-
 @navitembordercolor    : @bordercolor;
 @navitempadding        : @gutterwidth / 2;
 @navtabsbordercolor    : @bordercolor;

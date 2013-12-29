@@ -431,83 +431,89 @@ El usuario acaba de hacer algo con lo que debe llevar cuidado. Pero se lo decimo
 <table class="table table-bordered">
 
 <tbody>
-
+<tr>
+<td>&lt;button class="btn"&gt;</td>
+<td>&lt;a href="#" class="btn"&gt;</td>
+<td>&lt;input type="submit" value="Default" class="btn"&gt;</td>
+<td>Elementos</td>
+</tr>
 <tr>
 <td><button class="btn">Default</button></td>
 <td><a href="#" class="btn">Default</a></td>
 <td><input type="submit" value="Default" class="btn"></td>
-<td>Standard button</td>
+<td>Botón base</td>
 </tr>
 
 <tr>
-<td><button class="btn btn-disabled">Disabled</button></td>
-<td><a href="#" class="btn btn-disabled">Disabled</a></td>
-<td><input type="submit" value="Disabled" class="btn btn-disabled"></td>
-<td>Disabled standard button</td>
+<td><button class="btn btn--disabled">disabled</button></td>
+<td><a href="#" class="btn btn--disabled">disabled</a></td>
+<td><input type="submit" value="disabled" class="btn btn--disabled"></td>
+<td>Botón inactivo</td>
 </tr>
 
 <tr>
-<td><button class="btn btn-large">Default</button></td>
-<td><a href="#" class="btn btn-large">Default</a></td>
-<td><input type="submit" value="Default" class="btn btn-large"></td>
-<td>Standard button (large)</td>
+<td><button class="btn btn--large">.large</button></td>
+<td><a href="#" class="btn btn--large">.large</a></td>
+<td><input type="submit" value=".large" class="btn btn--large"></td>
+<td>.large</td>
 </tr>
 
 <tr>
-<td><button class="btn btn-small">Default</button></td>
-<td><a href="#" class="btn btn-small">Default</a></td>
-<td><input type="submit" value="Default" class="btn btn-small"></td>
-<td>Standard button (small)</td>
+<td><button class="btn btn--small">.small</button></td>
+<td><a href="#" class="btn btn--small">.small</a></td>
+<td><input type="submit" value=".small" class="btn btn--small"></td>
+<td>.small</td>
 </tr>
 
 <tr>
-<td><button class="btn btn-mini">Default</button></td>
-<td><a href="#" class="btn btn-mini">Default</a></td>
-<td><input type="submit" value="Default" class="btn btn-mini"></td>
-<td>Standard button (mini)</td>
+<td><button class="btn btn--mini">.mini</button></td>
+<td><a href="#" class="btn btn--mini">.mini</a></td>
+<td><input type="submit" value=".mini" class="btn btn--mini"></td>
+<td>.mini</td>
 </tr>
 
 <tr>
-<td><button class="btn btn-primary">Primary</button></td>
-<td><a href="#" class="btn btn-primary">Primary</a></td>
-<td><input type="submit" value="Primary" class="btn btn-primary"></td>
-<td>Extra visual weight and identifies a primary action</td>
+<td><button class="btn btn--primary">Principal</button></td>
+<td><a href="#" class="btn btn--primary">Principal</a></td>
+<td><input type="submit" value="Principal" class="btn btn--primary"></td>
+<td>Peso visual e identifica una acción primaria.</td>
 </tr>
 <tr>
-<td><button class="btn btn-info">Info</button></td>
-<td><a href="#" class="btn btn-info">Info</a></td>
-<td><input type="submit" value="Info" class="btn btn-info"></td>
-<td>An alternate to default styles</td>
+<td><button class="btn btn--info">Info</button></td>
+<td><a href="#" class="btn btn--info">Info</a></td>
+<td><input type="submit" value="Info" class="btn btn--info"></td>
+<td>Estilo alternativo</td>
 </tr>
 <tr>
-<td><button class="btn btn-success">Success</button></td>
-<td><a href="#" class="btn btn-success">Success</a></td>
-<td><input type="submit" value="Success" class="btn btn-success"></td>
-<td>A positive action</td>
+<td><button class="btn btn--success">Success</button></td>
+<td><a href="#" class="btn btn--success">Success</a></td>
+<td><input type="submit" value="Success" class="btn btn--success"></td>
+<td>Una acción positiva</td>
 </tr>
 <tr>
-<td><button class="btn btn-warning">Warning</button></td>
-<td><a href="#" class="btn btn-warning">Warning</a></td>
-<td><input type="submit" value="Warning" class="btn btn-warning"></td>
-<td>Caution should be taken</td>
+<td><button class="btn btn--warning">Warning</button></td>
+<td><a href="#" class="btn btn--warning">Warning</a></td>
+<td><input type="submit" value="Warning" class="btn btn--warning"></td>
+<td>Algo puede salir mal</td>
 </tr>
-
-<tr>
-<td><button class="btn btn-inverse">Inverse</button></td>
-<td><a href="#" class="btn btn-inverse">Inverse</a></td>
-<td><input type="submit" value="Inverse" class="btn btn-inverse"></td>
-<td>Dark grey button</td>
+<td><button class="btn btn--error">error</button></td>
+<td><a href="#" class="btn btn--error">error</a></td>
+<td><input type="submit" value="error" class="btn btn--error"></td>
+<td>Algo ha salido mal</td>
 </tr>
 
 </tbody></table>
 <h2 class="h5">Botones en grupo:</h2>
-<div class="btn-group clearfix">
+<div class="btn--group clearfix">
 	<a href="" class="btn">Botón 1</a>
-	<a href="" class="btn btn-success">Botón 2</a>
-	<a href="" class="btn btn-warning">Botón 3</a>
-	<a href="" class="btn info">Botón 3</a>
+	<a href="" class="btn btn--success">Botón 2</a>
+	<a href="" class="btn btn--warning">Botón 3</a>
+	<a href="" class="btn btn--info">Botón 3</a>
 </div>
-
+<h2 class="h5">Input type="submit" con la clase .btn:</h2>
+<div class="btn-group clearfix">
+	<input type="submit" class="btn">
+</div>
 </section>
 <section>
 <h2 class="h2">Imágenes</h2>
