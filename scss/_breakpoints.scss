@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    $BREAKPOINTS
+\*------------------------------------*/
+/*
+ * Cada Mediaquery se basará en la variable $bp$ e incluirá el archivo bp$.less
+ */
+
+@media only screen and (min-width: $bp1) {
+	@import "bp1";
+}
+
+// Break point 1  //////////////////////
+@media only screen and (min-width: $bp2) {
+	@import "bp2";
+}
+// Break point 2  //////////////////////
+@media only screen and (min-width: $bp3) {
+	@import "bp3";
+}
+// Break point 3  //////////////////////
+@media only screen and (min-width: $bp4) {
+	@import "bp4";
+}
+// Break point 4  //////////////////////
+@media only screen and (min-width: $bp5) {
+	@import "bp5";
+}
+// Break point x2 --> Retina Display  //////////////////////
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5), 
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+@import "2x"; }
