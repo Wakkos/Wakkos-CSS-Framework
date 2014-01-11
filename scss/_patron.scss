@@ -12,20 +12,20 @@ section {
 	width: 90%;
 	@extend .max-width;
 	@include clearfix;
-	margin-bottom: $baselineheight * 2;
+	margin-bottom: $baselineheight * 2; 
 }
 .altfont {
 font-family:$altfont;
 }
 
 .basefont::after {
-	content: ': ${basefont}';
+	content: "#{$basefont}";
 }
 .altfont::after {
-	content: ': ${altfont}';
+	content: "#{$altfont}"; 
 }
 .code::after {
-	content: ': ${codefont}';
+	content: "#{$codefont}";
 }
 // swatches
 
@@ -54,7 +54,7 @@ height : 100px; }
 		background-color:$basecolor;
  	}
  	small::after {
-		content: " ${basecolor}";
+		content: "#{$basecolor}";
 		color: $basecolor;
 		display: block;
 	}
@@ -69,7 +69,7 @@ height : 100px; }
 		background-color:$secondary; 
 	}
 	small::after {
-		content: " ${secondary}";
+		content: "#{$secondary}";
 		color: $secondary;
 		display: block;
 	}
@@ -84,7 +84,7 @@ height : 100px; }
 		background-color:$compcolor; 
 	}
 	small::after {
-		content: " ${compcolor}";
+		content: " #{$compcolor}";
 		color: $compcolor;
 		display: block;
 	}
@@ -98,7 +98,7 @@ height : 100px; }
 		background-color:$alertcolor; 
 	}
 	small::after {
-		content: " ${alertcolor}";
+		content: "#{$alertcolor}";
 		color: $alertcolor;
 		display: block;
 	}
@@ -114,7 +114,7 @@ height : 100px; }
 		background-color:$errorcolor; 
 	}
 	small::after {
-		content: " ${errorcolor}";
+		content: "#{$errorcolor}";
 		color: $errorcolor;
 		display: block;
 	}
@@ -130,7 +130,7 @@ height : 100px; }
 	}
 
 	small::after {
-		content: " ${infocolor}";
+		content: "#{$infocolor}";
 		color: $infocolor;
 		display: block;
 	}
@@ -145,7 +145,7 @@ height : 100px; }
 		background-color:$successcolor; 
 	}
 	small::after {
-		content: " ${successcolor}";
+		content: "#{$successcolor}";
 		color: $successcolor;
 		display: block;
 	}
@@ -162,7 +162,7 @@ height : 100px; }
 	}
 
 	small::after {
-		content: " ${warningcolor}";
+		content: "#{$warningcolor}";
 		color: $warningcolor;
 		display: block;
 	}
@@ -201,13 +201,13 @@ height : 100px; }
 		background-color: $basecolor;
 	}
 	strong::after {
-			content: ': @{hovertransition}';
+			content: ': #{$hovertransition}';
 			font-weight: normal;
 		}
 }
 
 .transition::after {
-			content: ': @{animationtime}';
+			content: ': #{$animationtime}';
 			font-weight: normal;
 		}
 

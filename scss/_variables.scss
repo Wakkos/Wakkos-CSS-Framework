@@ -42,7 +42,7 @@ $codefont : "Courier New", monospace;
 // Colores Base  //////////////////////
 $basecolor 		: #00a1cb;	 
 $baselight      : lighten($basecolor, 35%); 
-$secondary      : spin($basecolor, 180);
+$secondary      : adjust-hue($basecolor, 180);
 $compcolor 		: rgb(218,128,45); 
 $bordercolor    : lighten($basecolor, 10);
 
