@@ -1,9 +1,13 @@
 /*------------------------------------*\
     $TEXTURAS
 \*------------------------------------*/
-// Más estilos adicionales:
-// http://twitter.github.com/bootstrap/components.html#alerts"
-// https://github.com/twitter/bootstrap/blob/master/less/alerts.less"
+/**
+* Todas las cajas, popups y elementos informativos
+*
+* Más estilos adicionales:
+* http://twitter.github.com/bootstrap/components.html#alerts"
+* https://github.com/twitter/bootstrap/blob/master/less/alerts.less"
+*/
 
 
 .alert {
@@ -16,51 +20,48 @@ font-family : @basefont;
 color : @alerttext;
 border-radius: @radius;
 
-.alert-heading {
-color : inherit; }
-
-.close {
-position : relative;
-top : -2px;
-right : -21px;
-float : right;
-.font-size(21);
-font-weight : bold;
-line-height : 18px;
-color : inherit; }
+	.close {
+		position : relative;
+		top : -2px;
+		right : -21px;
+		float : right;
+		.font-size(21);
+		font-weight : bold;
+		line-height : 18px;
+		color : inherit; }
 }
 
-.alert-success {
+.alert--success {
 background-color : @alertsuccesscolor;
 border-color : @alertsuccessborder;
 color : @alertsuccesstext; }
 
-.alert-warning {
+.alert--warning {
 background-color : @alertwarningcolor;
 border-color : @alertwarningborder;
 color : @alertwarningtext; }
 
-.alert-error {
+.alert--error {
 background-color : @alerterrorcolor;
 border-color : @alerterrorborder;
 color : @alerterrortext; }
-.alert-info {
+.alert--info {
 background-color : @alertinfocolor;
 border-color : @alertinfoborder;
 color : @alertinfotext; }
 
-.alert-inverse {
+.alert--inverse {
 background-color : @alertinversecolor;
 border-color : @alertinverseborder;
 color : @alertinversetext; }
 
 // alert block
 
-.alert-block {
+.alert--block {
 padding-top : 14px;
 padding-bottom : 14px;
 
-.alert-heading {
+.alert--heading {
 margin-bottom : @baselineheight / 8;
 font-size : inherit;
 font-weight : bold; }
@@ -73,8 +74,9 @@ p + p {
 margin-top : 5px; }
 }
 
-// BADGES ====================================================
-
+/*------------------------------------*\
+    $BADGES
+\*------------------------------------*/
 .badge {
 padding : 1px 9px 2px;
 .font-size(12);
@@ -91,7 +93,7 @@ text-decoration : none;
 cursor : pointer; }
 }
 
-.badge-error {
+.badge--error {
 background-color : @errorcolor;
 
 
@@ -100,7 +102,7 @@ background-color : darken(@errorcolor, 20%);
  }
 }
 
-.badge-warning {
+.badge--warning {
 background-color : @warningcolor;
 
 
@@ -109,7 +111,7 @@ background-color : darken(@warningcolor, 20%);
  }
 }
 
-.badge-success {
+.badge--success {
 background-color : @successcolor;
 
 
@@ -118,7 +120,7 @@ background-color : darken(@successcolor, 20%);
  }
 }
 
-.badge-info {
+.badge--info {
 background-color : @infocolor;
 color : darken(@infocolor, 50%);
 
@@ -126,7 +128,7 @@ color : darken(@infocolor, 50%);
 background-color : darken(@infocolor, 20%); }
 }
 
-.badge-inverse {
+.badge--inverse {
 background-color : @inverscolor;
 color : @white;
 
@@ -135,8 +137,9 @@ background-color : darken(@inverscolor, 20%);
 color : @white; }
 }
 
-// GRADIENTES ====================================================
-
+/*------------------------------------*\
+    $GRADIENTES
+\*------------------------------------*/
 .basegrad {
 .vertical(@basecolor, darken(@basecolor, 10%)); }
 
@@ -160,8 +163,9 @@ color : @white; }
 
 // Para más gradientes: https://github.com/twitter/bootstrap/blob/master/less/mixins.less
 
-// WELL ====================================================
-
+/*------------------------------------*\
+    $WELLS
+\*------------------------------------*/
 .well {
 min-height : 21px;
 padding : 11px;
@@ -175,10 +179,10 @@ p:last-child {
 margin-bottom : 0; }
 }
 
-.well-large {
+.well--large {
 padding : 22px; }
 
-.well-small {
+.well--small {
 padding : 6px; }
 
 // Web Colours

@@ -63,6 +63,7 @@ border-color : @buttonbordercolor; }
 
 
 /**
+* Extiende .btn
 * Botón no disponible
 */
 .btn--disabled {
@@ -70,6 +71,7 @@ border-color : @buttonbordercolor; }
 cursor : default; }
 
 /**
+* Extiende .btn
 * Botón de Error
 */
 .btn--error {
@@ -83,6 +85,7 @@ cursor : default; }
 }
 
 /**
+* Extiende .btn
 * Botón de Info
 */
 .btn--info {
@@ -98,6 +101,7 @@ cursor : default; }
 
 
 /**
+* Extiende .btn
 * Botón principal
 */
 
@@ -112,6 +116,7 @@ cursor : default; }
 }
 
 /**
+* Extiende .btn
 * Botón de OK
 */
 
@@ -128,6 +133,7 @@ cursor : default; }
 
 
 /**
+* Extiende .btn
 * Botón de advertencia
 */
 .btn--warning {
@@ -158,7 +164,7 @@ cursor : default; }
 \*------------------------------------*/
 /**
  * Variantes de los botones por tamaño.
- *
+ * Todas extienden .btn
  */
 
 .btn--mini{
@@ -188,32 +194,40 @@ cursor : default; }
 /**
  * Con esta clase podemos agrupar los botones
  * en grupos horizontales.
+ * el contenedor de los elementos con las clases
+ * .btn debe contener la clase .btn__group:
+	
+	<div class="btn__group">
+		<a class="btn">Botón 1</a>
+		<a class="btn">Botón 1</a>
+		<a class="btn">Botón 1</a>
+	</div>
  *
  */
-.btn--group {
+.btn__group {
 position : relative;
 *zoom : 1;
 *margin-left : .3em; }
 
-.btn--group .btn {
+.btn__group .btn {
 position : relative;
 border-radius: 0;
 float : left;
 margin-left : -1px;
 }
 
-.btn-group .btn:first-child {
+.btn__group .btn:first-child {
 margin-left : 0;
 .border-radius(0, 0, @radius, @radius); } 
 
-.btn-group .btn:last-child {
+.btn__group .btn:last-child {
 .border-radius(@radius, @radius, 0, 0); }
 
-.btn-group .btn.large:first-child {
+.btn__group .btn.large:first-child {
 margin-left : 0;
 .border-radius(@radius, 0, @radius, 0); }
 
-.btn-group .btn.large:last-child {
+.btn__group .btn.large:last-child {
 .border-radius(0, @radius, 0, @radius); }
 
 

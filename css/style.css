@@ -640,6 +640,7 @@ input[type="submit"].btn:hover {
   border-color: #cccccc;
 }
 /**
+* Extiende .btn
 * Botón no disponible
 */
 .btn--disabled {
@@ -649,6 +650,7 @@ input[type="submit"].btn:hover {
   cursor: default;
 }
 /**
+* Extiende .btn
 * Botón de Error
 */
 .btn--error {
@@ -662,6 +664,7 @@ input[type="submit"].btn:hover {
   color: #48110f;
 }
 /**
+* Extiende .btn
 * Botón de Info
 */
 .btn--info {
@@ -675,6 +678,7 @@ input[type="submit"].btn:hover {
   color: #308588;
 }
 /**
+* Extiende .btn
 * Botón principal
 */
 .btn--primary {
@@ -688,6 +692,7 @@ input[type="submit"].btn:hover {
   color: #000000;
 }
 /**
+* Extiende .btn
 * Botón de OK
 */
 .btn--success {
@@ -701,6 +706,7 @@ input[type="submit"].btn:hover {
   color: #153115;
 }
 /**
+* Extiende .btn
 * Botón de advertencia
 */
 .btn--warning {
@@ -728,7 +734,7 @@ input[type="submit"].btn:hover {
 \*------------------------------------*/
 /**
  * Variantes de los botones por tamaño.
- *
+ * Todas extienden .btn
  */
 .btn--mini {
   padding-right: 0.5em;
@@ -751,20 +757,28 @@ input[type="submit"].btn:hover {
 /**
  * Con esta clase podemos agrupar los botones
  * en grupos horizontales.
+ * el contenedor de los elementos con las clases
+ * .btn debe contener la clase .btn__group:
+	
+	<div class="btn__group">
+		<a class="btn">Botón 1</a>
+		<a class="btn">Botón 1</a>
+		<a class="btn">Botón 1</a>
+	</div>
  *
  */
-.btn--group {
+.btn__group {
   position: relative;
   *zoom: 1;
   *margin-left: .3em;
 }
-.btn--group .btn {
+.btn__group .btn {
   position: relative;
   border-radius: 0;
   float: left;
   margin-left: -1px;
 }
-.btn-group .btn:first-child {
+.btn__group .btn:first-child {
   margin-left: 0;
   -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 0;
@@ -782,7 +796,7 @@ input[type="submit"].btn:hover {
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
-.btn-group .btn:last-child {
+.btn__group .btn:last-child {
   -webkit-border-top-right-radius: 2px;
   -webkit-border-bottom-right-radius: 2px;
   -webkit-border-bottom-left-radius: 0;
@@ -799,7 +813,7 @@ input[type="submit"].btn:hover {
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
-.btn-group .btn.large:first-child {
+.btn__group .btn.large:first-child {
   margin-left: 0;
   -webkit-border-top-right-radius: 2px;
   -webkit-border-bottom-right-radius: 0;
@@ -817,7 +831,7 @@ input[type="submit"].btn:hover {
   -moz-background-clip: padding;
   background-clip: padding-box;
 }
-.btn-group .btn.large:last-child {
+.btn__group .btn.large:last-child {
   -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 2px;
   -webkit-border-bottom-left-radius: 0;
@@ -1569,6 +1583,13 @@ body {
 /*------------------------------------*\
     $TEXTURAS
 \*------------------------------------*/
+/**
+* Todas las cajas, popups y elementos informativos
+*
+* Más estilos adicionales:
+* http://twitter.github.com/bootstrap/components.html#alerts"
+* https://github.com/twitter/bootstrap/blob/master/less/alerts.less"
+*/
 .alert {
   margin-bottom: 1.5em;
   padding: 8px 35px 8px 14px;
@@ -1579,9 +1600,6 @@ body {
   font-size: 0.875rem;
   color: #904809;
   border-radius: 2px;
-}
-.alert .alert-heading {
-  color: inherit;
 }
 .alert .close {
   position: relative;
@@ -1594,47 +1612,50 @@ body {
   line-height: 18px;
   color: inherit;
 }
-.alert-success {
+.alert--success {
   background-color: #c5e6c5;
   border-color: #a2d6a2;
   color: #347834;
 }
-.alert-warning {
+.alert--warning {
   background-color: #fee7c7;
   border-color: #fcd296;
   color: #c17305;
 }
-.alert-error {
+.alert--error {
   background-color: #f4cac8;
   border-color: #eba19e;
   color: #da4f49;
 }
-.alert-info {
+.alert--info {
   background-color: #cbebec;
   border-color: #7fcfd2;
   color: #236062;
 }
-.alert-inverse {
+.alert--inverse {
   background-color: #414141;
   border-color: #000000;
   color: #ffffff;
 }
-.alert-block {
+.alert--block {
   padding-top: 14px;
   padding-bottom: 14px;
 }
-.alert-block .alert-heading {
+.alert--block .alert--heading {
   margin-bottom: 0.1875em;
   font-size: inherit;
   font-weight: bold;
 }
-.alert-block > p,
-.alert-block > ul {
+.alert--block > p,
+.alert--block > ul {
   margin-bottom: 0;
 }
-.alert-block p + p {
+.alert--block p + p {
   margin-top: 5px;
 }
+/*------------------------------------*\
+    $BADGES
+\*------------------------------------*/
 .badge {
   padding: 1px 9px 2px;
   font-size: 12px;
@@ -1655,39 +1676,42 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-.badge-error {
+.badge--error {
   background-color: #da4f49;
 }
-.badge-error:hover {
+.badge--error:hover {
   background-color: #9d2520;
 }
-.badge-warning {
+.badge--warning {
   background-color: #faa732;
 }
-.badge-warning:hover {
+.badge--warning:hover {
   background-color: #c17305;
 }
-.badge-success {
+.badge--success {
   background-color: #5bb75b;
 }
-.badge-success:hover {
+.badge--success:hover {
   background-color: #347834;
 }
-.badge-info {
+.badge--info {
   background-color: #a5dddf;
   color: #236062;
 }
-.badge-info:hover {
+.badge--info:hover {
   background-color: #5ac1c4;
 }
-.badge-inverse {
+.badge--inverse {
   background-color: #414141;
   color: #ffffff;
 }
-.badge-inverse:hover {
+.badge--inverse:hover {
   background-color: #0e0e0e;
   color: #ffffff;
 }
+/*------------------------------------*\
+    $GRADIENTES
+\*------------------------------------*/
 .basegrad {
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00a1cb), to(#007998));
   background-image: -webkit-linear-gradient(top, #00a1cb, #007998);
@@ -1758,6 +1782,9 @@ body {
   background-image: linear-gradient(top, #faa732, #f39106);
   background-repeat: repeat-x;
 }
+/*------------------------------------*\
+    $WELLS
+\*------------------------------------*/
 .well {
   min-height: 21px;
   padding: 11px;
@@ -1772,10 +1799,10 @@ body {
 .well p:last-child {
   margin-bottom: 0;
 }
-.well-large {
+.well--large {
   padding: 22px;
 }
-.well-small {
+.well--small {
   padding: 6px;
 }
 ::-moz-selection {
