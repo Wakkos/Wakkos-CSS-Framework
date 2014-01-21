@@ -5,24 +5,24 @@
 
 // HEADINGS ====================================================
 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
 margin : 0;
 font-family : $baseheadingfont;
 font-weight : $baseheadingfontweight;
 color : $baseheadingfontcolor;
-text-rendering : optimizelegibility; 
+text-rendering : optimizelegibility;
 	&.altheader {
 		color:$grey;
 		text-transform: uppercase;
 	}
 }
 
-h1 small, 
+h1 small,
 h2 small,
 h3 small {
 font-weight : normal;
@@ -30,38 +30,38 @@ display: block;
 color : $grey; }
 
 h1,
-.h1 { 
+.h1 {
 margin-bottom : $baselineheight / 2;
 @include font-size(32);
 line-height : 1.2; }
 
 h2,
-.h2 { 
+.h2 {
 margin-bottom : $baselineheight / 3;
 @include font-size(24);
 line-height : 1.2; }
 
 h3,
-.h3 { 
+.h3 {
 margin-bottom : $baselineheight / 4;
 @include font-size(21);
 line-height : 1.3; }
 
 h4,
-.h4 { 
+.h4 {
 margin-bottom : $baselineheight / 6;
 @include font-size(18);
 line-height : 1.25; }
 
 h5,
-.h5 { 
+.h5 {
 @include font-size(16);
 margin-bottom : $baselineheight / 6; }
 
 h6,
-.h6 { 
+.h6 {
 margin-bottom : $baselineheight / 6;
-@include font-size(14); 
+@include font-size(14);
  }
 
 // header
@@ -69,8 +69,8 @@ margin-bottom : $baselineheight / 6;
 .header h1,
 .header h2,
 .header h3 {
-float : left; 
-margin-right : $gutterwidth; 
+float : left;
+margin-right : $gutterwidth;
 
 a {
 display : block;
@@ -87,21 +87,21 @@ background-color : lighten($basecolor, 75%); }
 
 .header .a-rss,
 .header .a-rss:hover {
-float : left; 
+float : left;
 width : 16px;
 height : 16px;
 padding : 0;
 background : transparent url(../img/a-rss.png) no-repeat 0 0;
-@include hide-text; } 
+@include hide-text; }
 
 // TYPOGRAFÍA ====================================================
 
-p, 
-ol, 
-ul, 
-dl, 
-address { 
-margin-bottom : $baselineheight; 
+p,
+ol,
+ul,
+dl,
+address {
+margin-bottom : $baselineheight;
 line-height : $baselineheight;
  }
 
@@ -109,27 +109,27 @@ line-height : $baselineheight;
  	font-weight: bold;
  }
 
-small { 
+small {
 @include font-size(12);
 color: $grey; }
 
-ul, 
-ol { 
-margin : 0 0 $baselineheight - pxToEm($gutterwidth); 
+ul,
+ol {
+margin : 0 0 $baselineheight - pxToEm($gutterwidth);
 padding : 0 0 0 $gutterwidth; }
 
-li ul, 
-li ol { 
+li ul,
+li ol {
 margin : 0; }
 
 // blockquote
 
-blockquote  { 
-margin : 0 0 $baselineheight - pxToEm($gutterwidth); 
-padding-left : $gutterwidth; 
+blockquote  {
+margin : 0 0 $baselineheight - pxToEm($gutterwidth);
+padding-left : $gutterwidth;
 border-left : 2px solid $bordercolor;
 font-family : $altfont;
-font-style : normal; 
+font-style : normal;
 p {
 	@include font-size(18);
 color:$grey;
@@ -137,26 +137,26 @@ font-style: italic;
 }
 }
 
-q { 
+q {
 quotes : none;
 font-style: italic; }
 
-blockquote p::before, 
-blockquote p::after, 
-q:before, 
+blockquote p::before,
+blockquote p::after,
+q:before,
 q:after {
 content : ""; }
 
 cite {
-font-style : normal; } 
+font-style : normal; }
 
 // definition lists
 
-dl, 
-dd { 
+dl,
+dd {
 margin-bottom : $baselineheight;  }
 
-dt { 
+dt {
 font-weight : bold; }
 
 .dl-horizontal {
@@ -168,53 +168,53 @@ width : 20.25%;
 text-align : right; }
 
 dd {
-margin-left : 22.78%; } 
+margin-left : 22.78%; }
 }
 
 // text-level
 
-abbr[title] { 
-border-bottom : 1px dotted $bordercolor; 
+abbr[title] {
+border-bottom : 1px dotted $bordercolor;
 cursor : help; }
 
-b, strong { 
+b, strong {
 font-weight : bold; }
 
-dfn { 
+dfn {
 font-style : italic; }
 
-ins { 
-background-color : lighten($basecolor, 75%); 
-color : $textcolor; 
+ins {
+background-color : lighten($basecolor, 75%);
+color : $textcolor;
 text-decoration : none; }
 
-mark { 
+mark {
 background-color : yellow;
 color : $textcolor;  }
 
-pre, 
-code, 
-kbd, 
-samp { 
+pre,
+code,
+kbd,
+samp {
 font-family : $codefont;
 @include font-size(14);
 line-height : $baselineheight; }
 
-pre { 
-white-space : pre; 
-white-space : pre-wrap; 
+pre {
+white-space : pre;
+white-space : pre-wrap;
 word-wrap : break-word; }
 
-sub, 
-sup { 
+sub,
+sup {
 position : relative;
 @include font-size(12);
-line-height : 0; 
+line-height : 0;
 vertical-align : baselineheight; }
 
-sup { 
+sup {
 top : -.5em; }
 
-sub { 
+sub {
 bottom : -.25em; }
 

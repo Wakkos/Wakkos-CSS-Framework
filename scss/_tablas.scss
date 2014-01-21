@@ -8,13 +8,13 @@ max-width : 100%;
 margin-bottom : $baselineheight;
 border-collapse : collapse;
 border-spacing : 0;
-background-color : $tablebackground; 
+background-color : $tablebackground;
 
 th,
 td {
 padding : 8px;
 vertical-align : top;
-border-top : $tableborderwidth $tableborderstyle $tableborder; 
+border-top : $tableborderwidth $tableborderstyle $tableborder;
 @include font-size(14);
 line-height : $baselineheight;
 text-align : left; }
@@ -58,7 +58,7 @@ padding : 4px 5px; }
 border : $tableborderwidth $tableborderstyle $tableborder;
 border-left : 0;
 border-collapse : separate;
-*border-collapse : collapsed; 
+*border-collapse : collapsed;
 
 th,
 td {

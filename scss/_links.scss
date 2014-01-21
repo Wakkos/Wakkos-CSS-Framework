@@ -1,27 +1,27 @@
 /*------------------------------------*\
     $LINKS
 \*------------------------------------*/
-a { 
+a {
 	text-decoration : none;
-	color : $linkcolor; 
+	color : $linkcolor;
 
-	&:visited { 
-		color : $linkcolorvisited; 
+	&:visited {
+		color : $linkcolorvisited;
 	}
 
-	&:hover { 
+	&:hover {
 		text-decoration : underline;
-		color : $linkcolorhover; 
+		color : $linkcolorhover;
 	}
 
-	&:focus { 
-		outline : thin dotted; 
-		color : $linkcolorfocus; 
+	&:focus {
+		outline : thin dotted;
+		color : $linkcolorfocus;
 	}
 
-	&:hover, 
-	&:active { 
-		outline : 0; 
+	&:hover,
+	&:active {
+		outline : 0;
 	}
 }
 

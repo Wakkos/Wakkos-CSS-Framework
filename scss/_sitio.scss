@@ -3,41 +3,40 @@
 \*------------------------------------*/
 
 
-@-webkit-viewport { 
+@-webkit-viewport {
 width : device-width; }
 
-@-moz-viewport { 
+@-moz-viewport {
 width : device-width; }
 
-@-ms-viewport { 
+@-ms-viewport {
 width : device-width; }
 
-@-o-viewport { 
+@-o-viewport {
 width : device-width; }
 
-@viewport { 
+@viewport {
 width : device-width; }
 
 html {
-background : @background; 
+background : $background;
 font-size : 100%;
--webkit-overflow-scrolling : touch; 
--webkit-tap-highlight-color : lighten(@basecolor, 75%); 
--webkit-text-size-adjust : 100%; 
+-webkit-overflow-scrolling : touch;
+-webkit-tap-highlight-color : lighten($basecolor, 75%);
+-webkit-text-size-adjust : 100%;
 -ms-text-size-adjust : 100%; }
 
-body { 
+body {
 margin : 0;
 padding : 0;
 width : 100%;
 background-color : transparent;
-font-family : @basefont;
-.font-size();
-line-height : @baselineheight;
-color : @textcolor; }
+font-family : $basefont;
+@include font-size();
+line-height : $baselineheight;
+color : $textcolor; }
 
 /**
 * A partir de aquí es donde debes escribir los estilos de posicionamiento
 * y detalles que forman tu web. Disfruta!
 */
-
