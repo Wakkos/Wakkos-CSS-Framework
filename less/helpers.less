@@ -75,14 +75,9 @@ white-space : nowrap; }
   * Clear floats.
   */
 .clearfix {
-	*zoom : 1;
-	&:before,
-
-	&:after {
-	display: table;
-	content : ""; 
-	}
-	&:after {
-	clear : both; 
+	&::after {
+		content:"";
+	    display:table;
+	    clear:both; 
 	} 
 }

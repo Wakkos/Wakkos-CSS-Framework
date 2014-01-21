@@ -65,19 +65,9 @@
 /** 
   * Clear floats.
   */
-.clearfix,
-.nav {
-  *zoom: 1;
-}
-.clearfix:before,
-.clearfix:after,
-.nav:before,
-.nav:after {
-  display: table;
+.clearfix::after {
   content: "";
-}
-.clearfix:after,
-.nav:after {
+  display: table;
   clear: both;
 }
 /*------------------------------------*\
@@ -1143,6 +1133,11 @@ sub {
 		</ul>
 * 
 */
+.nav::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .nav > li {
   position: relative;
   display: inline-block;
@@ -1580,6 +1575,11 @@ body {
 * A partir de aquí es donde debes escribir los estilos de posicionamiento
 * y detalles que forman tu web. Disfruta!
 */
+.test::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 /*------------------------------------*\
     $TEXTURAS
 \*------------------------------------*/
@@ -1883,15 +1883,11 @@ section {
   margin-left: auto;
   margin-right: auto;
   max-width: 1024px;
-  *zoom: 1;
   margin-bottom: 3em;
 }
-section:before,
-section:after {
-  display: table;
+section::after {
   content: "";
-}
-section:after {
+  display: table;
   clear: both;
 }
 .altfont {
