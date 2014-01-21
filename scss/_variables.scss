@@ -21,7 +21,7 @@ $radius      : 2px;
 $hovertransition : .3s;
 $animationtime : .8s;
 
-// Web  
+// Web
 $background: 		white;
 $textcolor: 		darkergrey;
 $textcolor-strong:	black;
@@ -33,17 +33,17 @@ $basefontsize : 16;
 $baseheadingfont : inherit;
 $baseheadingfontweight : bold;
 $baseheadingfontcolor : inherit;
- 
+
 $altfont : Georgia, Times, "Times New Roman";
 $altlineheight : 1.35em;
- 
+
 $codefont : "Courier New", monospace;
 
 // Colores Base  //////////////////////
-$basecolor 		: #00a1cb;	 
-$baselight      : lighten($basecolor, 35%); 
+$basecolor 		: #00a1cb;
+$baselight      : lighten($basecolor, 35%);
 $secondary      : adjust-hue($basecolor, 180);
-$compcolor 		: rgb(218,128,45); 
+$compcolor 		: rgb(218,128,45);
 $bordercolor    : lighten($basecolor, 10);
 
 // Escala de grises  ///////////////
@@ -81,27 +81,27 @@ $alerttext			: darken($alertcolor, 60%);
 // Error
 $alerterrorcolor 	: lighten($errorcolor, 30%);
 $alerterrorborder  	: lighten($errorcolor, 20%);
-$alerterrortext 	: $errorcolor; 
+$alerterrortext 	: $errorcolor;
 
 // Info
 $alertinfocolor 	: lighten($infocolor, 10%);
 $alertinfoborder  	: darken($infocolor, 10%);
-$alertinfotext 		: darken($infocolor, 50%);  
+$alertinfotext 		: darken($infocolor, 50%);
 
 // Inverso
 $alertinversecolor 	: $inverscolor;
 $alertinverseborder : $black;
-$alertinversetext 	: $white;  
+$alertinversetext 	: $white;
 
 // Success
 $alertsuccesscolor 	: lighten($successcolor, 30%);
 $alertsuccessborder : lighten($successcolor, 20%);
-$alertsuccesstext 	: darken($successcolor, 20%); 
+$alertsuccesstext 	: darken($successcolor, 20%);
 
 // Advertencia
 $alertwarningcolor 	: lighten($warningcolor, 30%);
 $alertwarningborder : lighten($warningcolor, 20%);
-$alertwarningtext 	: darken($warningcolor, 20%); 
+$alertwarningtext 	: darken($warningcolor, 20%);
 
 // Colores sociales -> son los colores corporativos, pero cambiadlos si hace falta. (también podéis añadir más)  ///////////////////////
 $facebook       :rgb(59, 89, 182);
@@ -111,37 +111,37 @@ $pinterest      :rgb(203, 32, 39);
 $skype          :rgb(18,165,244);
 $spotify        :rgb(129,183,26);
 
- 
-// badges 
+
+// badges
 $badgebackground    : $basecolor;
 $badgecolor         : $textcolor;
- 
-// botones 
+
+// botones
 $buttonbackground   : $lightergrey;
 $buttonbordercolor  : darken($buttonbackground, 10%);
 $buttonbottombordercolor : darken($buttonbordercolor, 10%);
 $buttoncolor        : $black;
 $buttonborderwidth  : 1px;
 $buttonborderstyle  : solid;
- 
+
 // boxes (well)
 $wellbackground     : lighten($basecolor, 75%);
-$wellbordercolor    : darken($wellbackground, 20%); 
+$wellbordercolor    : darken($wellbackground, 20%);
 $wellborderwidth    : 1px;
 $wellborderstyle    : solid;
 $wellshadow         : darken($wellbackground, 10%);
 $wellshadowblur     : 10px;
- 
-// tablas 
+
+// tablas
 $tablebackground    : transparent;
 $tablestripe        : lighten($basecolor, 60%);
 $tablehover         : lighten($basecolor, 50%);
 $tableborder        : lighten($basecolor, 40%);
 $tableborderwidth   : 1px;
 $tableborderstyle   : solid;
- 
-// formularios 
-$inputbackground    : $white; 
+
+// formularios
+$inputbackground    : $white;
 $inputborder        : $lightgrey;
 $inputborderwidth   : 1px;
 $inputborderstyle   : solid;
@@ -150,7 +150,7 @@ $inputfocus         : $basecolor, 40%;
 $placeholdercolor   : $lightergrey;
 
 
-// Navegación 
+// Navegación
 $navitembordercolor    : $bordercolor;
 $navitempadding        : $gutterwidth / 2;
 $navtabsbordercolor    : $bordercolor;

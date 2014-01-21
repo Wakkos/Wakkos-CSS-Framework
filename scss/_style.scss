@@ -4,11 +4,11 @@
 /**
  * Aquí incluímos todos los módulos (archivos .less) que se can
  * a compilar en el CSS definitivo: /css/style.css.
- * Si no usas algún módulo, es recomendable que elimines 
+ * Si no usas algún módulo, es recomendable que elimines
  * o comentes su inclusión para no tener estilos innecesarios en tu CSS final
  * y optimizar lo máximo posible.
  */
- 
+
 @import "variables.less";
 
 @import "mixins.less";

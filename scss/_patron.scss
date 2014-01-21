@@ -12,7 +12,7 @@ section {
 	width: 90%;
 	@extend .max-width;
 	@include clearfix;
-	margin-bottom: $baselineheight * 2; 
+	margin-bottom: $baselineheight * 2;
 }
 .altfont {
 font-family:$altfont;
@@ -22,7 +22,7 @@ font-family:$altfont;
 	content: "#{$basefont}";
 }
 .altfont::after {
-	content: "#{$altfont}"; 
+	content: "#{$altfont}";
 }
 .code::after {
 	content: "#{$codefont}";
@@ -35,7 +35,7 @@ padding : 0;
 float:left; }
 
 .swatch-row {
-display : block; 
+display : block;
 margin : 0;
 padding : 0;
 width : 200px; }
@@ -43,7 +43,7 @@ width : 200px; }
 
 .swatch-row span {
 display : block;
-float : left; 
+float : left;
 width : 100px;
 height : 100px; }
 
@@ -66,7 +66,7 @@ height : 100px; }
 
 .swatch-secondary {
 	span:nth-child(1) {
-		background-color:$secondary; 
+		background-color:$secondary;
 	}
 	small::after {
 		content: "#{$secondary}";
@@ -81,7 +81,7 @@ height : 100px; }
 
 .swatch-compcolor {
 	span:nth-child(1) {
-		background-color:$compcolor; 
+		background-color:$compcolor;
 	}
 	small::after {
 		content: " #{$compcolor}";
@@ -95,7 +95,7 @@ height : 100px; }
 
 .swatch-alert {
 	span:nth-child(1) {
-		background-color:$alertcolor; 
+		background-color:$alertcolor;
 	}
 	small::after {
 		content: "#{$alertcolor}";
@@ -111,7 +111,7 @@ height : 100px; }
 
 .swatch-error {
 	span:nth-child(1) {
-		background-color:$errorcolor; 
+		background-color:$errorcolor;
 	}
 	small::after {
 		content: "#{$errorcolor}";
@@ -126,7 +126,7 @@ height : 100px; }
 
 .swatch-info {
 	span:nth-child(1) {
-		background-color:$infocolor; 
+		background-color:$infocolor;
 	}
 
 	small::after {
@@ -142,7 +142,7 @@ height : 100px; }
 
 .swatch-success {
 	span:nth-child(1) {
-		background-color:$successcolor; 
+		background-color:$successcolor;
 	}
 	small::after {
 		content: "#{$successcolor}";
@@ -158,7 +158,7 @@ height : 100px; }
 
 .swatch-warning {
 	span:nth-child(1) {
-		background-color:$warningcolor; 
+		background-color:$warningcolor;
 	}
 
 	small::after {
@@ -185,7 +185,7 @@ height : 100px; }
 		left: 0;
 		bottom:0;
 		width: 20px;
-		background-color: $grey; 
+		background-color: $grey;
 		@include border-radius(0,0,$radius, $radius);
 		@include transition(all $animationtime ease-in-out);
 	}
