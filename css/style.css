@@ -1617,11 +1617,6 @@ body {
 * A partir de aquí es donde debes escribir los estilos de posicionamiento
 * y detalles que forman tu web. Disfruta!
 */
-.test::after {
-  content: "";
-  display: table;
-  clear: both;
-}
 /*------------------------------------*\
     $TEXTURAS
 \*------------------------------------*/
@@ -1861,7 +1856,13 @@ body {
     $BREAKPOINTS
 \*------------------------------------*/
 /*
- * Cada Mediaquery se basará en la variable @bp$ e incluirá el archivo bp$.less
+ * Cada Mediaquery se basará en la variable @bp$ que definimos en lib/variables.less
+ * e incluirá el archivo bp$.less. 
+ * Recordad que el primer mediaquery es la ausencia de mediaquery tal y como
+ * lo haríamos si empezaramos mobile first.
+ */
+/*
+ * Primer Breakpoint
  */
 @media only screen and (min-width: 30em) {
   /*------------------------------------*\
@@ -1871,7 +1872,10 @@ body {
  * Estilos que entrarán en el breakpoint basado en la variable @bp1
  */
 }
-@media only screen and (min-width: 37.5em) {
+/*
+ * Segundo Breakpoint
+ */
+@media only screen and (min-width: only screen and (min-width: 37.5em)) {
   /*------------------------------------*\
     $BREAKPOINT_2
 \*------------------------------------*/
@@ -1879,7 +1883,10 @@ body {
  * Estilos que entrarán en el breakpoint basado en la variable @bp2
  */
 }
-@media only screen and (min-width: 48em) {
+/*
+ * Tercer Breakpoint
+ */
+@media only screen and (min-width: only screen and (min-width: 48em)) {
   /*------------------------------------*\
     $BREAKPOINT_3
 \*------------------------------------*/
@@ -1887,7 +1894,10 @@ body {
  * Estilos que entrarán en el breakpoint basado en la variable @bp3
  */
 }
-@media only screen and (min-width: 56.25em) {
+/*
+ * Cuarto Breakpoint
+ */
+@media only screen and (min-width: only screen and (min-width: 56.25em)) {
   /*------------------------------------*\
     $BREAKPOINT_4
 \*------------------------------------*/
@@ -1895,7 +1905,10 @@ body {
  * Estilos que entrarán en el breakpoint basado en la variable @bp4
  */
 }
-@media only screen and (min-width: 68.75em) {
+/*
+ * Quinto Breakpoint
+ */
+@media only screen and (min-width: only screen and (min-width: 68.25em)) {
   /*------------------------------------*\
     $BREAKPOINT_5
 \*------------------------------------*/
@@ -1903,6 +1916,9 @@ body {
  * Estilos que entrarán en el breakpoint basado en la variable @bp5
  */
 }
+/*
+ * Densidades mayores a @densityBP
+ */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /*------------------------------------*\
     $2x

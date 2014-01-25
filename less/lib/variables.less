@@ -6,11 +6,12 @@
 // Breakpoints
 // "Start with the small screen first, then expand until it looks like shit. Time to insert a breakpoint!"
 
-@bp1 : 30em;
-@bp2 : 37.5em;
-@bp3 : 48em;
-@bp4 : 56.25em;
-@bp5 : 68.75em;
+@bp1 : ~"only screen and (min-width: 30em)";
+@bp2 : ~"only screen and (min-width: 37.5em)";
+@bp3 : ~"only screen and (min-width: 48em)";
+@bp4 : ~"only screen and (min-width: 56.25em)";
+@bp5 : ~"only screen and (min-width: 68.25em)";
+@RetinaDensity: 1.5;
 
 // Layout
 @baseline : @baselineheight;
