@@ -247,12 +247,3 @@ column-gap : $colgap;
 column-rule-color : $columnRuleColor;
 column-rule-style : $columnRuleStyle;
 column-rule-width : $columnRuleWidth; }
-
-
-// Compass px to em
-
-@function pxToEm($target, $context: $base-font-size) {
-   @if $target == 0 { @return 0 }
-   @return $target / $context + 0em;
-}
-

@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    $STYLE
+\*------------------------------------*/
+/**
+ * Aquí incluímos todos los módulos (archivos .scss) que se can
+ * a compilar en el CSS definitivo: /css/style.css.
+ * Si no usas algún módulo, es recomendable que elimines
+ * o comentes su inclusión para no tener estilos innecesarios en tu CSS final
+ * y optimizar lo máximo posible.
+ */
+
+@import "contenido.scss";
+
+@import "lib/variables.scss";
+
+@import "lib/mixins.scss";
+
+@import "lib/helpers.scss";
+
+@import "componentes/reset.scss";
+
+@import "componentes/fuentes.scss";
+
+@import "componentes/links.scss";
+
+@import "componentes/tablas.scss";
+
+@import "componentes/botones.scss";
+
+@import "componentes/elementos.scss";
+
+@import "componentes/tipografia.scss";
+
+@import "componentes/navegacion.scss";
+
+@import "componentes/paginacion.scss";
+
+@import "componentes/formularios.scss";
+
+@import "layout/sitio.scss";
+
+@import "componentes/texturas.scss";
+
+@import "layout/breakpoints.scss";
+
+
+@import "patron.scss"; // Deberías eliminar/comentar esto, se usa solo para patrones.html
+
+@import "debug.scss";  // Utilizado para comprobar que el marcado HTML no contenga errores
