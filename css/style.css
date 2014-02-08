@@ -1,10 +1,11 @@
+@charset "UTF-8";
 /*------------------------------------*\
     $STYLE
 \*------------------------------------*/
 /**
- * Aquí incluímos todos los módulos (archivos .less) que se can
+ * Aquí incluímos todos los módulos (archivos .scss) que se can
  * a compilar en el CSS definitivo: /css/style.css.
- * Si no usas algún módulo, es recomendable que elimines 
+ * Si no usas algún módulo, es recomendable que elimines
  * o comentes su inclusión para no tener estilos innecesarios en tu CSS final
  * y optimizar lo máximo posible.
  */
@@ -21,7 +22,7 @@
  * Helpers....................... Clases de ayuda
 
  * Reset......................... Reinicio de valores CSS
- 
+
  * Fuentes....................... Fuentes que vamos a importar
 
  * Links......................... Formas y estilos de los links
@@ -45,48 +46,42 @@
  * Texturas...................... Badges, cajas y wells
 
  * Breakpoints................... Importamos breakpoints basados en las variables @bp$
- 
- * Patron........................ Estilos para la guía de patrones
 
- * Debug......................... Utilizado para revisar el marcado.
+ * Patron........................ Estilos para la guía de patrones
  */
 /*------------------------------------*\
     $VARIABLES
 \*------------------------------------*/
+/* Colores sociales -> son los colores corporativos, pero cambiadlos 
+ * si hace falta. (también podéis añadir más)  ///////////////////////
+ */
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
-.displayflex {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
 /*------------------------------------*\
     $HELPERS
 \*------------------------------------*/
-/** 
-  * The ghost, nudged to maintain perfect centering 
-  */
+/**
+* The ghost, nudged to maintain perfect centering
+*/
 .vcenter:before {
   content: '';
   display: inline-block;
   height: 100%;
-  vertical-align: middle;
-}
-/** 
-  * Escondemos el texto solo VISUALMENTE
-  */
-/** 
-  * Escondemos el texto de VISUALMENTE y SCREENREADERS
-  */
-/** 
-  * Escondemos pero mantenemos layout.
-  */
-/** 
-  * Visualmente escondido, pero se puede detectar con teclado (focus).
-  */
+  vertical-align: middle; }
+
+/**
+* Escondemos el texto solo VISUALMENTE
+*/
+/**
+* Escondemos el texto de VISUALMENTE y SCREENREADERS
+*/
+/**
+* Escondemos pero mantenemos layout.
+*/
+/**
+* Visualmente escondido, pero se puede detectar con teclado (focus).
+*/
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   position: static;
@@ -94,24 +89,27 @@
   height: auto;
   width: auto;
   margin: 0;
-  overflow: visible;
-}
-/** 
-  * Centrar y dar un ancho máximo igual a @pagemaxwidth.
-  */
-.max-width {
+  overflow: visible; }
+
+/**
+* Centrar y dar un ancho máximo igual a $pagemaxwidth.
+*/
+.max-width, section {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1024px;
-}
-/** 
-  * Clear floats.
-  */
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+  max-width: 1024px; }
+
+/**
+* Clear floats.
+*/
+.clearfix {
+  *zoom: 1; }
+  .clearfix:before, .clearfix:after {
+    display: table;
+    content: ""; }
+  .clearfix:after {
+    clear: both; }
+
 /*------------------------------------*\
     $RESET
 \*------------------------------------*/
@@ -136,32 +134,32 @@ main,
 nav,
 section,
 summary {
-  display: block;
-}
+  display: block; }
+
 /**
  * Correct `inline-block` display not defined in IE 8/9.
  */
 audio,
 canvas,
 video {
-  display: inline-block;
-}
+  display: inline-block; }
+
 /**
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
 audio:not([controls]) {
   display: none;
-  height: 0;
-}
+  height: 0; }
+
 /**
  * Address `[hidden]` styling not present in IE 8/9.
  * Hide the `template` element in IE, Safari, and Firefox < 22.
  */
 [hidden],
 template {
-  display: none;
-}
+  display: none; }
+
 /* ==========================================================================
    Base
    ========================================================================== */
@@ -176,14 +174,14 @@ html {
   -ms-text-size-adjust: 100%;
   /* 2 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
-}
+  /* 2 */ }
+
 /**
  * Remove default margin.
  */
 body {
-  margin: 0;
-}
+  margin: 0; }
+
 /* ==========================================================================
    Links
    ========================================================================== */
@@ -191,21 +189,21 @@ body {
  * Remove the gray background color from active links in IE 10.
  */
 a {
-  background: transparent;
-}
+  background: transparent; }
+
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
 a:focus {
-  outline: thin dotted;
-}
+  outline: thin dotted; }
+
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
 a:active,
 a:hover {
-  outline: 0;
-}
+  outline: 0; }
+
 /* ==========================================================================
    Typography
    ========================================================================== */
@@ -215,42 +213,42 @@ a:hover {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
-}
+  margin: 0.67em 0; }
+
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
 abbr[title] {
-  border-bottom: 1px dotted;
-}
+  border-bottom: 1px dotted; }
+
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
 b,
 strong {
-  font-weight: bold;
-}
+  font-weight: bold; }
+
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
 dfn {
-  font-style: italic;
-}
+  font-style: italic; }
+
 /**
  * Address differences between Firefox and other browsers.
  */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  height: 0;
-}
+  height: 0; }
+
 /**
  * Address styling not present in IE 8/9.
  */
 mark {
   background: #ff0;
-  color: #000;
-}
+  color: #000; }
+
 /**
  * Correct font family set oddly in Safari 5 and Chrome.
  */
@@ -259,26 +257,26 @@ kbd,
 pre,
 samp {
   font-family: monospace, serif;
-  font-size: 1em;
-}
+  font-size: 1em; }
+
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
 pre {
-  white-space: pre-wrap;
-}
+  white-space: pre-wrap; }
+
 /**
  * Set consistent quote types.
  */
 q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
-}
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
 /**
  * Address inconsistent and variable font size in all browsers.
  */
 small {
-  font-size: 80%;
-}
+  font-size: 80%; }
+
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
@@ -287,14 +285,14 @@ sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
+
 sup {
-  top: -0.5em;
-}
+  top: -0.5em; }
+
 sub {
-  bottom: -0.25em;
-}
+  bottom: -0.25em; }
+
 /* ==========================================================================
    Embedded content
    ========================================================================== */
@@ -302,14 +300,14 @@ sub {
  * Remove border when inside `a` element in IE 8/9.
  */
 img {
-  border: 0;
-}
+  border: 0; }
+
 /**
  * Correct overflow displayed oddly in IE 9.
  */
 svg:not(:root) {
-  overflow: hidden;
-}
+  overflow: hidden; }
+
 /* ==========================================================================
    Figures
    ========================================================================== */
@@ -317,8 +315,8 @@ svg:not(:root) {
  * Address margin not present in IE 8/9 and Safari 5.
  */
 figure {
-  margin: 0;
-}
+  margin: 0; }
+
 /* ==========================================================================
    Forms
    ========================================================================== */
@@ -328,8 +326,8 @@ figure {
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
+  padding: 0.35em 0.625em 0.75em; }
+
 /**
  * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
@@ -338,8 +336,8 @@ legend {
   border: 0;
   /* 1 */
   padding: 0;
-  /* 2 */
-}
+  /* 2 */ }
+
 /**
  * 1. Correct font family not being inherited in all browsers.
  * 2. Correct font size not being inherited in all browsers.
@@ -354,16 +352,16 @@ textarea {
   font-size: 100%;
   /* 2 */
   margin: 0;
-  /* 3 */
-}
+  /* 3 */ }
+
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
 button,
 input {
-  line-height: normal;
-}
+  line-height: normal; }
+
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
  * All other form control elements do not inherit `text-transform` values.
@@ -372,8 +370,8 @@ input {
  */
 button,
 select {
-  text-transform: none;
-}
+  text-transform: none; }
+
 /**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
  *    and `video` controls.
@@ -388,15 +386,15 @@ input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
-  /* 3 */
-}
+  /* 3 */ }
+
 /**
  * Re-set default cursor for disabled elements.
  */
 button[disabled],
 html input[disabled] {
-  cursor: default;
-}
+  cursor: default; }
+
 /**
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
@@ -406,8 +404,8 @@ input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
-  /* 2 */
-}
+  /* 2 */ }
+
 /**
  * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
@@ -419,24 +417,24 @@ input[type="search"] {
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   /* 2 */
-  box-sizing: content-box;
-}
+  box-sizing: content-box; }
+
 /**
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
+  -webkit-appearance: none; }
+
 /**
  * Remove inner padding and border in Firefox 4+.
  */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
-  padding: 0;
-}
+  padding: 0; }
+
 /**
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
@@ -445,8 +443,8 @@ textarea {
   overflow: auto;
   /* 1 */
   vertical-align: top;
-  /* 2 */
-}
+  /* 2 */ }
+
 /* ==========================================================================
    Tables
    ========================================================================== */
@@ -455,26 +453,26 @@ textarea {
  */
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
+
 ul li {
-  list-style-type: none;
-}
+  list-style-type: none; }
+
 /*------------------------------------*\
     $FUENTES
 \*------------------------------------*/
 /*
- * Por defecto incluyo una fuente de icomoon (http://icomoon.io/) 
+ * Por defecto incluyo una fuente de icomoon (http://icomoon.io/)
  * con 5 iconos que se encuentra en la carpeta /fonts.
- * Ve y adàptalos a tu web.  
+ * Ve y adàptalos a tu web.
  */
 @font-face {
   font-family: 'icomoon';
-  src: url('fonts/icomoon.eot');
-  src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('fonts/icomoon.woff') format('woff'), url('fonts/icomoon.ttf') format('truetype'), url('fonts/icomoon.svg#icomoon') format('svg');
+  src: url("fonts/icomoon.eot");
+  src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/icomoon.woff") format("woff"), url("fonts/icomoon.ttf") format("truetype"), url("fonts/icomoon.svg#icomoon") format("svg");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
+
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
   font-family: 'icomoon';
@@ -485,19 +483,15 @@ ul li {
   text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -moz-osx-font-smoothing: grayscale; }
+
 /* Use the following CSS code if you want to have a class per icon */
 /*
 Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-cloud-download,
-.icon-cloud-upload,
-.icon-user,
-.icon-css3,
-.icon-eye {
+.icon-cloud-download, .icon-cloud-upload, .icon-user, .icon-css3, .icon-eye {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -505,45 +499,40 @@ you can use the generic selector below, but it's slower:
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
+  -webkit-font-smoothing: antialiased; }
+
 .icon-cloud-download:before {
-  content: "\e009";
-}
+  content: "\e009"; }
+
 .icon-cloud-upload:before {
-  content: "\e000";
-}
+  content: "\e000"; }
+
 .icon-user:before {
-  content: "\e001";
-}
+  content: "\e001"; }
+
 .icon-css3:before {
-  content: "\f13c";
-}
+  content: "\f13c"; }
+
 .icon-eye:before {
-  content: "\e002";
-}
+  content: "\e002"; }
+
 /*------------------------------------*\
     $LINKS
 \*------------------------------------*/
 a {
   text-decoration: none;
-  color: #00a1cb;
-}
-a:visited {
-  color: #00a1cb;
-}
-a:hover {
-  text-decoration: underline;
-  color: #007998;
-}
-a:focus {
-  outline: thin dotted;
-  color: #007998;
-}
-a:hover,
-a:active {
-  outline: 0;
-}
+  color: #00a1cb; }
+  a:visited {
+    color: #00a1cb; }
+  a:hover {
+    text-decoration: underline;
+    color: #007998; }
+  a:focus {
+    outline: thin dotted;
+    color: #007998; }
+  a:hover, a:active {
+    outline: 0; }
+
 /*------------------------------------*\
     $TABLAS
 \*------------------------------------*/
@@ -553,68 +542,59 @@ table {
   margin-bottom: 1.5em;
   border-collapse: collapse;
   border-spacing: 0;
-  background-color: transparent;
-}
-table th,
-table td {
-  padding: 8px;
-  vertical-align: top;
-  border-top: 1px solid #98eaff;
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.5em;
-  text-align: left;
-}
-table th {
-  font-weight: bold;
-}
-table thead th {
-  vertical-align: bottom;
-}
-table colgroup + thead tr:first-child th,
-table colgroup + thead tr:first-child td,
-table thead:first-child tr:first-child th,
-table thead:first-child tr:first-child td {
-  border-top: 0;
-}
-table tbody + tbody {
-  border-top: 2px solid #98eaff;
-}
-table tbody tr td,
-table tbody tr th {
-  -webkit-transition: background-color 0.25s 0 linear;
-  -moz-transition: background-color 0.25s 0 linear;
-  -ms-transition: background-color 0.25s 0 linear;
-  -o-transition: background-color 0.25s 0 linear;
-  transition: background-color 0.25s 0 linear;
-}
-table tbody tr:hover td,
-table tbody tr:hover th {
-  background-color: #cbf4ff;
-}
+  background-color: transparent; }
+  table th,
+  table td {
+    padding: 8px;
+    vertical-align: top;
+    border-top: 1px solid #98eaff;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    text-align: left; }
+  table th {
+    font-weight: bold; }
+  table thead th {
+    vertical-align: bottom; }
+  table colgroup + thead tr:first-child th,
+  table colgroup + thead tr:first-child td,
+  table thead:first-child tr:first-child th,
+  table thead:first-child tr:first-child td {
+    border-top: 0; }
+  table tbody + tbody {
+    border-top: 2px solid #98eaff; }
+  table tbody tr td,
+  table tbody tr th {
+    -webkit-transition: background-color 0.25s 0 linear;
+    -moz-transition: background-color 0.25s 0 linear;
+    -ms-transition: background-color 0.25s 0 linear;
+    -o-transition: background-color 0.25s 0 linear;
+    transition: background-color 0.25s 0 linear; }
+  table tbody tr:hover td,
+  table tbody tr:hover th {
+    background-color: #cbf4ff; }
+
 .table-condensed th,
 .table-condensed td {
-  padding: 4px 5px;
-}
+  padding: 4px 5px; }
+
 .table-bordered {
   border: 1px solid #98eaff;
   border-left: 0;
   border-collapse: separate;
-  *border-collapse: collapsed;
-}
-.table-bordered th,
-.table-bordered td {
-  border-left: 1px solid #98eaff;
-}
-.table-bordered thead:first-child tr:first-child th,
-.table-bordered tbody:first-child tr:first-child th,
-.table-bordered tbody:first-child tr:first-child td {
-  border-top: 0;
-}
+  *border-collapse: collapsed; }
+  .table-bordered th,
+  .table-bordered td {
+    border-left: 1px solid #98eaff; }
+  .table-bordered thead:first-child tr:first-child th,
+  .table-bordered tbody:first-child tr:first-child th,
+  .table-bordered tbody:first-child tr:first-child td {
+    border-top: 0; }
+
 .table-striped tbody tr:nth-child(odd) td,
 .table-striped tbody tr:nth-child(odd) th {
-  background-color: #feffff;
-}
+  background-color: #feffff; }
+
 /*------------------------------------*\
     $BOTONES
 \*------------------------------------*/
@@ -622,13 +602,13 @@ table tbody tr:hover th {
  * Definimos los botones y sus variantes
  */
 /**
- * .btn es la clase principal para definir un botón
- */
+* .btn es la clase principal para definir un botón
+*/
 .btn {
   display: inline-block;
   *zoom: 1;
   line-height: 3em;
-  color: #262626;
+  color: darkergrey;
   text-align: center;
   vertical-align: middle;
   font-size: 100%;
@@ -643,21 +623,17 @@ table tbody tr:hover th {
   padding-right: 1em;
   padding-left: 1em;
   border-radius: 2px;
-  /**
- 	* Nadie quiere un botón con texto subrayado cuando
- 	* hacemos hover.
- 	*/
-}
-.btn:hover {
-  text-decoration: none;
-}
-.btn:active,
-.btn:focus {
-  outline: none;
-}
-.btn:visited {
-  color: #262626;
-}
+  	/**
+   	* Nadie quiere un botón con texto subrayado cuando
+   	* hacemos hover.
+   	*/ }
+  .btn:hover {
+    text-decoration: none; }
+  .btn:active, .btn:focus {
+    outline: none; }
+  .btn:visited {
+    color: darkergrey; }
+
 /*------------------------------------*\
     $VARIANTES
 \*------------------------------------*/
@@ -669,88 +645,72 @@ table tbody tr:hover th {
 * Inputs con estilo de botones
 */
 input[type="submit"].btn:hover {
-  border-color: #cccccc;
-}
+  border-color: #cccccc; }
+
 /**
-* Extiende .btn
 * Botón no disponible
 */
 .btn--disabled {
   -webkit-opacity: 0.5;
   -moz-opacity: 0.5;
   opacity: 0.5;
-  cursor: default;
-}
+  cursor: default; }
+
 /**
-* Extiende .btn
 * Botón de Error
 */
 .btn--error {
   background-color: #da4f49;
-  color: #48110f;
-}
-.btn--error:hover {
-  color: #fcf3f3;
-}
-.btn--error:visited {
-  color: #48110f;
-}
+  color: #48110f; }
+  .btn--error:hover {
+    color: #fcf3f3; }
+  .btn--error:visited {
+    color: #48110f; }
+
 /**
-* Extiende .btn
 * Botón de Info
 */
 .btn--info {
   background-color: #a5dddf;
-  color: #308588;
-}
-.btn--info:hover {
-  color: #ffffff;
-}
-.btn--info:visited {
-  color: #308588;
-}
+  color: #308588; }
+  .btn--info:hover {
+    color: white; }
+  .btn--info:visited {
+    color: #308588; }
+
 /**
-* Extiende .btn
 * Botón principal
 */
 .btn--primary {
   background-color: #00a1cb;
-  color: #ffffff;
-}
-.btn--primary:hover {
-  color: #98eaff;
-}
-.btn--primary:visited {
-  color: #000000;
-}
+  color: white; }
+  .btn--primary:hover {
+    color: #98eaff; }
+  .btn--primary:visited {
+    color: black; }
+
 /**
-* Extiende .btn
 * Botón de OK
 */
 .btn--success {
   background-color: #5bb75b;
-  color: #153115;
-}
-.btn--success:hover {
-  color: #e9f5e9;
-}
-.btn--success:visited {
-  color: #153115;
-}
+  color: #153115; }
+  .btn--success:hover {
+    color: #e9f5e9; }
+  .btn--success:visited {
+    color: #153115; }
+
 /**
-* Extiende .btn
 * Botón de advertencia
 */
 .btn--warning {
   background-color: #faa732;
-  color: #5e3802;
-}
-.btn--warning:hover {
-  color: #fffcf9;
-}
-.btn--warning:visited {
-  color: #5e3802;
-}
+  color: #5e3802; }
+  .btn--warning:hover {
+    color: #fffcf9; }
+  .btn--warning:visited {
+    color: #5e3802; }
+
 .btn--inactive,
 .btn--inactive:hover,
 .btn--inactive:active,
@@ -759,58 +719,50 @@ input[type="submit"].btn:hover {
   -moz-opacity: 0.5;
   opacity: 0.5;
   cursor: default;
-  cursor: text;
-}
+  cursor: text; }
+
 /*------------------------------------*\
     $TAMAÑOS
 \*------------------------------------*/
 /**
  * Variantes de los botones por tamaño.
- * Todas extienden .btn
+ *
  */
 .btn--mini {
   padding-right: 0.5em;
   padding-left: 0.5em;
-  line-height: 2;
-}
+  line-height: 2; }
+
 .btn--small {
   padding-right: 1.5em;
   padding-left: 1.5em;
-  line-height: 3;
-}
+  line-height: 3; }
+
 .btn--large {
   padding-right: 3em;
   padding-left: 3em;
-  line-height: 4;
-}
+  line-height: 4; }
+
 /*------------------------------------*\
     $GRUPOS
 \*------------------------------------*/
 /**
  * Con esta clase podemos agrupar los botones
  * en grupos horizontales.
- * el contenedor de los elementos con las clases
- * .btn debe contener la clase .btn__group:
-	
-	<div class="btn__group">
-		<a class="btn">Botón 1</a>
-		<a class="btn">Botón 1</a>
-		<a class="btn">Botón 1</a>
-	</div>
  *
  */
-.btn__group {
+.btn--group {
   position: relative;
   *zoom: 1;
-  *margin-left: .3em;
-}
-.btn__group .btn {
+  *margin-left: .3em; }
+
+.btn--group .btn {
   position: relative;
   border-radius: 0;
   float: left;
-  margin-left: -1px;
-}
-.btn__group .btn:first-child {
+  margin-left: -1px; }
+
+.btn-group .btn:first-child {
   margin-left: 0;
   -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 0;
@@ -826,9 +778,9 @@ input[type="submit"].btn:hover {
   border-top-left-radius: 2px;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
-  background-clip: padding-box;
-}
-.btn__group .btn:last-child {
+  background-clip: padding-box; }
+
+.btn-group .btn:last-child {
   -webkit-border-top-right-radius: 2px;
   -webkit-border-bottom-right-radius: 2px;
   -webkit-border-bottom-left-radius: 0;
@@ -843,9 +795,9 @@ input[type="submit"].btn:hover {
   border-top-left-radius: 0;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
-  background-clip: padding-box;
-}
-.btn__group .btn.large:first-child {
+  background-clip: padding-box; }
+
+.btn-group .btn.large:first-child {
   margin-left: 0;
   -webkit-border-top-right-radius: 2px;
   -webkit-border-bottom-right-radius: 0;
@@ -861,9 +813,9 @@ input[type="submit"].btn:hover {
   border-top-left-radius: 0;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
-  background-clip: padding-box;
-}
-.btn__group .btn.large:last-child {
+  background-clip: padding-box; }
+
+.btn-group .btn.large:last-child {
   -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 2px;
   -webkit-border-bottom-left-radius: 0;
@@ -878,8 +830,8 @@ input[type="submit"].btn:hover {
   border-top-left-radius: 2px;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
-  background-clip: padding-box;
-}
+  background-clip: padding-box; }
+
 /*------------------------------------*\
     $TAMAÑOS-FUENTES
 \*------------------------------------*/
@@ -887,14 +839,14 @@ input[type="submit"].btn:hover {
  * Modificadores del tamaño de la fuente  de los botones.
  */
 .btn--alpha {
-  font-size: 3rem;
-}
+  font-size: 3rem; }
+
 .btn--beta {
-  font-size: 2rem;
-}
+  font-size: 2rem; }
+
 .btn--gamma {
-  font-size: 1rem;
-}
+  font-size: 1rem; }
+
 /*------------------------------------*\
     $ELEMENTOS
 \*------------------------------------*/
@@ -905,40 +857,38 @@ hr {
   padding: 0;
   height: 1px;
   border: 0;
-  border-top: 1px solid #00c9fe;
-}
+  border-top: 1px solid #00c9fe; }
+
 img {
   max-width: 100%;
   border-width: 0;
   vertical-align: middle;
-  -ms-interpolation-mode: bicubic;
-}
+  -ms-interpolation-mode: bicubic; }
+
 .img-rounded {
-  border-radius: 8px;
-}
+  border-radius: 8px; }
+
 .img-polaroid {
   padding: 12px;
-  background-color: #ffffff;
+  background-color: white;
   border: 1px solid #00c9fe;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
+
 .img-circle {
-  border-radius: 100%;
-}
+  border-radius: 100%; }
+
 figure {
-  margin-bottom: 1.5em;
-}
-figure img {
-  margin-bottom: 0.375em;
-}
-figure figcaption {
-  display: block;
-  font-weight: normal;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-style: italic;
-  color: #808080;
-}
+  margin-bottom: 1.5em; }
+  figure img {
+    margin-bottom: 0.375em; }
+  figure figcaption {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-style: italic;
+    color: gray; }
+
 /*------------------------------------*\
     $TIPOGRAFÍA
 \*------------------------------------*/
@@ -952,87 +902,84 @@ h6 {
   font-family: inherit;
   font-weight: bold;
   color: inherit;
-  text-rendering: optimizelegibility;
-}
-h1.altheader,
-h2.altheader,
-h3.altheader,
-h4.altheader,
-h5.altheader,
-h6.altheader {
-  color: #808080;
-  text-transform: uppercase;
-}
+  text-rendering: optimizelegibility; }
+  h1.altheader,
+  h2.altheader,
+  h3.altheader,
+  h4.altheader,
+  h5.altheader,
+  h6.altheader {
+    color: gray;
+    text-transform: uppercase; }
+
 h1 small,
 h2 small,
 h3 small {
   font-weight: normal;
   display: block;
-  color: #808080;
-}
+  color: gray; }
+
 h1,
 .h1 {
   margin-bottom: 0.75em;
   font-size: 32px;
   font-size: 2rem;
-  line-height: 1.2;
-}
+  line-height: 1.2; }
+
 h2,
 .h2 {
   margin-bottom: 0.5em;
   font-size: 24px;
   font-size: 1.5rem;
-  line-height: 1.2;
-}
+  line-height: 1.2; }
+
 h3,
 .h3 {
   margin-bottom: 0.375em;
   font-size: 21px;
   font-size: 1.3125rem;
-  line-height: 1.3;
-}
+  line-height: 1.3; }
+
 h4,
 .h4 {
   margin-bottom: 0.25em;
   font-size: 18px;
   font-size: 1.125rem;
-  line-height: 1.25;
-}
+  line-height: 1.25; }
+
 h5,
 .h5 {
   font-size: 16px;
   font-size: 1rem;
-  margin-bottom: 0.25em;
-}
+  margin-bottom: 0.25em; }
+
 h6,
 .h6 {
   margin-bottom: 0.25em;
   font-size: 14px;
-  font-size: 0.875rem;
-}
+  font-size: 0.875rem; }
+
 .header h1,
 .header h2,
 .header h3 {
   float: left;
-  margin-right: 24px;
-}
-.header h1 a,
-.header h2 a,
-.header h3 a {
-  display: block;
-  position: relative;
-  top: 6px;
-  float: right;
-  padding: 4px 12px;
-  font-size: 14px;
-  font-size: 0.875rem;
-  background-color: #ffffff;
-}
-.header h1:hover,
-.header h2:hover,
-.header h3:hover {
-  background-color: #ffffff;
-}
+  margin-right: 24px; }
+  .header h1 a,
+  .header h2 a,
+  .header h3 a {
+    display: block;
+    position: relative;
+    top: 6px;
+    float: right;
+    padding: 4px 12px;
+    font-size: 14px;
+    font-size: 0.875rem;
+    background-color: white; }
+  .header h1:hover,
+  .header h2:hover,
+  .header h3:hover {
+    background-color: white; }
+
 .header .a-rss,
 .header .a-rss:hover {
   float: left;
@@ -1042,95 +989,92 @@ h6,
   background: transparent url(../img/a-rss.png) no-repeat 0 0;
   text-indent: 100%;
   white-space: nowrap;
-  overflow: hidden;
-}
+  overflow: hidden; }
+
 p,
 ol,
 ul,
 dl,
 address {
   margin-bottom: 1.5em;
-  line-height: 1.5em;
-}
+  line-height: 1.5em; }
+
 .intro {
-  font-weight: bold;
-}
+  font-weight: bold; }
+
 small {
   font-size: 12px;
   font-size: 0.75rem;
-  color: #808080;
-}
+  color: gray; }
+
 ul,
 ol {
-  margin: 0 0 1.5em -24px;
-  padding: 0 0 0 24px;
-}
+  margin: 0 0 1.5em-pxToEm(24px);
+  padding: 0 0 0 24px; }
+
 li ul,
 li ol {
-  margin: 0;
-}
+  margin: 0; }
+
 blockquote {
-  margin: 0 0 1.5em -24px;
+  margin: 0 0 1.5em-pxToEm(24px);
   padding-left: 24px;
   border-left: 2px solid #00c9fe;
   font-family: Georgia, Times, "Times New Roman";
-  font-style: normal;
-}
-blockquote p {
-  font-size: 18px;
-  font-size: 1.125rem;
-  color: #808080;
-  font-style: italic;
-}
+  font-style: normal; }
+  blockquote p {
+    font-size: 18px;
+    font-size: 1.125rem;
+    color: gray;
+    font-style: italic; }
+
 q {
   quotes: none;
-  font-style: italic;
-}
+  font-style: italic; }
+
 blockquote p::before,
 blockquote p::after,
 q:before,
 q:after {
-  content: '"';
-}
+  content: ""; }
+
 cite {
-  font-style: normal;
-}
+  font-style: normal; }
+
 dl,
 dd {
-  margin-bottom: 1.5em;
-}
+  margin-bottom: 1.5em; }
+
 dt {
-  font-weight: bold;
-}
+  font-weight: bold; }
+
 .dl-horizontal dt {
   float: left;
   clear: left;
   width: 20.25%;
-  text-align: right;
-}
+  text-align: right; }
 .dl-horizontal dd {
-  margin-left: 22.78%;
-}
+  margin-left: 22.78%; }
+
 abbr[title] {
   border-bottom: 1px dotted #00c9fe;
-  cursor: help;
-}
-b,
-strong {
-  font-weight: bold;
-}
+  cursor: help; }
+
+b, strong {
+  font-weight: bold; }
+
 dfn {
-  font-style: italic;
-}
+  font-style: italic; }
+
 ins {
-  background-color: #ffffff;
-  color: #262626;
-  text-decoration: none;
-}
+  background-color: white;
+  color: darkergrey;
+  text-decoration: none; }
+
 mark {
   background-color: yellow;
-  color: #262626;
-}
+  color: darkergrey; }
+
 pre,
 code,
 kbd,
@@ -1138,32 +1082,40 @@ samp {
   font-family: "Courier New", monospace;
   font-size: 14px;
   font-size: 0.875rem;
-  line-height: 1.5em;
-}
+  line-height: 1.5em; }
+
 pre {
   white-space: pre;
   white-space: pre-wrap;
-  word-wrap: break-word;
-}
+  word-wrap: break-word; }
+
 sub,
 sup {
   position: relative;
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 0;
-  vertical-align: baselineheight;
-}
+  vertical-align: baselineheight; }
+
 sup {
-  top: -0.5em;
-}
+  top: -.5em; }
+
 sub {
-  bottom: -0.25em;
-}
+  bottom: -.25em; }
+
+.small {
+  font-size: 12px;
+  font-size: 0.75rem; }
+
+.huge {
+  font-size: 18px;
+  font-size: 1.125rem; }
+
 /*------------------------------------*\
     $NAVEGACIÓN
 \*------------------------------------*/
 /**
-* 
+*
 * Le asignamos la clase .nav al ul que contenga la navegación:
 
 		 <ul class="nav">
@@ -1173,28 +1125,20 @@ sub {
 			<li><a href="services.html">Services</a></li>
 			<li><a href="contact.html">Contact us</a></li>
 		</ul>
-* 
+*
 */
-.nav::after {
-  content: "";
-  display: table;
-  clear: both;
-}
 .nav > li {
   position: relative;
-  display: inline-block;
-}
-.nav > li > a {
-  position: relative;
-  padding: 12px;
-}
-.nav > li > a:hover,
-.nav > li > a:focus {
-  text-decoration: none;
-  background-color: #00c9fe;
-}
+  display: inline-block; }
+  .nav > li > a {
+    position: relative;
+    padding: 12px; }
+    .nav > li > a:hover, .nav > li > a:focus {
+      text-decoration: none;
+      background-color: #00c9fe; }
+
 /**
-* 
+*
 * .nav--fit extiende a .nav y alarga la navegación
 * para que ocupe el 100% de su contenedor
 
@@ -1205,20 +1149,18 @@ sub {
 			<li><a href="services.html">Services</a></li>
 			<li><a href="contact.html">Contact us</a></li>
 		</ul>
-* 
+*
 */
 .nav--fit {
   display: table;
-  width: 100%;
-}
-.nav--fit > li {
-  display: table-cell;
-}
-.nav--fit > li > a {
-  display: block;
-}
+  width: 100%; }
+  .nav--fit > li {
+    display: table-cell; }
+    .nav--fit > li > a {
+      display: block; }
+
 /**
-* 
+*
 * .nav--tabs extiende a .nav y crea la base para una navegación
 * en pestañas.
 
@@ -1229,17 +1171,15 @@ sub {
 			<li><a href="services.html">Services</a></li>
 			<li><a href="contact.html">Contact us</a></li>
 		</ul>
-* 
+*
 */
 .nav--tabs {
-  border-bottom: 1px solid #00c9fe;
-}
-.nav--tabs > li {
-  margin-bottom: -1px;
-}
-.nav--tabs > li > a {
-  display: block;
-}
+  border-bottom: 1px solid #00c9fe; }
+  .nav--tabs > li {
+    margin-bottom: -1px; }
+    .nav--tabs > li > a {
+      display: block; }
+
 /*------------------------------------*\
     $PAGINACION
 \*------------------------------------*/
@@ -1266,65 +1206,59 @@ sub {
 .pagination {
   text-align: center;
   /**
-     * Remove whitespace caused by `inline-block`.
-     */
+   * Remove whitespace caused by `inline-block`.
+   */
   letter-spacing: -0.31em;
-  word-spacing: -0.43em;
-}
+  word-spacing: -0.43em; }
+
 .pagination > li {
   display: inline-block;
   padding: 12PX;
   letter-spacing: normal;
-  word-spacing: normal;
-}
+  word-spacing: normal; }
+
 .pagination > li > a {
   padding: 12PX;
-  margin: -12px;
-}
+  margin: -12px; }
+
 .pagination__first a:before {
-  content: "\00AB" "\00A0";
-}
+  content: "\00AB" "\00A0"; }
+
 .pagination__last a:after {
-  content: "\00A0" "\00BB";
-}
+  content: "\00A0" "\00BB"; }
+
 /*------------------------------------*\
     $FORMULARIOS
 \*------------------------------------*/
 form {
-  margin: 0 0 1.5em 0;
-}
-form fieldset {
-  margin-bottom: 1.5em;
-  padding: 0;
-  border-width: 0;
-}
-form legend {
-  display: block;
-  width: 100%;
-  margin-bottom: 3em;
-  *margin-left: -7px;
-  padding: 0;
-  color: #262626;
-  border: 0;
-  border-bottom: 1px solid #bfbfbf;
-  white-space: normal;
-}
-form legend small {
-  font-size: 14px;
-  font-size: 0.875rem;
-  color: #bfbfbf;
-}
-form p {
-  margin-bottom: 0.75em;
-}
-form ul {
-  list-style-type: none;
-  margin: 0 0 1.5em 0;
-  padding: 0;
-}
-form br {
-  display: none;
-}
+  margin: 0 0 1.5em 0; }
+  form fieldset {
+    margin-bottom: 1.5em;
+    padding: 0;
+    border-width: 0; }
+  form legend {
+    display: block;
+    width: 100%;
+    margin-bottom: 3em;
+    *margin-left: -7px;
+    padding: 0;
+    color: darkergrey;
+    border: 0;
+    border-bottom: 1px solid #bfbfbf;
+    white-space: normal; }
+    form legend small {
+      font-size: 14px;
+      font-size: 0.875rem;
+      color: #bfbfbf; }
+  form p {
+    margin-bottom: 0.75em; }
+  form ul {
+    list-style-type: none;
+    margin: 0 0 1.5em 0;
+    padding: 0; }
+  form br {
+    display: none; }
+
 label,
 input,
 button,
@@ -1334,8 +1268,8 @@ textarea {
   font-size: 0.875rem;
   border-radius: 2px;
   vertical-align: baseline;
-  *vertical-align: middle;
-}
+  *vertical-align: middle; }
+
 input,
 button,
 select,
@@ -1344,20 +1278,19 @@ textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
+
 label {
   display: block;
   margin-bottom: 0.1875em;
   font-weight: bold;
-  color: #262626;
-  cursor: pointer;
-}
-label input,
-label textarea,
-label select {
-  display: block;
-}
+  color: darkergrey;
+  cursor: pointer; }
+  label input,
+  label textarea,
+  label select {
+    display: block; }
+
 input,
 textarea,
 select {
@@ -1365,21 +1298,20 @@ select {
   width: 100%;
   padding: 4px;
   margin-bottom: 0.375em;
-  background-color: #ffffff;
+  background-color: white;
   border: 1px solid #bfbfbf;
-  color: #262626;
-}
-input:hover,
-textarea:hover,
-select:hover {
-  border-color: #808080;
-}
+  color: darkergrey; }
+  input:hover,
+  textarea:hover,
+  select:hover {
+    border-color: gray; }
+
 .input-mini {
-  width: 60px;
-}
+  width: 60px; }
+
 .input-small {
-  width: 90px;
-}
+  width: 90px; }
+
 input[type="image"],
 input[type="checkbox"],
 input[type="radio"] {
@@ -1390,8 +1322,8 @@ input[type="radio"] {
   *margin-top: 0;
   line-height: normal;
   cursor: pointer;
-  border: 0 \9;
-}
+  border: 0 \9; }
+
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
@@ -1400,14 +1332,13 @@ input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
   *width: 13px;
-  *height: 13px;
-}
+  *height: 13px; }
+
 input[type="image"] {
   border: 0;
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
+  box-shadow: none; }
+
 input[type="file"] {
   width: auto;
   padding: initial;
@@ -1416,62 +1347,62 @@ input[type="file"] {
   background-color: transparent;
   background-color: initial;
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
+  box-shadow: none; }
+
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   width: auto;
   height: auto;
   cursor: pointer;
-  *overflow: visible;
-}
+  *overflow: visible; }
+
 select,
 input[type="file"] {
   height: 28px;
   *margin-top: 4px;
-  line-height: 28px;
-}
+  line-height: 28px; }
+
 select {
-  background-color: #ffffff;
+  background-color: white;
   font-size: 13px;
-  font-size: 0.8125rem;
-}
+  font-size: 0.8125rem; }
+
 select[multiple],
 select[size] {
-  height: auto;
-}
+  height: auto; }
+
 textarea {
   resize: vertical;
+  overflow: auto;
   height: auto;
   overflow: auto;
-  vertical-align: top;
-}
+  vertical-align: top; }
+
 input[type="hidden"] {
-  display: none;
-}
+  display: none; }
+
 .radio,
 .checkbox {
   padding-left: 18px;
-  font-weight: normal;
-}
+  font-weight: normal; }
+
 .radio input[type="radio"],
 .checkbox input[type="checkbox"] {
   float: left;
-  margin-left: -18px;
-}
+  margin-left: -18px; }
+
 .radio.inline,
 .checkbox.inline {
   display: inline-block;
   padding-top: 5px;
   margin-bottom: 0;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
+
 .radio.inline + .radio.inline,
 .checkbox.inline + .checkbox.inline {
-  margin-left: 10px;
-}
+  margin-left: 10px; }
+
 input[disabled],
 select[disabled],
 textarea[disabled],
@@ -1481,127 +1412,126 @@ textarea[readonly] {
   -webkit-opacity: 0.5;
   -moz-opacity: 0.5;
   opacity: 0.5;
-  cursor: not-allowed;
-}
+  cursor: not-allowed; }
+
 input:focus,
 textarea:focus {
   border-color: #00a1cb, 40%;
   outline: 0;
-  outline: thin dotted \9;
-}
+  outline: thin dotted \9; }
+
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus,
 select:focus {
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
+  box-shadow: none; }
+
 ::-webkit-input-placeholder {
   font-size: 14px;
-  font-size: 0.875rem;
-}
+  font-size: 0.875rem; }
+
 input:-moz-placeholder {
   font-size: 14px;
-  font-size: 0.875rem;
-}
+  font-size: 0.875rem; }
+
 .help-block,
 .help-inline {
-  color: #808080;
-}
+  color: gray; }
+
 .help-block {
   display: block;
-  margin-bottom: 0.75em;
-}
+  margin-bottom: 0.75em; }
+
 .help-inline {
   display: inline-block;
   vertical-align: middle;
-  padding-left: 5px;
-}
+  padding-left: 5px; }
+
 .form-inline input,
 .form-inline textarea,
 .form-inline select {
   display: inline-block;
-  margin-bottom: 0;
-}
+  margin-bottom: 0; }
+
 .form-inline label {
-  display: inline-block;
-}
+  display: inline-block; }
+
 .form-inline .radio,
 .form-inline .checkbox,
 .form-inline .radio {
   padding-left: 0;
   margin-bottom: 0;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
+
 .form-inline .radio input[type="radio"],
 .form-inline .checkbox input[type="checkbox"] {
   float: left;
   margin-left: 0;
-  margin-right: 3px;
-}
+  margin-right: 3px; }
+
 .form-search input,
 .form-search textarea,
 .form-search select {
   display: inline-block;
-  margin-bottom: 0;
-}
+  margin-bottom: 0; }
+
 .form-search .search-query {
   padding-left: 14px;
   padding-right: 14px;
-  margin-bottom: 0;
-}
+  margin-bottom: 0; }
+
 .form-search label {
-  display: inline-block;
-}
+  display: inline-block; }
+
 .form-search .radio,
 .form-search .checkbox,
 .form-inline .radio {
   padding-left: 0;
   margin-bottom: 0;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
+
 .form-search .radio input[type="radio"],
 .form-search .checkbox input[type="checkbox"] {
   float: left;
   margin-left: 0;
-  margin-right: 3px;
-}
+  margin-right: 3px; }
+
 /**
 * Validamos los formularios que son "required": http://coolvillage.es/ayuda-al-usuario-a-rellenar-formularios-con-css/
 */
 input:required:focus:invalid {
-  background-color: #fef2e7;
-}
+  background-color: #fef2e7; }
+
 input:required:focus:valid {
-  background-color: #d7edd7;
-}
+  background-color: #d7edd7; }
+
 /*------------------------------------*\
     $SITIO
 \*------------------------------------*/
 @-webkit-viewport {
-  width: device-width;
-}
+  width: device-width; }
+
 @-moz-viewport {
-  width: device-width;
-}
+  width: device-width; }
+
 @-ms-viewport {
-  width: device-width;
-}
+  width: device-width; }
+
 @-o-viewport {
-  width: device-width;
-}
+  width: device-width; }
+
 @viewport {
-  width: device-width;
-}
+  width: device-width; }
+
 html {
-  background: #ffffff;
+  background: white;
   font-size: 100%;
   -webkit-overflow-scrolling: touch;
-  -webkit-tap-highlight-color: #ffffff;
+  -webkit-tap-highlight-color: white;
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
+  -ms-text-size-adjust: 100%; }
+
 body {
   margin: 0;
   padding: 0;
@@ -1611,8 +1541,8 @@ body {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5em;
-  color: #262626;
-}
+  color: darkergrey; }
+
 /**
 * A partir de aquí es donde debes escribir los estilos de posicionamiento
 * y detalles que forman tu web. Disfruta!
@@ -1620,13 +1550,6 @@ body {
 /*------------------------------------*\
     $TEXTURAS
 \*------------------------------------*/
-/**
-* Todas las cajas, popups y elementos informativos
-*
-* Más estilos adicionales:
-* http://twitter.github.com/bootstrap/components.html#alerts"
-* https://github.com/twitter/bootstrap/blob/master/less/alerts.less"
-*/
 .alert {
   margin-bottom: 1.5em;
   padding: 8px 35px 8px 14px;
@@ -1636,63 +1559,58 @@ body {
   font-size: 14px;
   font-size: 0.875rem;
   color: #904809;
-  border-radius: 2px;
-}
-.alert .close {
-  position: relative;
-  top: -2px;
-  right: -21px;
-  float: right;
-  font-size: 21px;
-  font-size: 1.3125rem;
-  font-weight: bold;
-  line-height: 18px;
-  color: inherit;
-}
-.alert--success {
+  border-radius: 2px; }
+  .alert .alert-heading {
+    color: inherit; }
+  .alert .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    float: right;
+    font-size: 21px;
+    font-size: 1.3125rem;
+    font-weight: bold;
+    line-height: 18px;
+    color: inherit; }
+
+.alert-success {
   background-color: #c5e6c5;
   border-color: #a2d6a2;
-  color: #347834;
-}
-.alert--warning {
+  color: #347834; }
+
+.alert-warning {
   background-color: #fee7c7;
   border-color: #fcd296;
-  color: #c17305;
-}
-.alert--error {
+  color: #c17305; }
+
+.alert-error {
   background-color: #f4cac8;
   border-color: #eba19e;
-  color: #da4f49;
-}
-.alert--info {
+  color: #da4f49; }
+
+.alert-info {
   background-color: #cbebec;
   border-color: #7fcfd2;
-  color: #236062;
-}
-.alert--inverse {
+  color: #236062; }
+
+.alert-inverse {
   background-color: #414141;
-  border-color: #000000;
-  color: #ffffff;
-}
-.alert--block {
+  border-color: black;
+  color: white; }
+
+.alert-block {
   padding-top: 14px;
-  padding-bottom: 14px;
-}
-.alert--block .alert--heading {
-  margin-bottom: 0.1875em;
-  font-size: inherit;
-  font-weight: bold;
-}
-.alert--block > p,
-.alert--block > ul {
-  margin-bottom: 0;
-}
-.alert--block p + p {
-  margin-top: 5px;
-}
-/*------------------------------------*\
-    $BADGES
-\*------------------------------------*/
+  padding-bottom: 14px; }
+  .alert-block .alert-heading {
+    margin-bottom: 0.1875em;
+    font-size: inherit;
+    font-weight: bold; }
+  .alert-block > p,
+  .alert-block > ul {
+    margin-bottom: 0; }
+  .alert-block p + p {
+    margin-top: 5px; }
+
 .badge {
   padding: 1px 9px 2px;
   font-size: 12px;
@@ -1700,55 +1618,46 @@ body {
   font-weight: bold;
   white-space: nowrap;
   border-radius: 2px;
-  color: #262626;
+  color: darkergrey;
   background-color: #00a1cb;
   -webkit-transition: background-color 0.25s 0 linear;
   -moz-transition: background-color 0.25s 0 linear;
   -ms-transition: background-color 0.25s 0 linear;
   -o-transition: background-color 0.25s 0 linear;
-  transition: background-color 0.25s 0 linear;
-}
-.badge:hover {
-  color: #262626;
-  text-decoration: none;
-  cursor: pointer;
-}
-.badge--error {
-  background-color: #da4f49;
-}
-.badge--error:hover {
-  background-color: #9d2520;
-}
-.badge--warning {
-  background-color: #faa732;
-}
-.badge--warning:hover {
-  background-color: #c17305;
-}
-.badge--success {
-  background-color: #5bb75b;
-}
-.badge--success:hover {
-  background-color: #347834;
-}
-.badge--info {
+  transition: background-color 0.25s 0 linear; }
+  .badge:hover {
+    color: darkergrey;
+    text-decoration: none;
+    cursor: pointer; }
+
+.badge-error {
+  background-color: #da4f49; }
+  .badge-error:hover {
+    background-color: #9d2520; }
+
+.badge-warning {
+  background-color: #faa732; }
+  .badge-warning:hover {
+    background-color: #c17305; }
+
+.badge-success {
+  background-color: #5bb75b; }
+  .badge-success:hover {
+    background-color: #347834; }
+
+.badge-info {
   background-color: #a5dddf;
-  color: #236062;
-}
-.badge--info:hover {
-  background-color: #5ac1c4;
-}
-.badge--inverse {
+  color: #236062; }
+  .badge-info:hover {
+    background-color: #5ac1c4; }
+
+.badge-inverse {
   background-color: #414141;
-  color: #ffffff;
-}
-.badge--inverse:hover {
-  background-color: #0e0e0e;
-  color: #ffffff;
-}
-/*------------------------------------*\
-    $GRADIENTES
-\*------------------------------------*/
+  color: white; }
+  .badge-inverse:hover {
+    background-color: #0e0e0e;
+    color: white; }
+
 .basegrad {
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00a1cb), to(#007998));
   background-image: -webkit-linear-gradient(top, #00a1cb, #007998);
@@ -1757,8 +1666,8 @@ body {
   background-image: -ms-linear-gradient(top, #00a1cb, #007998);
   background-image: -o-linear-gradient(top, #00a1cb, #007998);
   background-image: linear-gradient(top, #00a1cb, #007998);
-  background-repeat: repeat-x;
-}
+  background-repeat: repeat-x; }
+
 .errorgrad {
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00a1cb), to(#c72f29));
   background-image: -webkit-linear-gradient(top, #00a1cb, #c72f29);
@@ -1767,18 +1676,18 @@ body {
   background-image: -ms-linear-gradient(top, #00a1cb, #c72f29);
   background-image: -o-linear-gradient(top, #00a1cb, #c72f29);
   background-image: linear-gradient(top, #00a1cb, #c72f29);
-  background-repeat: repeat-x;
-}
+  background-repeat: repeat-x; }
+
 .greygrad {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#d9d9d9));
-  background-image: -webkit-linear-gradient(top, #ffffff, #d9d9d9);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#d9d9d9));
+  background-image: -webkit-linear-gradient(top, white, #d9d9d9);
   background-color: #d9d9d9;
-  background-image: -moz-linear-gradient(top, #ffffff, #d9d9d9);
-  background-image: -ms-linear-gradient(top, #ffffff, #d9d9d9);
-  background-image: -o-linear-gradient(top, #ffffff, #d9d9d9);
-  background-image: linear-gradient(top, #ffffff, #d9d9d9);
-  background-repeat: repeat-x;
-}
+  background-image: -moz-linear-gradient(top, white, #d9d9d9);
+  background-image: -ms-linear-gradient(top, white, #d9d9d9);
+  background-image: -o-linear-gradient(top, white, #d9d9d9);
+  background-image: linear-gradient(top, white, #d9d9d9);
+  background-repeat: repeat-x; }
+
 .infograd {
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a5dddf), to(#7fcfd2));
   background-image: -webkit-linear-gradient(top, #a5dddf, #7fcfd2);
@@ -1787,8 +1696,8 @@ body {
   background-image: -ms-linear-gradient(top, #a5dddf, #7fcfd2);
   background-image: -o-linear-gradient(top, #a5dddf, #7fcfd2);
   background-image: linear-gradient(top, #a5dddf, #7fcfd2);
-  background-repeat: repeat-x;
-}
+  background-repeat: repeat-x; }
+
 .inversegrad {
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#414141), to(#272727));
   background-image: -webkit-linear-gradient(top, #414141, #272727);
@@ -1797,8 +1706,8 @@ body {
   background-image: -ms-linear-gradient(top, #414141, #272727);
   background-image: -o-linear-gradient(top, #414141, #272727);
   background-image: linear-gradient(top, #414141, #272727);
-  background-repeat: repeat-x;
-}
+  background-repeat: repeat-x; }
+
 .successgrad {
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bb75b), to(#449b44));
   background-image: -webkit-linear-gradient(top, #5bb75b, #449b44);
@@ -1807,8 +1716,8 @@ body {
   background-image: -ms-linear-gradient(top, #5bb75b, #449b44);
   background-image: -o-linear-gradient(top, #5bb75b, #449b44);
   background-image: linear-gradient(top, #5bb75b, #449b44);
-  background-repeat: repeat-x;
-}
+  background-repeat: repeat-x; }
+
 .warninggrad {
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#faa732), to(#f39106));
   background-image: -webkit-linear-gradient(top, #faa732, #f39106);
@@ -1817,116 +1726,84 @@ body {
   background-image: -ms-linear-gradient(top, #faa732, #f39106);
   background-image: -o-linear-gradient(top, #faa732, #f39106);
   background-image: linear-gradient(top, #faa732, #f39106);
-  background-repeat: repeat-x;
-}
-/*------------------------------------*\
-    $WELLS
-\*------------------------------------*/
+  background-repeat: repeat-x; }
+
 .well {
   min-height: 21px;
   padding: 11px;
   border-radius: 2px;
   margin-bottom: 1.5em;
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  -webkit-box-shadow: inset 0 1px 10px #e6e6e6;
-  -moz-box-shadow: inset 0 1px 10px #e6e6e6;
-  box-shadow: inset 0 1px 10px #e6e6e6;
-}
-.well p:last-child {
-  margin-bottom: 0;
-}
-.well--large {
-  padding: 22px;
-}
-.well--small {
-  padding: 6px;
-}
+  background-color: white;
+  border: 1px solid #99eaff;
+  -webkit-box-shadow: inset 0 1px 10px #ccf4ff;
+  box-shadow: inset 0 1px 10px #ccf4ff; }
+  .well p:last-child {
+    margin-bottom: 0; }
+
+.well-large {
+  padding: 22px; }
+
+.well-small {
+  padding: 6px; }
+
 ::-moz-selection {
-  background-color: #ffffff;
+  background-color: white;
   color: #00a1cb;
-  text-shadow: none;
-}
+  text-shadow: none; }
+
 ::selection {
-  background-color: #ffffff;
+  background-color: white;
   color: #00a1cb;
-  text-shadow: none;
-}
+  text-shadow: none; }
+
 /*------------------------------------*\
     $BREAKPOINTS
 \*------------------------------------*/
 /*
- * Cada Mediaquery se basará en la variable @bp$ que definimos en lib/variables.less
- * e incluirá el archivo bp$.less. 
- * Recordad que el primer mediaquery es la ausencia de mediaquery tal y como
- * lo haríamos si empezaramos mobile first.
- */
-/*
- * Primer Breakpoint
+ * Cada Mediaquery se basará en la variable $bp$ e incluirá el archivo bp$.less
  */
 @media only screen and (min-width: 30em) {
   /*------------------------------------*\
-    $BREAKPOINT_1
-\*------------------------------------*/
+      $BREAKPOINT_1
+  \*------------------------------------*/
   /*
- * Estilos que entrarán en el breakpoint basado en la variable @bp1
- */
-}
-/*
- * Segundo Breakpoint
- */
-@media only screen and (min-width: only screen and (min-width: 37.5em)) {
+   * Estilos que entrarán en el breakpoint basado en la variable $bp1
+   */ }
+@media only screen and (min-width: 37.5em) {
   /*------------------------------------*\
-    $BREAKPOINT_2
-\*------------------------------------*/
+      $BREAKPOINT_2
+  \*------------------------------------*/
   /*
- * Estilos que entrarán en el breakpoint basado en la variable @bp2
- */
-}
-/*
- * Tercer Breakpoint
- */
-@media only screen and (min-width: only screen and (min-width: 48em)) {
+   * Estilos que entrarán en el breakpoint basado en la variable $bp2
+   */ }
+@media only screen and (min-width: 48em) {
   /*------------------------------------*\
-    $BREAKPOINT_3
-\*------------------------------------*/
+      $BREAKPOINT_3
+  \*------------------------------------*/
   /*
- * Estilos que entrarán en el breakpoint basado en la variable @bp3
- */
-}
-/*
- * Cuarto Breakpoint
- */
-@media only screen and (min-width: only screen and (min-width: 56.25em)) {
+   * Estilos que entrarán en el breakpoint basado en la variable $bp3
+   */ }
+@media only screen and (min-width: 56.25em) {
   /*------------------------------------*\
-    $BREAKPOINT_4
-\*------------------------------------*/
+      $BREAKPOINT_4
+  \*------------------------------------*/
   /*
- * Estilos que entrarán en el breakpoint basado en la variable @bp4
- */
-}
-/*
- * Quinto Breakpoint
- */
-@media only screen and (min-width: only screen and (min-width: 68.25em)) {
+   * Estilos que entrarán en el breakpoint basado en la variable $bp4
+   */ }
+@media only screen and (min-width: 68.75em) {
   /*------------------------------------*\
-    $BREAKPOINT_5
-\*------------------------------------*/
+      $BREAKPOINT_5
+  \*------------------------------------*/
   /*
- * Estilos que entrarán en el breakpoint basado en la variable @bp5
- */
-}
-/*
- * Densidades mayores a @densityBP
- */
+   * Estilos que entrarán en el breakpoint basado en la variable $bp5
+   */ }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /*------------------------------------*\
-    $2x
-\*------------------------------------*/
+      $2x
+  \*------------------------------------*/
   /*
- * Breakpoint para dispositivos retina 
- */
-}
+   * Breakpoint para dispositivos retina
+   */ }
 /*------------------------------------*\
     $PATRONES
 \*------------------------------------*/
@@ -1938,111 +1815,94 @@ body {
  */
 section {
   width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1024px;
-  margin-bottom: 3em;
-}
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+  margin-bottom: 3em; }
+
 .altfont {
-  font-family: Georgia, Times, "Times New Roman";
-}
+  font-family: Georgia, Times, "Times New Roman"; }
+
 .basefont::after {
-  content: ': "Helvetica Neue", Helvetica, Arial, sans-serif';
-}
+  content: '"Helvetica Neue", Helvetica, Arial, sans-serif'; }
+
 .altfont::after {
-  content: ': Georgia, Times, "Times New Roman"';
-}
+  content: 'Georgia, Times, "Times New Roman"'; }
+
 .code::after {
-  content: ': "Courier New", monospace';
-}
+  content: '"Courier New", monospace'; }
+
 .swatch {
   margin: 0 24px 1.5em 0;
   padding: 0;
-  float: left;
-}
+  float: left; }
+
 .swatch-row {
   display: block;
   margin: 0;
   padding: 0;
-  width: 200px;
-}
+  width: 200px; }
+
 .swatch-row span {
   display: block;
   float: left;
   width: 100px;
-  height: 100px;
-}
+  height: 100px; }
+
 .swatch-base span:nth-child(1) {
-  background-color: #00a1cb;
-}
+  background-color: #00a1cb; }
 .swatch-base small::after {
-  content: " #00a1cb";
+  content: "#00a1cb";
   color: #00a1cb;
-  display: block;
-}
+  display: block; }
+
 .swatch-secondary span:nth-child(1) {
-  background-color: #cb2a00;
-}
+  background-color: #cb2a00; }
 .swatch-secondary small::after {
-  content: " #cb2a00";
+  content: "#cb2a00";
   color: #cb2a00;
-  display: block;
-}
+  display: block; }
+
 .swatch-compcolor span:nth-child(1) {
-  background-color: #da802d;
-}
+  background-color: #da802d; }
 .swatch-compcolor small::after {
   content: " #da802d";
   color: #da802d;
-  display: block;
-}
+  display: block; }
+
 .swatch-alert span:nth-child(1) {
-  background-color: #fce4cf;
-}
+  background-color: #fce4cf; }
 .swatch-alert small::after {
-  content: " #fce4cf";
+  content: "#fce4cf";
   color: #fce4cf;
-  display: block;
-}
+  display: block; }
+
 .swatch-error span:nth-child(1) {
-  background-color: #da4f49;
-}
+  background-color: #da4f49; }
 .swatch-error small::after {
-  content: " #da4f49";
+  content: "#da4f49";
   color: #da4f49;
-  display: block;
-}
+  display: block; }
+
 .swatch-info span:nth-child(1) {
-  background-color: #a5dddf;
-}
+  background-color: #a5dddf; }
 .swatch-info small::after {
-  content: " #a5dddf";
+  content: "#a5dddf";
   color: #a5dddf;
-  display: block;
-}
+  display: block; }
+
 .swatch-success span:nth-child(1) {
-  background-color: #5bb75b;
-}
+  background-color: #5bb75b; }
 .swatch-success small::after {
-  content: " #5bb75b";
+  content: "#5bb75b";
   color: #5bb75b;
-  display: block;
-}
+  display: block; }
+
 .swatch-warning span:nth-child(1) {
-  background-color: #faa732;
-}
+  background-color: #faa732; }
 .swatch-warning small::after {
-  content: " #faa732";
+  content: "#faa732";
   color: #faa732;
-  display: block;
-}
-.caja-animacion,
-.hover {
+  display: block; }
+
+.caja-animacion, .hover {
   width: 100%;
   padding: 1em;
   background-color: #bfbfbf;
@@ -2050,80 +1910,74 @@ section::after {
   position: relative;
   cursor: pointer;
   margin-bottom: 1em;
-  border-radius: 2px;
-}
-.caja-animacion .cursor,
-.hover .cursor {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 20px;
-  background-color: #808080;
-  -webkit-border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 0;
-  -webkit-border-bottom-left-radius: 2px;
-  -webkit-border-top-left-radius: 2px;
-  -moz-border-radius-topright: 0;
-  -moz-border-radius-bottomright: 0;
-  -moz-border-radius-bottomleft: 2px;
-  -moz-border-radius-topleft: 2px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 2px;
-  border-top-left-radius: 2px;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-  -webkit-transition: all 0.8s ease-in-out;
-  -moz-transition: all 0.8s ease-in-out;
-  -ms-transition: all 0.8s ease-in-out;
-  -o-transition: all 0.8s ease-in-out;
-  transition: all 0.8s ease-in-out;
-}
-.caja-animacion:hover .cursor,
-.hover:hover .cursor {
-  left: 100%;
-  margin-left: -20px;
-  -webkit-border-top-right-radius: 2px;
-  -webkit-border-bottom-right-radius: 2px;
-  -webkit-border-bottom-left-radius: 0;
-  -webkit-border-top-left-radius: 0;
-  -moz-border-radius-topright: 2px;
-  -moz-border-radius-bottomright: 2px;
-  -moz-border-radius-bottomleft: 0;
-  -moz-border-radius-topleft: 0;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-}
+  border-radius: 2px; }
+  .caja-animacion .cursor, .hover .cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20px;
+    background-color: gray;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 2px;
+    -webkit-border-top-left-radius: 2px;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 2px;
+    -moz-border-radius-topleft: 2px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out; }
+  .caja-animacion:hover .cursor, .hover:hover .cursor {
+    left: 100%;
+    margin-left: -20px;
+    -webkit-border-top-right-radius: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius-topright: 2px;
+    -moz-border-radius-bottomright: 2px;
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-topleft: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+
 .hover {
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-.hover:hover {
-  background-color: #00a1cb;
-}
-.hover strong::after {
-  content: ': 0.3s';
-  font-weight: normal;
-}
+  transition: all 0.3s ease-out; }
+  .hover:hover {
+    background-color: #00a1cb; }
+  .hover strong::after {
+    content: ": 0.3s";
+    font-weight: normal; }
+
 .transition::after {
-  content: ': 0.8s';
-  font-weight: normal;
-}
+  content: ": 0.8s";
+  font-weight: normal; }
+
 figure {
   width: 24%;
   float: left;
-  margin-right: 1%;
-}
+  margin-right: 1%; }
+
 /*------------------------------------*\
     $DEBUG
 \*------------------------------------*/
@@ -2143,111 +1997,110 @@ figure {
  * Hay elementos vacíos?
  */
 :empty {
-  outline: 5px solid yellow;
-}
+  outline: 5px solid yellow; }
+
 /**
  * Las imágenes requieren el atributo ALT, un ALT vacío no es del todo malo
  * pero una imagen sin ALT definitivamente está mal.
  */
 img {
-  outline: 5px solid red;
-}
+  outline: 5px solid red; }
+
 img[alt] {
-  outline: none;
-}
+  outline: none; }
+
 img[alt=""] {
-  outline: 5px solid yellow;
-}
+  outline: 5px solid yellow; }
+
 /**
  * Los links algunas veces, no siempre, se benefician del atributo "title".
  * Links sin 'title' no son inválidos, pero es buena idea revisar.
  */
 a {
-  outline: 5px solid yellow;
-}
+  outline: 5px solid yellow; }
+
 a[title] {
-  outline: none;
-}
+  outline: none; }
+
 /**
  * Revisa los "href" con contenido dudoso.
  */
 a[href="#"],
 a[href*="javascript"] {
-  outline: 5px solid yellow;
-}
+  outline: 5px solid yellow; }
+
 /**
  * El atributo 'target=""' es.... bueno, revisa.
  */
 a[target] {
-  outline: 5px solid yellow;
-}
+  outline: 5px solid yellow; }
+
 /**
  * Asegúrate que una lista solo anida LI's
  */
 ul > *:not(li),
 ol > *:not(li) {
-  outline: 5px solid red;
-}
+  outline: 5px solid red; }
+
 /**
  * Deberíamos asignar un atributo 'scope' a los th
  * http://bit.ly/1aHBDgW
  */
 th {
-  outline: 5px solid yellow;
-}
+  outline: 5px solid yellow; }
+
 th[scope] {
-  outline: none;
-}
+  outline: none; }
+
 /**
  * los tr hijos de 'table' no son buenos, ¿necesitabas un 'thead' / 'tbody'?
  */
 table > tr {
-  outline: 5px solid yellow;
-}
+  outline: 5px solid yellow; }
+
 /**
  * `tfoot` debe estar *antes* de `tbody`.
  */
 tbody + tfoot {
-  outline: 5px solid yellow;
-}
+  outline: 5px solid yellow; }
+
 /**
  * Forms necesitan del atributo `action`
  */
 form {
-  outline: 5px solid red;
-}
+  outline: 5px solid red; }
+
 form[action] {
-  outline: none;
-}
+  outline: none; }
+
 /**
  * Varios elementos de formularios requieren atributos. 'input' necsita de 'type'
  * 'textarea' necesita `rows' y 'cols' y 'submit' necesita del atributo 'value'.
  */
 textarea,
 input {
-  outline: 5px solid red;
-}
+  outline: 5px solid red; }
+
 input[type] {
-  outline: none;
-}
+  outline: none; }
+
 textarea[rows][cols] {
-  outline: none;
-}
+  outline: none; }
+
 input[type=submit] {
-  outline: 5px solid red;
-}
+  outline: 5px solid red; }
+
 input[type=submit][value] {
-  outline: none;
-}
+  outline: none; }
+
 /**
  * Evitamos estilos _inline_ a ser posible.
  */
 [style] {
-  outline: 5px solid yellow;
-}
+  outline: 5px solid yellow; }
+
 /**
  * Deberías evitar IDs para CSS.
  */
 [id] {
-  outline: 5px solid yellow;
-}
+  outline: 5px solid yellow; }
