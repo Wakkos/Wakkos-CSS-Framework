@@ -28,7 +28,11 @@ $textcolor-strong:	black;
 
 // Fuentes
 $basefont : "Helvetica Neue", Helvetica, Arial, sans-serif;
-$basefontsize : 16;
+
+// Tamaños de fuentes
+$basefontsize    : 16;
+$small-text-size : 12;
+$huge-text-size  : 18;
 
 $baseheadingfont : inherit;
 $baseheadingfontweight : bold;
@@ -103,13 +107,23 @@ $alertwarningcolor 	: lighten($warningcolor, 30%);
 $alertwarningborder : lighten($warningcolor, 20%);
 $alertwarningtext 	: darken($warningcolor, 20%);
 
-// Colores sociales -> son los colores corporativos, pero cambiadlos si hace falta. (también podéis añadir más)  ///////////////////////
-$facebook       :rgb(59, 89, 182);
-$twitter        :rgb(64,153,255);
-$googleplus     :rgb(221, 75, 57);
-$pinterest      :rgb(203, 32, 39);
-$skype          :rgb(18,165,244);
-$spotify        :rgb(129,183,26);
+/* Colores sociales -> son los colores corporativos, pero cambiadlos 
+ * si hace falta. (también podéis añadir más)  ///////////////////////
+ */
+$fb :rgb(59, 89, 182);
+$tw :rgb(64,153,255);
+$googleplus :rgb(221, 75, 57);
+$pinterest :rgb(203, 32, 39);
+$skype :rgb(18,165,244);
+$spotify :rgb(129,183,26);
+$instagram:#4E433C; 
+$tumblr: #2B4964; 
+$vimeo: #86B32D;
+$soundcloud: #f76600;
+$youtube: #FF3333;  
+$linkedin: #4875B4; 
+$flickr: #FE0883;  
+$foursquare: #8FD400;
 
 
 // badges

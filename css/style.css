@@ -52,6 +52,9 @@
 /*------------------------------------*\
     $VARIABLES
 \*------------------------------------*/
+/* Colores sociales -> son los colores corporativos, pero cambiadlos 
+ * si hace falta. (también podéis añadir más)  ///////////////////////
+ */
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
@@ -1100,6 +1103,14 @@ sup {
 sub {
   bottom: -.25em; }
 
+.small {
+  font-size: 12px;
+  font-size: 0.75rem; }
+
+.huge {
+  font-size: 18px;
+  font-size: 1.125rem; }
+
 /*------------------------------------*\
     $NAVEGACIÓN
 \*------------------------------------*/
@@ -1326,7 +1337,6 @@ input[type="radio"] {
 input[type="image"] {
   border: 0;
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none; }
 
 input[type="file"] {
@@ -1337,7 +1347,6 @@ input[type="file"] {
   background-color: transparent;
   background-color: initial;
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none; }
 
 input[type="button"],
@@ -1416,7 +1425,6 @@ input[type="radio"]:focus,
 input[type="checkbox"]:focus,
 select:focus {
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none; }
 
 ::-webkit-input-placeholder {
@@ -1728,7 +1736,6 @@ body {
   background-color: white;
   border: 1px solid #99eaff;
   -webkit-box-shadow: inset 0 1px 10px #ccf4ff;
-  -moz-box-shadow: inset 0 1px 10px #ccf4ff;
   box-shadow: inset 0 1px 10px #ccf4ff; }
   .well p:last-child {
     margin-bottom: 0; }

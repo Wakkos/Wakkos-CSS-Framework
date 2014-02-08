@@ -218,3 +218,12 @@ top : -.5em; }
 sub {
 bottom : -.25em; }
 
+// Tamaños de texto predefinidos
+
+.small {
+	@include font-size($small-text-size);
+}
+
+.huge {
+	@include font-size($huge-text-size);
+}
