@@ -8,6 +8,11 @@
     font-size:($font-size / $basefontsize)*1rem;
 }
 
+@mixin line-height($line-height: 16){
+    line-height:($line-height)*1px;
+    line-height:($line-height / $basefontsize)*1rem;
+}
+
 // flexbox, because fuck you, that's why.
 
 @mixin displayflex {
