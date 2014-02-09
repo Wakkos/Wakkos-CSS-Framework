@@ -12,23 +12,23 @@
 .btn {
 	display : inline-block;
 	*zoom : 1;
-	line-height : @baselineheight * 2;
-	color : @textcolor;
+	line-height : $baselineheight * 2;
+	color : $textcolor;
 	text-align : center;
 	vertical-align : middle;
 	font-size: 100%;
 	white-space:nowrap;
-	background-color : @buttonbackground;
+	background-color : $buttonbackground;
 	border : none;
 	font-weight: bold;
 	cursor : pointer;
 	margin:0;
 	padding-top:   0;
-    padding-bottom:0;
-    padding-right:1em;
-    padding-left: 1em;
-	border-radius: @radius;
-	
+   	padding-bottom:0;
+   	padding-right:1em;
+   	padding-left: 1em;
+	border-radius: $radius;
+
 	/**
  	* Nadie quiere un botón con texto subrayado cuando
  	* hacemos hover.
@@ -42,7 +42,7 @@
         outline:none;
     }
     &:visited {
-	color : @textcolor; 	
+	color : $textcolor;
 	}
 }
 
@@ -59,90 +59,84 @@
 * Inputs con estilo de botones
 */
 input[type="submit"].btn:hover {
-border-color : @buttonbordercolor; }
+border-color : $buttonbordercolor; }
 
 
 /**
-* Extiende .btn
 * Botón no disponible
 */
 .btn--disabled {
-.opacity(.5); 
+@include opacity(.5);
 cursor : default; }
 
 /**
-* Extiende .btn
 * Botón de Error
 */
 .btn--error {
-	background-color: @errorcolor;
-	color : darken(@errorcolor, 40%); 
+	background-color: $errorcolor;
+	color : darken($errorcolor, 40%);
 	&:hover {
-	color : lighten(@errorcolor, 40%);}
+	color : lighten($errorcolor, 40%);}
 	&:visited {
-	color : darken(@errorcolor, 40%); 	
+	color : darken($errorcolor, 40%);
 	}
 }
 
 /**
-* Extiende .btn
 * Botón de Info
 */
 .btn--info {
-	background-color: @infocolor;
-	color : darken(@infocolor, 40%); 
+	background-color: $infocolor;
+	color : darken($infocolor, 40%);
 	&:hover {
-	color : lighten(@infocolor, 40%);}
+	color : lighten($infocolor, 40%);}
 	&:visited {
-	color : darken(@infocolor, 40%); 	
+	color : darken($infocolor, 40%);
 	}
 }
 
 
 
 /**
-* Extiende .btn
 * Botón principal
 */
 
 .btn--primary {
-	background-color: @basecolor;
-	color: @white; 
+	background-color: $basecolor;
+	color: $white;
 	&:hover {
-	color : lighten(@basecolor, 40%); }
+	color : lighten($basecolor, 40%); }
 	&:visited {
-	color : darken(@basecolor, 40%); 	
+	color : darken($basecolor, 40%);
 	}
 }
 
 /**
-* Extiende .btn
 * Botón de OK
 */
 
 .btn--success {
-	background-color: @successcolor;
-	color : darken(@successcolor, 40%); 
+	background-color: $successcolor;
+	color : darken($successcolor, 40%);
 	&:hover {
-	color : lighten(@successcolor, 40%); }
+	color : lighten($successcolor, 40%); }
 	&:visited {
-	color : darken(@successcolor, 40%); 	
+	color : darken($successcolor, 40%);
 	}
 }
 
 
 
 /**
-* Extiende .btn
 * Botón de advertencia
 */
 .btn--warning {
-	background-color: @warningcolor;
-	color : darken(@warningcolor, 40%); 
+	background-color: $warningcolor;
+	color : darken($warningcolor, 40%);
 	&:hover {
-	color : lighten(@warningcolor, 40%); }
+	color : lighten($warningcolor, 40%); }
 	&:visited {
-	color : darken(@warningcolor, 40%); 	
+	color : darken($warningcolor, 40%);
 	}
 }
 
@@ -150,12 +144,10 @@ cursor : default; }
 .btn--inactive:hover,
 .btn--inactive:active,
 .btn--inactive:focus{
-	.opacity(.5); 
+	@include opacity(.5);
 	cursor : default;
 	cursor:text;
  }
-
-
 
 
 
@@ -164,7 +156,7 @@ cursor : default; }
 \*------------------------------------*/
 /**
  * Variantes de los botones por tamaño.
- * Todas extienden .btn
+ *
  */
 
 .btn--mini{
@@ -194,59 +186,30 @@ cursor : default; }
 /**
  * Con esta clase podemos agrupar los botones
  * en grupos horizontales.
- * el contenedor de los elementos con las clases
- * .btn debe contener la clase .btn__group:
-	
-	<div class="btn__group">
-		<a class="btn">Botón 1</a>
-		<a class="btn">Botón 1</a>
-		<a class="btn">Botón 1</a>
-	</div>
  *
  */
-.btn__group {
+.btn-group {
 position : relative;
 *zoom : 1;
 *margin-left : .3em; }
 
-.btn__group .btn {
+.btn-group .btn {
 position : relative;
 border-radius: 0;
 float : left;
 margin-left : -1px;
 }
 
-.btn__group .btn:first-child {
+.btn-group .btn:first-child {
 margin-left : 0;
-.border-radius(0, 0, @radius, @radius); } 
+@include border-radius(0, 0, $radius, $radius); }
 
-.btn__group .btn:last-child {
-.border-radius(@radius, @radius, 0, 0); }
+.btn-group .btn:last-child {
+@include border-radius($radius, $radius, 0, 0); }
 
-.btn__group .btn.large:first-child {
+.btn-group .btn.large:first-child {
 margin-left : 0;
-.border-radius(@radius, 0, @radius, 0); }
+@include border-radius($radius, 0, $radius, 0); }
 
-.btn__group .btn.large:last-child {
-.border-radius(0, @radius, 0, @radius); }
-
-
-
-
-/*------------------------------------*\
-    $TAMAÑOS-FUENTES
-\*------------------------------------*/
-/**
- * Modificadores del tamaño de la fuente  de los botones.
- */
-.btn--alpha{
-    font-size:3rem;
-}
-
-.btn--beta{
-    font-size:2rem;
-}
-
-.btn--gamma{
-    font-size:1rem;
-}
+.btn-group .btn.large:last-child {
+@include border-radius(0, $radius, 0, $radius); }

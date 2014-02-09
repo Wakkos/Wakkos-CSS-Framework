@@ -5,18 +5,18 @@
 table {
 width : 100%;
 max-width : 100%;
-margin-bottom : @baselineheight;
+margin-bottom : $baselineheight;
 border-collapse : collapse;
 border-spacing : 0;
-background-color : @tablebackground; 
+background-color : $tablebackground;
 
 th,
 td {
 padding : 8px;
 vertical-align : top;
-border-top : @tableborderwidth @tableborderstyle @tableborder; 
-.font-size(14);
-line-height : @baselineheight;
+border-top : $tableborderwidth $tableborderstyle $tableborder;
+@include font-size(14);
+line-height : $baselineheight;
 text-align : left; }
 
 th {
@@ -32,15 +32,15 @@ thead:first-child tr:first-child td {
 border-top : 0; }
 
 tbody + tbody {
-border-top : @tableborderwidth * 2 @tableborderstyle @tableborder; }
+border-top : $tableborderwidth * 2 $tableborderstyle $tableborder; }
 
 tbody tr td,
 tbody tr th {
-.transition(background-color .25s 0 linear); }
+@include transition(background-color .25s 0 linear); }
 
 tbody tr:hover td,
 tbody tr:hover th {
-background-color : @tablehover; }
+background-color : $tablehover; }
 }
 
 // CONDENSED ====================================================
@@ -55,14 +55,14 @@ padding : 4px 5px; }
 // BORDERED ====================================================
 
 .table-bordered {
-border : @tableborderwidth @tableborderstyle @tableborder;
+border : $tableborderwidth $tableborderstyle $tableborder;
 border-left : 0;
 border-collapse : separate;
-*border-collapse : collapsed; 
+*border-collapse : collapsed;
 
 th,
 td {
-border-left : @tableborderwidth @tableborderstyle @tableborder; }
+border-left : $tableborderwidth $tableborderstyle $tableborder; }
 
 thead:first-child tr:first-child th,
 tbody:first-child tr:first-child th,
@@ -76,7 +76,7 @@ border-top : 0; }
 
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
-background-color : @tablestripe; }
+background-color : $tablestripe; }
 }
 
 

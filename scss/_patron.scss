@@ -10,32 +10,31 @@
 
 section {
 	width: 90%;
-	.max-width;
-	.clearfix;
-	margin-bottom: @baselineheight * 2;
+	@extend .max-width;
+	margin-bottom: $baselineheight * 2;
 }
 .altfont {
-font-family:@altfont;
+font-family:$altfont;
 }
 
 .basefont::after {
-	content: ': @{basefont}';
+	content: "#{$basefont}";
 }
 .altfont::after {
-	content: ': @{altfont}';
+	content: "#{$altfont}";
 }
 .code::after {
-	content: ': @{codefont}';
+	content: "#{$codefont}";
 }
 // swatches
 
 .swatch {
-margin : 0 @gutterwidth @baselineheight 0;
+margin : 0 $gutterwidth $baselineheight 0;
 padding : 0;
 float:left; }
 
 .swatch-row {
-display : block; 
+display : block;
 margin : 0;
 padding : 0;
 width : 200px; }
@@ -43,7 +42,7 @@ width : 200px; }
 
 .swatch-row span {
 display : block;
-float : left; 
+float : left;
 width : 100px;
 height : 100px; }
 
@@ -51,11 +50,11 @@ height : 100px; }
 
 .swatch-base {
 	span:nth-child(1) {
-		background-color:@basecolor;
+		background-color:$basecolor;
  	}
  	small::after {
-		content: " @{basecolor}";
-		color: @basecolor;
+		content: "#{$basecolor}";
+		color: $basecolor;
 		display: block;
 	}
 }
@@ -66,11 +65,11 @@ height : 100px; }
 
 .swatch-secondary {
 	span:nth-child(1) {
-		background-color:@secondary; 
+		background-color:$secondary;
 	}
 	small::after {
-		content: " @{secondary}";
-		color: @secondary;
+		content: "#{$secondary}";
+		color: $secondary;
 		display: block;
 	}
 
@@ -81,11 +80,11 @@ height : 100px; }
 
 .swatch-compcolor {
 	span:nth-child(1) {
-		background-color:@compcolor; 
+		background-color:$compcolor;
 	}
 	small::after {
-		content: " @{compcolor}";
-		color: @compcolor;
+		content: " #{$compcolor}";
+		color: $compcolor;
 		display: block;
 	}
 }
@@ -95,11 +94,11 @@ height : 100px; }
 
 .swatch-alert {
 	span:nth-child(1) {
-		background-color:@alertcolor; 
+		background-color:$alertcolor;
 	}
 	small::after {
-		content: " @{alertcolor}";
-		color: @alertcolor;
+		content: "#{$alertcolor}";
+		color: $alertcolor;
 		display: block;
 	}
 
@@ -111,11 +110,11 @@ height : 100px; }
 
 .swatch-error {
 	span:nth-child(1) {
-		background-color:@errorcolor; 
+		background-color:$errorcolor;
 	}
 	small::after {
-		content: " @{errorcolor}";
-		color: @errorcolor;
+		content: "#{$errorcolor}";
+		color: $errorcolor;
 		display: block;
 	}
 
@@ -126,12 +125,12 @@ height : 100px; }
 
 .swatch-info {
 	span:nth-child(1) {
-		background-color:@infocolor; 
+		background-color:$infocolor;
 	}
 
 	small::after {
-		content: " @{infocolor}";
-		color: @infocolor;
+		content: "#{$infocolor}";
+		color: $infocolor;
 		display: block;
 	}
 
@@ -142,11 +141,11 @@ height : 100px; }
 
 .swatch-success {
 	span:nth-child(1) {
-		background-color:@successcolor; 
+		background-color:$successcolor;
 	}
 	small::after {
-		content: " @{successcolor}";
-		color: @successcolor;
+		content: "#{$successcolor}";
+		color: $successcolor;
 		display: block;
 	}
 
@@ -158,12 +157,12 @@ height : 100px; }
 
 .swatch-warning {
 	span:nth-child(1) {
-		background-color:@warningcolor; 
+		background-color:$warningcolor;
 	}
 
 	small::after {
-		content: " @{warningcolor}";
-		color: @warningcolor;
+		content: "#{$warningcolor}";
+		color: $warningcolor;
 		display: block;
 	}
 
@@ -173,41 +172,41 @@ height : 100px; }
 .caja-animacion, .hover {
 	width: 100%;
 	padding:1em;
-	background-color: @lightgrey;
+	background-color: $lightgrey;
 	text-align: center;
 	position: relative;
 	cursor: pointer;
 	margin-bottom: 1em;
-	border-radius: @radius;
+	border-radius: $radius;
 	.cursor {
 		position: absolute;
 		top: 0;
 		left: 0;
 		bottom:0;
 		width: 20px;
-		background-color: @grey; 
-		.border-radius(0,0,@radius, @radius);
-		.transition(all @animationtime ease-in-out);
+		background-color: $grey;
+		@include border-radius(0,0,$radius, $radius);
+		@include transition(all $animationtime ease-in-out);
 	}
 	&:hover .cursor {
 		left: 100%;
 		margin-left: -20px;
-		.border-radius(@radius, @radius,0,0);
+		@include border-radius($radius, $radius,0,0);
 			}
 }
 .hover {
-	.transition(all @hovertransition ease-out);
+	@include transition(all $hovertransition ease-out);
 	&:hover {
-		background-color: @basecolor;
+		background-color: $basecolor;
 	}
 	strong::after {
-			content: ': @{hovertransition}';
+			content: ': #{$hovertransition}';
 			font-weight: normal;
 		}
 }
 
 .transition::after {
-			content: ': @{animationtime}';
+			content: ': #{$animationtime}';
 			font-weight: normal;
 		}
 

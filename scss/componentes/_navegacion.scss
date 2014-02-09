@@ -2,7 +2,7 @@
     $NAVEGACIÓN
 \*------------------------------------*/
 /**
-* 
+*
 * Le asignamos la clase .nav al ul que contenga la navegación:
 
 		 <ul class="nav">
@@ -12,21 +12,21 @@
 			<li><a href="services.html">Services</a></li>
 			<li><a href="contact.html">Contact us</a></li>
 		</ul>
-* 
+*
 */
 .nav {
-  	.clearfix();
+  	//&:extend(.clearfix all);      /// TODO : Pasar a sass
   	> li {
     position: relative;
     display: inline-block;
 
 	    > a {
 	      position: relative;
-	      padding: @navitempadding;
+	      padding: $navitempadding;
 	      &:hover,
 	      &:focus {
 	        text-decoration: none;
-	        background-color: @bordercolor;
+	        background-color: $bordercolor;
 	      }
 	    }
 	}
@@ -34,7 +34,7 @@
 
 
 /**
-* 
+*
 * .nav--fit extiende a .nav y alarga la navegación
 * para que ocupe el 100% de su contenedor
 
@@ -45,7 +45,7 @@
 			<li><a href="services.html">Services</a></li>
 			<li><a href="contact.html">Contact us</a></li>
 		</ul>
-* 
+*
 */
 .nav--fit{
     display:table;
@@ -63,7 +63,7 @@
 
 
 /**
-* 
+*
 * .nav--tabs extiende a .nav y crea la base para una navegación
 * en pestañas.
 
@@ -74,10 +74,10 @@
 			<li><a href="services.html">Services</a></li>
 			<li><a href="contact.html">Contact us</a></li>
 		</ul>
-* 
+*
 */
 .nav--tabs {
-	border-bottom: 1px solid @navtabsbordercolor;
+	border-bottom: 1px solid $navtabsbordercolor;
 	> li {
 	    margin-bottom: -1px;
 		> a {

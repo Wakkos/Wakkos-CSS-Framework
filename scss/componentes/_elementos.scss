@@ -6,11 +6,11 @@
 hr {
 clear : both;
 display : block;
-margin : @baselineheight * 2 0;
+margin : $baselineheight * 2 0;
 padding : 0;
 height : 1px;
 border : 0;
-border-top : 1px solid @bordercolor; }
+border-top : 1px solid $bordercolor; }
 
 // img
 
@@ -21,12 +21,12 @@ vertical-align : middle;
 -ms-interpolation-mode : bicubic; }
 
 .img-rounded {
-border-radius :@radius * 4; }
+border-radius :$radius * 4; }
 
 .img-polaroid {
-padding : @gutterwidth / 2;
-background-color : @white;
-border : 1px solid @bordercolor;
+padding : $gutterwidth / 2;
+background-color : $white;
+border : 1px solid $bordercolor;
 box-shadow : 0 1px 3px rgba(0,0,0,.1); }
 
 .img-circle {
@@ -35,15 +35,15 @@ border-radius : 100%; }
 // figure
 
 figure {
-margin-bottom : @baselineheight;
+margin-bottom : $baselineheight;
 
 img {
-margin-bottom : @baselineheight / 4; }
+margin-bottom : $baselineheight / 4; }
 
 figcaption {
 display : block;
 font-weight : normal;
-.font-size(14);
+@include font-size(14);
 font-style : italic;
-color : @grey; }
+color : $grey; }
 }
