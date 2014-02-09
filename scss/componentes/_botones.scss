@@ -151,8 +151,6 @@ cursor : default; }
 
 
 
-
-
 /*------------------------------------*\
     $TAMAÑOS
 \*------------------------------------*/
@@ -190,12 +188,12 @@ cursor : default; }
  * en grupos horizontales.
  *
  */
-.btn--group {
+.btn-group {
 position : relative;
 *zoom : 1;
 *margin-left : .3em; }
 
-.btn--group .btn {
+.btn-group .btn {
 position : relative;
 border-radius: 0;
 float : left;
@@ -215,24 +213,3 @@ margin-left : 0;
 
 .btn-group .btn.large:last-child {
 @include border-radius(0, $radius, 0, $radius); }
-
-
-
-
-/*------------------------------------*\
-    $TAMAÑOS-FUENTES
-\*------------------------------------*/
-/**
- * Modificadores del tamaño de la fuente  de los botones.
- */
-.btn--alpha{
-    font-size:3rem;
-}
-
-.btn--beta{
-    font-size:2rem;
-}
-
-.btn--gamma{
-    font-size:1rem;
-}

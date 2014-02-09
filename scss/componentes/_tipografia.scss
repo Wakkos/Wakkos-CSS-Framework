@@ -218,8 +218,13 @@ top : -.5em; }
 sub {
 bottom : -.25em; }
 
-// Tamaños de texto predefinidos
 
+/*------------------------------------*\
+    $TAMAÑOS-FUENTES
+\*------------------------------------*/
+/**
+ * Modificadores del tamaño de las fuentes.
+ */
 .small {
 	@include font-size($small-text-size);
 }
