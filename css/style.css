@@ -59,8 +59,11 @@
     $MIXINS
 \*------------------------------------*/
 /*------------------------------------*\
-    $HELPERS
+    $HELPERS (Shorthands)
 \*------------------------------------*/
+/**
+* Centrar y dar un ancho máximo igual a $pagemaxwidth.
+*/
 /**
 * The ghost, nudged to maintain perfect centering
 */
@@ -90,14 +93,6 @@
   width: auto;
   margin: 0;
   overflow: visible; }
-
-/**
-* Centrar y dar un ancho máximo igual a $pagemaxwidth.
-*/
-.max-width, section {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1024px; }
 
 /**
 * Clear floats.
