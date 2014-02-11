@@ -7,11 +7,32 @@
  * es recomendable eliminar su inclusión en el style.less
  * a la hora de compilar el CSS de la web.
  */
-
+main {
+	@include max-width(1024px);
+}
 section {
-	width: 90%;
-	@extend .max-width;
+	width: 100%;
 	margin-bottom: $baselineheight * 2;
+	background-color: $white;
+	@extend .clearfix;
+	padding: ($baselineheight * 2) $gutterwidth $baselineheight;
+	border-radius:$radius * 2;
+	border:1px solid $lightgrey;
+	position:relative;
+	h2.title {
+		background-color:$secondary;
+		position: absolute;
+		top:0;
+		left:0;
+		right: 0;
+		padding:($baselineheight / 4);
+		@include font-size(12);
+		font-weight: normal;
+		small {
+			color: $black;
+			font-weight: bold;
+		}
+	}
 }
 .altfont {
 font-family:$altfont;
@@ -29,21 +50,24 @@ font-family:$altfont;
 // swatches
 
 .swatch {
-margin : 0 $gutterwidth $baselineheight 0;
-padding : 0;
+margin : 1%;
+padding : 1em;
+@extend .clearfix;
+width : 31.333%;
+border:1px solid $lightergrey;
 float:left; }
 
 .swatch-row {
 display : block;
 margin : 0;
 padding : 0;
-width : 200px; }
+ }
 
 
 .swatch-row span {
 display : block;
 float : left;
-width : 100px;
+width : 100%;
 height : 100px; }
 
 // base
@@ -212,7 +236,7 @@ height : 100px; }
 
 
 figure {
-	width: 24%;
+	width: 20%;
 	float: left;
-	margin-right: 1%;
+	margin-right: 5%;
 }

@@ -97,12 +97,12 @@
 /**
 * Clear floats.
 */
-.clearfix {
+.clearfix, section, .swatch {
   *zoom: 1; }
-  .clearfix:before, .clearfix:after {
+  .clearfix:before, section:before, .swatch:before, .clearfix:after, section:after, .swatch:after {
     display: table;
     content: ""; }
-  .clearfix:after {
+  .clearfix:after, section:after, .swatch:after {
     clear: both; }
 
 /*------------------------------------*\
@@ -1546,7 +1546,7 @@ body {
   font-size: 0.875rem;
   color: #904809;
   border-radius: 2px; }
-  .alert .alert-heading {
+  .alert .alert--heading {
     color: inherit; }
   .alert .close {
     position: relative;
@@ -1559,42 +1559,42 @@ body {
     line-height: 18px;
     color: inherit; }
 
-.alert-success {
+.alert--success {
   background-color: #c5e6c5;
   border-color: #a2d6a2;
   color: #347834; }
 
-.alert-warning {
+.alert--warning {
   background-color: #fee7c7;
   border-color: #fcd296;
   color: #c17305; }
 
-.alert-error {
+.alert--error {
   background-color: #f4cac8;
   border-color: #eba19e;
   color: #da4f49; }
 
-.alert-info {
+.alert--info {
   background-color: #cbebec;
   border-color: #7fcfd2;
   color: #236062; }
 
-.alert-inverse {
+.alert--inverse {
   background-color: #414141;
   border-color: black;
   color: white; }
 
-.alert-block {
+.alert--block {
   padding-top: 14px;
   padding-bottom: 14px; }
-  .alert-block .alert-heading {
+  .alert--block .alert--heading {
     margin-bottom: 0.1875em;
     font-size: inherit;
     font-weight: bold; }
-  .alert-block > p,
-  .alert-block > ul {
+  .alert--block > p,
+  .alert--block > ul {
     margin-bottom: 0; }
-  .alert-block p + p {
+  .alert--block p + p {
     margin-top: 5px; }
 
 .badge {
@@ -1616,31 +1616,31 @@ body {
     text-decoration: none;
     cursor: pointer; }
 
-.badge-error {
+.badge--error {
   background-color: #da4f49; }
-  .badge-error:hover {
+  .badge--error:hover {
     background-color: #9d2520; }
 
-.badge-warning {
+.badge--warning {
   background-color: #faa732; }
-  .badge-warning:hover {
+  .badge--warning:hover {
     background-color: #c17305; }
 
-.badge-success {
+.badge--success {
   background-color: #5bb75b; }
-  .badge-success:hover {
+  .badge--success:hover {
     background-color: #347834; }
 
-.badge-info {
+.badge--info {
   background-color: #a5dddf;
   color: #236062; }
-  .badge-info:hover {
+  .badge--info:hover {
     background-color: #5ac1c4; }
 
-.badge-inverse {
+.badge--inverse {
   background-color: #414141;
   color: white; }
-  .badge-inverse:hover {
+  .badge--inverse:hover {
     background-color: #0e0e0e;
     color: white; }
 
@@ -1799,9 +1799,32 @@ body {
  * es recomendable eliminar su inclusión en el style.less
  * a la hora de compilar el CSS de la web.
  */
+main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px; }
+
 section {
-  width: 90%;
-  margin-bottom: 3em; }
+  width: 100%;
+  margin-bottom: 3em;
+  background-color: white;
+  padding: 3em 24px 1.5em;
+  border-radius: 4px;
+  border: 1px solid #bfbfbf;
+  position: relative; }
+  section h2.title {
+    background-color: #cb2a00;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.375em;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: normal; }
+    section h2.title small {
+      color: black;
+      font-weight: bold; }
 
 .altfont {
   font-family: Georgia, Times, "Times New Roman"; }
@@ -1816,20 +1839,21 @@ section {
   content: '"Courier New", monospace'; }
 
 .swatch {
-  margin: 0 24px 1.5em 0;
-  padding: 0;
+  margin: 1%;
+  padding: 1em;
+  width: 31.333%;
+  border: 1px solid #e6e6e6;
   float: left; }
 
 .swatch-row {
   display: block;
   margin: 0;
-  padding: 0;
-  width: 200px; }
+  padding: 0; }
 
 .swatch-row span {
   display: block;
   float: left;
-  width: 100px;
+  width: 100%;
   height: 100px; }
 
 .swatch-base span:nth-child(1) {
@@ -1960,9 +1984,9 @@ section {
   font-weight: normal; }
 
 figure {
-  width: 24%;
+  width: 20%;
   float: left;
-  margin-right: 1%; }
+  margin-right: 5%; }
 
 /*------------------------------------*\
     $DEBUG
