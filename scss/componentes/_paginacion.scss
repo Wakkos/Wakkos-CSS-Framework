@@ -41,9 +41,9 @@
             padding:12PX;
             margin:-12px;
         }
-            .pagination__first a:before{
+            .pagination--first a:before{
                 content:"\00AB" "\00A0";
             }
-            .pagination__last a:after{
+            .pagination--last a:after{
                 content:"\00A0" "\00BB";
             }
