@@ -59,7 +59,8 @@
 * Inputs con estilo de botones
 */
 input[type="submit"].btn:hover {
-border-color : $buttonbordercolor; }
+	border-color : $buttonbordercolor;
+}
 
 
 /**
@@ -67,7 +68,8 @@ border-color : $buttonbordercolor; }
 */
 .btn--disabled {
 @include opacity(.5);
-cursor : default; }
+	cursor : default;
+}
 
 /**
 * Botón de Error
@@ -76,9 +78,10 @@ cursor : default; }
 	background-color: $errorcolor;
 	color : darken($errorcolor, 40%);
 	&:hover {
-	color : lighten($errorcolor, 40%);}
+		color : lighten($errorcolor, 40%);
+	}
 	&:visited {
-	color : darken($errorcolor, 40%);
+		color : darken($errorcolor, 40%);
 	}
 }
 
@@ -89,9 +92,10 @@ cursor : default; }
 	background-color: $infocolor;
 	color : darken($infocolor, 40%);
 	&:hover {
-	color : lighten($infocolor, 40%);}
+		color : lighten($infocolor, 40%);
+	}
 	&:visited {
-	color : darken($infocolor, 40%);
+		color : darken($infocolor, 40%);
 	}
 }
 
@@ -105,9 +109,10 @@ cursor : default; }
 	background-color: $basecolor;
 	color: $white;
 	&:hover {
-	color : lighten($basecolor, 40%); }
+		color : lighten($basecolor, 40%);
+	}
 	&:visited {
-	color : darken($basecolor, 40%);
+		color : darken($basecolor, 40%);
 	}
 }
 
@@ -119,9 +124,10 @@ cursor : default; }
 	background-color: $successcolor;
 	color : darken($successcolor, 40%);
 	&:hover {
-	color : lighten($successcolor, 40%); }
+		color : lighten($successcolor, 40%);
+	}
 	&:visited {
-	color : darken($successcolor, 40%);
+		color : darken($successcolor, 40%);
 	}
 }
 
@@ -134,9 +140,9 @@ cursor : default; }
 	background-color: $warningcolor;
 	color : darken($warningcolor, 40%);
 	&:hover {
-	color : lighten($warningcolor, 40%); }
+		color : lighten($warningcolor, 40%); }
 	&:visited {
-	color : darken($warningcolor, 40%);
+		color : darken($warningcolor, 40%);
 	}
 }
 
@@ -189,27 +195,32 @@ cursor : default; }
  *
  */
 .btn-group {
-position : relative;
-*zoom : 1;
-*margin-left : .3em; }
+	position : relative;
+	*zoom : 1;
+	*margin-left : .3em;
+}
 
 .btn-group .btn {
-position : relative;
-border-radius: 0;
-float : left;
-margin-left : -1px;
+	position : relative;
+	border-radius: 0;
+	float : left;
+	margin-left : -1px;
 }
 
 .btn-group .btn:first-child {
-margin-left : 0;
-@include border-radius(0, 0, $radius, $radius); }
+	margin-left : 0;
+	@include border-radius(0, 0, $radius, $radius);
+}
 
 .btn-group .btn:last-child {
-@include border-radius($radius, $radius, 0, 0); }
+	@include border-radius($radius, $radius, 0, 0);
+}
 
 .btn-group .btn.large:first-child {
-margin-left : 0;
-@include border-radius($radius, 0, $radius, 0); }
+	margin-left : 0;
+	@include border-radius($radius, 0, $radius, 0);
+}
 
 .btn-group .btn.large:last-child {
-@include border-radius(0, $radius, 0, $radius); }
+	@include border-radius(0, $radius, 0, $radius);
+}
