@@ -86,4 +86,17 @@ white-space : nowrap; }
 	}
 }
 
-
+  /**
+  * Centrado vertical de un elemento según su contenedor.
+  */
+.vertical-center {
+	margin: 0 auto;
+	display: table;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
