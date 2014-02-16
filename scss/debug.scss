@@ -18,7 +18,7 @@
 /**
  * Hay elementos vacíos?
  */
-:empty{
+:empty {
     outline:5px solid yellow;
 }
 
@@ -27,13 +27,13 @@
  * Las imágenes requieren el atributo ALT, un ALT vacío no es del todo malo
  * pero una imagen sin ALT definitivamente está mal.
  */
-img{
+img {
     outline:5px solid red;
 }
-img[alt]{
+img[alt] {
     outline:none;
 }
-img[alt=""]{
+img[alt=""] {
     outline:5px solid yellow;
 }
 
@@ -42,10 +42,10 @@ img[alt=""]{
  * Los links algunas veces, no siempre, se benefician del atributo "title".
  * Links sin 'title' no son inválidos, pero es buena idea revisar.
  */
-a{
+a {
     outline:5px solid yellow;
 }
-a[title]{
+a[title] {
     outline:none;
 }
 
@@ -54,7 +54,7 @@ a[title]{
  * Revisa los "href" con contenido dudoso.
  */
 a[href="#"],
-a[href*="javascript"]{
+a[href*="javascript"] {
     outline:5px solid yellow;
 }
 
@@ -62,7 +62,7 @@ a[href*="javascript"]{
 /**
  * El atributo 'target=""' es.... bueno, revisa.
  */
-a[target]{
+a[target] {
     outline:5px solid yellow;
 }
 
@@ -71,7 +71,7 @@ a[target]{
  * Asegúrate que una lista solo anida LI's
  */
 ul,
-ol{
+ol {
     > *:not(li){
         outline:5px solid red;
     }
@@ -82,10 +82,10 @@ ol{
  * Deberíamos asignar un atributo 'scope' a los th
  * http://bit.ly/1aHBDgW
  */
-th{
+th {
     outline:5px solid yellow;
 }
-th[scope]{
+th[scope] {
     outline:none;
 }
 
@@ -93,7 +93,7 @@ th[scope]{
 /**
  * los tr hijos de 'table' no son buenos, ¿necesitabas un 'thead' / 'tbody'?
  */
-table > tr{
+table > tr {
     outline:5px solid yellow;
 }
 
@@ -101,7 +101,7 @@ table > tr{
 /**
  * `tfoot` debe estar *antes* de `tbody`.
  */
-tbody + tfoot{
+tbody + tfoot {
     outline:5px solid yellow;
 }
 
@@ -109,10 +109,10 @@ tbody + tfoot{
 /**
  * Forms necesitan del atributo `action`
  */
-form{
+form {
     outline:5px solid red;
 }
-form[action]{
+form[action] {
     outline:none;
 }
 
@@ -122,19 +122,19 @@ form[action]{
  * 'textarea' necesita `rows' y 'cols' y 'submit' necesita del atributo 'value'.
  */
 textarea,
-input{
+input {
     outline:5px solid red;
 }
-input[type]{
+input[type] {
     outline:none;
 }
-textarea[rows][cols]{
+textarea[rows][cols] {
     outline:none;
 }
-input[type=submit]{
+input[type=submit] {
     outline:5px solid red;
 }
-input[type=submit][value]{
+input[type=submit][value] {
     outline:none;
 }
 
@@ -142,7 +142,7 @@ input[type=submit][value]{
 /**
  * Evitamos estilos _inline_ a ser posible.
  */
-[style]{
+[style] {
         outline:5px solid yellow;
 }
 
@@ -150,6 +150,6 @@ input[type=submit][value]{
 /**
  * Deberías evitar IDs para CSS.
  */
-[id]{
+[id] {
         outline:5px solid yellow;
 }
