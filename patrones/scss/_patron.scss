@@ -8,7 +8,7 @@
  * a la hora de compilar el CSS de la web.
  */
 main {
-	@include max-width(1024px);
+	@extend max-width;
 }
 section {
 	width: 100%;

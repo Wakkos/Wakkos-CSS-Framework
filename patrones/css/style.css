@@ -59,7 +59,7 @@
     $MIXINS
 \*------------------------------------*/
 /*------------------------------------*\
-    $HELPERS (Shorthands)
+    $PLACEHOLDERS
 \*------------------------------------*/
 /**
 * Centrar y dar un ancho máximo igual a $pagemaxwidth.
@@ -67,12 +67,6 @@
 /**
 * The ghost, nudged to maintain perfect centering
 */
-.vcenter:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle; }
-
 /**
 * Escondemos el texto solo VISUALMENTE
 */
@@ -97,14 +91,6 @@
 /**
 * Clear floats.
 */
-.clearfix, section, .swatch {
-  *zoom: 1; }
-  .clearfix:before, section:before, .swatch:before, .clearfix:after, section:after, .swatch:after {
-    display: table;
-    content: ""; }
-  .clearfix:after, section:after, .swatch:after {
-    clear: both; }
-
 /*------------------------------------*\
     $RESET
 \*------------------------------------*/
@@ -966,10 +952,7 @@ h6,
   width: 16px;
   height: 16px;
   padding: 0;
-  background: transparent url(../img/a-rss.png) no-repeat 0 0;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden; }
+  background: transparent url(../img/a-rss.png) no-repeat 0 0; }
 
 p,
 ol,
@@ -1799,11 +1782,6 @@ body {
  * es recomendable eliminar su inclusión en el style.less
  * a la hora de compilar el CSS de la web.
  */
-main {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1024px; }
-
 section {
   width: 100%;
   margin-bottom: 3em;

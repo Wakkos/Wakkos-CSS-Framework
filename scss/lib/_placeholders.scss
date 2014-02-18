@@ -1,8 +1,8 @@
 /*------------------------------------*\
-    $HELPERS (Shorthands)
+    $PLACEHOLDERS
 \*------------------------------------*/
 
-@mixin text-overflow() {
+%text-overflow {
 	overflow : hidden;
 	text-overflow : ellipsis;
 	white-space : nowrap;
@@ -12,16 +12,16 @@
   /**
   * Centrar y dar un ancho máximo igual a $pagemaxwidth.
   */
-@mixin max-width($max-width : $pagemaxwitdh) {
+%max-width {
 	margin-left:auto;
 	margin-right:auto;
-	max-width: $max-width;
+	max-width: $pagemaxwitdh;
 }
 
   /**
   * The ghost, nudged to maintain perfect centering
   */
-.vcenter {
+%vcenter {
 	&:before {
 		content: '';
 		display: inline-block;
@@ -33,7 +33,7 @@
   /**
   * Escondemos el texto solo VISUALMENTE
   */
-@mixin hide-text() {
+%hide-text {
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
@@ -42,7 +42,7 @@
   /**
   * Escondemos el texto de VISUALMENTE y SCREENREADERS
   */
-@mixin hidden() {
+%hidden {
 	display : none !important;
 	visibility : hidden;
 }
@@ -51,7 +51,7 @@
   /**
   * Escondemos pero mantenemos layout.
   */
-@mixin invisible() {
+%invisible {
 	visibility : hidden;
 }
 
@@ -73,7 +73,7 @@
   /**
   * Clear floats.
   */
-.clearfix {
+%clearfix {
 	*zoom : 1;
 	&:before,
 
