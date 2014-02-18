@@ -246,18 +246,3 @@ sup {
 sub {
 	bottom : -.25em;
 }
-
-
-/*------------------------------------*\
-    $TAMAÑOS-FUENTES
-\*------------------------------------*/
-/**
- * Modificadores del tamaño de las fuentes.
- */
-.small {
-	@include font-size($small-text-size);
-}
-
-.huge {
-	@include font-size($huge-text-size);
-}

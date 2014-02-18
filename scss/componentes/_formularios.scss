@@ -320,8 +320,8 @@ input:-moz-placeholder {
 */
 
 input:required:focus:invalid {
-  	background-color:lighten($alertcolor, 5%);
+  	background-color:lighten($color-alert, 5%);
 }
 input:required:focus:valid {
-  	background-color:lighten($successcolor, 35%);
+  	background-color:lighten($color-alert, 35%);
 }

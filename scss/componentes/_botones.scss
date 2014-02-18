@@ -75,13 +75,13 @@ input[type="submit"].btn:hover {
 * Botón de Error
 */
 .btn--error {
-	background-color: $errorcolor;
-	color : darken($errorcolor, 40%);
+	background-color: $color-error;
+	color : darken($color-error, 40%);
 	&:hover {
-		color : lighten($errorcolor, 40%);
+		color : lighten($color-error, 40%);
 	}
 	&:visited {
-		color : darken($errorcolor, 40%);
+		color : darken($color-error, 40%);
 	}
 }
 
@@ -89,13 +89,13 @@ input[type="submit"].btn:hover {
 * Botón de Info
 */
 .btn--info {
-	background-color: $infocolor;
-	color : darken($infocolor, 40%);
+	background-color: $color-info;
+	color : darken($color-info, 40%);
 	&:hover {
-		color : lighten($infocolor, 40%);
+		color : lighten($color-info, 40%);
 	}
 	&:visited {
-		color : darken($infocolor, 40%);
+		color : darken($color-info, 40%);
 	}
 }
 
@@ -121,13 +121,13 @@ input[type="submit"].btn:hover {
 */
 
 .btn--success {
-	background-color: $successcolor;
-	color : darken($successcolor, 40%);
+	background-color: $color-success;
+	color : darken($color-success, 40%);
 	&:hover {
-		color : lighten($successcolor, 40%);
+		color : lighten($color-success, 40%);
 	}
 	&:visited {
-		color : darken($successcolor, 40%);
+		color : darken($color-success, 40%);
 	}
 }
 
@@ -137,12 +137,12 @@ input[type="submit"].btn:hover {
 * Botón de advertencia
 */
 .btn--warning {
-	background-color: $warningcolor;
-	color : darken($warningcolor, 40%);
+	background-color: $color-warning;
+	color : darken($color-warning, 40%);
 	&:hover {
-		color : lighten($warningcolor, 40%); }
+		color : lighten($color-warning, 40%); }
 	&:visited {
-		color : darken($warningcolor, 40%);
+		color : darken($color-warning, 40%);
 	}
 }
 

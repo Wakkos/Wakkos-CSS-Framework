@@ -1,10 +1,19 @@
 /*------------------------------------*\
     $VARIABLES
 \*------------------------------------*/
+/**
+ *
+ * Definimos y configuramos las variables CSS que vamos a utilizar
+ *
+ */
 
 
-// Breakpoints
-// "Start with the small screen first, then expand until it looks like shit. Time to insert a breakpoint!"
+/*------------------------------------*\
+    $BREAKPOINTS
+\*------------------------------------*/
+/**
+ * "Start with the small screen first, then expand until it looks like shit. Time to insert a breakpoint!"
+ */
 
 $bp1 : 30em;
 $bp2 : 37.5em;
@@ -12,40 +21,111 @@ $bp3 : 48em;
 $bp4 : 56.25em;
 $bp5 : 68.75em;
 
-// Layout
-$baselineheight : 1.5em;
-$baseline : $baselineheight;
-$gutterwidth : 24px;
-$pagemaxwitdh: 1024px;
-$radius      : 2px;
-$hovertransition : .3s;
-$animationtime : .8s;
 
-// Fuentes
+
+
+
+/*------------------------------------*\
+    $BORDER-BOX
+\*------------------------------------*/
+/**
+ * Quieres todos los elementos tener un box-sizing:border-box?
+ * paulirish.com/2012/box-sizing-border-box-ftw ?
+ */
+$border-box: true!default;
+
+
+
+
+
+
+
+
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+/**
+ * Definimos elementos constantes del layout
+ */
+$baselineheight :     1.5em;
+$baseline :           $baselineheight;
+$gutterwidth :        24px;
+$pagemaxwitdh :       90em;
+$radius :             2px;
+$hovertransition :    .3s;
+$animationtime :      .8s;
+
+
+
+
+
+/*------------------------------------*\
+    $FONT-FACE
+\*------------------------------------*/
+/**
+ * Definimos las fuentes a utilizar:
+ * $basefont para todos los textos inline
+ * $altfont para textos alternativos, como citas, intro, etc...
+ * $codefont para código
+ */
 $basefont : "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-// Tamaños de fuentes
-$basefontsize    : 16;
-$small-text-size : 12;
-$huge-text-size  : 18;
-
+$altfont : Georgia, Times, "Times New Roman";
+$codefont : "Courier New", monospace;
 $baseheadingfont : inherit;
+
 $baseheadingfontweight : bold;
 $baseheadingfontcolor : inherit;
 
-$altfont : Georgia, Times, "Times New Roman";
 $altlineheight : 1.35em;
 
-$codefont : "Courier New", monospace;
 
-// Colores Base  //////////////////////
+
+
+
+/*------------------------------------*\
+    $TAMAÑOS
+\*------------------------------------*/
+/**
+ * Definimos las fuentes a utilizar:
+ * $basefont para todos los textos inline
+ * $altfont para textos alternativos, como citas, intro, etc...
+ * $codefont para código
+ */
+$basefontsize :      16;
+$giga-size :         96!default;
+$mega-size :         72!default;
+$kilo-size :         48!default;
+
+$h1-size :           36!default;
+$h2-size :           30!default;
+$h3-size :           24!default;
+$h4-size :           20!default;
+$h5-size :           16!default;
+$h6-size :           14!default;
+
+$small-size :        12!default;
+$micro-size :        10!default;
+
+
+
+
+
+/*------------------------------------*\
+    $COLORS
+\*------------------------------------*/
+/**
+ * Brand stuff
+ */
 $basecolor      : rgb(127,84,138); // Morado
-$baselight      : lighten($basecolor, 35%);
+$basecolor-light      : lighten($basecolor, 35%);
 $secondary      : rgb(140,191,147); // Verde Menu
 $bordercolor    : rgb(182,207,84); // Verde Bordes
 $compcolor      : rgb(182,207,84); // Verde Bordes, repetido porque se usa en patron.scss
 
-// Escala de grises  ///////////////
+/**
+ * Escala de grises
+ * A veces no queremos que el negro sea "negro" o el blanco "blanco", puedes cambiarlos.
+ */
 $black 			: rgb(0,0,0);
 $superdark  	: lighten($black, 10%);
 $darkergrey 	: lighten($black, 15%);
@@ -67,44 +147,53 @@ $linkcolorvisited   : $basecolor;
 $linkcolorfocus 	: darken($linkcolorvisited, 10);
 
 
-// Alertas y popups  ///////////////
-$alertcolor 	: rgb(252,228,207);
-$errorcolor 	: rgb(218,79,73);
-$infocolor 		: rgb(165,221,223);
-$inverscolor 	: rgb(65,65,65);
-$successcolor 	: rgb(91,183,91);
-$warningcolor 	: rgb(250,167,50);
+
+
+
+
+/*------------------------------------*\
+    $TEXTURAS
+\*------------------------------------*/
+/**
+ * Definimos Colores y elementos de popups, mensajes de alerta, etc...
+ */
+$color-alert 	: rgb(252,228,207);
+$color-error 	: rgb(218,79,73);
+$color-info 	: rgb(165,221,223);
+$color-inverse 	: rgb(65,65,65);
+$color-success 	: rgb(91,183,91);
+$color-warning 	: $color-error;
 
 // Texturas de popups
-$alertbordercolor	: darken($alertcolor, 20%);
+$alertbordercolor	: darken($color-alert, 20%);
 $alertborderwidth 	: 1px;
 $alertborderstyle 	: solid;
-$alerttext			: darken($alertcolor, 60%);
+$alerttext			: darken($color-alert, 60%);
 
 // Error
-$alerterrorcolor 	: lighten($errorcolor, 30%);
-$alerterrorborder  	: lighten($errorcolor, 20%);
-$alerterrortext 	: $errorcolor;
+$alerterrorcolor 	: lighten($color-error, 30%);
+$alerterrorborder  	: lighten($color-error, 20%);
+$alerterrortext 	: $color-error;
 
 // Info
-$alertinfocolor 	: lighten($infocolor, 10%);
-$alertinfoborder  	: darken($infocolor, 10%);
-$alertinfotext 		: darken($infocolor, 50%);
+$alertinfocolor 	: lighten($color-info, 10%);
+$alertinfoborder  	: darken($color-info, 10%);
+$alertinfotext 		: darken($color-info, 50%);
 
 // Inverso
-$alertinversecolor 	: $inverscolor;
+$alertinversecolor 	: $color-inverse;
 $alertinverseborder : $black;
 $alertinversetext 	: $white;
 
 // Success
-$alertsuccesscolor 	: lighten($successcolor, 30%);
-$alertsuccessborder : lighten($successcolor, 20%);
-$alertsuccesstext 	: darken($successcolor, 20%);
+$alertsuccesscolor 	: lighten($color-success, 30%);
+$alertsuccessborder : lighten($color-success, 20%);
+$alertsuccesstext 	: darken($color-success, 20%);
 
 // Advertencia
-$alertwarningcolor 	: lighten($warningcolor, 30%);
-$alertwarningborder : lighten($warningcolor, 20%);
-$alertwarningtext 	: darken($warningcolor, 20%);
+$alertwarningcolor 	: lighten($color-warning, 30%);
+$alertwarningborder : lighten($color-warning, 20%);
+$alertwarningtext 	: darken($color-warning, 20%);
 
 /* Colores sociales -> son los colores corporativos, pero cambiadlos
  * si hace falta. (también podéis añadir más)  ///////////////////////

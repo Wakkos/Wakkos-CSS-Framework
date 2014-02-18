@@ -72,16 +72,12 @@
 
   /**
   * Clear floats.
+  * http://bit.ly/1e3YaBH
   */
 %clearfix {
-	*zoom : 1;
-	&:before,
-
-	&:after {
-	display: table;
-	content : "";
-	}
-	&:after {
-	clear : both;
-	}
+	&:after{
+        content:"";
+        display:table;
+        clear:both;
+    }
 }

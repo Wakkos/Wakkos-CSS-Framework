@@ -9,7 +9,7 @@
 .alert {
 	margin-bottom : $baselineheight;
 	padding : 8px 35px 8px 14px;
-	background-color : $alertcolor;
+	background-color : $color-alert;
 	border : $alertborderwidth $alertborderstyle $alertbordercolor;
 	font-family : $basefont;
 	@include font-size(14);
@@ -104,47 +104,47 @@
 }
 
 	.badge--error {
-		background-color : $errorcolor;
+		background-color : $color-error;
 
 
 		&:hover {
-			background-color : darken($errorcolor, 20%);
+			background-color : darken($color-error, 20%);
 		}
 	}
 
 	.badge--warning {
-		background-color : $warningcolor;
+		background-color : $color-warning;
 
 
 		&:hover {
-			background-color : darken($warningcolor, 20%);
+			background-color : darken($color-warning, 20%);
 		}
 	}
 
 	.badge--success {
-		background-color : $successcolor;
+		background-color : $color-info;
 
 
 		&:hover {
-			background-color : darken($successcolor, 20%);
+			background-color : darken($color-info, 20%);
 		}
 	}
 
 	.badge--info {
-		background-color : $infocolor;
-		color : darken($infocolor, 50%);
+		background-color : $color-info;
+		color : darken($color-info, 50%);
 
 		&:hover {
-			background-color : darken($infocolor, 20%);
+			background-color : darken($color-info, 20%);
 		}
 	}
 
 	.badge--inverse {
-		background-color : $inverscolor;
+		background-color : $color-info;
 		color : $white;
 
 		&:hover {
-			background-color : darken($inverscolor, 20%);
+			background-color : darken($color-info, 20%);
 			color : $white;
 		}
 	}
@@ -156,7 +156,7 @@
 }
 
 .errorgrad {
-	@include vertical($basecolor, darken($errorcolor, 10%));
+	@include vertical($basecolor, darken($color-error, 10%));
 }
 
 .greygrad {
@@ -164,19 +164,19 @@
 }
 
 .infograd {
-	@include vertical($infocolor, darken($infocolor, 10%));
+	@include vertical($color-info, darken($color-info, 10%));
 }
 
 .inversegrad {
-	@include vertical($inverscolor, darken($inverscolor, 10%));
+	@include vertical($color-info, darken($color-info, 10%));
 }
 
 .successgrad {
-	@include vertical($successcolor, darken($successcolor, 10%));
+	@include vertical($color-info, darken($color-info, 10%));
 }
 
 .warninggrad {
-	@include vertical($warningcolor, darken($warningcolor, 10%));
+	@include vertical($color-warning, darken($color-warning, 10%));
 }
 
 // Para más gradientes: https://github.com/twitter/bootstrap/blob/master/less/mixins.less

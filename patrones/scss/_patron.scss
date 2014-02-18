@@ -118,11 +118,11 @@ height : 100px; }
 
 .swatch-alert {
 	span:nth-child(1) {
-		background-color:$alertcolor;
+		background-color:$color-alert;
 	}
 	small::after {
-		content: "#{$alertcolor}";
-		color: $alertcolor;
+		content: "#{$color-alert}";
+		color: $color-alert;
 		display: block;
 	}
 
@@ -134,11 +134,11 @@ height : 100px; }
 
 .swatch-error {
 	span:nth-child(1) {
-		background-color:$errorcolor;
+		background-color:$color-alert;
 	}
 	small::after {
-		content: "#{$errorcolor}";
-		color: $errorcolor;
+		content: "#{$color-alert}";
+		color: $color-alert;
 		display: block;
 	}
 
@@ -149,12 +149,12 @@ height : 100px; }
 
 .swatch-info {
 	span:nth-child(1) {
-		background-color:$infocolor;
+		background-color:$color-info;
 	}
 
 	small::after {
-		content: "#{$infocolor}";
-		color: $infocolor;
+		content: "#{$color-info}";
+		color: $color-info;
 		display: block;
 	}
 
@@ -165,11 +165,11 @@ height : 100px; }
 
 .swatch-success {
 	span:nth-child(1) {
-		background-color:$successcolor;
+		background-color:$color-success;
 	}
 	small::after {
-		content: "#{$successcolor}";
-		color: $successcolor;
+		content: "#{$color-success}";
+		color: $color-success;
 		display: block;
 	}
 
@@ -181,12 +181,12 @@ height : 100px; }
 
 .swatch-warning {
 	span:nth-child(1) {
-		background-color:$warningcolor;
+		background-color:$color-warning;
 	}
 
 	small::after {
-		content: "#{$warningcolor}";
-		color: $warningcolor;
+		content: "#{$color-warning}";
+		color: $color-warning;
 		display: block;
 	}
 
