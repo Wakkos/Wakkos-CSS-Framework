@@ -164,6 +164,13 @@ $color-inverse 	: rgb(65,65,65);
 $color-success 	: rgb(91,183,91);
 $color-warning 	: $color-error;
 
+$colors-list: $color-warning $color-error $color-info $color-inverse $color-success $color-warning;
+@each $current-color in $colors-list {
+    $i: index($colors-list, $current-color);
+    .stuff-#{$i} {
+        color: $current-color;
+    }
+}
 // Texturas de popups
 $alertbordercolor	: darken($color-alert, 20%);
 $alertborderwidth 	: 1px;
