@@ -21,11 +21,6 @@ $radius      : 2px;
 $hovertransition : .3s;
 $animationtime : .8s;
 
-// Web
-$background: 		white;
-$textcolor: 		darkergrey;
-$textcolor-strong:	black;
-
 // Fuentes
 $basefont : "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -44,11 +39,11 @@ $altlineheight : 1.35em;
 $codefont : "Courier New", monospace;
 
 // Colores Base  //////////////////////
-$basecolor 		: #00a1cb;
+$basecolor      : rgb(127,84,138); // Morado
 $baselight      : lighten($basecolor, 35%);
-$secondary      : adjust-hue($basecolor, 180);
-$compcolor 		: rgb(218,128,45);
-$bordercolor    : lighten($basecolor, 10);
+$secondary      : rgb(140,191,147); // Verde Menu
+$bordercolor    : rgb(182,207,84); // Verde Bordes
+$compcolor      : rgb(182,207,84); // Verde Bordes, repetido porque se usa en patron.scss
 
 // Escala de grises  ///////////////
 $black 			: rgb(0,0,0);
@@ -60,6 +55,10 @@ $lightgrey 		: lighten($black, 75%);
 $lightergrey 	: lighten($black, 90%);
 $white 			: rgb(255,255,255);
 
+// Web
+$background: 		$white;
+$textcolor: 		$darkergrey;
+$textcolor-strong:	$black;
 
 // Links  //////////////////////
 $linkcolor 		    : $basecolor;
@@ -107,7 +106,7 @@ $alertwarningcolor 	: lighten($warningcolor, 30%);
 $alertwarningborder : lighten($warningcolor, 20%);
 $alertwarningtext 	: darken($warningcolor, 20%);
 
-/* Colores sociales -> son los colores corporativos, pero cambiadlos 
+/* Colores sociales -> son los colores corporativos, pero cambiadlos
  * si hace falta. (también podéis añadir más)  ///////////////////////
  */
 $fb :rgb(59, 89, 182);
@@ -116,13 +115,13 @@ $googleplus :rgb(221, 75, 57);
 $pinterest :rgb(203, 32, 39);
 $skype :rgb(18,165,244);
 $spotify :rgb(129,183,26);
-$instagram:#4E433C; 
-$tumblr: #2B4964; 
+$instagram:#4E433C;
+$tumblr: #2B4964;
 $vimeo: #86B32D;
 $soundcloud: #f76600;
-$youtube: #FF3333;  
-$linkedin: #4875B4; 
-$flickr: #FE0883;  
+$youtube: #FF3333;
+$linkedin: #4875B4;
+$flickr: #FE0883;
 $foursquare: #8FD400;
 
 

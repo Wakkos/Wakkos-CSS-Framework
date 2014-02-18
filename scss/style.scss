@@ -43,7 +43,4 @@
 
 @import "layout/breakpoints.scss";
 
-
-@import "patron.scss"; // Deberías eliminar/comentar esto, se usa solo para patrones.html
-
-@import "debug.scss";  // Utilizado para comprobar que el marcado HTML no contenga errores
+// @import "debug.scss";  // Utilizado para comprobar que el marcado HTML no contenga errores
