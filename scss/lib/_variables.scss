@@ -127,7 +127,7 @@ $micro-size :        10!default;
  * Brand stuff
  */
 $basecolor      : rgb(127,84,138); // Morado
-$basecolor-light      : lighten($basecolor, 35%);
+$basecolor-light: lighten($basecolor, 35%);
 $secondary      : rgb(140,191,147); // Verde Menu
 $bordercolor    : rgb(182,207,84); // Verde Bordes
 $compcolor      : rgb(182,207,84); // Verde Bordes, repetido porque se usa en patron.scss
@@ -173,14 +173,8 @@ $color-info 	: rgb(165,221,223);
 $color-inverse 	: rgb(65,65,65);
 $color-success 	: rgb(91,183,91);
 $color-warning 	: $color-error;
+ 
 
-$colors-list: $color-warning $color-error $color-info $color-inverse $color-success $color-warning;
-@each $current-color in $colors-list {
-    $i: index($colors-list, $current-color);
-    .stuff-#{$i} {
-        color: $current-color;
-    }
-}
 // Texturas de popups
 $alertbordercolor	: darken($color-alert, 20%);
 $alertborderwidth 	: 1px;
