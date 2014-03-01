@@ -38,6 +38,16 @@ $border-box: true!default;
 
 
 
+/*------------------------------------*\
+    $IMAGE-DIR
+\*------------------------------------*/
+/**
+ * Con agregar esta variable a las imágenes declaradas en CSS apañamos:
+ */
+$image-dir: "../img";
+
+ //Use: background-image:url("#{$image-dir}/btn.jpg");
+
 
 
 

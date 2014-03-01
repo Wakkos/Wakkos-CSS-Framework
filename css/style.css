@@ -71,6 +71,12 @@
  * paulirish.com/2012/box-sizing-border-box-ftw ?
  */
 /*------------------------------------*\
+    $IMAGE-DIR
+\*------------------------------------*/
+/**
+ * Con agregar esta variable a las imágenes declaradas en CSS apañamos:
+ */
+/*------------------------------------*\
     $LAYOUT
 \*------------------------------------*/
 /**
