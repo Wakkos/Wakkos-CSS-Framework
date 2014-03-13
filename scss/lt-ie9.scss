@@ -1,0 +1,9 @@
+/*------------------------------------*\
+    $LT-IE9
+\*------------------------------------*/
+/**
+ * Esta hoja de estilos elimina los mediaqueries si trabajamos mobile first 
+ * y crea una clase para ellos. La clase está en la variable $no-mq-classname.
+ */
+$media-queries-supported : false;
+@import "style.scss";

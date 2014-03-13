@@ -71,6 +71,13 @@
  * paulirish.com/2012/box-sizing-border-box-ftw ?
  */
 /*------------------------------------*\
+    $no-mediaquery-class
+\*------------------------------------*/
+/**
+ * Si decides incluir lt-ie9 para dar soporte a navegadores sin estilos
+ * esta es la clase que se añadirá a todos los elementos.
+ */
+/*------------------------------------*\
     $IMAGE-DIR
 \*------------------------------------*/
 /**
