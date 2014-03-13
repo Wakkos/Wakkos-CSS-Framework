@@ -8,13 +8,13 @@
  * a la hora de compilar el CSS de la web.
  */
 main {
-	@extend max-width;
+	@extend %max-width;
 }
 section {
 	width: 100%;
 	margin-bottom: $baselineheight * 2;
 	background-color: $white;
-	@extend .clearfix;
+	@extend %clearfix;
 	padding: ($baselineheight * 2) $gutterwidth $baselineheight;
 	border-radius:$radius * 2;
 	border:1px solid $lightgrey;
@@ -52,7 +52,7 @@ font-family:$altfont;
 .swatch {
 margin : 1%;
 padding : 1em;
-@extend .clearfix;
+@extend %clearfix;
 width : 31.333%;
 border:1px solid $lightergrey;
 float:left; }

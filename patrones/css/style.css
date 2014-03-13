@@ -122,18 +122,17 @@
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
-/**
- * Creamos prefijos para todo dios
- *
-   `@include vendor(border-radius, 4px);`
- *
- */
 /*------------------------------------*\
     $PLACEHOLDERS
 \*------------------------------------*/
 /**
 * Centrar y dar un ancho máximo igual a $pagemaxwidth.
 */
+main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90em; }
+
 /**
 * The ghost, nudged to maintain perfect centering
 */
@@ -162,6 +161,11 @@
 * Clear floats.
 * http://bit.ly/1e3YaBH
 */
+section:after, .swatch:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 /*------------------------------------*\
     $RESET
 \*------------------------------------*/
@@ -201,7 +205,6 @@ article, aside, figure, footer, header, hgroup, nav, section {
   src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/icomoon.woff") format("woff"), url("fonts/icomoon.ttf") format("truetype"), url("fonts/icomoon.svg#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
   font-family: 'icomoon';
@@ -1214,19 +1217,14 @@ input:required:focus:valid {
 \*------------------------------------*/
 @-webkit-viewport {
   width: device-width; }
-
 @-moz-viewport {
   width: device-width; }
-
 @-ms-viewport {
   width: device-width; }
-
 @-o-viewport {
   width: device-width; }
-
 @viewport {
   width: device-width; }
-
 html {
   background: white;
   font-size: 100%;

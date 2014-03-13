@@ -3,6 +3,83 @@
 \*------------------------------------*/
 
 
+
+// Mediqueries y breakpoints: El mixin consta de 4 partes
+//
+//  $breakpoint: Es el Brakpoint o la variable de breakpoint, las definimos en _variables.scss
+//               las que vienen por defecto: $bp1, $bp2, $bp3, $bp4 y $bp5.
+//  
+//  $query1: max o min, dependiendo de como queremos el Mediaquery que funcione:
+//           max-width, min-width, min-device-width, etc... - 'min' por defecto -
+//
+//  $query2: La segunda parte del query, lo que va después de 'min' o 'max'.
+//           -device-width, -device-height, -width etc...  - 'width' por defecto -
+//
+//  $target: El medio. PUede ser 'all', 'screen', 'print', etc...
+//           - '' por defecto -
+//  USO:
+//
+//  **************************************************************************
+//
+//  $bp1 : 45em;
+//
+// .texto {
+// 	color:red; 
+// 	@include media-query-bp($bp1,max,device-width,screen) {
+// 		color: blue;	
+// 	}
+// }
+//
+//  **************************************************************************
+//
+// Compilaría: 
+//
+//  **************************************************************************
+// .texto {
+// color: red; }
+// @media screen and (max-device-width: 45em) {
+//   .texto {
+//     color: blue; } }
+//  **************************************************************************
+//
+// Y en la hoja de estilos para navegadores que no soportan mediaqueries
+// compilaría lo siguiente (componenter/no-mq.scss):
+//
+//  **************************************************************************
+//
+// .texto {
+// color: red; }
+// .ie8-sucks .texto {
+//   color: blue; }
+//
+//  **************************************************************************
+//
+// La clase .ie8-sucks podéis cambiarlas en la configuración de variables.
+//
+//
+@mixin media-query-bp($breakpoint, $query1: min, $query2: width, $target: "") {
+	$mqtarget: "";
+	// Check if media queries are supported
+	@if $media-queries-supported == true {
+		@if $target != "" {
+			@media #{$target} and (#{$query1}-#{$query2}: #{$breakpoint}) {
+				@content;
+			}
+		}
+		@else {
+			@media (#{$query1}-#{$query2}: #{$breakpoint}) {
+				@content;
+			}
+		}
+	}
+	@else {
+		#{$no-mq-classname} & {
+			@content;
+		}
+	}
+}
+
+
 @mixin font-size($font-size: 16){
     font-size:($font-size)*1px;
     font-size:($font-size / $basefontsize)*1rem;
@@ -278,12 +355,12 @@
 
 
 
-/**
- * Creamos prefijos para todo dios
- *
-   `@include vendor(border-radius, 4px);`
- *
- */
+//
+//Creamos prefijos para todo dios
+//
+//   `@include vendor(border-radius, 4px);`
+//
+//
 @mixin vendor($property, $value...){
     -webkit-#{$property}:$value;
        -moz-#{$property}:$value;
