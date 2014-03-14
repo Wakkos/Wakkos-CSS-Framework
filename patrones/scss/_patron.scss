@@ -20,12 +20,13 @@ section {
 	border:1px solid $lightgrey;
 	position:relative;
 	h2.title {
-		background-color:$secondary;
+		background-color:$bordercolor;
 		position: absolute;
 		top:0;
 		left:0;
 		right: 0;
 		padding:($baselineheight / 4);
+		
 		@include font-size(12);
 		font-weight: normal;
 		small {

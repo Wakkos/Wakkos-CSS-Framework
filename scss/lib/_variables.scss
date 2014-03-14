@@ -129,11 +129,11 @@ $basefontsize :      16;
 /**
  * Brand stuff
  */
-$basecolor      : rgb(127,84,138); // Morado
+$basecolor      : rgb(210,101,7); // Naranja CoolVillage
 $basecolor-light: lighten($basecolor, 35%);
-$secondary      : rgb(140,191,147); // Verde Menu
-$bordercolor    : rgb(182,207,84); // Verde Bordes
-$compcolor      : rgb(182,207,84); // Verde Bordes, repetido porque se usa en patron.scss
+$secondary      : rgb(115,20,22); // Rojo CoolVillage
+$bordercolor    : lighten($secondary, 50); // Verde Bordes
+$compcolor      : rgb(182,207,84); // 
 
 /**
  * Escala de grises
@@ -233,7 +233,7 @@ $badgebackground    : $basecolor;
 $badgecolor         : $textcolor;
 
 // botones
-$buttonbackground   : $lightergrey;
+$buttonbackground   : $basecolor-light;
 $buttonbordercolor  : darken($buttonbackground, 10%);
 $buttonbottombordercolor : darken($buttonbordercolor, 10%);
 $buttoncolor        : $black;
