@@ -87,7 +87,7 @@ de la siguiente manera:
         			_mixins.scss
         			_placeholders.scss
         			_variables.scss
-``
+```
 
 El archivo `contenido.scss` se compila al principio del `style.css` para dar una 
 guía de donde tenemos nuestros elementos y su nombre, gracias a los comentarios 
