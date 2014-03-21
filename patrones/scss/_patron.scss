@@ -7,6 +7,17 @@
  * es recomendable eliminar su inclusión en el style.less
  * a la hora de compilar el CSS de la web.
  */
+
+ [role="banner"] {
+	@extend %max-width;
+	@extend %clearfix;
+	background-color: $secondary;
+	text-align: center;
+	margin-bottom: $baselineheight;
+	h1 {
+		color:$white;
+	}
+ }
 main {
 	@extend %max-width;
 }
@@ -20,19 +31,23 @@ section {
 	border:1px solid $lightgrey;
 	position:relative;
 	h2.title {
-		background-color:$bordercolor;
+		background-color:$secondary;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: $color-inverse;
 		position: absolute;
 		top:0;
 		left:0;
 		right: 0;
 		padding:($baselineheight / 4);
-		
-		@include font-size(12);
-		font-weight: normal;
+		@include font-size(18);
 		small {
 			color: $black;
 			font-weight: bold;
 		}
+	}
+	.title {
+		color: $color-inverse;
 	}
 }
 .altfont {

@@ -320,12 +320,15 @@ input:-moz-placeholder {
 
 
 /**
-* Validamos los formularios que son "required": http://coolvillage.es/ayuda-al-usuario-a-rellenar-formularios-con-css/
+* Validamos los formularios que son "required":
+* http://coolvillage.es/ayuda-al-usuario-a-rellenar-formularios-con-css/
 */
 
 input:required:focus:invalid {
   	background-color:lighten($color-alert, 5%);
+  	border:1px solid $color-alert;
 }
 input:required:focus:valid {
-  	background-color:lighten($color-alert, 35%);
+  	background-color:lighten($color-success, 40%);
+  	border:1px solid $color-success;
 }

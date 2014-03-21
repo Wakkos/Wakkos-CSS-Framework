@@ -154,36 +154,6 @@
 		}
 	}
 
-// GRADIENTES ====================================================
-
-%basegrad {
-	@include vertical($basecolor, darken($basecolor, 10%));
-}
-
-%errorgrad {
-	@include vertical($basecolor, darken($color-error, 10%));
-}
-
-%greygrad {
-	@include vertical($white, darken($lightergrey, 5%));
-}
-
-%infograd {
-	@include vertical($color-info, darken($color-info, 10%));
-}
-
-%inversegrad {
-	@include vertical($color-info, darken($color-info, 10%));
-}
-
-%successgrad {
-	@include vertical($color-info, darken($color-info, 10%));
-}
-
-%warninggrad {
-	@include vertical($color-warning, darken($color-warning, 10%));
-}
-
 // Para más gradientes: https://github.com/twitter/bootstrap/blob/master/less/mixins.less
 
 // WELL ====================================================

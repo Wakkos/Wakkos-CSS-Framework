@@ -170,6 +170,10 @@
 * Clear floats.
 * http://bit.ly/1e3YaBH
 */
+/**
+* Gradientes los ocnvertimos en placeholders porque imprime 10 millones de
+* líneas inútiles en el CSS
+*/
 /*------------------------------------*\
     $RESET
 \*------------------------------------*/
@@ -342,7 +346,6 @@ table {
 */
 .btn {
   display: inline-block;
-  *zoom: 1;
   line-height: 3em;
   color: #262626;
   text-align: center;
@@ -371,7 +374,7 @@ table {
     color: #262626; }
 
 /*------------------------------------*\
-    $VARIANTES
+    $BOTONES-VARIANTES
 \*------------------------------------*/
 /**
  * Variantes de los botones: color para dar sensaciones.
@@ -458,7 +461,7 @@ input[type="submit"].btn:hover {
   cursor: text; }
 
 /*------------------------------------*\
-    $TAMAÑOS
+    $BOTONES-TAMAÑOS
 \*------------------------------------*/
 /**
  * Variantes de los botones por tamaño.
@@ -480,7 +483,7 @@ input[type="submit"].btn:hover {
   line-height: 4; }
 
 /*------------------------------------*\
-    $GRUPOS
+    $BOTONES-GRUPOS
 \*------------------------------------*/
 /**
  * Con esta clase podemos agrupar los botones
@@ -489,7 +492,6 @@ input[type="submit"].btn:hover {
  */
 .btn--group {
   position: relative;
-  *zoom: 1;
   *margin-left: .3em; }
 
 .btn--group .btn {
@@ -580,6 +582,9 @@ hr {
   border: 0;
   border-top: 1px solid #ed999b; }
 
+/*------------------------------------*\
+    $ELEMENTOS-IMÁGENES
+\*------------------------------------*/
 img {
   max-width: 100%;
   border-width: 0;
@@ -598,6 +603,9 @@ img {
 .img--circle {
   border-radius: 100%; }
 
+/*------------------------------------*\
+    $ELEMENTOS-FIGURE
+\*------------------------------------*/
 figure {
   margin-bottom: 1.5em; }
   figure img {
@@ -700,14 +708,6 @@ h6,
   .header h2:hover,
   .header h3:hover {
     background-color: white; }
-
-.header .a-rss,
-.header .a-rss:hover {
-  float: left;
-  width: 16px;
-  height: 16px;
-  padding: 0;
-  background: transparent url(../img/a-rss.png) no-repeat 0 0; }
 
 p,
 ol,
@@ -950,7 +950,6 @@ form {
     display: block;
     width: 100%;
     margin-bottom: 3em;
-    *margin-left: -7px;
     padding: 0;
     color: #262626;
     border: 0;
@@ -1208,13 +1207,16 @@ input:-moz-placeholder {
   margin-right: 3px; }
 
 /**
-* Validamos los formularios que son "required": http://coolvillage.es/ayuda-al-usuario-a-rellenar-formularios-con-css/
+* Validamos los formularios que son "required":
+* http://coolvillage.es/ayuda-al-usuario-a-rellenar-formularios-con-css/
 */
 input:required:focus:invalid {
-  background-color: #fef2e7; }
+  background-color: #fef2e7;
+  border: 1px solid #fce4cf; }
 
 input:required:focus:valid {
-  background-color: white; }
+  background-color: #e9f5e9;
+  border: 1px solid #5bb75b; }
 
 /*------------------------------------*\
     $SITIO
@@ -1299,7 +1301,7 @@ body {
   color: #236062; }
 
 .alert--inverse {
-  background-color: #414141;
+  background-color: #8cebe9;
   border-color: black;
   color: white; }
 
@@ -1362,76 +1364,6 @@ body {
   .badge--inverse:hover {
     background-color: #5ac1c4;
     color: white; }
-
-.basegrad {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d26507), to(#a14d05));
-  background-image: -webkit-linear-gradient(top, #d26507, #a14d05);
-  background-color: #a14d05;
-  background-image: -moz-linear-gradient(top, #d26507, #a14d05);
-  background-image: -ms-linear-gradient(top, #d26507, #a14d05);
-  background-image: -o-linear-gradient(top, #d26507, #a14d05);
-  background-image: linear-gradient(top, #d26507, #a14d05);
-  background-repeat: repeat-x; }
-
-.errorgrad {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d26507), to(#c72f29));
-  background-image: -webkit-linear-gradient(top, #d26507, #c72f29);
-  background-color: #c72f29;
-  background-image: -moz-linear-gradient(top, #d26507, #c72f29);
-  background-image: -ms-linear-gradient(top, #d26507, #c72f29);
-  background-image: -o-linear-gradient(top, #d26507, #c72f29);
-  background-image: linear-gradient(top, #d26507, #c72f29);
-  background-repeat: repeat-x; }
-
-.greygrad {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#d9d9d9));
-  background-image: -webkit-linear-gradient(top, white, #d9d9d9);
-  background-color: #d9d9d9;
-  background-image: -moz-linear-gradient(top, white, #d9d9d9);
-  background-image: -ms-linear-gradient(top, white, #d9d9d9);
-  background-image: -o-linear-gradient(top, white, #d9d9d9);
-  background-image: linear-gradient(top, white, #d9d9d9);
-  background-repeat: repeat-x; }
-
-.infograd {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a5dddf), to(#7fcfd2));
-  background-image: -webkit-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-color: #7fcfd2;
-  background-image: -moz-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-image: -ms-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-image: -o-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-image: linear-gradient(top, #a5dddf, #7fcfd2);
-  background-repeat: repeat-x; }
-
-.inversegrad {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a5dddf), to(#7fcfd2));
-  background-image: -webkit-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-color: #7fcfd2;
-  background-image: -moz-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-image: -ms-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-image: -o-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-image: linear-gradient(top, #a5dddf, #7fcfd2);
-  background-repeat: repeat-x; }
-
-.successgrad {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a5dddf), to(#7fcfd2));
-  background-image: -webkit-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-color: #7fcfd2;
-  background-image: -moz-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-image: -ms-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-image: -o-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-image: linear-gradient(top, #a5dddf, #7fcfd2);
-  background-repeat: repeat-x; }
-
-.warninggrad {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#da4f49), to(#c72f29));
-  background-image: -webkit-linear-gradient(top, #da4f49, #c72f29);
-  background-color: #c72f29;
-  background-image: -moz-linear-gradient(top, #da4f49, #c72f29);
-  background-image: -ms-linear-gradient(top, #da4f49, #c72f29);
-  background-image: -o-linear-gradient(top, #da4f49, #c72f29);
-  background-image: linear-gradient(top, #da4f49, #c72f29);
-  background-repeat: repeat-x; }
 
 .well {
   min-height: 21px;

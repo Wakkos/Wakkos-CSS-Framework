@@ -74,7 +74,7 @@ $image-dir: "../img";
 $baselineheight :     1.5em;
 $baseline :           $baselineheight;
 $gutterwidth :        24px;
-$pagemaxwitdh :       90em;
+$pagemaxwitdh :       80%;
 $radius :             2px;
 $hovertransition :    .3s;
 $animationtime :      .8s;
@@ -133,7 +133,7 @@ $basecolor      : rgb(210,101,7); // Naranja CoolVillage
 $basecolor-light: lighten($basecolor, 35%);
 $secondary      : rgb(115,20,22); // Rojo CoolVillage
 $bordercolor    : lighten($secondary, 50); // Verde Bordes
-$compcolor      : rgb(182,207,84); // 
+$compcolor      : rgb(182,207,84); //
 
 /**
  * Escala de grises
@@ -173,10 +173,10 @@ $linkcolorfocus 	: darken($linkcolorvisited, 10);
 $color-alert 	: rgb(252,228,207);
 $color-error 	: rgb(218,79,73);
 $color-info 	: rgb(165,221,223);
-$color-inverse 	: rgb(65,65,65);
+$color-inverse 	: invert($secondary);
 $color-success 	: rgb(91,183,91);
 $color-warning 	: $color-error;
- 
+
 
 // Texturas de popups
 $alertbordercolor	: darken($color-alert, 20%);

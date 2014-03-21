@@ -163,6 +163,10 @@
 * Clear floats.
 * http://bit.ly/1e3YaBH
 */
+/**
+* Gradientes los ocnvertimos en placeholders porque imprime 10 millones de
+* líneas inútiles en el CSS
+*/
 /*------------------------------------*\
     $RESET
 \*------------------------------------*/
@@ -250,15 +254,15 @@ you can use the generic selector below, but it's slower:
 \*------------------------------------*/
 a {
   text-decoration: none;
-  color: #7f548a; }
+  color: #d26507; }
   a:visited {
-    color: #7f548a; }
+    color: #d26507; }
   a:hover {
     text-decoration: underline;
-    color: #62416a; }
+    color: #a14d05; }
   a:focus {
     outline: thin dotted;
-    color: #62416a; }
+    color: #a14d05; }
   a:hover, a:active {
     outline: 0; }
 
@@ -276,7 +280,7 @@ table {
   table td {
     padding: 8px;
     vertical-align: top;
-    border-top: 1px solid #dbcbdf;
+    border-top: 1px solid #fccfa9;
     font-size: 14px;
     font-size: 0.875rem;
     line-height: 1.5em;
@@ -291,7 +295,7 @@ table {
   table thead:first-child tr:first-child td {
     border-top: 0; }
   table tbody + tbody {
-    border-top: 2px solid #dbcbdf; }
+    border-top: 2px solid #fccfa9; }
   table tbody tr td,
   table tbody tr th {
     -webkit-transition: background-color 0.25s 0 linear;
@@ -301,20 +305,20 @@ table {
     transition: background-color 0.25s 0 linear; }
   table tbody tr:hover td,
   table tbody tr:hover th {
-    background-color: #f1eaf3; }
+    background-color: #feebda; }
 
 .table-condensed th,
 .table-condensed td {
   padding: 4px 5px; }
 
 .table-bordered {
-  border: 1px solid #dbcbdf;
+  border: 1px solid #fccfa9;
   border-left: 0;
   border-collapse: separate;
   *border-collapse: collapsed; }
   .table-bordered th,
   .table-bordered td {
-    border-left: 1px solid #dbcbdf; }
+    border-left: 1px solid #fccfa9; }
   .table-bordered thead:first-child tr:first-child th,
   .table-bordered tbody:first-child tr:first-child th,
   .table-bordered tbody:first-child tr:first-child td {
@@ -335,14 +339,13 @@ table {
 */
 .btn {
   display: inline-block;
-  *zoom: 1;
   line-height: 3em;
   color: #262626;
   text-align: center;
   vertical-align: middle;
   font-size: 100%;
   white-space: nowrap;
-  background-color: #e6e6e6;
+  background-color: #fbc290;
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -364,7 +367,7 @@ table {
     color: #262626; }
 
 /*------------------------------------*\
-    $VARIANTES
+    $BOTONES-VARIANTES
 \*------------------------------------*/
 /**
  * Variantes de los botones: color para dar sensaciones.
@@ -374,7 +377,7 @@ table {
 * Inputs con estilo de botones
 */
 input[type="submit"].btn:hover {
-  border-color: #cccccc; }
+  border-color: #faa75f; }
 
 /**
 * Botón no disponible
@@ -411,12 +414,12 @@ input[type="submit"].btn:hover {
 * Botón principal
 */
 .btn--primary {
-  background-color: #7f548a;
+  background-color: #d26507;
   color: white; }
   .btn--primary:hover {
-    color: #dbcbdf; }
+    color: #fccfa9; }
   .btn--primary:visited {
-    color: #0a070b; }
+    color: #0d0600; }
 
 /**
 * Botón de OK
@@ -451,7 +454,7 @@ input[type="submit"].btn:hover {
   cursor: text; }
 
 /*------------------------------------*\
-    $TAMAÑOS
+    $BOTONES-TAMAÑOS
 \*------------------------------------*/
 /**
  * Variantes de los botones por tamaño.
@@ -473,25 +476,24 @@ input[type="submit"].btn:hover {
   line-height: 4; }
 
 /*------------------------------------*\
-    $GRUPOS
+    $BOTONES-GRUPOS
 \*------------------------------------*/
 /**
  * Con esta clase podemos agrupar los botones
  * en grupos horizontales.
  *
  */
-.btn-group {
+.btn--group {
   position: relative;
-  *zoom: 1;
   *margin-left: .3em; }
 
-.btn-group .btn {
+.btn--group .btn {
   position: relative;
   border-radius: 0;
   float: left;
   margin-left: -1px; }
 
-.btn-group .btn:first-child {
+.btn--group .btn:first-child {
   margin-left: 0;
   -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 0;
@@ -509,7 +511,7 @@ input[type="submit"].btn:hover {
   -moz-background-clip: padding;
   background-clip: padding-box; }
 
-.btn-group .btn:last-child {
+.btn--group .btn:last-child {
   -webkit-border-top-right-radius: 2px;
   -webkit-border-bottom-right-radius: 2px;
   -webkit-border-bottom-left-radius: 0;
@@ -526,7 +528,7 @@ input[type="submit"].btn:hover {
   -moz-background-clip: padding;
   background-clip: padding-box; }
 
-.btn-group .btn.large:first-child {
+.btn--group .btn.large:first-child {
   margin-left: 0;
   -webkit-border-top-right-radius: 2px;
   -webkit-border-bottom-right-radius: 0;
@@ -544,7 +546,7 @@ input[type="submit"].btn:hover {
   -moz-background-clip: padding;
   background-clip: padding-box; }
 
-.btn-group .btn.large:last-child {
+.btn--group .btn.large:last-child {
   -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 2px;
   -webkit-border-bottom-left-radius: 0;
@@ -571,26 +573,32 @@ hr {
   padding: 0;
   height: 1px;
   border: 0;
-  border-top: 1px solid #b6cf54; }
+  border-top: 1px solid #ed999b; }
 
+/*------------------------------------*\
+    $ELEMENTOS-IMÁGENES
+\*------------------------------------*/
 img {
   max-width: 100%;
   border-width: 0;
   vertical-align: middle;
   -ms-interpolation-mode: bicubic; }
 
-.img-rounded {
+.img--rounded {
   border-radius: 8px; }
 
-.img-polaroid {
+.img--polaroid {
   padding: 12px;
   background-color: white;
-  border: 1px solid #b6cf54;
+  border: 1px solid #ed999b;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
 
-.img-circle {
+.img--circle {
   border-radius: 100%; }
 
+/*------------------------------------*\
+    $ELEMENTOS-FIGURE
+\*------------------------------------*/
 figure {
   margin-bottom: 1.5em; }
   figure img {
@@ -694,14 +702,6 @@ h6,
   .header h3:hover {
     background-color: white; }
 
-.header .a-rss,
-.header .a-rss:hover {
-  float: left;
-  width: 16px;
-  height: 16px;
-  padding: 0;
-  background: transparent url(../img/a-rss.png) no-repeat 0 0; }
-
 p,
 ol,
 ul,
@@ -730,7 +730,7 @@ li ol {
 blockquote {
   margin: 0 0 1.5em-pxToEm(24px);
   padding-left: 24px;
-  border-left: 2px solid #b6cf54;
+  border-left: 2px solid #ed999b;
   font-family: Georgia, Times, "Times New Roman";
   font-style: normal; }
   blockquote p {
@@ -768,7 +768,7 @@ dt {
   margin-left: 22.78%; }
 
 abbr[title] {
-  border-bottom: 1px dotted #b6cf54;
+  border-bottom: 1px dotted #ed999b;
   cursor: help; }
 
 b, strong {
@@ -838,7 +838,7 @@ sub {
     padding: 12px; }
     .nav > li > a:hover, .nav > li > a:focus {
       text-decoration: none;
-      background-color: #b6cf54; }
+      background-color: #ed999b; }
 
 /**
 *
@@ -877,7 +877,7 @@ sub {
 *
 */
 .nav--tabs {
-  border-bottom: 1px solid #b6cf54; }
+  border-bottom: 1px solid #ed999b; }
   .nav--tabs > li {
     margin-bottom: -1px; }
     .nav--tabs > li > a {
@@ -943,7 +943,6 @@ form {
     display: block;
     width: 100%;
     margin-bottom: 3em;
-    *margin-left: -7px;
     padding: 0;
     color: #262626;
     border: 0;
@@ -1119,7 +1118,7 @@ textarea[readonly] {
 
 input:focus,
 textarea:focus {
-  border-color: #7f548a, 40%;
+  border-color: #d26507, 40%;
   outline: 0;
   outline: thin dotted \9; }
 
@@ -1201,13 +1200,16 @@ input:-moz-placeholder {
   margin-right: 3px; }
 
 /**
-* Validamos los formularios que son "required": http://coolvillage.es/ayuda-al-usuario-a-rellenar-formularios-con-css/
+* Validamos los formularios que son "required":
+* http://coolvillage.es/ayuda-al-usuario-a-rellenar-formularios-con-css/
 */
 input:required:focus:invalid {
-  background-color: #fef2e7; }
+  background-color: #fef2e7;
+  border: 1px solid #fce4cf; }
 
 input:required:focus:valid {
-  background-color: white; }
+  background-color: #e9f5e9;
+  border: 1px solid #5bb75b; }
 
 /*------------------------------------*\
     $SITIO
@@ -1292,7 +1294,7 @@ body {
   color: #236062; }
 
 .alert--inverse {
-  background-color: #414141;
+  background-color: #8cebe9;
   border-color: black;
   color: white; }
 
@@ -1317,7 +1319,7 @@ body {
   white-space: nowrap;
   border-radius: 2px;
   color: #262626;
-  background-color: #7f548a;
+  background-color: #d26507;
   -webkit-transition: background-color 0.25s 0 linear;
   -moz-transition: background-color 0.25s 0 linear;
   -ms-transition: background-color 0.25s 0 linear;
@@ -1356,85 +1358,15 @@ body {
     background-color: #5ac1c4;
     color: white; }
 
-.basegrad {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#7f548a), to(#62416a));
-  background-image: -webkit-linear-gradient(top, #7f548a, #62416a);
-  background-color: #62416a;
-  background-image: -moz-linear-gradient(top, #7f548a, #62416a);
-  background-image: -ms-linear-gradient(top, #7f548a, #62416a);
-  background-image: -o-linear-gradient(top, #7f548a, #62416a);
-  background-image: linear-gradient(top, #7f548a, #62416a);
-  background-repeat: repeat-x; }
-
-.errorgrad {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#7f548a), to(#c72f29));
-  background-image: -webkit-linear-gradient(top, #7f548a, #c72f29);
-  background-color: #c72f29;
-  background-image: -moz-linear-gradient(top, #7f548a, #c72f29);
-  background-image: -ms-linear-gradient(top, #7f548a, #c72f29);
-  background-image: -o-linear-gradient(top, #7f548a, #c72f29);
-  background-image: linear-gradient(top, #7f548a, #c72f29);
-  background-repeat: repeat-x; }
-
-.greygrad {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#d9d9d9));
-  background-image: -webkit-linear-gradient(top, white, #d9d9d9);
-  background-color: #d9d9d9;
-  background-image: -moz-linear-gradient(top, white, #d9d9d9);
-  background-image: -ms-linear-gradient(top, white, #d9d9d9);
-  background-image: -o-linear-gradient(top, white, #d9d9d9);
-  background-image: linear-gradient(top, white, #d9d9d9);
-  background-repeat: repeat-x; }
-
-.infograd {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a5dddf), to(#7fcfd2));
-  background-image: -webkit-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-color: #7fcfd2;
-  background-image: -moz-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-image: -ms-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-image: -o-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-image: linear-gradient(top, #a5dddf, #7fcfd2);
-  background-repeat: repeat-x; }
-
-.inversegrad {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a5dddf), to(#7fcfd2));
-  background-image: -webkit-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-color: #7fcfd2;
-  background-image: -moz-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-image: -ms-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-image: -o-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-image: linear-gradient(top, #a5dddf, #7fcfd2);
-  background-repeat: repeat-x; }
-
-.successgrad {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a5dddf), to(#7fcfd2));
-  background-image: -webkit-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-color: #7fcfd2;
-  background-image: -moz-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-image: -ms-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-image: -o-linear-gradient(top, #a5dddf, #7fcfd2);
-  background-image: linear-gradient(top, #a5dddf, #7fcfd2);
-  background-repeat: repeat-x; }
-
-.warninggrad {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#da4f49), to(#c72f29));
-  background-image: -webkit-linear-gradient(top, #da4f49, #c72f29);
-  background-color: #c72f29;
-  background-image: -moz-linear-gradient(top, #da4f49, #c72f29);
-  background-image: -ms-linear-gradient(top, #da4f49, #c72f29);
-  background-image: -o-linear-gradient(top, #da4f49, #c72f29);
-  background-image: linear-gradient(top, #da4f49, #c72f29);
-  background-repeat: repeat-x; }
-
 .well {
   min-height: 21px;
   padding: 11px;
   border-radius: 2px;
   margin-bottom: 1.5em;
   background-color: white;
-  border: 1px solid #d3c0d8;
-  -webkit-box-shadow: inset 0 1px 10px #e9dfec;
-  box-shadow: inset 0 1px 10px #e9dfec; }
+  border: 1px solid #fcc89c;
+  -webkit-box-shadow: inset 0 1px 10px #fde4ce;
+  box-shadow: inset 0 1px 10px #fde4ce; }
   .well p:last-child {
     margin-bottom: 0; }
 
@@ -1446,55 +1378,17 @@ body {
 
 ::-moz-selection {
   background-color: white;
-  color: #7f548a;
+  color: #d26507;
   text-shadow: none; }
 
 ::selection {
   background-color: white;
-  color: #7f548a;
+  color: #d26507;
   text-shadow: none; }
 
 /*------------------------------------*\
     $BREAKPOINTS
 \*------------------------------------*/
-/*
- * Cada Mediaquery se basará en la variable $bp$ e incluirá el archivo bp$.less
- */
-@media only screen and (min-width: 30em) {
-  /*------------------------------------*\
-      $BREAKPOINT_1
-  \*------------------------------------*/
-  /*
-   * Estilos que entrarán en el breakpoint basado en la variable $bp1
-   */ }
-@media only screen and (min-width: 37.5em) {
-  /*------------------------------------*\
-      $BREAKPOINT_2
-  \*------------------------------------*/
-  /*
-   * Estilos que entrarán en el breakpoint basado en la variable $bp2
-   */ }
-@media only screen and (min-width: 48em) {
-  /*------------------------------------*\
-      $BREAKPOINT_3
-  \*------------------------------------*/
-  /*
-   * Estilos que entrarán en el breakpoint basado en la variable $bp3
-   */ }
-@media only screen and (min-width: 56.25em) {
-  /*------------------------------------*\
-      $BREAKPOINT_4
-  \*------------------------------------*/
-  /*
-   * Estilos que entrarán en el breakpoint basado en la variable $bp4
-   */ }
-@media only screen and (min-width: 68.75em) {
-  /*------------------------------------*\
-      $BREAKPOINT_5
-  \*------------------------------------*/
-  /*
-   * Estilos que entrarán en el breakpoint basado en la variable $bp5
-   */ }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /*------------------------------------*\
       $2x
