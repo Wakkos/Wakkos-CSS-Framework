@@ -18,8 +18,14 @@ hr {
 	border-top : 1px solid $bordercolor;
 }
 
-// img
 
+
+
+
+
+/*------------------------------------*\
+    $ELEMENTOS-IMÁGENES
+\*------------------------------------*/
 img {
 	max-width : 100%;
 	border-width : 0;
@@ -42,8 +48,12 @@ img {
 	border-radius : 100%;
 }
 
-// figure
 
+
+
+/*------------------------------------*\
+    $ELEMENTOS-FIGURE
+\*------------------------------------*/
 figure {
 	margin-bottom : $baselineheight;
 

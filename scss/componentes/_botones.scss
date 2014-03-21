@@ -16,7 +16,6 @@
  */
 .btn {
 	display : inline-block;
-	*zoom : 1;
 	line-height : $baselineheight * 2;
 	color : $textcolor;
 	text-align : center;
@@ -52,7 +51,7 @@
 }
 
 /*------------------------------------*\
-    $VARIANTES
+    $BOTONES-VARIANTES
 \*------------------------------------*/
 /**
  * Variantes de los botones: color para dar sensaciones.
@@ -72,7 +71,7 @@ input[type="submit"].btn:hover {
 * Botón no disponible
 */
 .btn--disabled {
-@include opacity(.5);
+    @include opacity(.5);
 	cursor : default;
 }
 
@@ -163,7 +162,7 @@ input[type="submit"].btn:hover {
 
 
 /*------------------------------------*\
-    $TAMAÑOS
+    $BOTONES-TAMAÑOS
 \*------------------------------------*/
 /**
  * Variantes de los botones por tamaño.
@@ -192,7 +191,7 @@ input[type="submit"].btn:hover {
 
 
 /*------------------------------------*\
-    $GRUPOS
+    $BOTONES-GRUPOS
 \*------------------------------------*/
 /**
  * Con esta clase podemos agrupar los botones
@@ -201,7 +200,6 @@ input[type="submit"].btn:hover {
  */
 .btn--group {
 	position : relative;
-	*zoom : 1;
 	*margin-left : .3em;
 }
 

@@ -156,31 +156,31 @@
 
 // GRADIENTES ====================================================
 
-.basegrad {
+%basegrad {
 	@include vertical($basecolor, darken($basecolor, 10%));
 }
 
-.errorgrad {
+%errorgrad {
 	@include vertical($basecolor, darken($color-error, 10%));
 }
 
-.greygrad {
+%greygrad {
 	@include vertical($white, darken($lightergrey, 5%));
 }
 
-.infograd {
+%infograd {
 	@include vertical($color-info, darken($color-info, 10%));
 }
 
-.inversegrad {
+%inversegrad {
 	@include vertical($color-info, darken($color-info, 10%));
 }
 
-.successgrad {
+%successgrad {
 	@include vertical($color-info, darken($color-info, 10%));
 }
 
-.warninggrad {
+%warninggrad {
 	@include vertical($color-warning, darken($color-warning, 10%));
 }
 
