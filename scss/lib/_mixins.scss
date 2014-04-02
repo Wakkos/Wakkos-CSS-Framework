@@ -2,7 +2,6 @@
 
 
 
-
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
@@ -373,4 +372,10 @@
          -o-#{$property}:$value;
             #{$property}:$value;
 }
+
+//Convierte de px a em
+@function pxToEm($px, $base: $basefontsize){
+	@return ($px / ($base * 1px)) * 1em;
+}
+
 
