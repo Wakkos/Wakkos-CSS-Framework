@@ -156,7 +156,6 @@ input[type="submit"].btn:hover {
 .btn--inactive:focus{
 	@include opacity(.5);
 	cursor : default;
-	cursor:text;
  }
 
 
