@@ -254,15 +254,15 @@ you can use the generic selector below, but it's slower:
 \*------------------------------------*/
 a {
   text-decoration: none;
-  color: #d26507; }
+  color: #ff944d; }
   a:visited {
-    color: #d26507; }
+    color: #ff944d; }
   a:hover {
     text-decoration: underline;
-    color: #a14d05; }
+    color: #ff751a; }
   a:focus {
     outline: thin dotted;
-    color: #a14d05; }
+    color: #ff751a; }
   a:hover, a:active {
     outline: 0; }
 
@@ -280,7 +280,7 @@ table {
   table td {
     padding: 8px;
     vertical-align: top;
-    border-top: 1px solid #fccfa9;
+    border-top: 1px solid white;
     font-size: 14px;
     font-size: 0.875rem;
     line-height: 1.5em;
@@ -295,7 +295,7 @@ table {
   table thead:first-child tr:first-child td {
     border-top: 0; }
   table tbody + tbody {
-    border-top: 2px solid #fccfa9; }
+    border-top: 2px solid white; }
   table tbody tr td,
   table tbody tr th {
     -webkit-transition: background-color 0.25s 0 linear;
@@ -305,20 +305,20 @@ table {
     transition: background-color 0.25s 0 linear; }
   table tbody tr:hover td,
   table tbody tr:hover th {
-    background-color: #feebda; }
+    background-color: white; }
 
 .table-condensed th,
 .table-condensed td {
   padding: 4px 5px; }
 
 .table-bordered {
-  border: 1px solid #fccfa9;
+  border: 1px solid white;
   border-left: 0;
   border-collapse: separate;
   *border-collapse: collapsed; }
   .table-bordered th,
   .table-bordered td {
-    border-left: 1px solid #fccfa9; }
+    border-left: 1px solid white; }
   .table-bordered thead:first-child tr:first-child th,
   .table-bordered tbody:first-child tr:first-child th,
   .table-bordered tbody:first-child tr:first-child td {
@@ -339,13 +339,13 @@ table {
 */
 .btn {
   display: inline-block;
-  line-height: 3em;
+  line-height: 2.25em;
   color: #262626;
   text-align: center;
   vertical-align: middle;
   font-size: 100%;
   white-space: nowrap;
-  background-color: #fbc290;
+  background-color: #ffa366;
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -377,7 +377,7 @@ table {
 * Inputs con estilo de botones
 */
 input[type="submit"].btn:hover {
-  border-color: #faa75f; }
+  border-color: #ff8533; }
 
 /**
 * Botón no disponible
@@ -414,12 +414,12 @@ input[type="submit"].btn:hover {
 * Botón principal
 */
 .btn--primary {
-  background-color: #d26507;
+  background-color: #ff944d;
   color: white; }
   .btn--primary:hover {
-    color: #fccfa9; }
+    color: white; }
   .btn--primary:visited {
-    color: #0d0600; }
+    color: #803300; }
 
 /**
 * Botón de OK
@@ -463,17 +463,17 @@ input[type="submit"].btn:hover {
 .btn--mini {
   padding-right: 0.5em;
   padding-left: 0.5em;
-  line-height: 2; }
+  line-height: 1.5; }
 
 .btn--small {
   padding-right: 1.5em;
   padding-left: 1.5em;
-  line-height: 3; }
+  line-height: 2; }
 
 .btn--large {
   padding-right: 3em;
   padding-left: 3em;
-  line-height: 4; }
+  line-height: 3; }
 
 /*------------------------------------*\
     $BOTONES-GRUPOS
@@ -573,7 +573,7 @@ hr {
   padding: 0;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ed999b; }
+  border-top: 1px solid white; }
 
 /*------------------------------------*\
     $ELEMENTOS-IMÁGENES
@@ -590,7 +590,7 @@ img {
 .img--polaroid {
   padding: 12px;
   background-color: white;
-  border: 1px solid #ed999b;
+  border: 1px solid white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
 
 .img--circle {
@@ -681,27 +681,6 @@ h6,
   font-size: 14px;
   font-size: 0.875rem; }
 
-.header h1,
-.header h2,
-.header h3 {
-  float: left;
-  margin-right: 24px; }
-  .header h1 a,
-  .header h2 a,
-  .header h3 a {
-    display: block;
-    position: relative;
-    top: 6px;
-    float: right;
-    padding: 4px 12px;
-    font-size: 14px;
-    font-size: 0.875rem;
-    background-color: white; }
-  .header h1:hover,
-  .header h2:hover,
-  .header h3:hover {
-    background-color: white; }
-
 p,
 ol,
 ul,
@@ -720,7 +699,7 @@ small {
 
 ul,
 ol {
-  margin: 0 0 1.5em-pxToEm(24px);
+  margin: 0 0 1.5em 0;
   padding: 0 0 0 24px; }
 
 li ul,
@@ -728,9 +707,9 @@ li ol {
   margin: 0; }
 
 blockquote {
-  margin: 0 0 1.5em-pxToEm(24px);
+  margin: 0 0 1.5em 0;
   padding-left: 24px;
-  border-left: 2px solid #ed999b;
+  border-left: 2px solid white;
   font-family: Georgia, Times, "Times New Roman";
   font-style: normal; }
   blockquote p {
@@ -768,7 +747,7 @@ dt {
   margin-left: 22.78%; }
 
 abbr[title] {
-  border-bottom: 1px dotted #ed999b;
+  border-bottom: 1px dotted white;
   cursor: help; }
 
 b, strong {
@@ -806,7 +785,7 @@ sup {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 0;
-  vertical-align: baselineheight; }
+  vertical-align: 1.5em; }
 
 sup {
   top: -.5em; }
@@ -838,7 +817,7 @@ sub {
     padding: 12px; }
     .nav > li > a:hover, .nav > li > a:focus {
       text-decoration: none;
-      background-color: #ed999b; }
+      background-color: white; }
 
 /**
 *
@@ -877,7 +856,7 @@ sub {
 *
 */
 .nav--tabs {
-  border-bottom: 1px solid #ed999b; }
+  border-bottom: 1px solid white; }
   .nav--tabs > li {
     margin-bottom: -1px; }
     .nav--tabs > li > a {
@@ -1118,7 +1097,7 @@ textarea[readonly] {
 
 input:focus,
 textarea:focus {
-  border-color: #d26507, 40%;
+  border-color: #ff944d, 40%;
   outline: 0;
   outline: thin dotted \9; }
 
@@ -1294,7 +1273,7 @@ body {
   color: #236062; }
 
 .alert--inverse {
-  background-color: #8cebe9;
+  background-color: #242786;
   border-color: black;
   color: white; }
 
@@ -1319,7 +1298,7 @@ body {
   white-space: nowrap;
   border-radius: 2px;
   color: #262626;
-  background-color: #d26507;
+  background-color: #ff944d;
   -webkit-transition: background-color 0.25s 0 linear;
   -moz-transition: background-color 0.25s 0 linear;
   -ms-transition: background-color 0.25s 0 linear;
@@ -1364,9 +1343,9 @@ body {
   border-radius: 2px;
   margin-bottom: 1.5em;
   background-color: white;
-  border: 1px solid #fcc89c;
-  -webkit-box-shadow: inset 0 1px 10px #fde4ce;
-  box-shadow: inset 0 1px 10px #fde4ce; }
+  border: 1px solid #ffc299;
+  -webkit-box-shadow: inset 0 1px 10px #ffe0cc;
+  box-shadow: inset 0 1px 10px #ffe0cc; }
   .well p:last-child {
     margin-bottom: 0; }
 
@@ -1378,12 +1357,12 @@ body {
 
 ::-moz-selection {
   background-color: white;
-  color: #d26507;
+  color: #ff944d;
   text-shadow: none; }
 
 ::selection {
   background-color: white;
-  color: #d26507;
+  color: #ff944d;
   text-shadow: none; }
 
 /*------------------------------------*\

@@ -16,7 +16,7 @@
  */
 .btn {
 	display : inline-block;
-	line-height : $baselineheight * 2;
+	line-height : $baselineheight * 1.5;
 	color : $textcolor;
 	text-align : center;
 	vertical-align : middle;
@@ -172,19 +172,19 @@ input[type="submit"].btn:hover {
 .btn--mini{
     padding-right:0.5em;
     padding-left: 0.5em;
-    line-height:2;
+    line-height:1.5;
 }
 
 .btn--small{
     padding-right:1.5em;
     padding-left: 1.5em;
-    line-height:3;
+    line-height:2;
 }
 
 .btn--large{
     padding-right:3em;
     padding-left: 3em;
-    line-height:4;
+    line-height:3;
 }
 
 

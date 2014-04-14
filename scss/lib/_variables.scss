@@ -129,11 +129,11 @@ $basefontsize :      16;
 /**
  * Brand stuff
  */
-$basecolor      : rgb(210,101,7); // Naranja CoolVillage
-$basecolor-light: lighten($basecolor, 35%);
-$secondary      : rgb(115,20,22); // Rojo CoolVillage
+$basecolor      : rgb(255,148,77); // Naranja 
+$basecolor-light: lighten($basecolor, 5%);
+$secondary      : rgb(219,216,121); // Rojo CoolVillage
 $bordercolor    : lighten($secondary, 50); // Verde Bordes
-$compcolor      : rgb(182,207,84); //
+$compcolor      : rgb(216,240,227); //
 
 /**
  * Escala de grises
