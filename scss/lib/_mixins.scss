@@ -323,14 +323,6 @@
 
 
 
-// .resize(VALUE) (none, both, horizontal, vertical, inherit)
-
-@mixin resize($direction: both) {
-	resize : $direction;
-	overflow : auto;
-}
-
-
 
 
 // .columns(250px, 0, 24px, COLOR, solid, 1px)
