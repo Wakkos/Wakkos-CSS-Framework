@@ -25,18 +25,6 @@ $bp5 : 68.75em;
 
 
 
-/*------------------------------------*\
-    $BORDER-BOX
-\*------------------------------------*/
-/**
- * Quieres todos los elementos tener un box-sizing:border-box?
- * paulirish.com/2012/box-sizing-border-box-ftw ?
- */
-$border-box: true!default;
-
-
-
-
 
 /*------------------------------------*\
     $no-mediaquery-class
@@ -129,7 +117,7 @@ $basefontsize :      16;
 /**
  * Brand stuff
  */
-$basecolor      : rgb(255,148,77); // Naranja 
+$basecolor      : rgb(255,148,77); // Naranja
 $basecolor-light: lighten($basecolor, 5%);
 $secondary      : rgb(219,216,121); // Rojo CoolVillage
 $bordercolor    : lighten($secondary, 50); // Verde Bordes

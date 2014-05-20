@@ -64,13 +64,6 @@
  * "Start with the small screen first, then expand until it looks like shit. Time to insert a breakpoint!"
  */
 /*------------------------------------*\
-    $BORDER-BOX
-\*------------------------------------*/
-/**
- * Quieres todos los elementos tener un box-sizing:border-box?
- * paulirish.com/2012/box-sizing-border-box-ftw ?
- */
-/*------------------------------------*\
     $no-mediaquery-class
 \*------------------------------------*/
 /**
@@ -187,10 +180,7 @@ html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquo
 article, aside, figure, footer, header, hgroup, nav, section {
   display: block; }
 
-/**
-* Ningún padding jodiendo la marrana.
-*/
-*, *:before, *:after {
+*, *::before, *::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
