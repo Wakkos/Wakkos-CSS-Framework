@@ -9,7 +9,7 @@
  */
 
  [role="banner"] {
-	@extend %max-width;
+	@include max-width();
 	@extend %clearfix;
 	background-color: $secondary;
 	text-align: center;
@@ -19,7 +19,7 @@
 	}
  }
 main {
-	@extend %max-width;
+	@include max-width();
 }
 section {
 	width: 100%;

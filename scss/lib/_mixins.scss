@@ -90,6 +90,17 @@
     font-size:($font-size / $basefontsize)*1rem;
 }
 
+  /**
+  * Centrar y dar un ancho máximo igual a $pagemaxwidth.
+  */
+@mixin max-width($max-width : $pagemaxwitdh)  {
+	margin-left:auto;
+	margin-right:auto;
+	max-width: $max-width;
+	width:100%;
+}
+
+
 // flexbox, because fuck you, that's why.
 
 @mixin displayflex {

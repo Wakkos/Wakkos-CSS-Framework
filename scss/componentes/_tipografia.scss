@@ -35,48 +35,18 @@ h3 small {
 	color : $grey;
 }
 
-h1,
-.h1 {
-	margin-bottom : $baselineheight / 2;
-	@include font-size(32);
-	line-height : 1.2;
+@each $header, $margin-bot, $font-size, $line-height in (h1, 2, 32, 1.2)
+                                                        (h2, 3, 24, 1.2)
+                                                        (h3, 4, 21, 1.3)
+                                                        (h4, 6, 18, 1.25)
+                                                        (h5, 6, 16, 1)
+                                                        (h6, 6, 14, 1){
+  #{$header}, .#{$header} {
+  	margin-bottom : $baselineheight / $margin-bot;
+  	@include font-size($font-size);
+  	line-height : $line-height;
+  }
 }
-
-h2,
-.h2 {
-	margin-bottom : $baselineheight / 3;
-	@include font-size(24);
-	line-height : 1.2;
-}
-
-h3,
-.h3 {
-	margin-bottom : $baselineheight / 4;
-	@include font-size(21);
-	line-height : 1.3;
-}
-
-h4,
-.h4 {
-	margin-bottom : $baselineheight / 6;
-	@include font-size(18);
-	line-height : 1.25;
-}
-
-h5,
-.h5 {
-	@include font-size(16);
-	margin-bottom : $baselineheight / 6;
-}
-
-h6,
-.h6 {
-	margin-bottom : $baselineheight / 6;
-	@include font-size(14);
- }
-
-
-
 // TYPOGRAFÍA ====================================================
 
 p,

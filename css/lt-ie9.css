@@ -136,12 +136,12 @@
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
-/*------------------------------------*\
-    $PLACEHOLDERS
-\*------------------------------------*/
 /**
 * Centrar y dar un ancho máximo igual a $pagemaxwidth.
 */
+/*------------------------------------*\
+    $PLACEHOLDERS
+\*------------------------------------*/
 /**
 * The ghost, nudged to maintain perfect centering
 */
@@ -457,8 +457,7 @@ input[type="submit"].btn:hover {
   -webkit-opacity: 0.5;
   -moz-opacity: 0.5;
   opacity: 0.5;
-  cursor: default;
-  cursor: text; }
+  cursor: default; }
 
 /*------------------------------------*\
     $BOTONES-TAMAÑOS
@@ -648,45 +647,41 @@ h3 small {
   display: block;
   color: gray; }
 
-h1,
-.h1 {
+h1, .h1 {
   margin-bottom: 0.75em;
   font-size: 32px;
   font-size: 2rem;
   line-height: 1.2; }
 
-h2,
-.h2 {
+h2, .h2 {
   margin-bottom: 0.5em;
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1.2; }
 
-h3,
-.h3 {
+h3, .h3 {
   margin-bottom: 0.375em;
   font-size: 21px;
   font-size: 1.3125rem;
   line-height: 1.3; }
 
-h4,
-.h4 {
+h4, .h4 {
   margin-bottom: 0.25em;
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.25; }
 
-h5,
-.h5 {
+h5, .h5 {
+  margin-bottom: 0.25em;
   font-size: 16px;
   font-size: 1rem;
-  margin-bottom: 0.25em; }
+  line-height: 1; }
 
-h6,
-.h6 {
+h6, .h6 {
   margin-bottom: 0.25em;
   font-size: 14px;
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  line-height: 1; }
 
 p,
 ol,
