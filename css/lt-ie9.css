@@ -3,18 +3,8 @@
     $LT-IE9
 \*------------------------------------*/
 /**
- * Esta hoja de estilos elimina los mediaqueries si trabajamos mobile first 
+ * Esta hoja de estilos elimina los mediaqueries si trabajamos mobile first
  * y crea una clase para ellos. La clase está en la variable $no-mq-classname.
- */
-/*------------------------------------*\
-    $STYLE
-\*------------------------------------*/
-/**
- * Aquí incluímos todos los módulos (archivos .scss) que se can
- * a compilar en el CSS definitivo: /css/style.css.
- * Si no usas algún módulo, es recomendable que elimines
- * o comentes su inclusión para no tener estilos innecesarios en tu CSS final
- * y optimizar lo máximo posible.
  */
 /*------------------------------------*\
     $CONTENIDO
