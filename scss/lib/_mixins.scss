@@ -13,7 +13,7 @@
 //
 //  $breakpoint: Es el Brakpoint o la variable de breakpoint, las definimos en _variables.scss
 //               las que vienen por defecto: $bp1, $bp2, $bp3, $bp4 y $bp5.
-//  
+//
 //  $query1: max o min, dependiendo de como queremos el Mediaquery que funcione:
 //           max-width, min-width, min-device-width, etc... - 'min' por defecto -
 //
@@ -29,15 +29,15 @@
 //  $bp1 : 45em;
 //
 // .texto {
-// 	color:red; 
+// 	color:red;
 // 	@include media-query-bp($bp1,max,device-width,screen) {
-// 		color: blue;	
+// 		color: blue;
 // 	}
 // }
 //
 //  **************************************************************************
 //
-// Compilaría: 
+// Compilaría:
 //
 //  **************************************************************************
 // .texto {
