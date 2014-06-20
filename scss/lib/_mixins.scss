@@ -63,7 +63,7 @@
 //
 //
 @mixin media-query-bp($breakpoint, $query1: min, $query2: width, $target: "") {
-	$mqtarget: "";
+
 	// Check if media queries are supported
 	@if $media-queries-supported == true {
 		@if $target != "" {
