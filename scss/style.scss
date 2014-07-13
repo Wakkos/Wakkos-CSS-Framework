@@ -32,9 +32,9 @@ $media-queries-supported : true;
 
 @import "componentes/tipografia.scss";
 
-@import "componentes/navegacion.scss";
+@import "layout/navegacion.scss";
 
-@import "componentes/paginacion.scss";
+@import "layout/paginacion.scss";
 
 @import "componentes/formularios.scss";
 
