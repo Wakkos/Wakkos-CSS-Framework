@@ -35,7 +35,7 @@ La convención de nombre sigue este patrón:
 ```
 
 * '.bloque' representa el primer nivel de una abstracción o componente.
-* '.bloque__element' representa un descendente de '.bloque' que se ayuda de 
+* '.bloque__elemento' representa un descendente de '.bloque' que se ayuda de 
 '.bloque' como un conjunto.
 * '.bloque--modificador' representa un estado diferente de '.bloque'.
 
