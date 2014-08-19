@@ -71,7 +71,7 @@ $animationtime :      .8s;
 
 
 $z-layers: (
-  "goku":            9001, 
+  "goku":            9001,
   "shoryuken":       8000,
   "default":            1,
   "below":             -1,
@@ -261,6 +261,10 @@ $placeholdercolor   : $lightergrey;
 
 
 // Navegación
-$navitembordercolor    : $bordercolor;
-$navitempadding        : $gutterwidth / 2;
-$navtabsbordercolor    : $bordercolor;
+$nav-width:               44px;
+$nav-height:              $nav-width * 1.2;
+$nav-icon-size:           16px;
+$nav-color:               white;
+$nav-background:          $secondary;
+$nav-borders:             lighten($nav-background, 10%);
+$nav-lists-background:    $basecolor;

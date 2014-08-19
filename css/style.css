@@ -786,69 +786,110 @@ sub {
 \*------------------------------------*/
 /**
 *
-* Le asignamos la clase .nav al ul que contenga la navegación:
+* La semántica va como sigue:
 
-		 <ul class="nav">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="about.html">About us</a></li>
-			<li><a href="products.html">Products</a></li>
-			<li><a href="services.html">Services</a></li>
-			<li><a href="contact.html">Contact us</a></li>
-		</ul>
-*
+    <input type="checkbox" class="checkbox__hack" id="checkbox__hack">
+    <label for="checkbox__hack" class="checkbox-hack__label"></label>
+    <!-- OMG NO SEMANTIC HTML, well, it help us to avoid JS in the menu slide in mobile -->
+
+    <nav class="nav--top">
+        <ul class="nav--top__list">
+            <li><a href="">item</a></li>
+            <li><a href="">item</a></li>
+            <li><a href="">item</a></li>
+            <li><a href="">item</a></li>
+            <li><a href="">item</a></li>
+        </ul>
+    </nav>
+
+* Y no te olvides de modificar las variables en el archivo de variables ($nav-**)
 */
-.nav > li {
-  position: relative;
-  display: inline-block; }
-  .nav > li > a {
-    position: relative;
-    padding: 12px; }
-    .nav > li > a:hover, .nav > li > a:focus {
-      text-decoration: none;
-      background-color: white; }
+.nav--top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 44px;
+  height: 52.8px;
+  color: white;
+  overflow: hidden;
+  cursor: pointer;
+  /**
+   * Place a hamburger (don’t hate the player, hate the game...) icon
+   * over the top of our nav element.
+   */ }
+  .nav--top:after {
+    content: "☰";
+    font-size: 16px;
+    width: 1em;
+    line-height: 1;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -8px; }
 
-/**
-*
-* .nav--fit extiende a .nav y alarga la navegación
-* para que ocupe el 100% de su contenedor
+.nav--top__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 52.8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #dbd879;
+  box-shadow: inset -100px -50px 100px 100px rgba(0, 0, 0, 0.2);
+  /*
+  * Usamos VW porque con % tomaría el tamaño del contenedor,
+  * que es $nav-width (unos 48px) y no se ve na' e ná
+  */
+  width: 200px;
+  z-index: -1;
+  height: 80px; }
 
-		 <ul class="nav nav--fit">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="about.html">About us</a></li>
-			<li><a href="products.html">Products</a></li>
-			<li><a href="services.html">Services</a></li>
-			<li><a href="contact.html">Contact us</a></li>
-		</ul>
-*
-*/
-.nav--fit {
-  display: table;
-  width: 100%; }
-  .nav--fit > li {
-    display: table-cell; }
-    .nav--fit > li > a {
-      display: block; }
+.checkbox__hack {
+  display: none;
+ /*
+  * Quitamos el overflow:hidden para que se muestre el menú cuando
+* el checkbox está :checked
+  * Eso es todo, un overflow. Con eso mostramos u ocultamos el menú.
+  * (Eso y el content del after para que sea una X y no la hamburguesa)
+  */ }
+  .checkbox__hack:checked ~ .nav--top {
+    overflow: visible; }
+    .checkbox__hack:checked ~ .nav--top::after {
+      content: "x"; }
 
-/**
-*
-* .nav--tabs extiende a .nav y crea la base para una navegación
-* en pestañas.
+.checkbox-hack__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 52.8px;
+  color: white;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 0;
+  z-index: 100; }
 
-		 <ul class="nav nav--tabs">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="about.html">About us</a></li>
-			<li><a href="products.html">Products</a></li>
-			<li><a href="services.html">Services</a></li>
-			<li><a href="contact.html">Contact us</a></li>
-		</ul>
-*
-*/
-.nav--tabs {
-  border-bottom: 1px solid white; }
-  .nav--tabs > li {
-    margin-bottom: -1px; }
-    .nav--tabs > li > a {
-      display: block; }
+a, a:visited {
+  color: white;
+  display: block;
+  padding-left: 14px;
+  line-height: 44px;
+  background-image: none;
+  line-height: 2;
+  text-transform: uppercase;
+  font-size: 14;
+  border-bottom: 1px solid #d2cf59;
+  border-top: 1px solid #e0de8d;
+  background-color: #dbd879;
+  text-shadow: 1px 1px 1px #e0de8d; }
+  a:hover, a:visited:hover {
+    text-decoration: none;
+    background-color: #d0cc51; }
 
 /*------------------------------------*\
     $PAGINACION
