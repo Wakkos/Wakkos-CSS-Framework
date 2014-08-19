@@ -845,8 +845,7 @@ sub {
   * que es $nav-width (unos 48px) y no se ve na' e ná
   */
   width: 200px;
-  z-index: -1;
-  height: 80px; }
+  z-index: -1; }
 
 .checkbox__hack {
   display: none;
