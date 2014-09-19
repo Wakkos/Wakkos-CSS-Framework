@@ -66,7 +66,7 @@ de la siguiente manera:
 		style.scss
         --base
                      _reset.scss
-                     _normalize
+                     _normalize.scss
                      _elementos.scss
                      _formularios.scss
                      _fuentes.scss
