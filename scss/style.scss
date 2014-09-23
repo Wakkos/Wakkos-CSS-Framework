@@ -16,6 +16,8 @@ $media-queries-supported : true;
 
 @import "lib/mixins.scss";
 
+@import "lib/flex.scss";
+
 @import "lib/placeholders.scss";
 
 @import "componentes/reset.scss";
