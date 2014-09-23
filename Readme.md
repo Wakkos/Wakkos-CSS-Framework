@@ -64,20 +64,22 @@ de la siguiente manera:
 		debug.scss
 		lt-ie9.scss
 		style.scss
-		--componentes
-                     _botones.scss
+        --base
+                     _reset.scss
+                     _normalize.scss
                      _elementos.scss
                      _formularios.scss
                      _fuentes.scss
-                     _links.scss
-                     _navegacion.scss
-                     _normalize
-                     _paginacion.scss
-                     _reset.scss
-                     _tablas.scss
-                     _texturas.scss
+                     _links.scss      
                      _tipografia.scss
 
+		--componentes
+                     _botones.scss
+                     _navegacion.scss
+                     _paginacion.scss
+                     _tablas.scss
+                     _texturas.scss
+                    
         --layout
         			_2x.scss
         			_breakpoints.scss

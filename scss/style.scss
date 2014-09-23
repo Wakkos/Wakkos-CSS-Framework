@@ -2,7 +2,7 @@
     $STYLE
 \*------------------------------------*/
 /**
- * Aquí incluímos todos los módulos (archivos .scss) que se can
+ * Aquí incluímos todos los módulos (archivos .scss) que se van
  * a compilar en el CSS definitivo: /css/style.css.
  * Si no usas algún módulo, es recomendable que elimines
  * o comentes su inclusión para no tener estilos innecesarios en tu CSS final
@@ -20,25 +20,25 @@ $media-queries-supported : true;
 
 @import "lib/placeholders.scss";
 
-@import "componentes/reset.scss";
+@import "base/reset.scss";
 
-@import "componentes/fuentes.scss";
+@import "base/fuentes.scss";
 
-@import "componentes/links.scss";
+@import "base/links.scss";
 
 @import "componentes/tablas.scss";
 
 @import "componentes/botones.scss";
 
-@import "componentes/elementos.scss";
+@import "base/elementos.scss";
 
-@import "componentes/tipografia.scss";
+@import "base/tipografia.scss";
 
-@import "layout/navegacion.scss";
+@import "componentes/navegacion.scss";
 
-@import "layout/paginacion.scss";
+@import "componentes/paginacion.scss";
 
-@import "componentes/formularios.scss";
+@import "base/formularios.scss";
 
 @import "layout/sitio.scss";
 
