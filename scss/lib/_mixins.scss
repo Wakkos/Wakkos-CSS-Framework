@@ -101,58 +101,6 @@
 }
 
 
-// flexbox, because fuck you, that's why.
-
-@mixin displayflex {
-	display : -webkit-box;
-	display : -moz-box;
-	display : -ms-flexbox;
-	display : -webkit-flex;
-	display : flex;
-}
-
-@mixin align-items($align) {
-	-webkit-align-items : $align;
-	-moz-align-items : $align;
-	-o-align-items : $align;
-	align-items : $align;
-}
-
-@mixin flex($flex, $width) {
-	-webkit-box-flex : $flex;
-	-moz-box-flex : $flex;
-	width : $width;
-	-webkit-flex : $flex;
-	-ms-flex : $flex;
-	flex : $flex;
-}
-
-@mixin order($order) {
-	-webkit-box-ordinal-group : $order;
-	-moz-box-ordinal-group : $order;
-	-ms-flex-order : $order;
-	-webkit-order : $order;
-	order : $order;
-}
-
-// $include flex-start(VALUE) (flex-start | flex-end | center | space-between | space-around)
-@mixin content-justify($justify) {
-	-webkit-content-justify : $justify;
-	-moz-content-justify : $justify;
-	-o-content-justify : $justify;
-	content-justify : $justify;
-}
-
-// $include flex-direction(VALUE) (row | row-reverse | column | column-reverse)
-@mixin flex-direction($direction) {
-	-webkit-flex-direction : $direction;
-	-moz-flex-direction : $direction;
-	-o-flex-direction : $direction;
-	flex-direction : $direction;
-}
-
-
-
 // gradients
 @mixin horizontal($startColor : $white, $endColor : $lightergrey) {
 	background-color: $endColor;
