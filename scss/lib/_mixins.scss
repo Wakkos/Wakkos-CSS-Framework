@@ -144,94 +144,52 @@
 
 // .border-radius(VALUE,VALUE,VALUE,VALUE);
 @mixin border-radius($topright: 0, $bottomright: 0, $bottomleft: 0, $topleft: 0) {
-	-webkit-border-top-right-radius : $topright;
-	-webkit-border-bottom-right-radius : $bottomright;
-	-webkit-border-bottom-left-radius : $bottomleft;
-	-webkit-border-top-left-radius : $topleft;
-	-moz-border-radius-topright : $topright;
-	-moz-border-radius-bottomright : $bottomright;
-	-moz-border-radius-bottomleft : $bottomleft;
-	-moz-border-radius-topleft : $topleft;
-	border-top-right-radius : $topright;
-	border-bottom-right-radius : $bottomright;
-	border-bottom-left-radius : $bottomleft;
-	border-top-left-radius : $topleft;
-	-webkit-background-clip : padding-box;
-	-moz-background-clip : padding;
-	background-clip : padding-box;
+	@include vendor(border-radius, $topleft $topright $bottomright $bottomleft);
+	@include background-clip(padding-box);
 }
 
 // .box-shadow(HORIZONTAL VERTICAL BLUR COLOR))
 @mixin box-shadow($shadow: 0 1px 3px rgba(0,0,0,.25)) {
-	-webkit-box-shadow : $shadow;
-	box-shadow : $shadow;
+	@include vendor(box-shadow, $shadow);
 }
 
 // .drop-shadow(HORIZONTAL, VERTICAL, BLUR, ALPHA);
 @mixin drop-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $alpha: 0.1) {
-	-webkit-box-shadow : $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
-	-moz-box-shadow : $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
-	box-shadow : $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
+	@include vendor(box-shadow, $x-axis $y-axys $blur rgba(0, 0, 0, $alpha));
 }
 
 // .opacity(VALUE);
 @mixin opacity($opacity : .5) {
-	-webkit-opacity : $opacity;
-	-moz-opacity : $opacity;
-	opacity : $opacity;
+	@include vendor(opacity, $opacity);
 }
 
 // .rotate(VALUEdeg);
 @mixin rotate($deg) {
-	-webkit-transform : rotate($deg);
-	-moz-transform : rotate($deg);
-	-ms-transform : rotate($deg);
-	-o-transform : rotate($deg);
-	transform : rotate($deg);
+	@include vendor(transform, rotate($deg));
 }
 
 // .scale(VALUE);
 @mixin scale($ratio) {
-	-webkit-transform : scale($ratio);
-	-moz-transform : scale($ratio);
-	-ms-transform : scale($ratio);
-	-o-transform : scale($ratio);
-	transform : scale($ratio);
+	@include vendor(transform, scale($ratio));
 }
 
 // .skew(VALUE, VALUE);
 @mixin skew($x: 0, $y: 0) {
-	-webkit-transform : skew($x, $y);
-	-moz-transform : skew($x, $y);
-	-ms-transform : skew($x, $y);
-	-o-transform : skew($x, $y);
-	transform : skew($x, $y);
+	@include vendor(transform, skew($x, $y));
 }
 
 // .transition(PROPERTY DURATION DELAY(OPTIONAL) TIMING-FINCTION);
 @mixin transition($transition) {
-	-webkit-transition : $transition;
-	-moz-transition : $transition;
-	-ms-transition : $transition;
-	-o-transition : $transition;
-	transition : $transition;
+	@include vendor(transition, $transition);
 }
 
 // .translate(VALUE, VALUE)
 @mixin translate($x: 0, $y: 0) {
-	-webkit-transform : translate($x, $y);
-	-moz-transform : translate($x, $y);
-	-ms-transform : translate($x, $y);
-	-o-transform : translate($x, $y);
-	transform : translate($x, $y);
+	@include vendor(transform, translate($x, $y));
 }
 
 @mixin translate3d($x: 0, $y: 0, $z: 0) {
-	-webkit-transform : translate($x, $y, $z);
-	-moz-transform : translate($x, $y, $z);
-	-ms-transform : translate($x, $y, $z);
-	-o-transform : translate($x, $y, $z);
-	transform : translate($x, $y, $z);
+	@include vendor(transform, translate3d($x, $y, $z));
 }
 
 
@@ -242,69 +200,40 @@
 
 // .background-size(VALUE VALUE);
 @mixin background-size($size){
-	-webkit-background-size : $size;
-	-moz-background-size : $size;
-	-o-background-size : $size;
-	background-size : $size;
+	@include vendor(background-size, $size);
 }
 
 // .background-clip(VALUE); (border-box, padding-box, content-box)
 @mixin background-clip($clip) {
-	-webkit-background-clip : $clip;
-	-moz-background-clip : $clip;
-	background-clip : $clip;
+	@include vendor(background-clip, $clip);
 }
 
 // .box-sizing(VALUE); (border-box, padding-box, content-box)
 @mixin box-sizing($boxsize: border-box) {
-	-webkit-box-sizing : $boxsize;
-	-moz-box-sizing : $boxsize;
-	-ms-box-sizing : $boxsize;
-	box-sizing : $boxsize;
+	@include vendor(box-sizing, $boxsize);
 }
 
 
 // .resize(VALUE) (none, both, horizontal, vertical, inherit)
-
 @mixin resize($direction: both) {
 	resize : $direction;
 	overflow : auto;
 }
 
 // .userselect(VALUE) (all, element, none, text)
-
 @mixin user-select($select) {
-	-webkit-user-select : $select;
-	-moz-user-select : $select;
-	-o-user-select : $select;
-	user-select : $select;
+	@include vendor(user-select, $select);
 }
 
 
-
-
-
 // .columns(250px, 0, 24px, COLOR, solid, 1px)
-
 @mixin columns($colwidth: 250px, $colcount: 0, $colgap: 50px, $columnRuleColor: #eee, $columnRuleStyle: solid, $columnRuleWidth: 1px) {
-	-webkit-column-width : $colwidth;
-	-webkit-column-count : $colcount;
-	-webkit-column-gap : $colgap;
-	-webkit-column-rule-color : $columnRuleColor;
-	-webkit-column-rule-style : $columnRuleStyle;
-	-webkit-column-rule-width : $columnRuleWidth;
-	-moz-column-width : $colwidth;
-	-moz-column-count : $colcount;
-	-moz-column-gap : $colgap;
-	-moz-column-rule-color : $columnRuleColor;
-	-moz-column-rule-style : $columnRuleStyle;
-	-moz-column-rule-width : $columnRuleWidth;
-	column-width : $colwidth;
-	column-count : $colcount;
-	column-gap : $colgap;
-	column-rule-color : $columnRuleColor;
-	column-rule-style : $columnRuleStyle;
-	column-rule-width : $columnRuleWidth;
+	@include vendor(column-width, $colwidth);
+	@include vendor(column-count, $colcount);
+	@include vendor(column-gap, $colgap);
+	@include vendor(column-rule-color, $columnRuleColor);
+	@include vendor(column-rule-style, $columnRuleStyle);
+	@include vendor(column-rule-width, $columnruleWidth);
 }
 
 
@@ -315,12 +244,12 @@
 //
 //
 @mixin vendor($property, $value...){
-    -webkit-#{$property}:$value;
-       -moz-#{$property}:$value;
-        -ms-#{$property}:$value;
-         -o-#{$property}:$value;
-            #{$property}:$value;
+    @each $vendor in $vendors {
+      -#{$vendor}-#{$property}:$value;
+    }
+    #{$property}:$value;
 }
+
 
 /* 
  * Función para controlar el index 
