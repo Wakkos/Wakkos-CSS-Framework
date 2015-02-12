@@ -62,7 +62,6 @@ de la siguiente manera:
 --scss
 		_contenido.scss
 		debug.scss
-		lt-ie9.scss
 		style.scss
         --base
                      _reset.scss
@@ -81,11 +80,10 @@ de la siguiente manera:
                      _texturas.scss
                     
         --layout
-        			_2x.scss
-        			_breakpoints.scss
         			_sitio.scss
 
         --lib
+                    _flexbox.scss
         			_mixins.scss
         			_placeholders.scss
         			_variables.scss
@@ -112,13 +110,7 @@ usas Codekit, incluyo el archivo `config.codekit`y todos los `.scss`son compilad
 en la carpeta `css`.
 
 ## Patrones
-Siempre necesito una guía de estilos o de patrones para hacerme una idea de la 
-atmósfera de diseño de la web. Para esto tengo la carpeta `patrones`donde tengo 
-el `index.html` que me da un pequeño resumen de los elementos de la web y se ajusta
-a la configuración de nuestro CSS.
-
-Me gustaría poner código en cada elemento para así hacer que sea funcional no solo
-al diseñador sino al frontend, pero ese trabajo va a tener que esperar.
+Lo trabajaré en otra rama, ya que ahora mismo no provee ninguna ventaja.
 
 
 ## Tip
