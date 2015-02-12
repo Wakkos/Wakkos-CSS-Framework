@@ -866,23 +866,6 @@ sub {
   margin: 0;
   z-index: 100; }
 
-a, a:visited {
-  color: white;
-  display: block;
-  padding-left: 14px;
-  line-height: 44px;
-  background-image: none;
-  line-height: 2;
-  text-transform: uppercase;
-  font-size: 14;
-  border-bottom: 1px solid #d2cf59;
-  border-top: 1px solid #e0de8d;
-  background-color: #dbd879;
-  text-shadow: 1px 1px 1px #e0de8d; }
-  a:hover, a:visited:hover {
-    text-decoration: none;
-    background-color: #d0cc51; }
-
 /*------------------------------------*\
     $PAGINACION
 \*------------------------------------*/
