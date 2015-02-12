@@ -168,7 +168,19 @@ html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquo
   vertical-align: baseline;
   background: transparent; }
 
-article, aside, figure, footer, header, hgroup, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
   display: block; }
 
 *, *::before, *::after {
@@ -177,6 +189,12 @@ article, aside, figure, footer, header, hgroup, nav, section {
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box; }
+
+img {
+  max-width: 100%;
+  border-width: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic; }
 
 /*------------------------------------*\
     $FUENTES
@@ -563,12 +581,6 @@ hr {
 /*------------------------------------*\
     $ELEMENTOS-IMÁGENES
 \*------------------------------------*/
-img {
-  max-width: 100%;
-  border-width: 0;
-  vertical-align: middle;
-  -ms-interpolation-mode: bicubic; }
-
 .img--rounded {
   border-radius: 8px; }
 
@@ -1211,7 +1223,7 @@ html {
   background: white;
   font-size: 100%;
   -webkit-overflow-scrolling: touch;
-  -webkit-tap-highlight-color: white;
+  -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
@@ -1368,14 +1380,3 @@ body {
   background-color: white;
   color: #ff944d;
   text-shadow: none; }
-
-/*------------------------------------*\
-    $BREAKPOINTS
-\*------------------------------------*/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /*------------------------------------*\
-      $2x
-  \*------------------------------------*/
-  /*
-   * Breakpoint para dispositivos retina
-   */ }
