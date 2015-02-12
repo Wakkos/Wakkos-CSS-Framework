@@ -3,6 +3,16 @@
 \*------------------------------------*/
 /**
  *
+ * Configuramos los assets a utilizar, valor true o false 
+ * si quieres incluir o no alguna librería.
+ *
+ */
+
+$grids:         false!default;
+$use-grids:         false!default;
+
+/**
+ *
  * Definimos y configuramos las variables CSS que vamos a utilizar
  *
  */
@@ -63,6 +73,18 @@ $z-layers: (
   "below":             -1,
   "bottomless-pit": -9000
 );
+
+
+
+/*------------------------------------*\
+    $grid
+\*------------------------------------*/
+$bp3 : 48em;
+$gap : 5px;
+$grid-size: 3;
+
+
+
 
 /*------------------------------------*\
     $FONT-FACE

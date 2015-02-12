@@ -54,6 +54,12 @@
 \*------------------------------------*/
 /**
  *
+ * Configuramos los assets a utilizar, valor true o false 
+ * si quieres incluir o no alguna librería.
+ *
+ */
+/**
+ *
  * Definimos y configuramos las variables CSS que vamos a utilizar
  *
  */
@@ -75,6 +81,9 @@
 /**
  * Definimos elementos constantes del layout
  */
+/*------------------------------------*\
+    $grid
+\*------------------------------------*/
 /*------------------------------------*\
     $FONT-FACE
 \*------------------------------------*/
@@ -607,6 +616,43 @@ figure {
     font-size: 0.875rem;
     font-style: italic;
     color: gray; }
+
+/*------------------------------------*\
+    $grid
+\*------------------------------------*/
+* {
+  box-sizing: border-box; }
+
+.grid {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap; }
+
+[class^="item-"], [class*=" item-"] {
+  background-color: pink;
+  flex-shrink: 0;
+  flex-grow: 1;
+  margin: 2.5px;
+  padding: 5px;
+  min-height: 100px; }
+
+.item-1 {
+  flex-basis: 100%; }
+  @media (min-width: 48em) {
+    .item-1 {
+      flex: 0 0 calc(33.33333% - 5px); } }
+
+.item-2 {
+  flex-basis: 100%; }
+  @media (min-width: 48em) {
+    .item-2 {
+      flex: 0 0 calc(66.66667% - 5px); } }
+
+.item-3 {
+  flex-basis: 100%; }
+  @media (min-width: 48em) {
+    .item-3 {
+      flex: 0 0 calc(100% - 5px); } }
 
 /*------------------------------------*\
     $TIPOGRAFÍA
