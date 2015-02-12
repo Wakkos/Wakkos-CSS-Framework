@@ -3,7 +3,7 @@
     $STYLE
 \*------------------------------------*/
 /**
- * Aquí incluímos todos los módulos (archivos .scss) que se can
+ * Aquí incluímos todos los módulos (archivos .scss) que se van
  * a compilar en el CSS definitivo: /css/style.css.
  * Si no usas algún módulo, es recomendable que elimines
  * o comentes su inclusión para no tener estilos innecesarios en tu CSS final
@@ -62,13 +62,6 @@
 \*------------------------------------*/
 /**
  * "Start with the small screen first, then expand until it looks like shit. Time to insert a breakpoint!"
- */
-/*------------------------------------*\
-    $no-mediaquery-class
-\*------------------------------------*/
-/**
- * Si decides incluir lt-ie9 para dar soporte a navegadores sin estilos
- * esta es la clase que se añadirá a todos los elementos.
  */
 /*------------------------------------*\
     $IMAGE-DIR

@@ -59,13 +59,10 @@
 //
 //  **************************************************************************
 //
-// La clase .ie8-sucks se puede cambiar en la configuración de variables.
 //
 //
 @mixin media-query-bp($breakpoint, $query1: min, $query2: width, $target: "") {
 
-	// Check if media queries are supported
-	@if $media-queries-supported == true {
 		@if $target != "" {
 			@media #{$target} and (#{$query1}-#{$query2}: #{$breakpoint}) {
 				@content;
@@ -77,12 +74,6 @@
 			}
 		}
 	}
-	@else {
-		#{$no-mq-classname} & {
-			@content;
-		}
-	}
-}
 
 
 @mixin font-size($font-size: 16){
