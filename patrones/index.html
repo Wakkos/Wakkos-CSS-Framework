@@ -20,10 +20,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="../css/style.css">
-
-<!-- JavaScript -->
-<script src="js/modernizr-2.5.3-min.js"></script>
+<link rel="stylesheet" href="css/style.css">
 
 <link rel="shortcut icon" href="/favicon.ico">
 
@@ -31,23 +28,21 @@
 </head>
 
 <body>
-<nav>
-	<ul>
-		<li><a href="page.html">Ver Conjunto</a></li>
-	</ul>
-</nav>
+
 <header role="banner" class="header clearfix">
-<h1>Patrones de Estilos De *proyecto*</h1>
+<div class="logo"><img src="../img/logo.png" alt=""></div>
 </header>
 
-<div class="content">
+
+<main>
+<h1>Patrones de Estilos De *proyecto*</h1>
 <section>
 
-<h2>Colores Corporativos</h2>
+<h2 class="title">Colores Corporativos</h2>
 
 
 <div class="swatch swatch-base">
-<h2 class="h5">Base <small>@basecolor</small></h2>
+<h2 class="h5">Base <small>$basecolor</small></h2>
 <div class="swatch-row swatch-row-one clearfix">
 <span></span>
 
@@ -55,7 +50,7 @@
 </div>
 
 <div class="swatch swatch-secondary">
-<h2 class="h5">Secundario <small>@secondary</small></h2>
+<h2 class="h5">Secundario <small>$secondary</small></h2>
 <div class="swatch-row swatch-row-one clearfix">
 <span></span>
 
@@ -63,7 +58,7 @@
 </div>
 
 <div class="swatch swatch-compcolor">
-<h2 class="h5">Comp. <small>@compcolor</small></h2>
+<h2 class="h5">Comp. <small>$compcolor</small></h2>
 <div class="swatch-row swatch-row-one clearfix">
 <span></span>
 
@@ -73,11 +68,11 @@
 
 
 <section>
-<h2>Colores de Alertas</h2>
+<h2 class="title">Texturas</h2>
 
 
 <div class="swatch swatch-alert">
-<h2 class="h5">Alerta <small>@alertcolor</small></h2>
+<h2 class="h5">Alerta <small>$alertcolor</small></h2>
 <div class="swatch-row swatch-row-one clearfix">
 <span></span>
 
@@ -86,7 +81,7 @@
 
 
 <div class="swatch swatch-error">
-<h2 class="h5">Error <small>@errorcolor</small></h2>
+<h2 class="h5">Error <small>$errorcolor</small></h2>
 <div class="swatch-row swatch-row-one clearfix">
 <span></span>
 
@@ -95,7 +90,7 @@
 
 
 <div class="swatch swatch-info">
-<h2 class="h5">Info <small>@infocolor</small></h2>
+<h2 class="h5">Info <small>$infocolor</small></h2>
 <div class="swatch-row swatch-row-one clearfix">
 <span></span>
 
@@ -104,7 +99,7 @@
 
 
 <div class="swatch swatch-success">
-<h2 class="h5">Success <small>@successcolor</small></h2>
+<h2 class="h5">Success <small>$successcolor</small></h2>
 <div class="swatch-row swatch-row-one clearfix">
 <span></span>
 
@@ -113,7 +108,7 @@
 
 
 <div class="swatch swatch-warning">
-<h2 class="h5">Warning <small>@warningcolor</small></h2>
+<h2 class="h5">Warning <small>$warningcolor</small></h2>
 <div class="swatch-row swatch-row-one clearfix">
 <span></span>
 
@@ -124,7 +119,7 @@
 
 <section>
 
-<h2>Encabezados <small class="basefont">@basefont</small></h2>
+<h2 class="title">Encabezados <small class="basefont">$basefont</small></h2>
 
 <ul>
 <li><h1>Heading 1 - H1 <span>(32px)</span></h1></li>
@@ -134,8 +129,9 @@
 <li><h5>Heading 5 - H5 <span>(16px)</span></h5></li>
 <li><h6>Heading 6 - H6 <span>(14px)</span></h6></li>
 </ul>
-
-<h2>Encabezados Secundarios</h2>
+</section>
+<section>
+<h2 class="title">Encabezados Secundarios</h2>
 
 <ul>
 <li><h1 class="altheader">Heading 1 - H1 <span>(32px)</span></h1></li>
@@ -145,7 +141,9 @@
 <li><h5 class="altheader">Heading 5 - H5 <span>(16px)</span></h5></li>
 <li><h6 class="altheader">Heading 6 - H6 <span>(14px)</span></h6></li>
 </ul>
-<h2>Encabezados con links</h2>
+</section>
+<section>
+<h2 class="title">Encabezados con links</h2>
 
 <ul>
 <li><h1><a href="">Heading 1 - H1 <span>(32px)</span></a></h1></li>
@@ -156,13 +154,13 @@
 <li><h6><a href="">Heading 6 - H6 <span>(14px)</span></a></h6></li>
 </ul>
 <ul>
-	<li class="altfont"><b>@altfont</b></li>
-	<li><code class="code"><b>@codefont</b></code></li></ul>
+	<li class="altfont"><b>$altfont</b></li>
+	<li><code class="code"><b>$codefont</b></code></li></ul>
 </section>
 <section>
 
 
-<h2 class="h5">Párrafos</h2>
+<h2 class="title">Párrafos</h2>
 <p>Los párrafos son cadenas aisladas de texto, pueden tener elementos inline. Los elementos inline son los textos formateados que van dentro de un párrafo: </p>
 <ul>
 	<li><strong>Strong:</strong> de utiliza para dar importancia.</li>
@@ -180,22 +178,26 @@
 	<li>Fechas: <time datetime="25-03-1977T14:30+00:00">Mi cumpleaños</time></li>
 
 </ul>
-
-<h4>Juntemos algunos elementos inline en un párrafo:</h4>
+</section>
+<section>
+<h2 class="title">Juntemos algunos elementos inline en un párrafo:</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <b>incididunt</b> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <a href="">nostrud exercitation</a> ullamco laboris nisi ut aliquip<sub>ex</sub> ea commodo consequat. Lorem ipsum dolor sit amet, consectetur <em>adipisicing elit</em>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <del>nostrud exercitation</del> ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</section>
+<section>
 
-
-<h2 class="h5">Citas</h2>
+<h2 class="title">Citas</h2>
 <blockquote>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 </blockquote>
-
-<h2 class="h5">Texto introductorio</h2>
+</section>
+<section>
+<h2 class="title">Texto introductorio</h2>
 
 <p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
 
-
-<h2 class="h5">Listas Desordenadas</h2>
+</section>
+<section>
+<h2  class="title">Listas Desordenadas</h2>
 <ul>
 <li>Ordered list item</li>
 <li>Ordered list item</li>
@@ -204,8 +206,9 @@
 <li>Ordered list item</li>
 <li>Ordered list item</li>
 </ul>
-
-<h2 class="h5">Listas Ordenadas</h2>
+</section>
+<section>
+<h2  class="title">Listas Ordenadas</h2>
 <ol>
 <li>Ordered list item</li>
 <li>Ordered list item</li>
@@ -214,16 +217,20 @@
 <li>Ordered list item</li>
 <li>Ordered list item</li>
 </ol>
+</section>
 
-<h2 class="h5">Listas de Definición vertical</h2>
+<section>
+<h2  class="title">Listas de Definición vertical</h2>
 <dl>
 <dt>Término</dt>
 <dd>Breve Descripción</dd>
 <dt>Término</dt>
 <dd> BreveDescripción</dd>
 </dl>
+</section>
 
-<h2 class="h5">Listas de Definición horizontal <code><small>class="dl-horizontal"</small></code></h2>
+<section>
+<h2  class="title">Listas de Definición horizontal <code><small>class="dl-horizontal"</small></code></h2>
 <dl class="dl-horizontal">
 <dt>Término</dt>
 <dd>Breve Descripción</dd>
@@ -235,14 +242,17 @@
 
 <section>
 
-<h1>Texturas</h1>
+<h2>Texturas</h2>
 
 
 
-<h2 class="h5">Animaciones:</h2>
+<h2  class="title">Animaciones:</h2>
 <div class="caja-animacion hover"><strong>Hover</strong> ease-out (pon el ratón sobre esto)</div>
 <div class="caja-animacion"><strong class="transition">Transición</strong> ease-in-out <div class="cursor"></div></div>
-<h2 class="h5">Cajas de alerta:</h2>
+</section>
+
+<section>
+<h2  class="title">Cajas de alerta:</h2>
 <p>Para más estilos: <a href="http://twitter.github.com/bootstrap/components.html#alerts">Bootstrap alerts</a>,
 <a href="https://github.com/twitter/bootstrap/blob/master/less/alerts.less">Bootstrap alerts LESS on Github</a></p>
 
@@ -251,53 +261,57 @@
 <strong>Alerta</strong> El usuario acaba de hacer algo con lo que debe llevar cuidado.
 </div>
 
-<div class="alert alert-block">
+<div class="alert alert--block">
 <a class="close" data-dismiss="alert">×</a>
 <h4 class="alert-heading">Bloque de alerta</h4>
 El usuario acaba de hacer algo con lo que debe llevar cuidado. Pero se lo decimos en un bloque.
 </div>
 
-<div class="alert alert-success">
+<div class="alert alert--success">
 <a class="close" data-dismiss="alert">×</a>
 <strong>Éxito</strong> Así se ve una caja con un mensaje de una operación realizada con éxito.
 </div>
 
-<div class="alert alert-warning">
+<div class="alert alert--warning">
 <a class="close" data-dismiss="alert">×</a>
 <strong>Cuidado</strong> Un mensaje que indica cautela.
 </div>
 
-<div class="alert alert-error">
+<div class="alert alert--error">
 <a class="close" data-dismiss="alert">×</a>
 <strong>Error</strong> Mensaje para indicar que algo ha salido mal.
 </div>
 
-<div class="alert alert-info">
+<div class="alert alert--info">
 <a class="close" data-dismiss="alert">×</a>
 <strong>Info</strong> Mensaje para informar.
 </div>
 
-<div class="alert alert-inverse">
+<div class="alert alert--inverse">
 <a class="close" data-dismiss="alert">×</a>
 <strong>Inverse</strong> Nada, porsi necesitas un mensaje con los colores invertidos.
 </div>
+</section>
 
-<h2 class="h5">Cajas: Las usamos para banners o mensajes en la web.</h2>
+<section>
+<h2 class="title">Cajas: Las usamos para banners o mensajes en la web.</h2>
 
 <div class="well">
 <p><strong>Caja</strong> Lorem ipsum dolor sit amet, <a href="#" title="This is a tool-tip">adipisicing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
 
-<div class="well well-large">
+<div class="well well--large">
 <p><strong>Caja grande</strong> Lorem ipsum dolor sit amet, <a href="#" title="This is a tool-tip">adipisicing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
+</section>
 
-<h2 class="h5">Badges</h2>
+<section>
+<h2 class="title">Badges</h2>
 
 <p>Son usados para mostrar una información corta, por ejemplo si un producto tiene oferta, si está agotado, etc... Más estilos en: <a href="http://twitter.github.com/bootstrap/components.html#badges">Bootstrap forms</a>,
 <a href="https://github.com/twitter/bootstrap/blob/master/less/badges.less">Bootstrap badges LESS on Github</a></p>
 
-<table class="table table-bordered">
+<table class="table table--bordered">
 
 <thead>
 <tr>
@@ -315,38 +329,42 @@ El usuario acaba de hacer algo con lo que debe llevar cuidado. Pero se lo decimo
 
 <tr>
 <td>Success</td>
-<td><span class="badge badge-success">Mensaje</span></td>
+<td><span class="badge badge--success">Mensaje</span></td>
 </tr>
 
 <tr>
 <td>Warning</td>
-<td><span class="badge badge-warning">Mensaje</span></td>
+<td><span class="badge badge--warning">Mensaje</span></td>
 </tr>
 
 <tr>
 <td>Error</td>
-<td><span class="badge badge-error">Mensaje</span></td>
+<td><span class="badge badge--error">Mensaje</span></td>
 </tr>
 
 <tr>
 <td>Info</td>
-<td><span class="badge badge-info">Mensaje</span></td>
+<td><span class="badge badge--info">Mensaje</span></td>
 </tr>
 
 <tr>
 <td>Inverse</td>
-<td><span class="badge badge-inverse">Mensaje</span></td>
+<td><span class="badge badge--inverse">Mensaje</span></td>
 </tr>
 
 </tbody>
 </table>
+</section>
 
-<h2 class="h5">Formularios</h2>
+<section>
+<h2 class="title">Formularios</h2>
 
 <p>Más estilos de formularios en: <a href="http://twitter.github.com/bootstrap/base-css.html#forms">Bootstrap forms</a>,
 <a href="https://github.com/twitter/bootstrap/blob/master/less/forms.less">Bootstrap forms LESS on Github</a></p>
+</section>
 
-<h3 class="h4">Formulario estándar</h3>
+<section>
+<h2 class="title">Formulario estándar</h2>
 
 <form class="well">
 <p><label>Etiqueta</label>
@@ -355,16 +373,20 @@ El usuario acaba de hacer algo con lo que debe llevar cuidado. Pero se lo decimo
 <p><label class="checkbox"><input type="checkbox"> Checkbox option</label></p>
 <p><button class="btn">Button</button></p>
 </form>
+</section>
 
-<h3 class="h4">Formulario de Búsqueda</h3>
+<section>
+<h2 class="title">Formulario de Búsqueda</h2>
 
 <form class="well">
 <p><label>Label</label>
 <input type="search" class="search-query"></p>
 <p><button class="btn">Button</button></p>
 </form>
+</section>
 
-<h3 class="h4">Formularios "inline"</h3>
+<section>
+<h2 class="title">Formularios "inline"</h2>
 
 <form class="well form-inline">
 <input type="text" class="input-small">
@@ -372,8 +394,10 @@ El usuario acaba de hacer algo con lo que debe llevar cuidado. Pero se lo decimo
 <label class="checkbox"> <input type="checkbox">Checkbox option</label>
 <button class="btn">Button</button>
 </form>
+</section>
 
-<h3 class="h4">Elementos de formularios</h3>
+<section>
+<h2 class="title">Elementos de formularios</h2>
 
 <form>
 
@@ -422,8 +446,10 @@ El usuario acaba de hacer algo con lo que debe llevar cuidado. Pero se lo decimo
 <textarea id="textarea"> </textarea></p>
 
 </form>
+</section>
 
-<h2 class="h5">Form buttons</h2>
+<section>
+<h2 class="title">Form buttons</h2>
 
 <p>For more buttons styles: <a href="http://twitter.github.com/bootstrap/base-css.html#buttons">Bootstrap buttons</a>,
 <a href="https://github.com/twitter/bootstrap/blob/master/less/buttons.less">Bootstrap buttons LESS on Github</a></p>
@@ -431,86 +457,99 @@ El usuario acaba de hacer algo con lo que debe llevar cuidado. Pero se lo decimo
 <table class="table table-bordered">
 
 <tbody>
-
+<tr>
+<td>&lt;button class="btn"&gt;</td>
+<td>&lt;a href="#" class="btn"&gt;</td>
+<td>&lt;input type="submit" value="Default" class="btn"&gt;</td>
+<td>Elementos</td>
+</tr>
 <tr>
 <td><button class="btn">Default</button></td>
 <td><a href="#" class="btn">Default</a></td>
 <td><input type="submit" value="Default" class="btn"></td>
-<td>Standard button</td>
+<td>Botón base</td>
 </tr>
 
 <tr>
-<td><button class="btn btn-disabled">Disabled</button></td>
-<td><a href="#" class="btn btn-disabled">Disabled</a></td>
-<td><input type="submit" value="Disabled" class="btn btn-disabled"></td>
-<td>Disabled standard button</td>
+<td><button class="btn btn--disabled">disabled</button></td>
+<td><a href="#" class="btn btn--disabled">disabled</a></td>
+<td><input type="submit" value="disabled" class="btn btn--disabled"></td>
+<td>Botón inactivo</td>
 </tr>
 
 <tr>
-<td><button class="btn btn-large">Default</button></td>
-<td><a href="#" class="btn btn-large">Default</a></td>
-<td><input type="submit" value="Default" class="btn btn-large"></td>
-<td>Standard button (large)</td>
+<td><button class="btn btn--large">.large</button></td>
+<td><a href="#" class="btn btn--large">.large</a></td>
+<td><input type="submit" value=".large" class="btn btn--large"></td>
+<td>.large</td>
 </tr>
 
 <tr>
-<td><button class="btn btn-small">Default</button></td>
-<td><a href="#" class="btn btn-small">Default</a></td>
-<td><input type="submit" value="Default" class="btn btn-small"></td>
-<td>Standard button (small)</td>
+<td><button class="btn btn--small">.small</button></td>
+<td><a href="#" class="btn btn--small">.small</a></td>
+<td><input type="submit" value=".small" class="btn btn--small"></td>
+<td>.small</td>
 </tr>
 
 <tr>
-<td><button class="btn btn-mini">Default</button></td>
-<td><a href="#" class="btn btn-mini">Default</a></td>
-<td><input type="submit" value="Default" class="btn btn-mini"></td>
-<td>Standard button (mini)</td>
+<td><button class="btn btn--mini">.mini</button></td>
+<td><a href="#" class="btn btn--mini">.mini</a></td>
+<td><input type="submit" value=".mini" class="btn btn--mini"></td>
+<td>.mini</td>
 </tr>
 
 <tr>
-<td><button class="btn btn-primary">Primary</button></td>
-<td><a href="#" class="btn btn-primary">Primary</a></td>
-<td><input type="submit" value="Primary" class="btn btn-primary"></td>
-<td>Extra visual weight and identifies a primary action</td>
+<td><button class="btn btn--primary">Principal</button></td>
+<td><a href="#" class="btn btn--primary">Principal</a></td>
+<td><input type="submit" value="Principal" class="btn btn--primary"></td>
+<td>Peso visual e identifica una acción primaria.</td>
 </tr>
 <tr>
-<td><button class="btn btn-info">Info</button></td>
-<td><a href="#" class="btn btn-info">Info</a></td>
-<td><input type="submit" value="Info" class="btn btn-info"></td>
-<td>An alternate to default styles</td>
+<td><button class="btn btn--info">Info</button></td>
+<td><a href="#" class="btn btn--info">Info</a></td>
+<td><input type="submit" value="Info" class="btn btn--info"></td>
+<td>Estilo alternativo</td>
 </tr>
 <tr>
-<td><button class="btn btn-success">Success</button></td>
-<td><a href="#" class="btn btn-success">Success</a></td>
-<td><input type="submit" value="Success" class="btn btn-success"></td>
-<td>A positive action</td>
+<td><button class="btn btn--success">Success</button></td>
+<td><a href="#" class="btn btn--success">Success</a></td>
+<td><input type="submit" value="Success" class="btn btn--success"></td>
+<td>Una acción positiva</td>
 </tr>
 <tr>
-<td><button class="btn btn-warning">Warning</button></td>
-<td><a href="#" class="btn btn-warning">Warning</a></td>
-<td><input type="submit" value="Warning" class="btn btn-warning"></td>
-<td>Caution should be taken</td>
+<td><button class="btn btn--warning">Warning</button></td>
+<td><a href="#" class="btn btn--warning">Warning</a></td>
+<td><input type="submit" value="Warning" class="btn btn--warning"></td>
+<td>Algo puede salir mal</td>
 </tr>
-
-<tr>
-<td><button class="btn btn-inverse">Inverse</button></td>
-<td><a href="#" class="btn btn-inverse">Inverse</a></td>
-<td><input type="submit" value="Inverse" class="btn btn-inverse"></td>
-<td>Dark grey button</td>
+<td><button class="btn btn--error">error</button></td>
+<td><a href="#" class="btn btn--error">error</a></td>
+<td><input type="submit" value="error" class="btn btn--error"></td>
+<td>Algo ha salido mal</td>
 </tr>
 
 </tbody></table>
-<h2 class="h5">Botones en grupo:</h2>
-<div class="btn-group clearfix">
-	<a href="" class="btn">Botón 1</a>
-	<a href="" class="btn btn-success">Botón 2</a>
-	<a href="" class="btn btn-warning">Botón 3</a>
-	<a href="" class="btn info">Botón 3</a>
-</div>
 
 </section>
+
 <section>
-<h2 class="h2">Imágenes</h2>
+<h2 class="title">Botones en grupo:</h2>
+<div class="btn--group clearfix">
+	<a href="" class="btn">Botón 1</a>
+	<a href="" class="btn btn--success">Botón 2</a>
+	<a href="" class="btn btn--warning">Botón 3</a>
+	<a href="" class="btn btn--info">Botón 3</a>
+</div>
+</section>
+
+<section>
+<h2 class="title">Input type="submit" con la clase .btn:</h2>
+<div class="btn-group clearfix">
+	<input type="submit" class="btn">
+</div>
+</section>
+<section>
+<h2 class="title">Imágenes</h2>
 <figure>
 	<img src="img/stimpy.png" alt="Draculcat!">
 	<figcaption>
@@ -519,27 +558,29 @@ El usuario acaba de hacer algo con lo que debe llevar cuidado. Pero se lo decimo
 </figure>
 
 <figure>
-	<img class="img-rounded" src="img/stimpy.png" alt="Draculcat!">
+	<img class="img--rounded" src="img/stimpy.png" alt="Draculcat!">
 	<figcaption>
-		class="img-rounded"
+		class="img--rounded"
 	</figcaption>
 </figure>
 
-<figure class="img-polaroid">
+<figure class="img--polaroid">
 	<img src="img/stimpy.png" alt="Draculcat!">
 	<figcaption>
-		class="img-polaroid"
+		class="img--polaroid"
 	</figcaption>
 </figure>
 
 <figure>
-	<img class="img-circle" src="img/stimpy.png" alt="Draculcat!">
+	<img class="img--circle" src="img/stimpy.png" alt="Draculcat!">
 	<figcaption>
-		class="img-circle"
+		class="img--circle"
 	</figcaption>
 </figure>
+</section>
 
-<h2 class="h2">Tables</h2>
+<section>
+<h2 class="title">Tables</h2>
 
 
 
@@ -726,11 +767,11 @@ El usuario acaba de hacer algo con lo que debe llevar cuidado. Pero se lo decimo
 
 </section>
 
-</div><!-- / content -->
+</main><!-- / content -->
 
 <footer role="contentinfo">
-<small>Framework creado por <a href="http://twitter.com/wakkos">@Wakkos</a>  para facilitar el setup de proyectos. Basado en <a href="https://www.udemy.com/less-de-cero-a-experto/">LESS</a>.</small>
-<small>Este archivo toma las clases de vuestro CSS para crear una guía de patrones, pero cambia ese CSS a tu gusto. Las variables que aquí se ven, son actualizadas desde LESS con <code>::after</code>. Puedes ir a <a href="page.html">page.html</a> para ver tdos los elementos como un conjunto.</small>
+<small>Framework creado por <a href="http://twitter.com/wakkos">@Wakkos</a>  para facilitar el setup de proyectos. Basado en <a href="http://es.wikipedia.org/wiki/Sass_(lenguaje_de_hojas_de_estilo)">SASS</a>.</small>
+<small>Este archivo toma las clases de vuestro CSS para crear una guía de patrones, pero cambia ese CSS a tu gusto. Las variables que aquí se ven, son actualizadas desde SASS con <code>::after</code>. Puedes ir a <a href="page.html">page.html</a> para ver tdos los elementos como un conjunto.</small>
 </footer>
 </body>
 </html>
