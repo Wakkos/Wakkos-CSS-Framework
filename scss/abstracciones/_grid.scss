@@ -1,4 +1,4 @@
-
+@if $incluir-grid == true{
 
 
 
@@ -15,7 +15,7 @@
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
-  
+
 }
 
 [class^="item-"], [class*=" item-"] {
@@ -31,12 +31,13 @@
 @for $i from 1 to ($grid-size + 1) {
   // Total size (We would need to substract the margin to avoid wrapping);
   $width : 100 / $grid-size * $i * 1%;
-  
+
   .item-#{$i} {
     flex-basis: 100%;
       @include media-query-bp($bp3) {
         flex:0 0 calc(#{$width} - #{$gap});
     }
-  
+  }
 }
-}
+
+} // end if

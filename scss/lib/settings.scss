@@ -1,15 +1,26 @@
 /*------------------------------------*\
-    $VARIABLES
+    $SETTINGS
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+    $OBJETOS Y ABSTRACCIONES
 \*------------------------------------*/
 /**
- *
- * Configuramos los assets a utilizar, valor true o false 
- * si quieres incluir o no alguna librería.
- *
+ * Qué objetos y abstracciones vamos a usar? (true: se usa, false: no se usa)
  */
 
-$grids:         false!default;
-$use-grids:         false!default;
+$incluir-grid:          false!default;
+$incluir-botones:       true!default;
+$incluir-navegacion:    true!default;
+$incluir-paginacion:    false!default;
+$incluir-tablas:        false!default;
+$incluir-texturas:      true!default;
+$incluir-flexbox:       true!default;
+$incluir-fonticon:      false!default;
+
+$incluir-imgclass:      false!default;
+$incluir-debug:         false!default;
 
 /**
  *

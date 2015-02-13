@@ -1,0 +1,28 @@
+
+
+
+
+
+/*------------------------------------*\
+    $IMÁGENES
+\*------------------------------------*/
+
+@if $incluir-imgclass == true {
+
+
+.img--rounded {
+  border-radius :$radius * 4;
+}
+
+.img--polaroid {
+  padding : $gutterwidth / 2;
+  background-color : $white;
+  border : 1px solid $bordercolor;
+  box-shadow : 0 1px 3px rgba(0,0,0,.1);
+}
+
+.img--circle {
+  border-radius : 100%;
+}
+
+} //endif

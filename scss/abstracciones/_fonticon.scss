@@ -1,3 +1,4 @@
+@if $incluir-fonticon == true{
 
 
 
@@ -66,3 +67,6 @@ you can use the generic selector below, but it's slower:
 .icon-eye:before {
 	content: "\e002";
 }
+
+
+} //endif
