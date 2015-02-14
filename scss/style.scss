@@ -4,45 +4,43 @@
 /**
  * Aquí incluímos todos los módulos (archivos .scss) que se van
  * a compilar en el CSS definitivo: /css/style.css.
- * Si no usas algún módulo, es recomendable que elimines
- * o comentes su inclusión para no tener estilos innecesarios en tu CSS final
- * y optimizar lo máximo posible.
  */
 
-@import "contenido.scss";
-
-@import "lib/variables.scss";
-
+/**
+* Librerías
+**/
+@import "lib/settings.scss";
 @import "lib/mixins.scss";
-
 @import "lib/flex.scss";
-
 @import "lib/placeholders.scss";
 
+
+/**
+* Bases
+**/
+@import "base/contenido.scss";
 @import "base/reset.scss";
+@import "base/debug.scss";
 
-@import "base/fuentes.scss";
 
-@import "base/links.scss";
+/**
+* Selectores de elemento: un super "normalize":
+**/
+@import "elementos/figure.scss";
+@import "elementos/formularios.scss";
+@import "elementos/imagenes.scss";
+@import "elementos/links.scss";
+@import "elementos/tipografia.scss";
 
-@import "componentes/tablas.scss";
 
-@import "componentes/botones.scss";
+/**
+* Abstracciones y objetos
+**/
+@import "abstracciones/botones.scss";
+@import "abstracciones/fonticon.scss";
+@import "abstracciones/grid.scss";
+@import "abstracciones/paginacion.scss";
+@import "abstracciones/tablas.scss";
+@import "abstracciones/texturas.scss";
 
-@import "base/elementos.scss";
 
-@import "componentes/grid.scss";
-
-@import "base/tipografia.scss";
-
-@import "componentes/navegacion.scss";
-
-@import "componentes/paginacion.scss";
-
-@import "base/formularios.scss";
-
-@import "layout/sitio.scss";
-
-@import "componentes/texturas.scss";
-
-// @import "debug.scss";  // Utilizado para comprobar que el marcado HTML no contenga errores

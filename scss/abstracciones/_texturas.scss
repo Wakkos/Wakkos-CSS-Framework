@@ -1,3 +1,4 @@
+@if $incluir-texturas == true{
 
 
 
@@ -192,3 +193,5 @@
 	color : $basecolor;
 	text-shadow : none;
 }
+
+} // endif

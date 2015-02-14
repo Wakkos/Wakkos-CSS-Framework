@@ -1,3 +1,4 @@
+@if $incluir-paginacion == true{
 
 
 
@@ -52,3 +53,5 @@
             .pagination--last a:after{
                 content:"\00A0" "\00BB";
             }
+
+} // endif

@@ -1,3 +1,4 @@
+@if $incluir-botones == true{
 
 
 
@@ -226,3 +227,6 @@ input[type="submit"].btn:hover {
 .btn--group .btn.large:last-child {
 	@include border-radius(0, $radius, 0, $radius);
 }
+
+
+} // endif
