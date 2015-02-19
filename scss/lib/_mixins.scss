@@ -9,38 +9,73 @@
 
 
 
-/*
-* Fácil de usar: las variables a usar están en settings.scss y son:
+// Mediqueries y breakpoints: El mixin consta de 4 partes
+//
+//  $breakpoint: Es el Brakpoint o la variable de breakpoint, las definimos en _variables.scss
+//               las que vienen por defecto: $bp1, $bp2, $bp3, $bp4 y $bp5.
+//
+//  $query1: max o min, dependiendo de como queremos el Mediaquery que funcione:
+//           max-width, min-width, min-device-width, etc... - 'min' por defecto -
+//
+//  $query2: La segunda parte del query, lo que va después de 'min' o 'max'.
+//           -device-width, -device-height, -width etc...  - 'width' por defecto -
+//
+//  $target: El medio. PUede ser 'all', 'screen', 'print', etc...
+//           - '' por defecto -
+//  USO:
+//
+//  **************************************************************************
+//
+//  $bp1 : 45em;
+//
+// .texto {
+// 	color:red;
+// 	@include media-query-bp($bp1,max,device-width,screen) {
+// 		color: blue;
+// 	}
+// }
+//
+//  **************************************************************************
+//
+// Compilaría:
+//
+//  **************************************************************************
+// .texto {
+// color: red; }
+// @media screen and (max-device-width: 45em) {
+//   .texto {
+//     color: blue; } }
+//  **************************************************************************
+//
+// Y en la hoja de estilos para navegadores que no soportan mediaqueries
+// compilaría lo siguiente (componenter/no-mq.scss):
+//
+//  **************************************************************************
+//
+// .texto {
+// color: red; }
+// .ie8-sucks .texto {
+//   color: blue; }
+//
+//  **************************************************************************
+//
+//
+//
+@mixin media-query-bp($breakpoint, $query1: min, $query2: width, $target: "") {
 
-    'small'  : 48em,
-    'medium' : 56.25em,
-    'large'  : 68.75em,
+		@if $target != "" {
+			@media #{$target} and (#{$query1}-#{$query2}: #{$breakpoint}) {
+				@content;
+			}
+		}
+		@else {
+			@media (#{$query1}-#{$query2}: #{$breakpoint}) {
+				@content;
+			}
+		}
+	}
 
-* Y el uso va como sigue:
 
-.foo {
-  color: red;
-  @include respond-to('small') {
-    color: blue;
-  }
-}
-*/
-@mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
-      @content;
-    }
-  }
-
-  @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Please make sure it is defined in `$breakpoints` map.";
-  }
-}
-
-/*
-* Esto deberíamos eliminarlo ya, no? El primer Commit gana!
-*/
 @mixin font-size($font-size: 16){
     font-size:($font-size)*1px;
     font-size:($font-size / $basefontsize)*1rem;
@@ -278,14 +313,14 @@
             #{$property}:$value;
 }
 
-/*
- * Función para controlar el index
+/* 
+ * Función para controlar el index 
  */
-
+ 
 @function z($layer) {
   @if not map-has-key($z-layers, $layer) {
     @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
   }
-
+ 
   @return map-get($z-layers, $layer);
 }

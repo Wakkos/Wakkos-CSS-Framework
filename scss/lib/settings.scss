@@ -36,11 +36,11 @@ $incluir-debug:         false!default;
  * "Start with the small screen first, then expand until it looks like shit. Time to insert a breakpoint!"
  */
 
-$breakpoints: (
-  'small'  : 48em,
-  'medium' : 56.25em,
-  'large'  : 68.75em,
-) !default;
+$bp1 : 30em;
+$bp2 : 37.5em;
+$bp3 : 48em;
+$bp4 : 56.25em;
+$bp5 : 68.75em;
 
 
 

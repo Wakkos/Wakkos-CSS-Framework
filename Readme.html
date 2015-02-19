@@ -1,0 +1,119 @@
+<h1>Wakkos SASS framework</h1>
+
+<h3>Configuración:</h3>
+
+<h4>settings.scss</h4>
+
+<p>Configura primeramente el archivo <code>lib/settings.scss</code>.</p>
+
+<p>Pasa a configurar las variables y diferentes opciones de la atmósfera de diseño,
+donde podremos configurar colores, fuentes, tamaños, etc&hellip;</p>
+
+<h3>Breakpoints</h3>
+
+<p>Los breakpoints los he colocado en EM en vez de pixels para que el diseño no se
+vea afectado por acciones como el ZOOM. Para más info leer a
+<a href="http://css-tricks.com/why-ems/">Chris Coyer</a> y a <a href="http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/">Lyza Gardner</a> con argumentos al respecto.</p>
+
+<p><code>scss
+$bp1 : 30em;      // 480px
+$bp2 : 37.5em;    // 600px
+$bp3 : 48em;      // 768px
+$bp4 : 56.25em;   // 900px
+$bp5 : 68.75em;   // 1100px
+</code></p>
+
+<h3>Nomenclatura</h3>
+
+<p>La convención de nombre sigue este patrón:
+<code>css
+    .bloque{}
+    .bloque__elemento{}
+    .bloque--modificador{}
+</code></p>
+
+<ul>
+<li>&lsquo;.bloque&rsquo; representa el primer nivel de una abstracción o componente.</li>
+<li>&lsquo;.bloque__elemento&rsquo; representa un descendente de &lsquo;.bloque&rsquo; que se ayuda de
+&lsquo;.bloque&rsquo; como un conjunto.</li>
+<li>&lsquo;.bloque&ndash;modificador&rsquo; representa un estado diferente de &lsquo;.bloque&rsquo;.</li>
+</ul>
+
+
+<p>Una <strong>analogía</strong> del funcionamiento de las clases BEM sería:
+<code>css
+    .persona{}
+    .persona--mujer{}
+        .persona__mano{}
+        .persona__mano--izquierda{}
+        .persona__mano--derecha{}
+</code></p>
+
+<p>Para más info podéis leer mi traducción de la <a href="https://github.com/Wakkos/CSS-Guidelines">guía de CSS</a> de <a href="https://twitter.com/csswizardry">Harry Roberts</a>
+a la cual me he ajustado en su mayoría para crear este framework.</p>
+
+<p>También tenemos espacio entre secciones para que sea fácil de ubicar al ver el
+archivo compilado <code>style.css</code>.</p>
+
+<h3>Organización</h3>
+
+<p>Los archivos de <strong>SCSS</strong> están todos dentro de la carpeta <code>scss</code> y distribuidos
+de la siguiente manera:</p>
+
+<p><code>
+--scss
+        style.scss
+        -abstracciones
+                     _botones.scss
+                     _fonticon.scss
+                     _grid.scss
+                     _paginacion.scss
+                     _tablas.scss
+                     _texturas.scss
+        --base
+                     _contenido.scss
+                     _reset.scss
+                     _debug.scss
+        --elementos
+                     _figure.scss
+                     _formulario.scss
+                     _imagenes.scss
+                     _links.scss
+                     _reset.scss
+                     _tipografia.scss
+        --layout
+                    _navegacion.scss
+                    _sitio.scss
+        --lib
+                    _flex.scss
+                    _mixins.scss
+                    _placeholders.scss
+                    _settings.scss
+</code></p>
+
+<p>El archivo <code>contenido.scss</code> se compila al principio del <code>style.css</code> para dar una
+guía de donde tenemos nuestros elementos y su nombre, gracias a los comentarios
+BEM na búsqueda <code>cmd/ctrl + f</code> en nuestro editor que empiece por $NOMBREDESECCION
+nos ayudará mucho a encontrar el contenido.</p>
+
+<p>A su vez están todas las secciones separadas unas de las otras para ubicar rápidamente
+ cuando echamos un vistazo.</p>
+
+<p>El archivo <code>_debug.scss</code> lo usamos para tener una
+pequeña guía de la semántica de tu documento html.</p>
+
+<h3>Codekit</h3>
+
+<p>Iré adaptándolo a Codekit pero sin que afecte a los que no lo usan. De momento si
+usas Codekit, incluyo el archivo <code>config.codekit</code>y todos los <code>.scss</code>son compilados
+en la carpeta <code>css</code>.</p>
+
+<h2>Patrones</h2>
+
+<p>Lo trabajaré en otra rama, ya que ahora mismo no provee ninguna ventaja.</p>
+
+<h2>Tip</h2>
+
+<p><em>Modulariza</em> <strong>todo</strong> lo que puedas, el archivo <code>style.scss</code>
+es para meter archivos. Crea módulos, divide tu CSS en tantos archivos como puedas;
+el CSS del header en <code>header.scss</code>, <code>content-home.scss</code>, <code>footer.scss</code>, etc&hellip;</p>
