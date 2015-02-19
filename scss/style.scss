@@ -1,3 +1,7 @@
+
+
+
+
 /*------------------------------------*\
     $STYLE
 \*------------------------------------*/
@@ -32,6 +36,11 @@
 @import "elementos/links.scss";
 @import "elementos/tipografia.scss";
 
+/**
+* Layout del sitio
+**/
+@import "layout/sitio.scss";
+@import "layout/navegacion.scss";
 
 /**
 * Abstracciones y objetos
