@@ -34,7 +34,7 @@
 
   .item-#{$i} {
     flex-basis: 100%;
-      @include media-query-bp($bp3) {
+      @include respond-to(medium) {
         flex:0 0 calc(#{$width} - #{$gap});
     }
   }
