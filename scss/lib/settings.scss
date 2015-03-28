@@ -34,6 +34,15 @@ $incluir-debug:         false!default;
 \*------------------------------------*/
 /**
  * "Start with the small screen first, then expand until it looks like shit. Time to insert a breakpoint!"
+ * Lo usamos con el mixin respond-to($breakpoint):
+
+.text {
+  color: pink;
+  @include respond-to(medium) {
+    color: maroon;
+  }
+}
+ *
  */
 
 $breakpoints: (
@@ -41,6 +50,30 @@ $breakpoints: (
   'medium' : 56.25em,
   'large'  : 68.75em,
 ) !default;
+
+
+
+
+
+/*------------------------------------*\
+    $Z-INDEX  
+\*------------------------------------*/
+/**
+ * Podemos controlar los z-index con variables más reconocibles.
+ * Para usarlo, implementamos la función z($layers):
+ .element {
+  z-index: z(goku);
+ }
+ *
+ */
+
+$z-layers: (
+  "goku":            9001,
+  "shoryuken":       8000,
+  "default":            1,
+  "below":             -1,
+  "bottomless-pit": -9000
+);
 
 
 
@@ -74,16 +107,6 @@ $radius :             2px;
 $hovertransition :    .3s;
 $animationtime :      .8s;
 
-
-
-
-$z-layers: (
-  "goku":            9001,
-  "shoryuken":       8000,
-  "default":            1,
-  "below":             -1,
-  "bottomless-pit": -9000
-);
 
 
 
@@ -125,13 +148,30 @@ $altlineheight : 1.35em;
     $TAMAÑOS
 \*------------------------------------*/
 /**
- * Definimos las fuentes a utilizar:
- * $basefont para todos los textos inline
- * $altfont para textos alternativos, como citas, intro, etc...
- * $codefont para código
+ * Definimos los tamaños de fuentes:
+ 
  */
-$basefontsize :      16;
+$basefontsize   :   16;
 
+
+/*
+ * Las variables de tamaño las definimos en un MAP, puedes añadir, quitar o cambiarlas.
+ * Vienen dadas en REM. Esto creará una clase con el mismo nombre de la variable:
+
+  .x-small { font-size: .8rem}
+ 
+ * También podemos asignar tamaños con un función llamada fs:
+
+    .selector { font-size: fs(x-small);} 
+
+ *
+ */
+$size-vars: (
+  "x-small"  :    .8,
+  "small"    :    .9,
+  "big"      :    1.5,
+  "huge"     :    2
+);
 
 
 

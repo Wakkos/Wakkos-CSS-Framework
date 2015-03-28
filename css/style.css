@@ -28,6 +28,26 @@
 \*------------------------------------*/
 /**
  * "Start with the small screen first, then expand until it looks like shit. Time to insert a breakpoint!"
+ * Lo usamos con el mixin respond-to($breakpoint):
+
+.text {
+  color: pink;
+  @include respond-to(medium) {
+    color: maroon;
+  }
+}
+ *
+ */
+/*------------------------------------*\
+    $Z-INDEX  
+\*------------------------------------*/
+/**
+ * Podemos controlar los z-index con variables más reconocibles.
+ * Para usarlo, implementamos la función z($layers):
+ .element {
+  z-index: z(goku);
+ }
+ *
  */
 /*------------------------------------*\
     $IMAGE-DIR
@@ -57,10 +77,20 @@
     $TAMAÑOS
 \*------------------------------------*/
 /**
- * Definimos las fuentes a utilizar:
- * $basefont para todos los textos inline
- * $altfont para textos alternativos, como citas, intro, etc...
- * $codefont para código
+ * Definimos los tamaños de fuentes:
+ 
+ */
+/*
+ * Las variables de tamaño las definimos en un MAP, puedes añadir, quitar o cambiarlas.
+ * Vienen dadas en REM. Esto creará una clase con el mismo nombre de la variable:
+
+  .x-small { font-size: .8rem}
+ 
+ * También podemos asignar tamaños con un función llamada fs:
+
+    .selector { font-size: fs(x-small);} 
+
+ *
  */
 /*------------------------------------*\
     $COLORS
@@ -106,9 +136,6 @@
 /**
 * Centrar y dar un ancho máximo igual a $pagemaxwidth.
 */
-/*
- * Función para controlar el index
- */
 /*------------------------------------*\
     $PLACEHOLDERS
 \*------------------------------------*/
@@ -758,8 +785,6 @@ body {
   width: 100%;
   background-color: transparent;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
   line-height: 1.5em;
   color: #262626; }
 

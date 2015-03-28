@@ -43,7 +43,6 @@ body {
 	width : 100%;
 	background-color : transparent;
 	font-family : $basefont;
-	@include font-size();
 	line-height : $baselineheight;
 	color : $textcolor;
 }

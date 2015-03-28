@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    $FUNCIONES
+\*------------------------------------*/
+
+
+
+
+/*
+ * Función para controlar el index
+ 
+ 	.selector { z-index: z(goku);}
+
+ * compila:
+
+	.selector { z-index: 9001;}
+
+ * Puedes ver las variables en el MAP en settings.scss
+ */
+
+@function z($layer) {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No se ha encontrado capa para '#{$layer}' en $z-layers. Propiedad omitida.";
+  }
+
+  @return map-get($z-layers, $layer);
+}
+
+
+/*
+ * Función para mantener el tamaño de fuente consistente
+
+ .selector { font-size: fs(x-small);}
+
+ * Puedes ver en settings.scss las variables que se utilizan.
+ */
+
+@function f($font-size) {
+  @if not map-has-key($size-vars, $font-size) {
+    @warn "No se ha encontrado tamaño para '#{$font-size}' en $size-vars. Propiedad omitida.";
+  }
+  @return map-get($size-vars, $font-size);
+}
