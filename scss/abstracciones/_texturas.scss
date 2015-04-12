@@ -18,7 +18,7 @@
 	background-color : $color-alert;
 	border : $alertborderwidth $alertborderstyle $alertbordercolor;
 	font-family : $basefont;
-	@include font-size(14);
+	font-size: fs(small);
 	color : $alerttext;
 	border-radius: $radius;
 
@@ -31,7 +31,7 @@
 		top : -2px;
 		right : -21px;
 		float : right;
-		@include font-size(21);
+		font-size: fs(big);
 		font-weight : bold;
 		line-height : 18px;
 		color : inherit;
@@ -94,7 +94,7 @@
 
 .badge {
 	padding : 1px 9px 2px;
-	@include font-size(12);
+	font-size: fs(small);
 	font-weight : bold;
 	white-space : nowrap;
 	border-radius: $radius;

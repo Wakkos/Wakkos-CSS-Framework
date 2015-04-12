@@ -43,7 +43,7 @@ h3 small {
                                                         (h6, 6, 14, 1){
   #{$header}, .#{$header} {
   	margin-bottom : $baselineheight / $margin-bot;
-  	@include font-size($font-size);
+  	font-size: ($font-size) * 1rem;
   	line-height : $line-height;
   }
 }
@@ -63,7 +63,7 @@ address {
 }
 
 small {
-	@include font-size(12);
+	font-size: fs(x-small);
 	color: $grey;
 }
 
@@ -87,7 +87,7 @@ blockquote  {
 	font-family : $altfont;
 	font-style : normal;
 	p {
-		@include font-size(18);
+		font-size: fs(big);
 		color:$grey;
 		font-style: italic;
 	}
@@ -165,7 +165,7 @@ code,
 kbd,
 samp {
 	font-family : $codefont;
-	@include font-size(14);
+	font-size: fs(small);
 	line-height : $baselineheight;
 }
 
@@ -178,7 +178,7 @@ pre {
 sub,
 sup {
 	position : relative;
-	@include font-size(12);
+	font-size: fs(x-small);
 	line-height : 0;
 	vertical-align : $baselineheight;
 }

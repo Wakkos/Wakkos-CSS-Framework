@@ -18,10 +18,6 @@
  */
 
 @function z($layer) {
-  @if not map-has-key($z-layers, $layer) {
-    @warn "No se ha encontrado capa para '#{$layer}' en $z-layers. Propiedad omitida.";
-  }
-
   @return map-get($z-layers, $layer);
 }
 
@@ -34,9 +30,6 @@
  * Puedes ver en settings.scss las variables que se utilizan.
  */
 
-@function f($font-size) {
-  @if not map-has-key($size-vars, $font-size) {
-    @warn "No se ha encontrado tamaño para '#{$font-size}' en $size-vars. Propiedad omitida.";
-  }
-  @return map-get($size-vars, $font-size);
+@function fs($font-size) {
+  @return map-get($size-vars, $font-size) * 1rem;
 }

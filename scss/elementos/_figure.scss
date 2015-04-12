@@ -15,7 +15,7 @@ figure {
 	figcaption {
 		display : block;
 		font-weight : normal;
-		@include font-size(14);
+		font-size: fs(small);
 		font-style : italic;
 		color : $grey;
 	}

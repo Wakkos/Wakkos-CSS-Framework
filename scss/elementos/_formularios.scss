@@ -27,8 +27,8 @@ form {
 		white-space : normal;
 
 		small {
-			@include font-size(14);
-		color : $lightgrey;
+			font-size: fs(x-small);
+			color : $lightgrey;
 		}
 	}
 
@@ -52,7 +52,7 @@ input,
 button,
 select,
 textarea {
-	@include font-size(14);
+	font-size: fs(small);
 	border-radius: $radius;
 	vertical-align : baseline;
 	*vertical-align : middle;
@@ -158,7 +158,7 @@ input[type="file"] {
 
 select {
 	background-color : $inputbackground;
-	@include font-size(13);
+	font-size: fs(small);
 }
 
 select[multiple],
@@ -231,11 +231,11 @@ select:focus {
 }
 
 ::-webkit-input-placeholder {
-	@include font-size(14);
+	font-size: fs(small);
 }
 
 input:-moz-placeholder {
-	@include font-size(14);
+	font-size: fs(small);
 }
 
 // help text

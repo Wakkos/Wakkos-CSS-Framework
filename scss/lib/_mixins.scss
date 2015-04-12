@@ -38,14 +38,6 @@
   }
 }
 
-/*
-* Esto deberíamos eliminarlo ya, no? El primer Commit gana!
-*/
-@mixin font-size($font-size: 16){
-    font-size:($font-size)*1px;
-    font-size:($font-size / $basefontsize)*1rem;
-}
-
   /**
   * Centrar y dar un ancho máximo igual a $pagemaxwidth.
   */
