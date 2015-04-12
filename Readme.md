@@ -14,11 +14,13 @@ vea afectado por acciones como el ZOOM. Para más info leer a
 [Chris Coyer](http://css-tricks.com/why-ems/) y a [Lyza Gardner](http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/) con argumentos al respecto.
 
 ```scss
-$bp1 : 30em;      // 480px
-$bp2 : 37.5em;    // 600px
-$bp3 : 48em;      // 768px
-$bp4 : 56.25em;   // 900px
-$bp5 : 68.75em;   // 1100px
+$breakpoints: (
+
+  'small'  : 48em,
+  'medium' : 56.25em,
+  'large'  : 68.75em,
+
+) !default;
 ```
 
 ### Nomenclatura
@@ -61,7 +63,6 @@ de la siguiente manera:
                      _fonticon.scss
                      _grid.scss
                      _paginacion.scss
-                     _tablas.scss
                      _texturas.scss
         --base
                      _contenido.scss
@@ -74,6 +75,7 @@ de la siguiente manera:
                      _links.scss
                      _reset.scss
                      _tipografia.scss
+                     _tablas.scss
         --layout
         			_navegacion.scss
                     _sitio.scss
@@ -104,10 +106,5 @@ en la carpeta `css`.
 ## Patrones
 Lo trabajaré en otra rama, ya que ahora mismo no provee ninguna ventaja.
 
-
-## Tip
-_Modulariza_ **todo** lo que puedas, el archivo `style.scss`
-es para meter archivos. Crea módulos, divide tu CSS en tantos archivos como puedas;
-el CSS del header en `header.scss`, `content-home.scss`, `footer.scss`, etc...
 
 
