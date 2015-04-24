@@ -612,32 +612,32 @@ h3 small {
 
 h1, .h1 {
   margin-bottom: 0.75em;
-  font-size: 32rem;
+  font-size: 3.2rem;
   line-height: 1.2; }
 
 h2, .h2 {
   margin-bottom: 0.5em;
-  font-size: 24rem;
+  font-size: 2.4rem;
   line-height: 1.2; }
 
 h3, .h3 {
   margin-bottom: 0.375em;
-  font-size: 21rem;
+  font-size: 2.1rem;
   line-height: 1.3; }
 
 h4, .h4 {
   margin-bottom: 0.25em;
-  font-size: 18rem;
+  font-size: 1.8rem;
   line-height: 1.25; }
 
 h5, .h5 {
   margin-bottom: 0.25em;
-  font-size: 16rem;
+  font-size: 1.6rem;
   line-height: 1; }
 
 h6, .h6 {
   margin-bottom: 0.25em;
-  font-size: 14rem;
+  font-size: 1.4rem;
   line-height: 1; }
 
 p,
