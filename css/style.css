@@ -1256,6 +1256,15 @@ input[type="submit"].btn:hover {
     background-color: #5ac1c4;
     color: white; }
 
+.badge--icon {
+  display: inline-block;
+  color: #262626;
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 12px;
+  background-color: #ff944d;
+  text-align: center; }
+
 .well {
   min-height: 21px;
   padding: 11px;

@@ -154,6 +154,15 @@
 			color : $white;
 		}
 	}
+	.badge--icon {
+		display: inline-block;
+		color: $badgecolor;
+		border: 1px solid $bordercolor;
+		border-radius: $radius;
+		padding: $gutterwidth / 2;
+		background-color: $badgebackground;
+		text-align: center;
+	}
 
 // Para más gradientes: https://github.com/twitter/bootstrap/blob/master/less/mixins.less
 
