@@ -756,6 +756,32 @@ hr {
   border: 0;
   border-top: 1px solid white; }
 
+/*
+ * Creamos clases para cada uno de los tamaños de fuentes. Se pueden ver en Settings.
+ * Son los nombres de las varables con el prefijo font-
+ * Por ejemplo:
+
+        .font-x-small {
+            font-size: .8rem;
+        }
+
+
+ */
+.font-x-small {
+  font-size: 0.8rem; }
+
+.font-small {
+  font-size: 0.9rem; }
+
+.font-normal {
+  font-size: 1rem; }
+
+.font-big {
+  font-size: 1.5rem; }
+
+.font-huge {
+  font-size: 2rem; }
+
 /**
 * Layout del sitio
 **/

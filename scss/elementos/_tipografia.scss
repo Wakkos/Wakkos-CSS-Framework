@@ -201,3 +201,22 @@ hr {
   border : 0;
   border-top : 1px solid $bordercolor;
 }
+
+
+/*
+ * Creamos clases para cada uno de los tamaños de fuentes. Se pueden ver en Settings.
+ * Son los nombres de las varables con el prefijo font-
+ * Por ejemplo:
+
+        .font-x-small {
+            font-size: .8rem;
+        }
+
+
+ */
+
+@each $name, $value in $size-vars {
+  .font-#{$name} {
+    font-size: $value * 1rem;
+  }
+}
