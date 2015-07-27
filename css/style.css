@@ -50,11 +50,21 @@
  *
  */
 /*------------------------------------*\
-    $IMAGE-DIR
+    $DIR
 \*------------------------------------*/
 /**
  * Con agregar esta variable a las imágenes declaradas en CSS apañamos:
  */
+/*
+ * Igual para las fuentes
+ */
+/*
+ *   src:url('../fonts/icomoon.eot');
+ *   src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+ *   url('../fonts/icomoon.woff') format('woff'),
+ *   url('../fonts/icomoon.ttf') format('truetype'),
+ *   url('../fonts/icomoon.svg#icomoon') format('svg');
+*/
 /*------------------------------------*\
     $LAYOUT
 \*------------------------------------*/

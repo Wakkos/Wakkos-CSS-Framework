@@ -81,7 +81,7 @@ $z-layers: (
 
 
 /*------------------------------------*\
-    $IMAGE-DIR
+    $DIR
 \*------------------------------------*/
 /**
  * Con agregar esta variable a las imágenes declaradas en CSS apañamos:
@@ -89,6 +89,19 @@ $z-layers: (
 $image-dir: "../img";
 
  //Use: background-image:url("#{$image-dir}/btn.jpg");
+
+ /*
+  * Igual para las fuentes
+  */
+
+$font-dir: "../fonts";
+/*
+ *   src:url('#{$font-dir}/icomoon.eot');
+ *   src:url('#{$font-dir}/icomoon.eot?#iefix') format('embedded-opentype'),
+ *   url('#{$font-dir}/icomoon.woff') format('woff'),
+ *   url('#{$font-dir}/icomoon.ttf') format('truetype'),
+ *   url('#{$font-dir}/icomoon.svg#icomoon') format('svg');
+*/
 
 
 
