@@ -18,6 +18,7 @@ $incluir-tablas:        false!default;
 $incluir-texturas:      true!default;
 $incluir-flexbox:       true!default;
 $incluir-fonticon:      false!default;
+$incluir-abstracciones: false!default;
 
 $incluir-imgclass:      false!default;
 $incluir-debug:         false!default;
@@ -56,7 +57,7 @@ $breakpoints: (
 
 
 /*------------------------------------*\
-    $Z-INDEX  
+    $Z-INDEX
 \*------------------------------------*/
 /**
  * Podemos controlar los z-index con variables más reconocibles.
@@ -148,7 +149,7 @@ $altlineheight : 1.35em;
 \*------------------------------------*/
 /**
  * Definimos los tamaños de fuentes:
- 
+
  */
 $basefontsize   :   16;
 
@@ -158,10 +159,10 @@ $basefontsize   :   16;
  * Vienen dadas en REM. Esto creará una clase con el mismo nombre de la variable:
 
   .x-small { font-size: .8rem}
- 
+
  * También podemos asignar tamaños con un función llamada fs:
 
-    .selector { font-size: fs(x-small);} 
+    .selector { font-size: fs(x-small);}
 
  *
  */

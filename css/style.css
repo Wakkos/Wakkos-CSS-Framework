@@ -39,7 +39,7 @@
  *
  */
 /*------------------------------------*\
-    $Z-INDEX  
+    $Z-INDEX
 \*------------------------------------*/
 /**
  * Podemos controlar los z-index con variables más reconocibles.
@@ -78,17 +78,17 @@
 \*------------------------------------*/
 /**
  * Definimos los tamaños de fuentes:
- 
+
  */
 /*
  * Las variables de tamaño las definimos en un MAP, puedes añadir, quitar o cambiarlas.
  * Vienen dadas en REM. Esto creará una clase con el mismo nombre de la variable:
 
   .x-small { font-size: .8rem}
- 
+
  * También podemos asignar tamaños con un función llamada fs:
 
-    .selector { font-size: fs(x-small);} 
+    .selector { font-size: fs(x-small);}
 
  *
  */
@@ -321,8 +321,7 @@ select,
 textarea {
   font-size: 0.9rem;
   border-radius: 2px;
-  vertical-align: baseline;
-  *vertical-align: middle; }
+  vertical-align: baseline; }
 
 input,
 button,
