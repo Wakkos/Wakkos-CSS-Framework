@@ -610,14 +610,8 @@ h6 {
   h5.altheader,
   h6.altheader {
     color: gray;
-    text-transform: uppercase; }
-
-h1 small,
-h2 small,
-h3 small {
-  font-weight: normal;
-  display: block;
-  color: gray; }
+    text-transform: uppercase;
+    display: block; }
 
 h1, .h1 {
   margin-bottom: 0.75em;
@@ -656,9 +650,6 @@ dl,
 address {
   margin-bottom: 1.5em;
   line-height: 1.5em; }
-
-.intro {
-  font-weight: bold; }
 
 small {
   font-size: 0.8rem;
@@ -765,6 +756,9 @@ hr {
   height: 1px;
   border: 0;
   border-top: 1px solid white; }
+
+.intro {
+  font-weight: bold; }
 
 /*
  * Creamos clases para cada uno de los tamaños de fuentes. Se pueden ver en Settings.
@@ -941,7 +935,7 @@ body {
   vertical-align: middle;
   font-size: 1rem;
   white-space: nowrap;
-  background-color: #ffa366;
+  background-color: #ffa367;
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -973,7 +967,7 @@ body {
 * Inputs con estilo de botones
 */
 input[type="submit"].btn:hover {
-  border-color: #ff8533; }
+  border-color: #ff8534; }
 
 /**
 * Botón no disponible

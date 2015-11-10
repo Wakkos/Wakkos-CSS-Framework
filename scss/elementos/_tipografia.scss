@@ -24,15 +24,8 @@ h6 {
 		&.altheader {
 			color:$grey;
 			text-transform: uppercase;
+            display: block;
 		}
-}
-
-h1 small,
-h2 small,
-h3 small {
-	font-weight : normal;
-	display: block;
-	color : $grey;
 }
 
 @each $header, $margin-bot, $font-size, $line-height in (h1, 2, 3.2, 1.2)
@@ -56,10 +49,6 @@ dl,
 address {
 	margin-bottom : $baselineheight;
 	line-height : $baselineheight;
-}
-
-.intro {
- 	font-weight: bold;
 }
 
 small {
@@ -202,6 +191,11 @@ hr {
   border-top : 1px solid $bordercolor;
 }
 
+// Especificidades de fuentes
+
+.intro {
+    font-weight: bold;
+}
 
 /*
  * Creamos clases para cada uno de los tamaños de fuentes. Se pueden ver en Settings.
