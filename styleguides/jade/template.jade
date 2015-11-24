@@ -1,0 +1,24 @@
+include lib/globals.jade
+//- Settings for this page
+- var currentpage = "Home"
+doctype html
+
+html(lang="en")
+
+head
+    meta(charset="UTF-8")
+    title= currentpage
+    link(rel='stylesheet', href='/styleguides/css/styleguide.css')
+
+body
+    .topbar
+        img(src="/styleguides/img/wakkos.jpg", alt="")
+    nav.nav
+        ul.nav__list
+            +nav('Home')
+            +nav('Dog')
+            +nav('Pig')
+
+    block content
+
+    footer.main-footer
