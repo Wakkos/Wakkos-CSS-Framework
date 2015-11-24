@@ -460,15 +460,26 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/styleguides\/jade\/child-temp.jade": {
+	"\/styleguides\/jade\/includes\/nav.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/styleguides\/jade\/includes\/nav.jade",
+		"outputAbbreviatedPath": "\/styleguides\/jade\/includes\/nav.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/styleguides\/jade\/index.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/styleguides\/jade\/child-temp.jade",
-		"outputAbbreviatedPath": "\/styleguides\/jade\/child-temp.html",
+		"inputAbbreviatedPath": "\/styleguides\/jade\/index.jade",
+		"outputAbbreviatedPath": "\/styleguides\/index.html",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 0
 		},
 	"\/styleguides\/jade\/lib\/globals.jade": {
@@ -485,7 +496,7 @@
 	"\/styleguides\/jade\/template.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/styleguides\/jade\/template.jade",
 		"outputAbbreviatedPath": "\/styleguides\/index.html",

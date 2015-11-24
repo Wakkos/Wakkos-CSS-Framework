@@ -1296,3 +1296,25 @@ input[type="submit"].btn:hover {
   background-color: white;
   color: #ff944d;
   text-shadow: none; }
+
+.topbar {
+  background-color: #4d1f00;
+  padding: 6px; }
+  .topbar img {
+    width: 30px;
+    margin-right: 6px; }
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  width: 100%;
+  display: table; }
+
+.nav {
+  display: table-cell;
+  width: 22%; }
+
+section {
+  display: table-cell;
+  width: 78%; }

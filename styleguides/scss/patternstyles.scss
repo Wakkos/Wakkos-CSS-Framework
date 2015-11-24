@@ -1,0 +1,22 @@
+.topbar {
+    background-color: darken($basecolor, 50);
+    padding: $gutterwidth / 4;
+    img {
+        width: 30px;
+        margin-right: $gutterwidth / 4;
+    }
+}
+
+main {
+    @include max-width();
+    display: table;
+}
+
+.nav {
+    display: table-cell;
+    width: 22%;
+}
+section {
+    display: table-cell;
+    width: 78%;
+}
