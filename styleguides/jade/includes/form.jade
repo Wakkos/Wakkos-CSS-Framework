@@ -1,0 +1,31 @@
+extends ../template
+
+//- Page Variables
+block vars
+    - var currentpage = "Typography"
+
+block nav
+    include nav
+block content
+
+
+    //- Page Content
+    .stcontainer
+        span.sttitle Forms text inputs
+        form
+            fieldset
+                legend Text inputs
+                label(for="text") Input type=text
+                input(type="text", id="text", required)
+
+                label(for="email") Input type=email
+                input(type="email", id="email", required)
+
+                label(for="url") Input type=url
+                input(type="url", id="url", required)
+
+                label(for="tel") Input type=tel
+                input(type="tel", id="tel", required)
+
+            input(type="submit", value="Test me")
+

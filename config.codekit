@@ -469,6 +469,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/styleguides\/jade\/includes\/form.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/styleguides\/jade\/includes\/form.jade",
+		"outputAbbreviatedPath": "\/styleguides\/form.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 0
+		},
 	"\/styleguides\/jade\/includes\/nav.jade": {
 		"compileDebug": 1,
 		"fileType": 512,

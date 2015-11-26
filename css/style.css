@@ -360,7 +360,7 @@ select {
   display: inline-block;
   width: 100%;
   padding: 4px;
-  margin-bottom: 0.25em;
+  margin-bottom: 1em;
   background-color: white;
   border: 1px solid #bfbfbf;
   color: #333333; }
@@ -561,11 +561,11 @@ input:-moz-placeholder {
 * Validamos los formularios que son "required":
 * http://coolvillage.es/ayuda-al-usuario-a-rellenar-formularios-con-css/
 */
-input:required:focus:invalid {
+input:focus:invalid {
   background-color: #fef2e7;
   border: 1px solid #fce4cf; }
 
-input:required:focus:valid {
+input:focus:valid {
   background-color: #e9f5e9;
   border: 1px solid #5bb75b; }
 
