@@ -95,12 +95,18 @@ select {
 	}
 }
 
-.input-mini {
+
+// Some fields width variations, add as many as you want or modify them.
+
+.input-small {
 	width : 60px;
 }
 
-.input-small {
-	width : 90px;
+.input-medium {
+	width: 150px
+}
+.input-big {
+	width : 300px;
 }
 
 input[type="image"],
@@ -166,7 +172,7 @@ select[size] {
 }
 
 textarea {
-@include resize(vertical);
+	@include resize(vertical);
 	height : auto;
 	overflow : auto;
 	vertical-align : top;
@@ -176,30 +182,7 @@ input[type="hidden"] {
 	display : none;
 }
 
-.radio,
-.checkbox {
-	padding-left : 18px;
-	font-weight : normal;
-}
 
-.radio input[type="radio"],
-.checkbox input[type="checkbox"] {
-	float : left;
-	margin-left : -18px;
-}
-
-.radio.inline,
-.checkbox.inline {
-	display : inline-block;
-	padding-top : 5px;
-	margin-bottom : 0;
-	vertical-align : middle;
-}
-
-.radio.inline + .radio.inline,
-.checkbox.inline + .checkbox.inline {
-	margin-left : 10px;
-}
 
 // disabled
 
@@ -235,86 +218,6 @@ select:focus {
 
 input:-moz-placeholder {
 	font-size: fs(small);
-}
-
-// help text
-
-.help-block,
-.help-inline {
-	color : $grey;
-}
-
-.help-block {
-	display : block;
-	margin-bottom : $baselineheight / 2;
-}
-
-.help-inline {
-	display : inline-block;
-	vertical-align : middle;
-	padding-left : 5px;
-}
-
-// .form-inline
-
-.form-inline input,
-.form-inline textarea,
-.form-inline select {
-	display : inline-block;
-	margin-bottom : 0;
-}
-
-.form-inline label {
-	display : inline-block;
-}
-
-.form-inline .radio,
-.form-inline .checkbox,
-.form-inline .radio {
-	padding-left : 0;
-	margin-bottom : 0;
-	vertical-align : middle;
-}
-
-.form-inline .radio input[type="radio"],
-.form-inline .checkbox input[type="checkbox"] {
-	float : left;
-	margin-left : 0;
-	margin-right : 3px;
-}
-
-// .form-search
-
-.form-search input,
-.form-search textarea,
-.form-search select {
-	display : inline-block;
-	margin-bottom : 0;
-}
-
-.form-search .search-query {
-	padding-left : 14px;
-	padding-right : 14px;
-	margin-bottom : 0;
-}
-
-.form-search label {
-	display : inline-block;
-}
-
-.form-search .radio,
-.form-search .checkbox,
-.form-inline .radio {
-	padding-left : 0;
-	margin-bottom : 0;
-	vertical-align : middle;
-}
-
-.form-search .radio input[type="radio"],
-.form-search .checkbox input[type="checkbox"] {
-	float : left;
-	margin-left : 0;
-	margin-right : 3px;
 }
 
 

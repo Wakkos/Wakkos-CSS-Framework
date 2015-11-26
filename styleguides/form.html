@@ -18,10 +18,10 @@
       </ul>
     </nav>
     <section>
-      <div class="stcontainer"><span class="sttitle">Forms text inputs</span>
+      <div class="stcontainer"><span class="sttitle">Basic Form</span>
         <form>
           <fieldset>
-            <legend>Text inputs</legend>
+            <legend>Legend</legend>
             <label for="text">Input type=text</label>
             <input type="text" id="text" required>
             <label for="email">Input type=email</label>
@@ -32,7 +32,18 @@
             <input type="tel" id="tel" required>
           </fieldset>
           <input type="submit" value="Test me">
-        </form>
+        </form><small>The visual validation is created through CSS and it depends on the field type to <i>validate</i>. It's is only for a VISUAL INFORMATION to the user, don't relay your form interaction on CSS.</small>
+      </div>
+      <div class="stcontainer"><span class="sttitle">Input width variation</span>
+        <label><code>.input-small</code>
+          <input type="text" class="input-small">
+        </label>
+        <label><code>.input-medium</code>
+          <input type="text" class="input-medium">
+        </label>
+        <label><code>.input-big</code>
+          <input type="text" class="input-big">
+        </label>
       </div>
     </section>
   </main>

@@ -11,10 +11,10 @@ block content
 
     //- Page Content
     .stcontainer
-        span.sttitle Forms text inputs
+        span.sttitle Basic Form
         form
             fieldset
-                legend Text inputs
+                legend Legend
                 label(for="text") Input type=text
                 input(type="text", id="text", required)
 
@@ -27,5 +27,18 @@ block content
                 label(for="tel") Input type=tel
                 input(type="tel", id="tel", required)
 
-            input(type="submit", value="Test me")
 
+
+            input(type="submit", value="Test me")
+        small The visual validation is created through CSS and it depends on the field type to #[i validate]. It's is only for a VISUAL INFORMATION to the user, don't relay your form interaction on CSS.
+
+    .stcontainer
+        span.sttitle Input width variation
+        label #[code .input-small]
+            input(type="text", class="input-small")
+
+        label #[code .input-medium]
+            input(type="text", class="input-medium")
+
+        label #[code .input-big]
+            input(type="text", class="input-big")
