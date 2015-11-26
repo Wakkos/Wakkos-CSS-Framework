@@ -28,14 +28,21 @@ h6 {
 		}
 }
 
-@each $header, $margin-bot, $font-size, $line-height in (h1, 2, 3.2, 1.2)
-                                                        (h2, 3, 2.4, 1.2)
-                                                        (h3, 4, 2.1, 1.3)
-                                                        (h4, 6, 1.8, 1.25)
-                                                        (h5, 6, 1.6, 1)
-                                                        (h6, 6, 1.4, 1){
+
+// Set headers line-height, margin bottom and font size
+@each   $header,
+        $margin-bot,
+        $font-size,
+        $line-height
+        in  (h1, 0, 2.5, 1.5)
+            (h2, 0, 2.4, 1.5)
+            (h3, 0, 2.1, 1.5)
+            (h4, 0, 1.8, 1.5)
+            (h5, 0, 1.6, 1.5)
+            (h6, 0, 1.4, 1.5){
+
   #{$header}, .#{$header} {
-  	margin-bottom : $baselineheight / $margin-bot;
+  	margin-bottom : $margin-bot;
   	font-size: ($font-size) * 1rem;
   	line-height : $line-height;
   }
@@ -76,9 +83,10 @@ blockquote  {
 	font-family : $altfont;
 	font-style : normal;
 	p {
-		font-size: fs(big);
+		font-size: fs(small);
 		color:$grey;
 		font-style: italic;
+        line-height: 1.5;
 	}
 }
 
@@ -184,7 +192,7 @@ sub {
 hr {
   clear : both;
   display : block;
-  margin : $baselineheight * 2 0;
+  margin : $baselineheight 0;
   padding : 0;
   height : 1px;
   border : 0;

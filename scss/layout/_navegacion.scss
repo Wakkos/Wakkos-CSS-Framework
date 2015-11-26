@@ -15,8 +15,8 @@
     <label for="checkbox__hack" class="checkbox-hack__label"></label>
     <!-- OMG NO SEMANTIC HTML, well, it help us to avoid JS in the menu slide in mobile -->
 
-    <nav class="nav--top">
-        <ul class="nav--top__list">
+    <nav class="nav">
+        <ul class="nav__list">
             <li><a href="">item</a></li>
             <li><a href="">item</a></li>
             <li><a href="">item</a></li>
@@ -28,10 +28,10 @@
 * Y no te olvides de modificar las variables en el archivo de variables ($nav-**)
 */
 
-.nav--top {
+.nav {
     position: absolute;
     top:0;
-    left:0;
+    right:0;
     z-index: 10;
     width:  $nav-width;
     height: $nav-height;
@@ -55,26 +55,67 @@
         margin-top:  -($nav-icon-size / 2);
         margin-left: -($nav-icon-size / 2);
      }
+     @include respond-to(medium) {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: auto;
+        cursor: auto;
+        &:after {
+            content: "";
+            content: none;
+        }
+     }
 }
 
-    .nav--top__list {
-    list-style: none;
-    margin:  0;
-    padding: 0;
-    //Este padding top baja el contenido respecto a la hamburguesa
-    padding-top: $nav-height;
-    position: absolute;
-    top:   0;
-    left:  0;
-    background-color: $nav-background;
-    box-shadow:inset -100px -50px 100px 100px rgba(0,0,0,0.2);
-    /*
-    * Usamos VW porque con % tomaría el tamaño del contenedor,
-    * que es $nav-width (unos 48px) y no se ve na' e ná
-    */
-    width: 200px;
-    z-index: -1;
-  }
+    .nav__list {
+        list-style: none;
+        margin:  0;
+        padding: 0;
+        //Este padding top baja el contenido respecto a la hamburguesa
+        padding-top: $nav-height;
+        padding-left: $gutterwidth;
+        padding-right: $gutterwidth;
+        position: absolute;
+        top:   0;
+        right:  0;
+        background-color: $nav-background;
+        box-shadow: 0 1px 1px 1px rgba(0,0,0,0.5);
+
+        /*
+        * Usamos VW porque con % tomaría el tamaño del contenedor,
+        * que es $nav-width (unos 48px) y no se ve na' e ná
+        */
+        width: 100vw;
+        @include respond-to(medium) {
+            padding-top: 0;
+            position: relative;
+            top: auto;
+            left: auto;
+            width: 100%;
+            height: auto;
+            box-shadow: none;
+            margin-bottom: $gutterwidth;
+        }
+      }
+        .nav__item {
+            line-height: 2;
+            border-bottom: 1px solid $bordercolor;
+            text-transform: capitalize;
+            text-align: right;
+            a {
+                display: block;
+            }
+
+            @include respond-to(medium) {
+                display: inline-block;
+                border-bottom: none;
+                border-right: 1px solid $bordercolor;
+                text-align: center;
+                padding: 0 $gutterwidth;
+            }
+        }
 // Ocultamos el checkbox
      .checkbox__hack {
         display: none;
@@ -87,7 +128,7 @@
          */
 
         &:checked {
-            ~ .nav--top {
+            ~ .nav {
               overflow: visible;
 
               &::after {
@@ -99,7 +140,7 @@
 
 
  // Estilizamos el label para que aparezca JUSTO encima de la navegación
-     .checkbox-hack__label {
+    .checkbox-hack__label {
         position: absolute;
         top:0;
         left:0;
@@ -111,5 +152,8 @@
         cursor: pointer;
         margin:0;
         z-index: 100;
-     }
+        @include respond-to(medium) {
+            display: none;
+        }
+    }
 } //endif

@@ -95,7 +95,6 @@
 .badge {
 	padding : 1px 9px 2px;
 	font-size: fs(small);
-	font-weight : bold;
 	white-space : nowrap;
 	border-radius: $radius;
 	color : $badgecolor;
@@ -128,17 +127,16 @@
 	}
 
 	.badge--success {
-		background-color : $color-info;
-
-
+		background-color : $color-success;
+		color : darken($color-success, 40%);
 		&:hover {
-			background-color : darken($color-info, 20%);
+			background-color : darken($color-success, 20%);
 		}
 	}
 
 	.badge--info {
 		background-color : $color-info;
-		color : darken($color-info, 50%);
+		color : darken($color-info, 40%);
 
 		&:hover {
 			background-color : darken($color-info, 20%);

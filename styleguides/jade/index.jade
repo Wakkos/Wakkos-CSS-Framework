@@ -11,4 +11,17 @@ block content
 
     //- Page Content
     .stcontainer
-        h1 Colors
+        span.sttitle Colors
+        each val in colors.length ? colors : ['There are no values']
+            span(class="stcolor #{val}")
+
+    .stcontainer
+        span.sttitle Grey scale
+        each val in greycolors.length ? greycolors : ['There are no values']
+            span(class="stcolor #{val}")
+
+    .stcontainer
+        span.sttitle Textures
+        each val in alertcolors.length ? alertcolors : ['There are no values']
+            span(class="stcolor #{val}")
+

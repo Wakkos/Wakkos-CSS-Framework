@@ -18,7 +18,7 @@ $incluir-tablas:        false!default;
 $incluir-texturas:      true!default;
 $incluir-flexbox:       true!default;
 $incluir-fonticon:      false!default;
-$incluir-abstracciones: false!default;
+$incluir-abstracciones: true!default;
 
 $incluir-imgclass:      false!default;
 $incluir-debug:         false!default;
@@ -113,10 +113,10 @@ $font-dir: "../fonts";
 /**
  * Definimos elementos constantes del layout
  */
-$baselineheight :     1.5em;
+$baselineheight :     1em;
 $baseline :           $baselineheight;
 $gutterwidth :        24px;
-$pagemaxwidth :       80%;
+$pagemaxwidth :       860px;
 $radius :             2px;
 $hovertransition :    .3s;
 $animationtime :      .8s;
@@ -145,9 +145,9 @@ $grid-size: 3;
 $basefont : "Helvetica Neue", Helvetica, Arial, sans-serif;
 $altfont : Georgia, Times, "Times New Roman";
 $codefont : "Courier New", monospace;
-$baseheadingfont : inherit;
+$baseheadingfont : $altfont;
 
-$baseheadingfontweight : bold;
+$baseheadingfontweight : normal;
 $baseheadingfontcolor : inherit;
 
 $altlineheight : 1.35em;
@@ -180,7 +180,7 @@ $basefontsize   :   16;
  *
  */
 $size-vars: (
-  "x-small"  :    .8,
+  "x-small"  :    .6,
   "small"    :    .9,
   "normal"   :    1,
   "big"      :    1.5,
@@ -197,9 +197,9 @@ $size-vars: (
  * Brand stuff
  */
 $basecolor      : rgb(255,148,77); // Naranja
-$basecolor-light: lighten($basecolor, 5%);
+$basecolor-light: lighten($basecolor, 25%);
 $secondary      : rgb(219,216,121); // Rojo CoolVillage
-$bordercolor    : lighten($secondary, 50); // Verde Bordes
+$bordercolor    : lighten($secondary, 20); // Verde Bordes
 $compcolor      : rgb(216,240,227); //
 
 /**
@@ -207,16 +207,15 @@ $compcolor      : rgb(216,240,227); //
  * A veces no queremos que el negro sea "negro" o el blanco "blanco", puedes cambiarlos.
  */
 $black 			: rgb(0,0,0);
-$superdark  	: lighten($black, 10%);
-$darkergrey 	: lighten($black, 15%);
-$darkgrey 		: lighten($black, 25%);
-$grey 			: lighten($black, 50%);
+$darkergrey 	: lighten($black, 20%);
+$darkgrey 		: lighten($black, 30%);
+$grey 			: lighten($black, 45%);
 $lightgrey 		: lighten($black, 75%);
 $lightergrey 	: lighten($black, 90%);
 $white 			: rgb(255,255,255);
 
 // Web
-$background: 		$white;
+$background: 		$lightergrey;
 $textcolor: 		$darkergrey;
 $textcolor-strong:	$black;
 
@@ -296,8 +295,8 @@ $foursquare: #8FD400;
 
 
 // badges
-$badgebackground    : $basecolor;
-$badgecolor         : $textcolor;
+$badgebackground    : $lightergrey;
+$badgecolor         : $black;
 
 // botones
 $buttonbackground   : $basecolor-light;
@@ -334,10 +333,10 @@ $placeholdercolor   : $lightergrey;
 
 
 // Navegación
-$nav-width:               44px;
-$nav-height:              $nav-width * 1.2;
+$nav-width:               42px;
+$nav-height:              $nav-width;
 $nav-icon-size:           16px;
-$nav-color:               white;
-$nav-background:          $secondary;
+$nav-color:               $basecolor;
+$nav-background:          $white;
 $nav-borders:             lighten($nav-background, 10%);
 $nav-lists-background:    $basecolor;

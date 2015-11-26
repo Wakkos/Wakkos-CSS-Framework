@@ -284,42 +284,42 @@ img {
     $ELEMENTOS-FIGURE
 \*------------------------------------*/
 figure {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1em; }
   figure img {
-    margin-bottom: 0.375em; }
+    margin-bottom: 0.25em; }
   figure figcaption {
     display: block;
     font-weight: normal;
     font-size: 0.9rem;
     font-style: italic;
-    color: gray; }
+    color: #737373; }
 
 /*------------------------------------*\
     $FORMULARIOS
 \*------------------------------------*/
 form {
-  margin: 0 0 1.5em 0; }
+  margin: 0 0 1em 0; }
   form fieldset {
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
     padding: 0;
     border-width: 0; }
   form legend {
     display: block;
     width: 100%;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     padding: 0;
-    color: #262626;
+    color: #333333;
     border: 0;
     border-bottom: 1px solid #bfbfbf;
     white-space: normal; }
     form legend small {
-      font-size: 0.8rem;
+      font-size: 0.6rem;
       color: #bfbfbf; }
   form p {
-    margin-bottom: 0.75em; }
+    margin-bottom: 0.5em; }
   form ul {
     list-style-type: none;
-    margin: 0 0 1.5em 0;
+    margin: 0 0 1em 0;
     padding: 0; }
   form br {
     display: none; }
@@ -345,9 +345,9 @@ textarea {
 
 label {
   display: block;
-  margin-bottom: 0.1875em;
+  margin-bottom: 0.125em;
   font-weight: bold;
-  color: #262626;
+  color: #333333;
   cursor: pointer; }
   label input,
   label textarea,
@@ -360,10 +360,10 @@ select {
   display: inline-block;
   width: 100%;
   padding: 4px;
-  margin-bottom: 0.375em;
+  margin-bottom: 0.25em;
   background-color: white;
   border: 1px solid #bfbfbf;
-  color: #262626; }
+  color: #333333; }
   input:hover,
   textarea:hover,
   select:hover {
@@ -497,11 +497,11 @@ input:-moz-placeholder {
 
 .help-block,
 .help-inline {
-  color: gray; }
+  color: #737373; }
 
 .help-block {
   display: block;
-  margin-bottom: 0.75em; }
+  margin-bottom: 0.5em; }
 
 .help-inline {
   display: inline-block;
@@ -599,8 +599,8 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: inherit;
-  font-weight: bold;
+  font-family: Georgia, Times, "Times New Roman";
+  font-weight: normal;
   color: inherit;
   text-rendering: optimizelegibility; }
   h1.altheader,
@@ -609,55 +609,55 @@ h6 {
   h4.altheader,
   h5.altheader,
   h6.altheader {
-    color: gray;
+    color: #737373;
     text-transform: uppercase;
     display: block; }
 
 h1, .h1 {
-  margin-bottom: 0.75em;
-  font-size: 3.2rem;
-  line-height: 1.2; }
+  margin-bottom: 0;
+  font-size: 2.5rem;
+  line-height: 1.5; }
 
 h2, .h2 {
-  margin-bottom: 0.5em;
+  margin-bottom: 0;
   font-size: 2.4rem;
-  line-height: 1.2; }
+  line-height: 1.5; }
 
 h3, .h3 {
-  margin-bottom: 0.375em;
+  margin-bottom: 0;
   font-size: 2.1rem;
-  line-height: 1.3; }
+  line-height: 1.5; }
 
 h4, .h4 {
-  margin-bottom: 0.25em;
+  margin-bottom: 0;
   font-size: 1.8rem;
-  line-height: 1.25; }
+  line-height: 1.5; }
 
 h5, .h5 {
-  margin-bottom: 0.25em;
+  margin-bottom: 0;
   font-size: 1.6rem;
-  line-height: 1; }
+  line-height: 1.5; }
 
 h6, .h6 {
-  margin-bottom: 0.25em;
+  margin-bottom: 0;
   font-size: 1.4rem;
-  line-height: 1; }
+  line-height: 1.5; }
 
 p,
 ol,
 ul,
 dl,
 address {
-  margin-bottom: 1.5em;
-  line-height: 1.5em; }
+  margin-bottom: 1em;
+  line-height: 1em; }
 
 small {
-  font-size: 0.8rem;
-  color: gray; }
+  font-size: 0.6rem;
+  color: #737373; }
 
 ul,
 ol {
-  margin: 0 0 1.5em 0;
+  margin: 0 0 1em 0;
   padding: 0 0 0 24px; }
 
 li ul,
@@ -665,15 +665,16 @@ li ol {
   margin: 0; }
 
 blockquote {
-  margin: 0 0 1.5em 0;
+  margin: 0 0 1em 0;
   padding-left: 24px;
-  border-left: 2px solid white;
+  border-left: 2px solid #f1efc9;
   font-family: Georgia, Times, "Times New Roman";
   font-style: normal; }
   blockquote p {
-    font-size: 1.5rem;
-    color: gray;
-    font-style: italic; }
+    font-size: 0.9rem;
+    color: #737373;
+    font-style: italic;
+    line-height: 1.5; }
 
 q {
   quotes: none;
@@ -690,7 +691,7 @@ cite {
 
 dl,
 dd {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1em; }
 
 dt {
   font-weight: bold; }
@@ -704,7 +705,7 @@ dt {
   margin-left: 22.78%; }
 
 abbr[title] {
-  border-bottom: 1px dotted white;
+  border-bottom: 1px dotted #f1efc9;
   cursor: help; }
 
 b, strong {
@@ -715,12 +716,12 @@ dfn {
 
 ins {
   background-color: white;
-  color: #262626;
+  color: #333333;
   text-decoration: none; }
 
 mark {
   background-color: yellow;
-  color: #262626; }
+  color: #333333; }
 
 pre,
 code,
@@ -728,7 +729,7 @@ kbd,
 samp {
   font-family: "Courier New", monospace;
   font-size: 0.9rem;
-  line-height: 1.5em; }
+  line-height: 1em; }
 
 pre {
   white-space: pre;
@@ -738,9 +739,9 @@ pre {
 sub,
 sup {
   position: relative;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   line-height: 0;
-  vertical-align: 1.5em; }
+  vertical-align: 1em; }
 
 sup {
   top: -.5em; }
@@ -751,11 +752,11 @@ sub {
 hr {
   clear: both;
   display: block;
-  margin: 3em 0;
+  margin: 1em 0;
   padding: 0;
   height: 1px;
   border: 0;
-  border-top: 1px solid white; }
+  border-top: 1px solid #f1efc9; }
 
 .intro {
   font-weight: bold; }
@@ -772,7 +773,7 @@ hr {
 
  */
 .font-x-small {
-  font-size: 0.8rem; }
+  font-size: 0.6rem; }
 
 .font-small {
   font-size: 0.9rem; }
@@ -803,7 +804,7 @@ hr {
 @viewport {
   width: device-width; }
 html {
-  background: white;
+  background: #e6e6e6;
   font-size: 100%;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: transparent;
@@ -816,8 +817,8 @@ body {
   width: 100%;
   background-color: transparent;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.5em;
-  color: #262626; }
+  line-height: 1em;
+  color: #333333; }
 
 /**
 * A partir de aquí es donde debes escribir los estilos de posicionamiento
@@ -834,8 +835,8 @@ body {
     <label for="checkbox__hack" class="checkbox-hack__label"></label>
     <!-- OMG NO SEMANTIC HTML, well, it help us to avoid JS in the menu slide in mobile -->
 
-    <nav class="nav--top">
-        <ul class="nav--top__list">
+    <nav class="nav">
+        <ul class="nav__list">
             <li><a href="">item</a></li>
             <li><a href="">item</a></li>
             <li><a href="">item</a></li>
@@ -846,21 +847,21 @@ body {
 
 * Y no te olvides de modificar las variables en el archivo de variables ($nav-**)
 */
-.nav--top {
+.nav {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 10;
-  width: 44px;
-  height: 52.8px;
-  color: white;
+  width: 42px;
+  height: 42px;
+  color: #ff944d;
   overflow: hidden;
   cursor: pointer;
   /**
    * Place a hamburger (don’t hate the player, hate the game...) icon
    * over the top of our nav element.
    */ }
-  .nav--top:after {
+  .nav:after {
     content: "☰";
     font-size: 16px;
     width: 1em;
@@ -871,23 +872,60 @@ body {
     left: 50%;
     margin-top: -8px;
     margin-left: -8px; }
+  @media (min-width: 56.25em) {
+    .nav {
+      position: relative;
+      top: auto;
+      right: auto;
+      width: 100%;
+      height: auto;
+      cursor: auto; }
+      .nav:after {
+        content: "";
+        content: none; } }
 
-.nav--top__list {
+.nav__list {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-top: 52.8px;
+  padding-top: 42px;
+  padding-left: 24px;
+  padding-right: 24px;
   position: absolute;
   top: 0;
-  left: 0;
-  background-color: #dbd879;
-  box-shadow: inset -100px -50px 100px 100px rgba(0, 0, 0, 0.2);
+  right: 0;
+  background-color: white;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.5);
   /*
   * Usamos VW porque con % tomaría el tamaño del contenedor,
   * que es $nav-width (unos 48px) y no se ve na' e ná
   */
-  width: 200px;
-  z-index: -1; }
+  width: 100vw; }
+  @media (min-width: 56.25em) {
+    .nav__list {
+      padding-top: 0;
+      position: relative;
+      top: auto;
+      left: auto;
+      width: 100%;
+      height: auto;
+      box-shadow: none;
+      margin-bottom: 24px; } }
+
+.nav__item {
+  line-height: 2;
+  border-bottom: 1px solid #f1efc9;
+  text-transform: capitalize;
+  text-align: right; }
+  .nav__item a {
+    display: block; }
+  @media (min-width: 56.25em) {
+    .nav__item {
+      display: inline-block;
+      border-bottom: none;
+      border-right: 1px solid #f1efc9;
+      text-align: center;
+      padding: 0 24px; } }
 
 .checkbox__hack {
   display: none;
@@ -897,9 +935,9 @@ body {
   * Eso es todo, un overflow. Con eso mostramos u ocultamos el menú.
   * (Eso y el content del after para que sea una X y no la hamburguesa)
   */ }
-  .checkbox__hack:checked ~ .nav--top {
+  .checkbox__hack:checked ~ .nav {
     overflow: visible; }
-    .checkbox__hack:checked ~ .nav--top::after {
+    .checkbox__hack:checked ~ .nav::after {
       content: "x"; }
 
 .checkbox-hack__label {
@@ -908,12 +946,15 @@ body {
   left: 0;
   z-index: 100;
   width: 100%;
-  height: 52.8px;
-  color: white;
+  height: 42px;
+  color: #ff944d;
   overflow: hidden;
   cursor: pointer;
   margin: 0;
   z-index: 100; }
+  @media (min-width: 56.25em) {
+    .checkbox-hack__label {
+      display: none; } }
 
 /**
 * Abstracciones y objetos
@@ -929,13 +970,13 @@ body {
 */
 .btn {
   display: inline-block;
-  line-height: 2.25em;
-  color: #262626;
+  line-height: 1.5em;
+  color: #333333;
   text-align: center;
   vertical-align: middle;
   font-size: 1rem;
   white-space: nowrap;
-  background-color: #ffa367;
+  background-color: #ffe1cd;
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -954,7 +995,7 @@ body {
   .btn:active, .btn:focus {
     outline: none; }
   .btn:visited {
-    color: #262626; }
+    color: #333333; }
 
 /*------------------------------------*\
     $BOTONES-VARIANTES
@@ -967,7 +1008,7 @@ body {
 * Inputs con estilo de botones
 */
 input[type="submit"].btn:hover {
-  border-color: #ff8534; }
+  border-color: #ffc29a; }
 
 /**
 * Botón no disponible
@@ -1156,7 +1197,7 @@ input[type="submit"].btn:hover {
     $TEXTURAS
 \*------------------------------------*/
 .alert {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   padding: 8px 35px 8px 14px;
   background-color: #fce4cf;
   border: 1px solid #f6ae6f;
@@ -1205,7 +1246,7 @@ input[type="submit"].btn:hover {
   padding-top: 14px;
   padding-bottom: 14px; }
   .alert--block .alert--heading {
-    margin-bottom: 0.1875em;
+    margin-bottom: 0.125em;
     font-size: inherit;
     font-weight: bold; }
   .alert--block > p,
@@ -1217,18 +1258,17 @@ input[type="submit"].btn:hover {
 .badge {
   padding: 1px 9px 2px;
   font-size: 0.9rem;
-  font-weight: bold;
   white-space: nowrap;
   border-radius: 2px;
-  color: #262626;
-  background-color: #ff944d;
+  color: black;
+  background-color: #e6e6e6;
   -webkit-transition: background-color 0.25s 0 linear;
   -moz-transition: background-color 0.25s 0 linear;
   -ms-transition: background-color 0.25s 0 linear;
   -o-transition: background-color 0.25s 0 linear;
   transition: background-color 0.25s 0 linear; }
   .badge:hover {
-    color: #262626;
+    color: black;
     text-decoration: none;
     cursor: pointer; }
 
@@ -1243,13 +1283,14 @@ input[type="submit"].btn:hover {
     background-color: #9d2520; }
 
 .badge--success {
-  background-color: #a5dddf; }
+  background-color: #5bb75b;
+  color: #153115; }
   .badge--success:hover {
-    background-color: #5ac1c4; }
+    background-color: #347834; }
 
 .badge--info {
   background-color: #a5dddf;
-  color: #236062; }
+  color: #308588; }
   .badge--info:hover {
     background-color: #5ac1c4; }
 
@@ -1262,18 +1303,18 @@ input[type="submit"].btn:hover {
 
 .badge--icon {
   display: inline-block;
-  color: #262626;
-  border: 1px solid white;
+  color: black;
+  border: 1px solid #f1efc9;
   border-radius: 2px;
   padding: 12px;
-  background-color: #ff944d;
+  background-color: #e6e6e6;
   text-align: center; }
 
 .well {
   min-height: 21px;
   padding: 11px;
   border-radius: 2px;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   background-color: white;
   border: 1px solid #ffc299;
   -webkit-box-shadow: inset 0 1px 10px #ffe0cc;
@@ -1296,3 +1337,23 @@ input[type="submit"].btn:hover {
   background-color: white;
   color: #ff944d;
   text-shadow: none; }
+
+/*------------------------------------*\
+    $ABSTRACIONES
+\*------------------------------------*/
+/*
+*
+* Abstracciones usadas a lo largo del layout, os dejo algunas de ejemplo
+* pero borradlas y añadid las que necesitéis
+*/
+.float-right {
+  float: right; }
+
+.inline-block {
+  display: inline-block; }
+
+.nomargin-bottom {
+  margin-bottom: 0; }
+
+.margin-bottom {
+  margin-bottom: 1em; }
