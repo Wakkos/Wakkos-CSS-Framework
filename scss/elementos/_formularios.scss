@@ -52,7 +52,7 @@ input,
 button,
 select,
 textarea {
-	font-size: fs(small);
+	font-size: fs(x-small);
 	border-radius: $radius;
 	vertical-align : baseline;
 }
@@ -66,29 +66,28 @@ textarea {
 }
 
 label {
-	display : block;
+	display : inline-block;
 	margin-bottom : $baseline / 8;
+	font-family: fs(x-small);
 	font-weight : bold;
 	color : $textcolor;
 	cursor : pointer;
-
-	input,
-	textarea,
-	select {
-	display : block;
-	}
 }
 
 input,
 textarea,
 select {
 	display : inline-block;
+	vertical-align: middle;
 	width : 100%;
 	padding : 4px;
 	margin-bottom : $baselineheight;
 	background-color : $inputbackground;
 	border : $inputborderwidth $inputborderstyle $inputborder;
 	color : $textcolor;
+	 -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
 	&:hover {
 		border-color : $inputhover;
@@ -109,26 +108,44 @@ select {
 	width : 300px;
 }
 
-input[type="image"],
-input[type="checkbox"],
-input[type="radio"] {
+input[type="image"] {
 	width : auto;
 	height : auto;
 	padding : 0;
 	margin : 3px 0;
-	*margin-top : 0;
 	line-height : normal;
 	cursor : pointer;
-	border : 0 \9;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-	@include box-sizing(border-box);
+	width : $gutterwidth / 2;
+	height : $gutterwidth / 2;
 	padding : 0;
-	*width : 13px;
-	*height : 13px;
+	margin :0 3px 0 0;
+	line-height : normal;
+	cursor : pointer;
+	background-color: $white;
+	&:checked {
+		background-color: $inputborder;
+		border-color: $white;
+		border-width: 1px;
+		box-shadow: 0 0 0 1px $inputborder;
+	}
+	+ label {
+		margin-right: $gutterwidth;
+	}
 }
+input[type="radio"] {
+	border-radius: 100%;
+}
+
+	label {
+		input[type="checkbox"],
+		input[type="radio"]  {
+			margin-right: $gutterwidth / 4;
+		}
+	}
 
 input[type="image"] {
 	border : 0;
@@ -154,22 +171,6 @@ input[type="submit"] {
 	*overflow : visible;
 }
 
-select,
-input[type="file"] {
-	height : 28px;
-	*margin-top : 4px;
-	line-height : 28px;
-}
-
-select {
-	background-color : $inputbackground;
-	font-size: fs(small);
-}
-
-select[multiple],
-select[size] {
-	height : auto;
-}
 
 textarea {
 	@include resize(vertical);
@@ -201,15 +202,8 @@ textarea[readonly] {
 input:focus,
 textarea:focus {
 	border-color : $inputfocus;
-	outline : 0;
-	outline : thin dotted \9;
-}
-
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus,
-select:focus {
-	@include box-shadow(none);
+	box-shadow: 0 0 1px 1px $lightgrey;
+	outline: none;
 }
 
 ::-webkit-input-placeholder {
@@ -226,11 +220,11 @@ input:-moz-placeholder {
 * http://coolvillage.es/ayuda-al-usuario-a-rellenar-formularios-con-css/
 */
 
-input:focus:invalid {
+input:required:focus:invalid {
   	background-color:lighten($color-alert, 5%);
   	border:1px solid $color-alert;
 }
-input:focus:valid {
+input:required:focus:valid {
   	background-color:lighten($color-success, 40%);
   	border:1px solid $color-success;
 }

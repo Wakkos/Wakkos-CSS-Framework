@@ -308,7 +308,7 @@ form {
     width: 100%;
     margin-bottom: 2em;
     padding: 0;
-    color: #333333;
+    color: #494949;
     border: 0;
     border-bottom: 1px solid #bfbfbf;
     white-space: normal; }
@@ -329,7 +329,7 @@ input,
 button,
 select,
 textarea {
-  font-size: 0.9rem;
+  font-size: 0.6rem;
   border-radius: 2px;
   vertical-align: baseline; }
 
@@ -344,26 +344,27 @@ textarea {
   box-sizing: border-box; }
 
 label {
-  display: block;
+  display: inline-block;
   margin-bottom: 0.125em;
+  font-family: 0.6rem;
   font-weight: bold;
-  color: #333333;
+  color: #494949;
   cursor: pointer; }
-  label input,
-  label textarea,
-  label select {
-    display: block; }
 
 input,
 textarea,
 select {
   display: inline-block;
+  vertical-align: middle;
   width: 100%;
   padding: 4px;
   margin-bottom: 1em;
   background-color: white;
   border: 1px solid #bfbfbf;
-  color: #333333; }
+  color: #494949;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
   input:hover,
   textarea:hover,
   select:hover {
@@ -378,27 +379,39 @@ select {
 .input-big {
   width: 300px; }
 
-input[type="image"],
-input[type="checkbox"],
-input[type="radio"] {
+input[type="image"] {
   width: auto;
   height: auto;
   padding: 0;
   margin: 3px 0;
-  *margin-top: 0;
   line-height: normal;
-  cursor: pointer;
-  border: 0 \9; }
+  cursor: pointer; }
 
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
   padding: 0;
-  *width: 13px;
-  *height: 13px; }
+  margin: 0 3px 0 0;
+  line-height: normal;
+  cursor: pointer;
+  background-color: white; }
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked {
+    background-color: #bfbfbf;
+    border-color: white;
+    border-width: 1px;
+    box-shadow: 0 0 0 1px #bfbfbf; }
+  input[type="checkbox"] + label,
+  input[type="radio"] + label {
+    margin-right: 24px; }
+
+input[type="radio"] {
+  border-radius: 100%; }
+
+label input[type="checkbox"],
+label input[type="radio"] {
+  margin-right: 6px; }
 
 input[type="image"] {
   border: 0;
@@ -422,20 +435,6 @@ input[type="submit"] {
   height: auto;
   cursor: pointer;
   *overflow: visible; }
-
-select,
-input[type="file"] {
-  height: 28px;
-  *margin-top: 4px;
-  line-height: 28px; }
-
-select {
-  background-color: white;
-  font-size: 0.9rem; }
-
-select[multiple],
-select[size] {
-  height: auto; }
 
 textarea {
   resize: vertical;
@@ -461,15 +460,8 @@ textarea[readonly] {
 input:focus,
 textarea:focus {
   border-color: #ff944d, 40%;
-  outline: 0;
-  outline: thin dotted \9; }
-
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus,
-select:focus {
-  -webkit-box-shadow: none;
-  box-shadow: none; }
+  box-shadow: 0 0 1px 1px #bfbfbf;
+  outline: none; }
 
 ::-webkit-input-placeholder {
   font-size: 0.9rem; }
@@ -481,11 +473,11 @@ input:-moz-placeholder {
 * Validamos los formularios que son "required":
 * http://coolvillage.es/ayuda-al-usuario-a-rellenar-formularios-con-css/
 */
-input:focus:invalid {
+input:required:focus:invalid {
   background-color: #fef2e7;
   border: 1px solid #fce4cf; }
 
-input:focus:valid {
+input:required:focus:valid {
   background-color: #e9f5e9;
   border: 1px solid #5bb75b; }
 
@@ -636,12 +628,12 @@ dfn {
 
 ins {
   background-color: white;
-  color: #333333;
+  color: #494949;
   text-decoration: none; }
 
 mark {
   background-color: yellow;
-  color: #333333; }
+  color: #494949; }
 
 pre,
 code,
@@ -725,7 +717,7 @@ hr {
   width: device-width; }
 html {
   background: #e6e6e6;
-  font-size: 100%;
+  font-size: 87.5%;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
@@ -738,7 +730,7 @@ body {
   background-color: transparent;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1em;
-  color: #333333; }
+  color: #494949; }
 
 /**
 * A partir de aquí es donde debes escribir los estilos de posicionamiento
@@ -890,15 +882,14 @@ body {
 */
 .btn {
   display: inline-block;
-  line-height: 1.5em;
-  color: #333333;
+  line-height: 2em;
+  color: #494949;
   text-align: center;
   vertical-align: middle;
   font-size: 1rem;
   white-space: nowrap;
-  background-color: #ffe1cd;
-  border: none;
-  font-weight: bold;
+  background-color: #e6e6e6;
+  border: 1px solid #cccccc;
   cursor: pointer;
   margin: 0;
   padding-top: 0;
@@ -906,16 +897,23 @@ body {
   padding-right: 1em;
   padding-left: 1em;
   border-radius: 2px;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
   	/**
    	* Nadie quiere un botón con texto subrayado cuando
    	* hacemos hover.
    	*/ }
   .btn:hover {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #494949;
+    background-color: #d9d9d9; }
   .btn:active, .btn:focus {
     outline: none; }
   .btn:visited {
-    color: #333333; }
+    color: #494949; }
 
 /*------------------------------------*\
     $BOTONES-VARIANTES
@@ -928,7 +926,7 @@ body {
 * Inputs con estilo de botones
 */
 input[type="submit"].btn:hover {
-  border-color: #ffc29a; }
+  border-color: #cccccc; }
 
 /**
 * Botón no disponible
@@ -937,7 +935,18 @@ input[type="submit"].btn:hover {
   -webkit-opacity: 0.5;
   -moz-opacity: 0.5;
   opacity: 0.5;
-  cursor: default; }
+  cursor: not-allowed; }
+
+/**
+* Botón de Info
+*/
+.btn--info {
+  background-color: #a5dddf;
+  color: #308588; }
+  .btn--info:hover {
+    background-color: #5ac1c4; }
+  .btn--info:visited {
+    color: #308588; }
 
 /**
 * Botón de Error
@@ -949,17 +958,6 @@ input[type="submit"].btn:hover {
     color: #fcf3f3; }
   .btn--error:visited {
     color: #48110f; }
-
-/**
-* Botón de Info
-*/
-.btn--info {
-  background-color: #a5dddf;
-  color: #308588; }
-  .btn--info:hover {
-    color: white; }
-  .btn--info:visited {
-    color: #308588; }
 
 /**
 * Botón principal

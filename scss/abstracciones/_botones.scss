@@ -17,15 +17,14 @@
  */
 .btn {
 	display : inline-block;
-	line-height : $baselineheight * 1.5;
-	color : $textcolor;
+	line-height : $baselineheight * 2;
+	color : $buttoncolor;
 	text-align : center;
 	vertical-align : middle;
 	font-size: fs(normal);
 	white-space:nowrap;
 	background-color : $buttonbackground;
-	border : none;
-	font-weight: bold;
+	border : $buttonborderwidth $buttonborderstyle $buttonbordercolor;
 	cursor : pointer;
 	margin:0;
 	padding-top:   0;
@@ -33,6 +32,7 @@
    	padding-right:1em;
    	padding-left: 1em;
 	border-radius: $radius;
+    @include transition(all $hovertransition ease-in);
 
 	/**
  	* Nadie quiere un botón con texto subrayado cuando
@@ -41,6 +41,8 @@
 
 	&:hover {
 		text-decoration : none;
+        color: $buttoncolor;
+        background-color: darken($buttonbackground, 5);
 	}
 	&:active,
     &:focus{
@@ -73,8 +75,32 @@ input[type="submit"].btn:hover {
 */
 .btn--disabled {
     @include opacity(.5);
-	cursor : default;
+	cursor : not-allowed;
+    &:hover {
+
+    }
 }
+
+
+
+
+
+/**
+* Botón de Info
+*/
+.btn--info {
+    background-color: $color-info;
+    color : darken($color-info, 40%);
+    &:hover {
+        background-color: darken($color-info, 20);
+    }
+    &:visited {
+        color : darken($color-info, 40%);
+    }
+}
+
+
+
 
 /**
 * Botón de Error
@@ -90,19 +116,7 @@ input[type="submit"].btn:hover {
 	}
 }
 
-/**
-* Botón de Info
-*/
-.btn--info {
-	background-color: $color-info;
-	color : darken($color-info, 40%);
-	&:hover {
-		color : lighten($color-info, 40%);
-	}
-	&:visited {
-		color : darken($color-info, 40%);
-	}
-}
+
 
 
 

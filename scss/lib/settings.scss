@@ -216,7 +216,7 @@ $white 			: rgb(255,255,255);
 
 // Web
 $background: 		$lightergrey;
-$textcolor: 		$darkergrey;
+$textcolor: 		#494949;
 $textcolor-strong:	$black;
 
 // Links  //////////////////////
@@ -299,10 +299,9 @@ $badgebackground    : $lightergrey;
 $badgecolor         : $black;
 
 // botones
-$buttonbackground   : $basecolor-light;
+$buttonbackground   : $lightergrey;
 $buttonbordercolor  : darken($buttonbackground, 10%);
-$buttonbottombordercolor : darken($buttonbordercolor, 10%);
-$buttoncolor        : $black;
+$buttoncolor        : $textcolor;
 $buttonborderwidth  : 1px;
 $buttonborderstyle  : solid;
 

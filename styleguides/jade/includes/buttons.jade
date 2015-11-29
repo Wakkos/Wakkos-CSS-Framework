@@ -1,0 +1,28 @@
+extends ../template
+
+//- Page Variables
+block vars
+    - var currentpage = "Buttons"
+
+block nav
+    include nav
+block content
+
+
+    //- Page Content
+    .stcontainer
+        span.sttitle Buttons
+        p All buttons need the class #[code .btn] to look like a button, then, we add the modifier: #[code .btn--modifier]
+        span.sttitle Button colors
+        div.margin-bottom
+            a.btn(href="#") Block element
+        div.margin-bottom
+            a.btn.btn--disabled(href="#") Modifier: btn--disabled
+        div.margin-bottom
+            a.btn.btn--info(href="#") Modifier: btn--info
+        div.margin-bottom
+            a.btn.btn--error(href="#") Modifier: btn--error
+        div.margin-bottom
+            a.btn.btn--warning(href="#") Modifier: btn--warning
+        div.margin-bottom
+            a.btn.btn--primary(href="#") Modifier: btn--primary
