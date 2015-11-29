@@ -12,21 +12,75 @@ block content
     //- Page Content
     .stcontainer
         span.sttitle Buttons
-        p All buttons comes with the extend #[code %btn] block to look like a button, then, we add the modifier: #[code .btn--modifier]
+        p All buttons comes with the extend #[code %btn] block to look like a button, then, we add the modifier: #[code .btn--modifier]. You should extend the #[code extender] in every partial that uses the buttom.
         p All these #[code %extend] are made to simplify CSS as detailed in #[a(href="https://twitter.com/una") Una Kravets] method #[a(href="http://una.im/classy-css/#💁") Atomic OOBEMITSCSS].
-        span.sttitle Button colors
-        div.margin-bottom
+        div
             a.btn--primary(href="#") Modifier: btn--primary
-        div.margin-bottom
-            a.btn.btn--disabled(href="#") Modifier: btn--disabled
-        div.margin-bottom
-            a.btn.btn--info(href="#") Modifier: btn--info
-        div.margin-bottom
-            a.btn.btn--error(href="#") Modifier: btn--error
-        div.margin-bottom
-            a.btn.btn--warning(href="#") Modifier: btn--warning
-        div.margin-bottom
-            a.btn.btn--success(href="#") Modifier: btn--success
         pre
-            code(class="language-css")
-                |p { color: red }
+            code(class="language-html")
+                | &lt;a class="btn--primary"&gt;Modifier: btn--primary&lt;/a&gt;
+
+        div
+            a.btn--disabled(href="#") Modifier: btn--disabled
+        pre
+            code(class="language-html")
+                | &lt;a class="btn--disabled"&gt;Modifier: btn--disabled&lt;/a&gt;
+
+        div
+            a.btn--info(href="#") Modifier: btn--info
+        pre
+            code(class="language-html")
+                | &lt;a class="btn--info"&gt;Modifier: btn--info&lt;/a&gt;
+
+        div
+            a.btn--error(href="#") Modifier: btn--error
+        pre
+            code(class="language-html")
+                | &lt;a class="btn--error"&gt;Modifier: btn--error&lt;/a&gt;
+
+        div
+            a.btn--warning(href="#") Modifier: btn--warning
+        pre
+            code(class="language-html")
+                | &lt;a class="btn--warning"&gt;Modifier: btn--warning&lt;/a&gt;
+
+        div
+            a.btn--success(href="#") Modifier: btn--success
+        pre
+            code(class="language-html")
+                | &lt;a class="btn--success"&gt;Modifier: btn--success&lt;/a&gt;
+
+    .stcontainer
+        span.sttitle Buttons size
+        div
+            a.btn--primary.btn--mini(href="#") Modifier: btn--mini
+        pre
+            code(class="language-html")
+                | &lt;a class="btn--primary btn--mini"&gt;Modifier: .btn--mini&lt;/a&gt;
+
+        div
+            a.btn--primary.btn--small(href="#") Modifier: btn--small
+        pre
+            code(class="language-html")
+                    | &lt;a class="btn--primary btn--small"&gt;Modifier: .btn--small&lt;/a&gt;
+
+        div
+            a.btn--primary.btn--large(href="#") Modifier: btn--large
+        pre
+            code(class="language-html")
+                    | &lt;a class="btn--primary btn--large"&gt;Modifier: .btn--large&lt;/a&gt;
+
+    .stcontainer
+        span.sttitle Button groups
+
+        .btn-group
+            a.btn--primary(href="#") Link
+            a.btn--success(href="#") Link
+            a.btn--error(href="#") Link
+        pre
+            code(class="language-html")
+                    | &lt;div class="btn-group"&gt;
+                    | &lt;a class="btn--primary"&gt;Link&lt;/a&gt;
+                    | &lt;a class="btn--success"&gt;Link&lt;/a&gt;
+                    | &lt;a class="btn--error"&gt;Link&lt;/a&gt;
+                    | &lt;/div&gt;

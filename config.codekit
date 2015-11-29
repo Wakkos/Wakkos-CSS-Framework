@@ -431,6 +431,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/styleguides\/buttons.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/styleguides\/buttons.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/styleguides\/css\/patternstyles.css": {
 		"fileType": 16,
 		"ignore": 1,

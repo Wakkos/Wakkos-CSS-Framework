@@ -21,15 +21,36 @@
     </nav>
     <section>
       <div class="stcontainer"><span class="sttitle">Buttons</span>
-        <p>All buttons comes with the extend <code>%btn</code> block to look like a button, then, we add the modifier: <code>.btn--modifier</code></p>
-        <p>All these <code>%extend</code> are made to simplify CSS as detailed in <a href="https://twitter.com/una">Una Kravets</a> method <a href="http://una.im/classy-css/#💁">Atomic OOBEMITSCSS</a>.</p><span class="sttitle">Button colors</span>
-        <div class="margin-bottom"><a href="#" class="btn--primary">Modifier: btn--primary</a></div>
-        <div class="margin-bottom"><a href="#" class="btn btn--disabled">Modifier: btn--disabled</a></div>
-        <div class="margin-bottom"><a href="#" class="btn btn--info">Modifier: btn--info</a></div>
-        <div class="margin-bottom"><a href="#" class="btn btn--error">Modifier: btn--error</a></div>
-        <div class="margin-bottom"><a href="#" class="btn btn--warning">Modifier: btn--warning</a></div>
-        <div class="margin-bottom"><a href="#" class="btn btn--success">Modifier: btn--success</a></div>
-        <pre><code class="language-css">p { color: red }</code></pre>
+        <p>All buttons comes with the extend <code>%btn</code> block to look like a button, then, we add the modifier: <code>.btn--modifier</code>. You should extend the <code>extender</code> in every partial that uses the buttom.</p>
+        <p>All these <code>%extend</code> are made to simplify CSS as detailed in <a href="https://twitter.com/una">Una Kravets</a> method <a href="http://una.im/classy-css/#💁">Atomic OOBEMITSCSS</a>.</p>
+        <div><a href="#" class="btn--primary">Modifier: btn--primary</a></div>
+        <pre><code class="language-html">&lt;a class="btn--primary"&gt;Modifier: btn--primary&lt;/a&gt;</code></pre>
+        <div><a href="#" class="btn--disabled">Modifier: btn--disabled</a></div>
+        <pre><code class="language-html">&lt;a class="btn--disabled"&gt;Modifier: btn--disabled&lt;/a&gt;</code></pre>
+        <div><a href="#" class="btn--info">Modifier: btn--info</a></div>
+        <pre><code class="language-html">&lt;a class="btn--info"&gt;Modifier: btn--info&lt;/a&gt;</code></pre>
+        <div><a href="#" class="btn--error">Modifier: btn--error</a></div>
+        <pre><code class="language-html">&lt;a class="btn--error"&gt;Modifier: btn--error&lt;/a&gt;</code></pre>
+        <div><a href="#" class="btn--warning">Modifier: btn--warning</a></div>
+        <pre><code class="language-html">&lt;a class="btn--warning"&gt;Modifier: btn--warning&lt;/a&gt;</code></pre>
+        <div><a href="#" class="btn--success">Modifier: btn--success</a></div>
+        <pre><code class="language-html">&lt;a class="btn--success"&gt;Modifier: btn--success&lt;/a&gt;</code></pre>
+      </div>
+      <div class="stcontainer"><span class="sttitle">Buttons size</span>
+        <div><a href="#" class="btn--primary btn--mini">Modifier: btn--mini</a></div>
+        <pre><code class="language-html">&lt;a class="btn--primary btn--mini"&gt;Modifier: .btn--mini&lt;/a&gt;</code></pre>
+        <div><a href="#" class="btn--primary btn--small">Modifier: btn--small</a></div>
+        <pre><code class="language-html">&lt;a class="btn--primary btn--small"&gt;Modifier: .btn--small&lt;/a&gt;</code></pre>
+        <div><a href="#" class="btn--primary btn--large">Modifier: btn--large</a></div>
+        <pre><code class="language-html">&lt;a class="btn--primary btn--large"&gt;Modifier: .btn--large&lt;/a&gt;</code></pre>
+      </div>
+      <div class="stcontainer"><span class="sttitle">Button groups</span>
+        <div class="btn-group"><a href="#" class="btn--primary">Link</a><a href="#" class="btn--success">Link</a><a href="#" class="btn--error">Link</a></div>
+        <pre><code class="language-html">&lt;div class="btn-group"&gt;
+&lt;a class="btn--primary"&gt;Link&lt;/a&gt;
+&lt;a class="btn--success"&gt;Link&lt;/a&gt;
+&lt;a class="btn--error"&gt;Link&lt;/a&gt;
+&lt;/div&gt;</code></pre>
       </div>
     </section>
   </main>
