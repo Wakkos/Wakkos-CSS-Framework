@@ -12,10 +12,11 @@ block content
     //- Page Content
     .stcontainer
         span.sttitle Buttons
-        p All buttons need the class #[code .btn] to look like a button, then, we add the modifier: #[code .btn--modifier]
+        p All buttons comes with the extend #[code %btn] block to look like a button, then, we add the modifier: #[code .btn--modifier]
+        p All these #[code %extend] are made to simplify CSS as detailed in #[a(href="https://twitter.com/una") Una Kravets] method #[a(href="http://una.im/classy-css/#💁") Atomic OOBEMITSCSS].
         span.sttitle Button colors
         div.margin-bottom
-            a.btn(href="#") Block element
+            a.btn--primary(href="#") Modifier: btn--primary
         div.margin-bottom
             a.btn.btn--disabled(href="#") Modifier: btn--disabled
         div.margin-bottom
@@ -25,4 +26,7 @@ block content
         div.margin-bottom
             a.btn.btn--warning(href="#") Modifier: btn--warning
         div.margin-bottom
-            a.btn.btn--primary(href="#") Modifier: btn--primary
+            a.btn.btn--success(href="#") Modifier: btn--success
+        pre
+            code(class="language-css")
+                |p { color: red }

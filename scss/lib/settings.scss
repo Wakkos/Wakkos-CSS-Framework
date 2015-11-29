@@ -117,7 +117,7 @@ $baselineheight :     1em;
 $baseline :           $baselineheight;
 $gutterwidth :        24px;
 $pagemaxwidth :       860px;
-$radius :             2px;
+$radius :             3px;
 $hovertransition :    .3s;
 $animationtime :      .8s;
 
@@ -196,7 +196,7 @@ $size-vars: (
 /**
  * Brand stuff
  */
-$basecolor      : rgb(255,148,77); // Naranja
+$basecolor      : rgb(187, 34, 153);
 $basecolor-light: lighten($basecolor, 25%);
 $secondary      : rgb(219,216,121); // Rojo CoolVillage
 $bordercolor    : lighten($secondary, 20); // Verde Bordes
@@ -221,9 +221,9 @@ $textcolor-strong:	$black;
 
 // Links  //////////////////////
 $linkcolor 		    : $basecolor;
-$linkcolorhover 	: darken($linkcolor, 10);
-$linkcolorvisited   : $basecolor;
-$linkcolorfocus 	: darken($linkcolorvisited, 10);
+$linkcolorhover 	: $linkcolor;
+$linkcolorvisited   : $linkcolor;
+$linkcolorfocus 	: $linkcolor;
 
 
 
@@ -238,10 +238,10 @@ $linkcolorfocus 	: darken($linkcolorvisited, 10);
  */
 $color-alert 	: rgb(252,228,207);
 $color-error 	: rgb(218,79,73);
-$color-info 	: rgb(165,221,223);
+$color-info 	: rgb(66, 184, 221);
 $color-inverse 	: invert($secondary);
 $color-success 	: rgb(91,183,91);
-$color-warning 	: $color-error;
+$color-warning 	: rgb(231,135,48);
 
 
 // Texturas de popups
@@ -299,8 +299,8 @@ $badgebackground    : $lightergrey;
 $badgecolor         : $black;
 
 // botones
-$buttonbackground   : $lightergrey;
-$buttonbordercolor  : darken($buttonbackground, 10%);
+$buttonbackground   : transparent;
+$buttonbordercolor  : currentcolor;
 $buttoncolor        : $textcolor;
 $buttonborderwidth  : 1px;
 $buttonborderstyle  : solid;

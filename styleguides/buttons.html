@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title></title>
   <link rel="stylesheet" href="/styleguides/css/styleguide.css">
+  <script src="js/prism.js"></script>
 </head>
 <body>
   <div class="topbar"><img src="/styleguides/img/wakkos.jpg" alt=""><small><a href="https://github.com/Wakkos/Wakkos-CSS-Framework">Wakkos CSS Framework</a></small></div>
@@ -20,13 +21,15 @@
     </nav>
     <section>
       <div class="stcontainer"><span class="sttitle">Buttons</span>
-        <p>All buttons need the class <code>.btn</code> to look like a button, then, we add the modifier: <code>.btn--modifier</code></p><span class="sttitle">Button colors</span>
-        <div class="margin-bottom"><a href="#" class="btn">Block element</a></div>
+        <p>All buttons comes with the extend <code>%btn</code> block to look like a button, then, we add the modifier: <code>.btn--modifier</code></p>
+        <p>All these <code>%extend</code> are made to simplify CSS as detailed in <a href="https://twitter.com/una">Una Kravets</a> method <a href="http://una.im/classy-css/#💁">Atomic OOBEMITSCSS</a>.</p><span class="sttitle">Button colors</span>
+        <div class="margin-bottom"><a href="#" class="btn--primary">Modifier: btn--primary</a></div>
         <div class="margin-bottom"><a href="#" class="btn btn--disabled">Modifier: btn--disabled</a></div>
         <div class="margin-bottom"><a href="#" class="btn btn--info">Modifier: btn--info</a></div>
         <div class="margin-bottom"><a href="#" class="btn btn--error">Modifier: btn--error</a></div>
         <div class="margin-bottom"><a href="#" class="btn btn--warning">Modifier: btn--warning</a></div>
-        <div class="margin-bottom"><a href="#" class="btn btn--primary">Modifier: btn--primary</a></div>
+        <div class="margin-bottom"><a href="#" class="btn btn--success">Modifier: btn--success</a></div>
+        <pre><code class="language-css">p { color: red }</code></pre>
       </div>
     </section>
   </main>
