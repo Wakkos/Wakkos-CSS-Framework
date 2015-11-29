@@ -165,7 +165,11 @@ samp {
 	font-size: fs(small);
 	line-height : $baselineheight;
 }
-
+code {
+    background-color: #f5f2f0;
+    padding: 0.1em 0.3em;
+    border-radius: $radius;
+}
 pre {
 	white-space : pre;
 	white-space : pre-wrap;

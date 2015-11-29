@@ -648,6 +648,11 @@ samp {
   font-size: 0.8rem;
   line-height: 1em; }
 
+code {
+  background-color: #f5f2f0;
+  padding: 0.1em 0.3em;
+  border-radius: 3px; }
+
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -703,6 +708,67 @@ hr {
 
 .font-huge {
   font-size: 2rem; }
+
+/*------------------------------------*\
+    $TABLAS
+\*------------------------------------*/
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1em;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: transparent; }
+  table th,
+  table td {
+    padding: 8px;
+    vertical-align: top;
+    border-top: 1px solid #737373;
+    font-size: 0.8rem;
+    line-height: 1em;
+    text-align: left; }
+  table th {
+    font-weight: bold; }
+  table thead th {
+    vertical-align: bottom; }
+  table colgroup + thead tr:first-child th,
+  table colgroup + thead tr:first-child td,
+  table thead:first-child tr:first-child th,
+  table thead:first-child tr:first-child td {
+    border-top: 0; }
+  table tbody + tbody {
+    border-top: 2px solid #737373; }
+  table tbody tr td,
+  table tbody tr th {
+    -webkit-transition: background-color 0.25s 0 linear;
+    -moz-transition: background-color 0.25s 0 linear;
+    -ms-transition: background-color 0.25s 0 linear;
+    -o-transition: background-color 0.25s 0 linear;
+    transition: background-color 0.25s 0 linear; }
+  table tbody tr:hover td,
+  table tbody tr:hover th {
+    background-color: #e6e6e6; }
+
+.table-condensed th,
+.table-condensed td {
+  padding: 4px 5px; }
+
+.table-bordered {
+  border: 1px solid #737373;
+  border-left: 0;
+  border-collapse: separate;
+  *border-collapse: collapsed; }
+  .table-bordered th,
+  .table-bordered td {
+    border-left: 1px solid #737373; }
+  .table-bordered thead:first-child tr:first-child th,
+  .table-bordered tbody:first-child tr:first-child th,
+  .table-bordered tbody:first-child tr:first-child td {
+    border-top: 0; }
+
+.table-striped tbody tr:nth-child(odd) td,
+.table-striped tbody tr:nth-child(odd) th {
+  background-color: #e6e6e6; }
 
 /**
 * Layout del sitio

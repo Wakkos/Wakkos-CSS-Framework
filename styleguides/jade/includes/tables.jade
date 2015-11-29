@@ -1,0 +1,155 @@
+extends ../template
+
+//- Page Variables
+block vars
+    - var currentpage = "Tables"
+
+block nav
+    include nav
+block content
+
+
+    .stcontainer
+        span.sttitle Tables
+        p When you use #[code &lt;thead&gt;], there must be no #[code &lt;tr&gt;] that is a direct child of #[code &lt;table&gt;]. All rows must be within either the #[code &lt;thead&gt;], #[code &lt;tbody&gt;], or #[code &lt;tfoot&gt;].
+        table
+            thead
+                tr
+                    th Head 1
+                    th Head 2
+                    th Head 3
+                    th Head 4
+                    th Head 5
+            tbody
+                tr
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                tr
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                tr
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                tr
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+    .stcontainer
+        span.sttitle Compact Table
+        table.table-condensed
+            thead
+                tr
+                    th Head 1
+                    th Head 2
+                    th Head 3
+                    th Head 4
+                    th Head 5
+            tbody
+                tr
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                tr
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                tr
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                tr
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+
+    .stcontainer
+        span.sttitle Bordered Table
+        table.table-bordered
+            thead
+                tr
+                    th Head 1
+                    th Head 2
+                    th Head 3
+                    th Head 4
+                    th Head 5
+            tbody
+                tr
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                tr
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                tr
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                tr
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+
+    .stcontainer
+        span.sttitle Stripped Table
+        table.table-striped
+            thead
+                tr
+                    th Head 1
+                    th Head 2
+                    th Head 3
+                    th Head 4
+                    th Head 5
+            tbody
+                tr
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                tr
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                tr
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                tr
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+                    td Cell content
+
