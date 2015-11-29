@@ -12,6 +12,48 @@ block content
     //- Page Content
     .stcontainer
         span.sttitle Buttons
+        p We have the component block into a #[code sass extend] and we extend it on the modifier.
+        pre
+            code(class="language-css")
+                |%btn {
+                |    display: inline-block;
+                |    line-height: $baselineheight * 2;
+                |    color: $buttoncolor;
+                |    text-align: center;
+                |    vertical-align: middle;
+                |    font-size: fs(normal);
+                |    white-space: nowrap;
+                |    background-color: $buttonbackground;
+                |    border-top: $buttonborderwidth $buttonborderstyle $buttonbordercolor;
+                |    border-right: $buttonborderwidth $buttonborderstyle $buttonbordercolor;
+                |    border-bottom: ($buttonborderwidth * 2) $buttonborderstyle |$buttonbordercolor;
+                |    border-left: $buttonborderwidth $buttonborderstyle $buttonbordercolor;
+                |    cursor: pointer;
+                |    margin:0;
+                |    padding-top:   0;
+                |    padding-bottom:0;
+                |    padding-right:1em;
+                |    padding-left: 1em;
+                |    border-radius: $radius;
+                |    @include transition(all $hovertransition ease-in);
+
+                |    /**
+                |    * Nadie quiere un botón con texto subrayado cuando
+                |    * hacemos hover.
+                |    */
+
+                |    &:hover {
+                |        text-decoration: none;
+                |        color: $buttoncolor;
+                |    }
+                |    &:active,
+                |    &:focus{
+                |        outline:none;
+                |    }
+                |    &:visited {
+                |    color: $buttoncolor;
+                |    }
+                |}
         p All buttons comes with the extend #[code %btn] block to look like a button, then, we add the modifier: #[code .btn--modifier]. You should extend the #[code extender] in every partial that uses the buttom.
         p All these #[code %extend] are made to simplify CSS as detailed in #[a(href="https://twitter.com/una") Una Kravets] method #[a(href="http://una.im/classy-css/#💁") Atomic OOBEMITSCSS].
         div

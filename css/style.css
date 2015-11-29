@@ -1072,7 +1072,7 @@ input[type="submit"].btn:hover {
 /*------------------------------------*\
     $TEXTURAS
 \*------------------------------------*/
-.alert {
+.alert--success, .alert--warning, .alert--error, .alert--info, .alert--block {
   margin-bottom: 1em;
   padding: 8px 35px 8px 14px;
   background-color: #fce4cf;
@@ -1080,15 +1080,16 @@ input[type="submit"].btn:hover {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.8rem;
   color: #904809;
-  border-radius: 3px; }
-  .alert .alert--heading {
+  border-radius: 3px;
+  position: relative; }
+  .alert--success .alert--heading, .alert--warning .alert--heading, .alert--error .alert--heading, .alert--info .alert--heading, .alert--block .alert--heading {
     color: inherit; }
-  .alert .close {
-    position: relative;
+  .alert--success .close, .alert--warning .close, .alert--error .close, .alert--info .close, .alert--block .close {
+    position: absolute;
     top: -2px;
-    right: -21px;
+    right: 2px;
     float: right;
-    font-size: 1.5rem;
+    font-size: 0.8rem;
     font-weight: bold;
     line-height: 18px;
     color: inherit; }
@@ -1113,11 +1114,6 @@ input[type="submit"].btn:hover {
   border-color: #24a1c8;
   color: #05161b; }
 
-.alert--inverse {
-  background-color: #242786;
-  border-color: black;
-  color: white; }
-
 .alert--block {
   padding-top: 14px;
   padding-bottom: 14px; }
@@ -1131,78 +1127,45 @@ input[type="submit"].btn:hover {
   .alert--block p + p {
     margin-top: 5px; }
 
-.badge {
-  padding: 1px 9px 2px;
+.badge--primary, .badge--error, .badge--warning, .badge--success, .badge--info {
+  padding: 0.1em 0.3em;
+  margin-right: 3px;
   font-size: 0.8rem;
   white-space: nowrap;
+  border: 1px solid currentcolor;
   border-radius: 3px;
-  color: black;
-  background-color: #e6e6e6;
+  color: #494949;
+  background-color: transparent;
   -webkit-transition: background-color 0.25s 0 linear;
   -moz-transition: background-color 0.25s 0 linear;
   -ms-transition: background-color 0.25s 0 linear;
   -o-transition: background-color 0.25s 0 linear;
   transition: background-color 0.25s 0 linear; }
-  .badge:hover {
-    color: black;
+  .badge--primary:hover, .badge--error:hover, .badge--warning:hover, .badge--success:hover, .badge--info:hover {
+    color: #494949;
     text-decoration: none;
     cursor: pointer; }
 
 .badge--error {
-  background-color: #da4f49; }
-  .badge--error:hover {
-    background-color: #9d2520; }
+  color: #da4f49; }
 
 .badge--warning {
-  background-color: #e78730; }
-  .badge--warning:hover {
-    background-color: #9f5512; }
+  color: #e78730; }
 
 .badge--success {
-  background-color: #5bb75b;
-  color: #153115; }
-  .badge--success:hover {
-    background-color: #347834; }
+  color: #5bb75b; }
 
 .badge--info {
-  background-color: #42b8dd;
-  color: #0d3946; }
-  .badge--info:hover {
-    background-color: #1c7e9d; }
-
-.badge--inverse {
-  background-color: #42b8dd;
-  color: white; }
-  .badge--inverse:hover {
-    background-color: #1c7e9d;
-    color: white; }
+  color: #42b8dd; }
 
 .badge--icon {
   display: inline-block;
-  color: black;
+  color: #494949;
   border: 1px solid #f1efc9;
   border-radius: 3px;
   padding: 12px;
-  background-color: #e6e6e6;
+  background-color: transparent;
   text-align: center; }
-
-.well {
-  min-height: 21px;
-  padding: 11px;
-  border-radius: 3px;
-  margin-bottom: 1em;
-  background-color: white;
-  border: 1px solid #efa9e0;
-  -webkit-box-shadow: inset 0 1px 10px #f7d4ef;
-  box-shadow: inset 0 1px 10px #f7d4ef; }
-  .well p:last-child {
-    margin-bottom: 0; }
-
-.well--large {
-  padding: 22px; }
-
-.well--small {
-  padding: 6px; }
 
 ::-moz-selection {
   background-color: white;

@@ -431,15 +431,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/styleguides\/buttons.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/styleguides\/buttons.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/styleguides\/css\/patternstyles.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -527,6 +518,17 @@
 		"outputAbbreviatedPath": "\/styleguides\/jade\/includes\/nav.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/styleguides\/jade\/includes\/textures.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/styleguides\/jade\/includes\/textures.jade",
+		"outputAbbreviatedPath": "\/styleguides\/textures.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 0
 		},
 	"\/styleguides\/jade\/includes\/typography.jade": {
@@ -642,6 +644,15 @@
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
+		},
+	"\/styleguides\/textures.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/styleguides\/textures.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/styleguides\/typography.html": {
 		"fileType": 8192,
