@@ -1,0 +1,30 @@
+@if $incluir-abstracciones == true{
+
+/*------------------------------------*\
+    $ABSTRACIONES
+\*------------------------------------*/
+/*
+*
+* Abstracciones usadas a lo largo del layout, os dejo algunas de ejemplo
+* pero borradlas y añadid las que necesitéis
+*/
+
+.float-right{
+    float:right;
+}
+
+// Para cuando queremos tener varios elementos en inline-block:
+.inline-block {
+    display: inline-block;
+}
+
+// Diferentes especificaciones para márgenes
+.nomargin-bottom {
+    margin-bottom: 0;
+}
+.margin-bottom {
+    margin-bottom: $baseline;
+}
+
+
+} // if

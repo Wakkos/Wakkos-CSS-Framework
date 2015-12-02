@@ -1,0 +1,102 @@
+extends ../template
+
+//- Page Variables
+block vars
+    - var currentpage = "Textures"
+
+block nav
+    include nav
+block content
+
+    .stcontainer
+        span.sttitle Alert Box
+        p We have the component block into a #[code sass extend] and we extend it in the modifier.
+        pre
+            code(class="language-css")
+                |%alert {
+                |    margin-bottom : $baselineheight;
+                |    padding : 8px 35px 8px 14px;
+                |    background-color : $color-alert;
+                |    border : $alertborderwidth $alertborderstyle $alertbordercolor;
+                |    font-family : $basefont;
+                |    font-size: fs(small);
+                |    color : $alerttext;
+                |    border-radius: $radius;
+                |    position: relative;
+
+                |    .alert--heading {
+                |        color : inherit;
+                |    }
+
+                |    .close {
+                |        position : absolute;
+                |        top : -2px;
+                |        right : 2px;
+                |        float : right;
+                |        font-size: fs(small);
+                |        font-weight : bold;
+                |        line-height : 18px;
+                |        color : inherit;
+                |    }
+                |}
+        .alert--success #[strong Modifier:] alert--success
+            a.close X
+        pre
+            code(class="language-html")
+                | &lt;div class="alert--success"&gt;
+                |     &lt;a href="js-close"&gt;X&lt;a&gt;
+                |     &lt;strong&gt;Modifier:&lt;strong&gt; alert--success
+                | &lt;/div&gt;
+
+        .alert--warning #[strong Modifier:] alert--warning
+            a.close X
+        pre
+            code(class="language-html")
+                | &lt;div class="alert--warning"&gt;
+                |     &lt;a href="js-close"&gt;X&lt;a&gt;
+                |     &lt;strong&gt;Modifier:&lt;strong&gt; alert--warning
+                | &lt;/div&gt;
+
+        .alert--error #[strong Modifier:] alert--error
+            a.close X
+        pre
+            code(class="language-html")
+                | &lt;div class="alert--error"&gt;
+                |     &lt;a href="js-close"&gt;X&lt;a&gt;
+                |     &lt;strong&gt;Modifier:&lt;strong&gt; alert--error
+                | &lt;/div&gt;
+
+        .alert--info #[strong Modifier:] alert--info
+            a.close X
+        pre
+            code(class="language-html")
+                | &lt;div class="alert--info"&gt;
+                |     &lt;a href="js-close"&gt;X&lt;a&gt;
+                |     &lt;strong&gt;Modifier:&lt;strong&gt; alert--info
+                | &lt;/div&gt;
+
+    .stcontainer
+        span.sttitle Alert Box block
+        .alert--block
+            .alert--heading #[strong Modifier:] alert--block
+            p Some info block
+            a.close X
+        pre
+            code(class="language-html")
+                | &lt;div class="alert--block"&gt;
+                |     &lt;div class="alert--heading"&gt;
+                |          &lt;strong&gt;Modifier:&lt;strong&gt; alert--block
+                |     &lt;/div&gt;
+                |     &lt;p&gt;
+                |          Some info block
+                |     &lt;/p&gt;
+                |     &lt;a href="js-close"&gt;X&lt;a&gt;
+                | &lt;/div&gt;
+
+    .stcontainer
+        span.sttitle Badges
+        span.badge--primary(href="") .badge--info
+        span.badge--info(href="") .badge--info
+        span.badge--warning(href="") .badge--warning
+        span.badge--error(href="") .badge--error
+        span.badge--success(href="") .badge--success

@@ -1,47 +1,57 @@
+
+
+
+
 /*------------------------------------*\
     $STYLE
 \*------------------------------------*/
 /**
- * Aquí incluímos todos los módulos (archivos .scss) que se can
+ * Aquí incluímos todos los módulos (archivos .scss) que se van
  * a compilar en el CSS definitivo: /css/style.css.
- * Si no usas algún módulo, es recomendable que elimines
- * o comentes su inclusión para no tener estilos innecesarios en tu CSS final
- * y optimizar lo máximo posible.
  */
-$media-queries-supported : true;
 
-@import "contenido.scss";
-
-@import "lib/variables.scss";
-
+/**
+* Librerías
+**/
+@import "lib/settings.scss";
 @import "lib/mixins.scss";
-
+@import "lib/funciones.scss";
+@import "lib/flex.scss";
 @import "lib/placeholders.scss";
 
-@import "componentes/reset.scss";
 
-@import "componentes/fuentes.scss";
+/**
+* Bases
+**/
+@import "base/contenido.scss";
+@import "base/reset.scss";
+@import "base/debug.scss";
 
-@import "componentes/links.scss";
 
-@import "componentes/tablas.scss";
+/**
+* Selectores de elemento: un super "normalize":
+**/
+@import "elementos/figure.scss";
+@import "elementos/formularios.scss";
+@import "elementos/imagenes.scss";
+@import "elementos/links.scss";
+@import "elementos/tipografia.scss";
+@import "elementos/tablas.scss";
 
-@import "componentes/botones.scss";
-
-@import "componentes/elementos.scss";
-
-@import "componentes/tipografia.scss";
-
-@import "componentes/navegacion.scss";
-
-@import "componentes/paginacion.scss";
-
-@import "componentes/formularios.scss";
-
+/**
+* Layout del sitio
+**/
 @import "layout/sitio.scss";
+@import "layout/navegacion.scss";
 
-@import "componentes/texturas.scss";
+/**
+* Abstracciones y objetos
+**/
+@import "abstracciones/botones.scss";
+@import "abstracciones/fonticon.scss";
+@import "abstracciones/grid.scss";
+@import "abstracciones/paginacion.scss";
+@import "abstracciones/texturas.scss";
+@import "abstracciones/abstracciones.scss";
 
-@import "layout/breakpoints.scss";
 
-// @import "debug.scss";  // Utilizado para comprobar que el marcado HTML no contenga errores

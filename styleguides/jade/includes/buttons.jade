@@ -1,0 +1,128 @@
+extends ../template
+
+//- Page Variables
+block vars
+    - var currentpage = "Buttons"
+
+block nav
+    include nav
+block content
+
+
+    //- Page Content
+    .stcontainer
+        span.sttitle Buttons
+        p We have the component block into a #[code sass extend] and we extend it on the modifier.
+        pre
+            code(class="language-css")
+                |%btn {
+                |    display: inline-block;
+                |    line-height: $baselineheight * 2;
+                |    color: $buttoncolor;
+                |    text-align: center;
+                |    vertical-align: middle;
+                |    font-size: fs(normal);
+                |    white-space: nowrap;
+                |    background-color: $buttonbackground;
+                |    border-top: $buttonborderwidth $buttonborderstyle $buttonbordercolor;
+                |    border-right: $buttonborderwidth $buttonborderstyle $buttonbordercolor;
+                |    border-bottom: ($buttonborderwidth * 2) $buttonborderstyle |$buttonbordercolor;
+                |    border-left: $buttonborderwidth $buttonborderstyle $buttonbordercolor;
+                |    cursor: pointer;
+                |    margin:0;
+                |    padding-top:   0;
+                |    padding-bottom:0;
+                |    padding-right:1em;
+                |    padding-left: 1em;
+                |    border-radius: $radius;
+                |    @include transition(all $hovertransition ease-in);
+
+                |    /**
+                |    * Nadie quiere un botón con texto subrayado cuando
+                |    * hacemos hover.
+                |    */
+
+                |    &:hover {
+                |        text-decoration: none;
+                |        color: $buttoncolor;
+                |    }
+                |    &:active,
+                |    &:focus{
+                |        outline:none;
+                |    }
+                |    &:visited {
+                |    color: $buttoncolor;
+                |    }
+                |}
+        p All buttons comes with the extend #[code %btn] block to look like a button, then, we add the modifier: #[code .btn--modifier]. You should extend the #[code extender] in every partial that uses the buttom.
+        p All these #[code %extend] are made to simplify CSS as detailed in #[a(href="https://twitter.com/una") Una Kravets] method #[a(href="http://una.im/classy-css/#💁") Atomic OOBEMITSCSS].
+        div
+            a.btn--primary(href="#") Modifier: btn--primary
+        pre
+            code(class="language-html")
+                | &lt;a class="btn--primary"&gt;Modifier: btn--primary&lt;/a&gt;
+
+        div
+            a.btn--disabled(href="#") Modifier: btn--disabled
+        pre
+            code(class="language-html")
+                | &lt;a class="btn--disabled"&gt;Modifier: btn--disabled&lt;/a&gt;
+
+        div
+            a.btn--info(href="#") Modifier: btn--info
+        pre
+            code(class="language-html")
+                | &lt;a class="btn--info"&gt;Modifier: btn--info&lt;/a&gt;
+
+        div
+            a.btn--error(href="#") Modifier: btn--error
+        pre
+            code(class="language-html")
+                | &lt;a class="btn--error"&gt;Modifier: btn--error&lt;/a&gt;
+
+        div
+            a.btn--warning(href="#") Modifier: btn--warning
+        pre
+            code(class="language-html")
+                | &lt;a class="btn--warning"&gt;Modifier: btn--warning&lt;/a&gt;
+
+        div
+            a.btn--success(href="#") Modifier: btn--success
+        pre
+            code(class="language-html")
+                | &lt;a class="btn--success"&gt;Modifier: btn--success&lt;/a&gt;
+
+    .stcontainer
+        span.sttitle Buttons size
+        div
+            a.btn--primary.btn--mini(href="#") Modifier: btn--mini
+        pre
+            code(class="language-html")
+                | &lt;a class="btn--primary btn--mini"&gt;Modifier: .btn--mini&lt;/a&gt;
+
+        div
+            a.btn--primary.btn--small(href="#") Modifier: btn--small
+        pre
+            code(class="language-html")
+                    | &lt;a class="btn--primary btn--small"&gt;Modifier: .btn--small&lt;/a&gt;
+
+        div
+            a.btn--primary.btn--large(href="#") Modifier: btn--large
+        pre
+            code(class="language-html")
+                    | &lt;a class="btn--primary btn--large"&gt;Modifier: .btn--large&lt;/a&gt;
+
+    .stcontainer
+        span.sttitle Button groups
+
+        .btn-group
+            a.btn--primary(href="#") Link
+            a.btn--success(href="#") Link
+            a.btn--error(href="#") Link
+        pre
+            code(class="language-html")
+                    | &lt;div class="btn-group"&gt;
+                    | &lt;a class="btn--primary"&gt;Link&lt;/a&gt;
+                    | &lt;a class="btn--success"&gt;Link&lt;/a&gt;
+                    | &lt;a class="btn--error"&gt;Link&lt;/a&gt;
+                    | &lt;/div&gt;

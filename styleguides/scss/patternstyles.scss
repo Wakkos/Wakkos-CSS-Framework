@@ -1,0 +1,285 @@
+.topbar {
+    background-color: darken($basecolor, 50);
+    padding: $gutterwidth / 4;
+    margin-bottom: $baseline;
+    img {
+        width: 30px;
+        margin-right: $gutterwidth / 4;
+    }
+}
+
+main {
+    @include max-width(600px);
+}
+.stcontainer {
+    background-color: $white;
+    padding: $baseline $gutterwidth;
+    border: 1px solid $lightgrey;
+    border-radius: $radius;
+    margin-bottom: $baseline;
+}
+    .sttitle {
+        display: block;
+        border-bottom: 1px solid $lightergrey;
+        margin-bottom: $baseline;
+        font-size: fs(x-small);
+        line-height: 2;
+        color: $grey;
+    }
+
+    .stcolor {
+        display: inline-block;
+        border-radius: $radius;
+        width: 100px;
+        line-height: 50px;
+        text-align: center;
+        position: relative;
+        margin-right: $gutterwidth;
+        margin-bottom: $gutterwidth * 2;
+        &:before {
+            font-size: fs(x-small);
+        }
+        &:after {
+            content: "$basecolor";
+            position: absolute;
+            font-size: fs(x-small);
+            color: $black;
+            text-align: center;
+            bottom: -40px;
+            left: 0;
+        }
+    }
+        // For the moment, I insert colors variables manually, until I find a way to make
+        // a less painfull process
+        .basecolor {
+            background-color: $basecolor;
+            border: 1px solid darken($basecolor, 20);
+            color: invert($basecolor);
+            &:before {
+                content: "#{$basecolor}";
+            }
+            &:after {
+                content: "$basecolor";
+            }
+        }
+        .basecolor-light {
+            background-color: $basecolor-light;
+            border: 1px solid darken($basecolor-light, 20);
+            color: invert($basecolor-light);
+            &:before {
+                content: "#{$basecolor-light}";
+            }
+            &:after {
+                content: "$basecolor-light";
+            }
+        }
+
+        .secondary {
+            background-color: $secondary;
+            border: 1px solid darken($secondary, 20);
+            color: invert($secondary);
+            &:before {
+                content: "#{$secondary}";
+            }
+            &:after {
+                content: "$secondary";
+            }
+        }
+
+        .bordercolor {
+            background-color: $bordercolor;
+            border: 1px solid darken($bordercolor, 20);
+            color: invert($bordercolor);
+            &:before {
+                content: "#{$bordercolor}";
+            }
+            &:after {
+                content: "$bordercolor";
+            }
+        }
+        .compcolor {
+            background-color: $compcolor;
+            border: 1px solid darken($compcolor, 20);
+            color: invert($compcolor);
+            &:before {
+                content: "#{$compcolor}";
+            }
+            &:after {
+                content: "$compcolor";
+            }
+        }
+
+        .white {
+            background-color: $white;
+            border: 1px solid darken($white, 20);
+            color: invert($white);
+            &:before {
+                content: "#{$white}";
+            }
+            &:after {
+                content: "$white";
+            }
+        }
+        .lightergrey {
+            background-color: $lightergrey;
+            border: 1px solid darken($lightergrey, 20);
+            color: invert($lightergrey);
+            &:before {
+                content: "#{$lightergrey}";
+            }
+            &:after {
+                content: "$lightergrey";
+            }
+        }
+        .lightgrey {
+            background-color: $lightgrey;
+            border: 1px solid darken($lightgrey, 20);
+            color: invert($lightgrey);
+            &:before {
+                content: "#{$lightgrey}";
+            }
+            &:after {
+                content: "$lightgrey";
+            }
+        }
+        .grey {
+            background-color: $grey;
+            border: 1px solid darken($grey, 20);
+            color: invert($grey);
+            &:before {
+                content: "#{$grey}";
+            }
+            &:after {
+                content: "$grey";
+            }
+        }
+        .darkgrey {
+            background-color: $darkgrey;
+            border: 1px solid darken($darkgrey, 20);
+            color: invert($darkgrey);
+            &:before {
+                content: "#{$darkgrey}";
+            }
+            &:after {
+                content: "$darkgrey";
+            }
+        }
+        .darkergrey {
+            background-color: $darkergrey;
+            border: 1px solid darken($darkergrey, 20);
+            color: invert($darkergrey);
+            &:before {
+                content: "#{$darkergrey}";
+            }
+            &:after {
+                content: "$darkergrey";
+            }
+        }
+        .black {
+            background-color: $black;
+            border: 1px solid darken($black, 20);
+            color: invert($black);
+            &:before {
+                content: "#{$black}";
+            }
+            &:after {
+                content: "$black";
+            }
+        }
+
+        .color-alert {
+            background-color: $color-alert;
+            border: 1px solid darken($color-alert, 20);
+            color: invert($color-alert);
+            &:before {
+                content: "#{$color-alert}";
+            }
+            &:after {
+                content: "$color-alert";
+            }
+        }
+
+        .color-error {
+            background-color: $color-error;
+            border: 1px solid darken($color-error, 20);
+            color: invert($color-error);
+            &:before {
+                content: "#{$color-error}";
+            }
+            &:after {
+                content: "$color-error";
+            }
+        }
+        .color-info {
+            background-color: $color-info;
+            border: 1px solid darken($color-info, 20);
+            color: invert($color-info);
+            &:before {
+                content: "#{$color-info}";
+            }
+            &:after {
+                content: "$color-info";
+            }
+        }
+        .color-success {
+            background-color: $color-success;
+            border: 1px solid darken($color-success, 20);
+            color: invert($color-success);
+            &:before {
+                content: "#{$color-success}";
+            }
+            &:after {
+                content: "$color-success";
+            }
+        }
+        .color-warning {
+            background-color: $color-warning;
+            border: 1px solid darken($color-warning, 20);
+            color: invert($color-warning);
+            &:before {
+                content: "#{$color-warning}";
+            }
+            &:after {
+                content: "$color-warning";
+            }
+        }
+
+
+// Typography
+.sttitlebag {
+    &:before {
+        content: attr(data-header);
+        display: inline-block;
+        font-size: fs(x-small);
+        margin-right: 1em;
+        border: 1px solid darken($lightergrey, 10);
+        border-radius: $radius;
+        line-height: 1.6;
+        width: 1.6em;
+        text-align: center;
+        font-family: $basefont;
+        background-color: $lightergrey;
+        color: $grey;
+        vertical-align: middle;
+    }
+}
+
+// Fonts
+.basefont {
+    font-family: $basefont;
+    &:after {
+        content: " #{$basefont}";
+    }
+}
+.altfont {
+    font-family: $altfont;
+    &:after {
+        content: " #{$altfont}";
+    }
+}
+.codefont {
+    font-family: $codefont;
+    &:after {
+        content: " #{$codefont}";
+    }
+}

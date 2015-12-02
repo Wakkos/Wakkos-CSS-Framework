@@ -1,0 +1,230 @@
+
+
+
+
+
+/*------------------------------------*\
+    $FORMULARIOS
+\*------------------------------------*/
+
+form {
+	margin : 0 0 $baselineheight 0;
+
+	fieldset {
+		margin-bottom : $baselineheight;
+		padding : 0;
+		border-width : 0;
+	}
+
+	legend {
+		display : block;
+		width : 100%;
+		margin-bottom : $baselineheight * 2;
+		padding : 0;
+		color : $textcolor;
+		border : 0;
+		border-bottom : $inputborderwidth $inputborderstyle $inputborder;
+		white-space : normal;
+
+		small {
+			font-size: fs(x-small);
+			color : $lightgrey;
+		}
+	}
+
+	p {
+		margin-bottom : $baselineheight / 2;
+	}
+
+	ul {
+		list-style-type : none;
+		margin : 0 0 $baselineheight 0;
+		padding : 0;
+	}
+
+	br {
+		display : none;
+	}
+}
+
+label,
+input,
+button,
+select,
+textarea {
+	font-size: fs(x-small);
+	border-radius: $radius;
+	vertical-align : baseline;
+}
+
+input,
+button,
+select,
+textarea {
+	font-family : $basefont;
+	@include box-sizing(border-box);
+}
+
+label {
+	display : inline-block;
+	margin-bottom : $baseline / 8;
+	font-family: fs(x-small);
+	font-weight : bold;
+	color : $textcolor;
+	cursor : pointer;
+}
+
+input,
+textarea,
+select {
+	display : inline-block;
+	vertical-align: middle;
+	width : 100%;
+	padding : 4px;
+	margin-bottom : $baselineheight;
+	background-color : $inputbackground;
+	border : $inputborderwidth $inputborderstyle $inputborder;
+	color : $textcolor;
+	 -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+	&:hover {
+		border-color : $inputhover;
+	}
+}
+
+
+// Some fields width variations, add as many as you want or modify them.
+
+.input-small {
+	width : 60px;
+}
+
+.input-medium {
+	width: 150px
+}
+.input-big {
+	width : 300px;
+}
+
+input[type="image"] {
+	width : auto;
+	height : auto;
+	padding : 0;
+	margin : 3px 0;
+	line-height : normal;
+	cursor : pointer;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	width : $gutterwidth / 2;
+	height : $gutterwidth / 2;
+	padding : 0;
+	margin :0 3px 0 0;
+	line-height : normal;
+	cursor : pointer;
+	background-color: $white;
+	&:checked {
+		background-color: $inputborder;
+		border-color: $white;
+		border-width: 1px;
+		box-shadow: 0 0 0 1px $inputborder;
+	}
+	+ label {
+		margin-right: $gutterwidth;
+	}
+}
+input[type="radio"] {
+	border-radius: 100%;
+}
+
+	label {
+		input[type="checkbox"],
+		input[type="radio"]  {
+			margin-right: $gutterwidth / 4;
+		}
+	}
+
+input[type="image"] {
+	border : 0;
+	@include box-shadow(none);
+}
+
+input[type="file"] {
+	width : auto;
+	padding : initial;
+	line-height : initial;
+	border : initial;
+	background-color : transparent;
+	background-color : initial;
+	@include box-shadow(none);
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	width : auto;
+	height : auto;
+	cursor : pointer;
+	*overflow : visible;
+}
+
+
+textarea {
+	@include resize(vertical);
+	height : auto;
+	overflow : auto;
+	vertical-align : top;
+}
+
+input[type="hidden"] {
+	display : none;
+}
+
+
+
+// disabled
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+	@include opacity(.5);
+	cursor : not-allowed;
+}
+
+// focus and active
+
+input:focus,
+textarea:focus {
+	border-color : $inputfocus;
+	box-shadow: 0 0 1px 1px $lightgrey;
+	outline: none;
+}
+
+::-webkit-input-placeholder {
+	font-size: fs(small);
+}
+
+input:-moz-placeholder {
+	font-size: fs(small);
+}
+
+
+/**
+* Validamos los formularios que son "required":
+* http://coolvillage.es/ayuda-al-usuario-a-rellenar-formularios-con-css/
+*/
+
+input:required:focus:invalid {
+  	background-color:lighten($color-alert, 5%);
+  	border:1px solid $color-alert;
+}
+input:required:focus:valid {
+  	background-color:lighten($color-success, 40%);
+  	border:1px solid $color-success;
+}

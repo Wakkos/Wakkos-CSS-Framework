@@ -30,9 +30,9 @@
 
 html {
 	background : $background;
-	font-size : 100%;
+	font-size : 87.5%;
 	-webkit-overflow-scrolling : touch;
-	-webkit-tap-highlight-color : lighten($basecolor, 75%);
+	-webkit-tap-highlight-color : transparent;
 	-webkit-text-size-adjust : 100%;
 	-ms-text-size-adjust : 100%;
 }
@@ -43,7 +43,6 @@ body {
 	width : 100%;
 	background-color : transparent;
 	font-family : $basefont;
-	@include font-size();
 	line-height : $baselineheight;
 	color : $textcolor;
 }
@@ -52,3 +51,4 @@ body {
 * A partir de aquí es donde debes escribir los estilos de posicionamiento
 * y detalles que forman tu web. Disfruta!
 */
+

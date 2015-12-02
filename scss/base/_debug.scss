@@ -1,0 +1,162 @@
+@if $incluir-debug== true{
+
+
+
+
+
+/*------------------------------------*\
+    $DEBUG
+\*------------------------------------*/
+/**
+ * Activa esta hoja de estilos para detectar visualmente cualquier
+ * anidación impropia o marcado potencialmente inválido.
+ *
+ * Rojo           ==      Definitivamente un error
+ * Amarillo       ==      a revisar
+ * Ninguno        ==      debería estar bien
+ *
+ * Este método de validación no es más que una guía, no te bases en el
+ * para validar tu marcado
+ *
+ */
+
+
+/**
+ * Hay elementos vacíos?
+ */
+:empty{
+    outline:5px solid yellow;
+}
+
+
+/**
+ * Las imágenes requieren el atributo ALT, un ALT vacío no es del todo malo
+ * pero una imagen sin ALT definitivamente está mal.
+ */
+img{
+    outline:5px solid red;
+}
+img[alt]{
+    outline:none;
+}
+img[alt=""]{
+    outline:5px solid yellow;
+}
+
+
+/**
+ * Los links algunas veces, no siempre, se benefician del atributo "title".
+ * Links sin 'title' no son inválidos, pero es buena idea revisar.
+ */
+a{
+    outline:5px solid yellow;
+}
+a[title]{
+    outline:none;
+}
+
+
+/**
+ * Revisa los "href" con contenido dudoso.
+ */
+a[href="#"],
+a[href*="javascript"]{
+    outline:5px solid yellow;
+}
+
+
+/**
+ * El atributo 'target=""' es.... bueno, revisa.
+ */
+a[target]{
+    outline:5px solid yellow;
+}
+
+
+/**
+ * Asegúrate que una lista solo anida LI's
+ */
+ul,
+ol{
+    > *:not(li){
+        outline:5px solid red;
+    }
+}
+
+
+/**
+ * Deberíamos asignar un atributo 'scope' a los th
+ * http://bit.ly/1aHBDgW
+ */
+th{
+    outline:5px solid yellow;
+}
+th[scope]{
+    outline:none;
+}
+
+
+/**
+ * los tr hijos de 'table' no son buenos, ¿necesitabas un 'thead' / 'tbody'?
+ */
+table > tr{
+    outline:5px solid yellow;
+}
+
+
+/**
+ * `tfoot` debe estar *antes* de `tbody`.
+ */
+tbody + tfoot{
+    outline:5px solid yellow;
+}
+
+
+/**
+ * Forms necesitan del atributo `action`
+ */
+form{
+    outline:5px solid red;
+}
+form[action]{
+    outline:none;
+}
+
+
+/**
+ * Varios elementos de formularios requieren atributos. 'input' necsita de 'type'
+ * 'textarea' necesita `rows' y 'cols' y 'submit' necesita del atributo 'value'.
+ */
+textarea,
+input{
+    outline:5px solid red;
+}
+input[type]{
+    outline:none;
+}
+textarea[rows][cols]{
+    outline:none;
+}
+input[type=submit]{
+    outline:5px solid red;
+}
+input[type=submit][value]{
+    outline:none;
+}
+
+
+/**
+ * Evitamos estilos _inline_ a ser posible.
+ */
+[style]{
+        outline:5px solid yellow;
+}
+
+
+/**
+ * Deberías evitar IDs para CSS.
+ */
+[id]{
+        outline:5px solid yellow;
+}
+} // endif

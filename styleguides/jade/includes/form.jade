@@ -1,0 +1,77 @@
+extends ../template
+
+//- Page Variables
+block vars
+    - var currentpage = "Typography"
+
+block nav
+    include nav
+block content
+
+
+    //- Page Content
+    .stcontainer
+        span.sttitle Basic Form
+        form
+            fieldset
+                legend Legend
+                label(for="text") Input type=text
+                input(type="text", id="text", required)
+
+                label(for="email") Input type=email
+                input(type="email", id="email", required)
+
+                label(for="url") Input type=url
+                input(type="url", id="url", required)
+
+                label(for="tel") Input type=tel
+                input(type="tel", id="tel", required)
+
+                label(for="select") Input type=tel
+                select
+                    option(value="") Option 1
+                    option(value="") Option 2
+                    option(value="") Option 3
+                    option(value="") Option 4
+                    option(value="") Option 5
+                textarea
+
+
+
+            input(type="submit", value="Test me")
+        small The visual validation is created through CSS and it depends on the field type to #[i validate]. It's is only for a VISUAL INFORMATION to the user, don't relay your form interaction on CSS.
+
+    .stcontainer
+        span.sttitle Input width variation
+        label(for="") #[i .input-small]
+            input(type="text", class="input-small", id="input-small")
+
+        label(for="") #[i .input-medium]
+            input(type="text", class="input-medium", id="input-medium")
+
+        label(for="") #[i .input-big]
+            input(type="text", class="input-big", id="input-big")
+
+    .stcontainer
+        span.sttitle Checkbox and Radio input
+
+        input#checkbox1(type="checkbox")
+        label(for="checkbox1") Checkbox 1
+
+        input#checkbox2(type="checkbox")
+        label(for="checkbox2") Checkbox 2
+
+        input#checkbox3(type="checkbox")
+        label(for="checkbox3") Checkbox 3
+
+        input#checkbox4(type="checkbox")
+        label(for="checkbox4") Checkbox 4
+        div
+            input#radio1(type="radio", name="styleradio")
+            label(for="radio1") Radio 1
+            input#radio2(type="radio", name="styleradio")
+            label(for="radio2") Radio 2
+            input#radio3(type="radio", name="styleradio")
+            label(for="radio3") Radio 3
+            input#radio4(type="radio", name="styleradio")
+            label(for="radio4") Radio 4

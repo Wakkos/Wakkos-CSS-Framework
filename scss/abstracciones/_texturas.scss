@@ -1,0 +1,161 @@
+@if $incluir-texturas == true{
+
+
+
+
+
+/*------------------------------------*\
+    $TEXTURAS
+\*------------------------------------*/
+// Más estilos adicionales:
+// http://twitter.github.com/bootstrap/components.html#alerts"
+// https://github.com/twitter/bootstrap/blob/master/less/alerts.less"
+
+
+%alert {
+	margin-bottom : $baselineheight;
+	padding : 8px 35px 8px 14px;
+	background-color : $color-alert;
+	border : $alertborderwidth $alertborderstyle $alertbordercolor;
+	font-family : $basefont;
+	font-size: fs(small);
+	color : $alerttext;
+	border-radius: $radius;
+	position: relative;
+
+	.alert--heading {
+		color : inherit;
+	}
+
+	.close {
+		position : absolute;
+		top : -2px;
+		right : 2px;
+		float : right;
+		font-size: fs(small);
+		font-weight : bold;
+		line-height : 18px;
+		color : inherit;
+	}
+}
+
+	.alert--success {
+		@extend %alert;
+		background-color : $alertsuccesscolor;
+		border-color : $alertsuccessborder;
+		color : $alertsuccesstext;
+	}
+
+	.alert--warning {
+		@extend %alert;
+		background-color : $alertwarningcolor;
+		border-color : $alertwarningborder;
+		color : $alertwarningtext;
+	}
+
+	.alert--error {
+		@extend %alert;
+		background-color : $alerterrorcolor;
+		border-color : $alerterrorborder;
+		color : $alerterrortext;
+	}
+
+	.alert--info {
+		@extend %alert;
+		background-color : $alertinfocolor;
+		border-color : $alertinfoborder;
+		color : $alertinfotext;
+	}
+
+// alert block
+
+	.alert--block {
+		@extend %alert;
+		padding-top : 14px;
+		padding-bottom : 14px;
+
+		.alert--heading {
+			margin-bottom : $baselineheight / 8;
+			font-size : inherit;
+			font-weight : bold;
+		}
+
+		> p,
+		> ul {
+			margin-bottom : 0;
+		}
+
+		p + p {
+			margin-top : 5px;
+		}
+	}
+
+// BADGES ====================================================
+
+%badge {
+	padding: 0.1em 0.3em;
+	margin-right: 3px;
+	font-size: fs(small);
+	white-space : nowrap;
+	border: 1px solid currentcolor;
+	border-radius: $radius;
+	color : $badgecolor;
+	background-color : $badgebackground;
+	@include transition(background-color .25s 0 linear);
+
+	&:hover {
+		color : $badgecolor;
+		text-decoration : none;
+		cursor : pointer;
+	}
+}
+
+
+	.badge--primary {
+		@extend %badge;
+	}
+	.badge--error {
+		@extend %badge;
+		color : $color-error;
+	}
+
+	.badge--warning {
+		@extend %badge;
+		color : $color-warning;
+	}
+
+	.badge--success {
+		@extend %badge;
+		color : $color-success;
+	}
+
+	.badge--info {
+		@extend %badge;
+		color : $color-info;
+	}
+
+	.badge--icon {
+		display: inline-block;
+		color: $badgecolor;
+		border: 1px solid $bordercolor;
+		border-radius: $radius;
+		padding: $gutterwidth / 2;
+		background-color: $badgebackground;
+		text-align: center;
+	}
+
+
+// Web Colours
+::-moz-selection {
+	background-color : lighten($basecolor, 65%);
+	color : $basecolor;
+	text-shadow : none;
+}
+
+::selection {
+	background-color : lighten($basecolor, 65%);
+	color : $basecolor;
+	text-shadow : none;
+}
+
+} // endif

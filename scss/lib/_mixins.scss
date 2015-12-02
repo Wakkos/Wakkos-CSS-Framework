@@ -9,137 +9,44 @@
 
 
 
-// Mediqueries y breakpoints: El mixin consta de 4 partes
-//
-//  $breakpoint: Es el Brakpoint o la variable de breakpoint, las definimos en _variables.scss
-//               las que vienen por defecto: $bp1, $bp2, $bp3, $bp4 y $bp5.
-//  
-//  $query1: max o min, dependiendo de como queremos el Mediaquery que funcione:
-//           max-width, min-width, min-device-width, etc... - 'min' por defecto -
-//
-//  $query2: La segunda parte del query, lo que va después de 'min' o 'max'.
-//           -device-width, -device-height, -width etc...  - 'width' por defecto -
-//
-//  $target: El medio. PUede ser 'all', 'screen', 'print', etc...
-//           - '' por defecto -
-//  USO:
-//
-//  **************************************************************************
-//
-//  $bp1 : 45em;
-//
-// .texto {
-// 	color:red; 
-// 	@include media-query-bp($bp1,max,device-width,screen) {
-// 		color: blue;	
-// 	}
-// }
-//
-//  **************************************************************************
-//
-// Compilaría: 
-//
-//  **************************************************************************
-// .texto {
-// color: red; }
-// @media screen and (max-device-width: 45em) {
-//   .texto {
-//     color: blue; } }
-//  **************************************************************************
-//
-// Y en la hoja de estilos para navegadores que no soportan mediaqueries
-// compilaría lo siguiente (componenter/no-mq.scss):
-//
-//  **************************************************************************
-//
-// .texto {
-// color: red; }
-// .ie8-sucks .texto {
-//   color: blue; }
-//
-//  **************************************************************************
-//
-// La clase .ie8-sucks se puede cambiar en la configuración de variables.
-//
-//
-@mixin media-query-bp($breakpoint, $query1: min, $query2: width, $target: "") {
-	$mqtarget: "";
-	// Check if media queries are supported
-	@if $media-queries-supported == true {
-		@if $target != "" {
-			@media #{$target} and (#{$query1}-#{$query2}: #{$breakpoint}) {
-				@content;
-			}
-		}
-		@else {
-			@media (#{$query1}-#{$query2}: #{$breakpoint}) {
-				@content;
-			}
-		}
-	}
-	@else {
-		#{$no-mq-classname} & {
-			@content;
-		}
-	}
+/*
+* Fácil de usar: las variables a usar están en settings.scss y son:
+
+    'small'  : 48em,
+    'medium' : 56.25em,
+    'large'  : 68.75em,
+
+* Y el uso va como sigue:
+
+.foo {
+  color: red;
+  @include respond-to('small') {
+    color: blue;
+  }
+}
+*/
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
 }
 
-
-@mixin font-size($font-size: 16){
-    font-size:($font-size)*1px;
-    font-size:($font-size / $basefontsize)*1rem;
+  /**
+  * Centrar y dar un ancho máximo igual a $pagemaxwidth.
+  */
+@mixin max-width($max-width : $pagemaxwidth)  {
+	margin-left:auto;
+	margin-right:auto;
+	max-width: $max-width;
+	width:100%;
 }
-
-// flexbox, because fuck you, that's why.
-
-@mixin displayflex {
-	display : -webkit-box;
-	display : -moz-box;
-	display : -ms-flexbox;
-	display : -webkit-flex;
-	display : flex;
-}
-
-@mixin align-items($align) {
-	-webkit-align-items : $align;
-	-moz-align-items : $align;
-	-o-align-items : $align;
-	align-items : $align;
-}
-
-@mixin flex($flex, $width) {
-	-webkit-box-flex : $flex;
-	-moz-box-flex : $flex;
-	width : $width;
-	-webkit-flex : $flex;
-	-ms-flex : $flex;
-	flex : $flex;
-}
-
-@mixin order($order) {
-	-webkit-box-ordinal-group : $order;
-	-moz-box-ordinal-group : $order;
-	-ms-flex-order : $order;
-	-webkit-order : $order;
-	order : $order;
-}
-
-// $include flex-start(VALUE) (flex-start | flex-end | center | space-between | space-around)
-@mixin content-justify($justify) {
-	-webkit-content-justify : $justify;
-	-moz-content-justify : $justify;
-	-o-content-justify : $justify;
-	content-justify : $justify;
-}
-
-// $include flex-direction(VALUE) (row | row-reverse | column | column-reverse)
-@mixin flex-direction($direction) {
-	-webkit-flex-direction : $direction;
-	-moz-flex-direction : $direction;
-	-o-flex-direction : $direction;
-	flex-direction : $direction;
-}
-
 
 
 // gradients
@@ -268,11 +175,11 @@
 }
 
 @mixin translate3d($x: 0, $y: 0, $z: 0) {
-	-webkit-transform : translate($x, $y, $z);
-	-moz-transform : translate($x, $y, $z);
-	-ms-transform : translate($x, $y, $z);
-	-o-transform : translate($x, $y, $z);
-	transform : translate($x, $y, $z);
+	-webkit-transform : translate3d($x, $y, $z);
+	-moz-transform : translate3d($x, $y, $z);
+	-ms-transform : translate3d($x, $y, $z);
+	-o-transform : translate3d($x, $y, $z);
+	transform : translate3d($x, $y, $z);
 }
 
 
@@ -349,9 +256,6 @@
 }
 
 
-
-
-
 //
 //Creamos prefijos para todo dios
 //
@@ -365,4 +269,3 @@
          -o-#{$property}:$value;
             #{$property}:$value;
 }
-

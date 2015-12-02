@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="/styleguides/css/styleguide.css">
+  <script src="js/prism.js"></script>
+</head>
+<body>
+  <div class="topbar"><img src="/styleguides/img/wakkos.jpg" alt=""><small><a href="https://github.com/Wakkos/Wakkos-CSS-Framework">Wakkos CSS Framework</a></small></div>
+  <main>
+    <input type="checkbox" id="checkbox__hack" class="checkbox__hack">
+    <label for="checkbox__hack" class="checkbox-hack__label"></label>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="/styleguides/index.html">index</a></li>
+        <li class="nav__item"><a href="/styleguides/typography.html">typography</a></li>
+        <li class="nav__item"><a href="/styleguides/form.html">form</a></li>
+        <li class="nav__item"><a href="/styleguides/buttons.html">buttons</a></li>
+        <li class="nav__item"><a href="/styleguides/textures.html">textures</a></li>
+        <li class="nav__item"><a href="/styleguides/tables.html">tables</a></li>
+      </ul>
+    </nav>
+    <section>
+      <div class="stcontainer"><span class="sttitle">Alert Box</span>
+        <p>We have the component block into a <code>sass extend</code> and we extend it in the modifier.</p>
+        <pre><code class="language-css">%alert {
+   margin-bottom : $baselineheight;
+   padding : 8px 35px 8px 14px;
+   background-color : $color-alert;
+   border : $alertborderwidth $alertborderstyle $alertbordercolor;
+   font-family : $basefont;
+   font-size: fs(small);
+   color : $alerttext;
+   border-radius: $radius;
+   position: relative;
+   .alert--heading {
+       color : inherit;
+   }
+   .close {
+       position : absolute;
+       top : -2px;
+       right : 2px;
+       float : right;
+       font-size: fs(small);
+       font-weight : bold;
+       line-height : 18px;
+       color : inherit;
+   }
+}</code></pre>
+        <div class="alert--success"><strong>Modifier:</strong> alert--success<a class="close">X</a></div>
+        <pre><code class="language-html">&lt;div class="alert--success"&gt;
+    &lt;a href="js-close"&gt;X&lt;a&gt;
+    &lt;strong&gt;Modifier:&lt;strong&gt; alert--success
+&lt;/div&gt;</code></pre>
+        <div class="alert--warning"><strong>Modifier:</strong> alert--warning<a class="close">X</a></div>
+        <pre><code class="language-html">&lt;div class="alert--warning"&gt;
+    &lt;a href="js-close"&gt;X&lt;a&gt;
+    &lt;strong&gt;Modifier:&lt;strong&gt; alert--warning
+&lt;/div&gt;</code></pre>
+        <div class="alert--error"><strong>Modifier:</strong> alert--error<a class="close">X</a></div>
+        <pre><code class="language-html">&lt;div class="alert--error"&gt;
+    &lt;a href="js-close"&gt;X&lt;a&gt;
+    &lt;strong&gt;Modifier:&lt;strong&gt; alert--error
+&lt;/div&gt;</code></pre>
+        <div class="alert--info"><strong>Modifier:</strong> alert--info<a class="close">X</a></div>
+        <pre><code class="language-html">&lt;div class="alert--info"&gt;
+    &lt;a href="js-close"&gt;X&lt;a&gt;
+    &lt;strong&gt;Modifier:&lt;strong&gt; alert--info
+&lt;/div&gt;</code></pre>
+      </div>
+      <div class="stcontainer"><span class="sttitle">Alert Box block</span>
+        <div class="alert--block">
+          <div class="alert--heading"><strong>Modifier:</strong> alert--block</div>
+          <p>Some info block</p><a class="close">X</a>
+        </div>
+        <pre><code class="language-html">&lt;div class="alert--block"&gt;
+    &lt;div class="alert--heading"&gt;
+         &lt;strong&gt;Modifier:&lt;strong&gt; alert--block
+    &lt;/div&gt;
+    &lt;p&gt;
+         Some info block
+    &lt;/p&gt;
+    &lt;a href="js-close"&gt;X&lt;a&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <div class="stcontainer"><span class="sttitle">Badges</span><span href="" class="badge--primary">.badge--info</span><span href="" class="badge--info">.badge--info</span><span href="" class="badge--warning">.badge--warning</span><span href="" class="badge--error">.badge--error</span><span href="" class="badge--success">.badge--success</span></div>
+    </section>
+  </main>
+  <footer class="main-footer"></footer>
+</body>

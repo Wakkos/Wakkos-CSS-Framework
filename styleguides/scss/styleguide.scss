@@ -1,0 +1,60 @@
+
+
+
+
+/*------------------------------------*\
+    $STYLE
+\*------------------------------------*/
+/**
+ * Aquí incluímos todos los módulos (archivos .scss) que se van
+ * a compilar en el CSS definitivo: /css/style.css.
+ */
+
+/**
+* Librerías
+**/
+@import "../../scss/lib/settings.scss";
+@import "../../scss/lib/mixins.scss";
+@import "../../scss/lib/funciones.scss";
+@import "../../scss/lib/flex.scss";
+@import "../../scss/lib/placeholders.scss";
+
+
+/**
+* Bases
+**/
+@import "../../scss/base/contenido.scss";
+@import "../../scss/base/reset.scss";
+@import "../../scss/base/debug.scss";
+
+
+/**
+* Selectores de elemento: un super "normalize":
+**/
+@import "../../scss/elementos/figure.scss";
+@import "../../scss/elementos/formularios.scss";
+@import "../../scss/elementos/imagenes.scss";
+@import "../../scss/elementos/links.scss";
+@import "../../scss/elementos/tipografia.scss";
+@import "../../scss/elementos/tablas.scss";
+
+/**
+* Layout del sitio
+**/
+@import "../../scss/layout/sitio.scss";
+@import "../../scss/layout/navegacion.scss";
+
+/**
+* Abstracciones y objetos
+**/
+@import "../../scss/abstracciones/botones.scss";
+@import "../../scss/abstracciones/fonticon.scss";
+@import "../../scss/abstracciones/grid.scss";
+@import "../../scss/abstracciones/paginacion.scss";
+@import "../../scss/abstracciones/texturas.scss";
+@import "../../scss/abstracciones/abstracciones.scss";
+
+@import "patternstyles.scss";
+@import "prism.scss";
+
+

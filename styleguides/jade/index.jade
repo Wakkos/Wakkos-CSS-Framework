@@ -1,0 +1,27 @@
+extends template
+//- Page Variables
+
+block vars
+    - var currentpage = "Home"
+
+block nav
+    include includes/nav
+block content
+
+
+    //- Page Content
+    .stcontainer
+        span.sttitle Colors
+        each val in colors.length ? colors : ['There are no values']
+            span(class="stcolor #{val}")
+
+    .stcontainer
+        span.sttitle Grey scale
+        each val in greycolors.length ? greycolors : ['There are no values']
+            span(class="stcolor #{val}")
+
+    .stcontainer
+        span.sttitle Textures
+        each val in alertcolors.length ? alertcolors : ['There are no values']
+            span(class="stcolor #{val}")
+

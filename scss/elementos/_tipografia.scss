@@ -1,0 +1,228 @@
+
+
+
+
+
+/*------------------------------------*\
+    $TIPOGRAFÍA
+\*------------------------------------*/
+
+
+// HEADINGS ====================================================
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin : 0;
+	font-family : $baseheadingfont;
+	font-weight : $baseheadingfontweight;
+	color : $baseheadingfontcolor;
+	text-rendering : optimizelegibility;
+		&.altheader {
+			color:$grey;
+			text-transform: uppercase;
+            display: block;
+		}
+}
+
+
+// Set headers line-height, margin bottom and font size
+@each   $header,
+        $margin-bot,
+        $font-size,
+        $line-height
+        in  (h1, 0, 2.5, 1.5)
+            (h2, 0, 2.4, 1.5)
+            (h3, 0, 2.1, 1.5)
+            (h4, 0, 1.8, 1.5)
+            (h5, 0, 1.6, 1.5)
+            (h6, 0, 1.4, 1.5){
+
+  #{$header}, .#{$header} {
+  	margin-bottom : $margin-bot;
+  	font-size: ($font-size) * 1rem;
+  	line-height : $line-height;
+  }
+}
+// TYPOGRAFÍA ====================================================
+
+p,
+ol,
+ul,
+dl,
+address {
+	margin-bottom : $baselineheight;
+	line-height : $baselineheight;
+}
+
+small {
+	font-size: fs(x-small);
+	color: $grey;
+}
+
+ul,
+ol {
+	margin : 0 0 $baselineheight 0;
+	padding : 0 0 0 $gutterwidth;
+}
+
+li ul,
+li ol {
+	margin : 0;
+}
+
+// blockquote
+
+blockquote  {
+	margin : 0 0 $baselineheight 0;
+	padding-left : $gutterwidth;
+	border-left : 2px solid $bordercolor;
+	font-family : $altfont;
+	font-style : normal;
+	p {
+		font-size: fs(small);
+		color:$grey;
+		font-style: italic;
+        line-height: 1.5;
+	}
+}
+
+q {
+	quotes : none;
+	font-style: italic;
+}
+
+blockquote p::before,
+blockquote p::after,
+q:before,
+q:after {
+	content : "";
+}
+
+cite {
+	font-style : normal;
+}
+
+// definition lists
+
+dl,
+dd {
+	margin-bottom : $baselineheight;
+}
+
+dt {
+	font-weight : bold;
+}
+
+.dl-horizontal {
+
+	dt {
+		float : left;
+		clear : left;
+		width : 20.25%;
+		text-align : right;
+	}
+
+	dd {
+		margin-left : 22.78%;
+	}
+}
+
+// text-level
+
+abbr[title] {
+	border-bottom : 1px dotted $bordercolor;
+	cursor : help;
+}
+
+b, strong {
+	font-weight : bold;
+}
+
+dfn {
+	font-style : italic;
+}
+
+ins {
+	background-color : lighten($basecolor, 75%);
+	color : $textcolor;
+	text-decoration : none;
+}
+
+mark {
+	background-color : yellow;
+	color : $textcolor;
+}
+
+pre,
+code,
+kbd,
+samp {
+	font-family : $codefont;
+	font-size: fs(small);
+	line-height : $baselineheight;
+}
+code {
+    background-color: #f5f2f0;
+    padding: 0.1em 0.3em;
+    border-radius: $radius;
+}
+pre {
+	white-space : pre;
+	white-space : pre-wrap;
+	word-wrap : break-word;
+}
+
+sub,
+sup {
+	position : relative;
+	font-size: fs(x-small);
+	line-height : 0;
+	vertical-align : $baselineheight;
+}
+
+sup {
+	top : -.5em;
+}
+
+sub {
+	bottom : -.25em;
+}
+
+
+hr {
+  clear : both;
+  display : block;
+  margin : $baselineheight 0;
+  padding : 0;
+  height : 1px;
+  border : 0;
+  border-top : 1px solid $bordercolor;
+}
+
+// Especificidades de fuentes
+
+.intro {
+    font-weight: bold;
+}
+
+/*
+ * Creamos clases para cada uno de los tamaños de fuentes. Se pueden ver en Settings.
+ * Son los nombres de las varables con el prefijo font-
+ * Por ejemplo:
+
+        .font-x-small {
+            font-size: .8rem;
+        }
+
+
+ */
+
+@each $name, $value in $size-vars {
+  .font-#{$name} {
+    font-size: $value * 1rem;
+  }
+}

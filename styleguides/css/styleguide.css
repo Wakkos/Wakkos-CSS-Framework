@@ -1262,3 +1262,353 @@ input[type="submit"].btn:hover {
 
 .margin-bottom {
   margin-bottom: 1em; }
+
+.topbar {
+  background-color: black;
+  padding: 6px;
+  margin-bottom: 1em; }
+  .topbar img {
+    width: 30px;
+    margin-right: 6px; }
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  width: 100%; }
+
+.stcontainer {
+  background-color: white;
+  padding: 1em 24px;
+  border: 1px solid #bfbfbf;
+  border-radius: 3px;
+  margin-bottom: 1em; }
+
+.sttitle {
+  display: block;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 1em;
+  font-size: 0.6rem;
+  line-height: 2;
+  color: #737373; }
+
+.stcolor {
+  display: inline-block;
+  border-radius: 3px;
+  width: 100px;
+  line-height: 50px;
+  text-align: center;
+  position: relative;
+  margin-right: 24px;
+  margin-bottom: 48px; }
+  .stcolor:before {
+    font-size: 0.6rem; }
+  .stcolor:after {
+    content: "$basecolor";
+    position: absolute;
+    font-size: 0.6rem;
+    color: black;
+    text-align: center;
+    bottom: -40px;
+    left: 0; }
+
+.basecolor {
+  background-color: #bb2299;
+  border: 1px solid #651252;
+  color: #44dd66; }
+  .basecolor:before {
+    content: "#bb2299"; }
+  .basecolor:after {
+    content: "$basecolor"; }
+
+.basecolor-light {
+  background-color: #e676cd;
+  border: 1px solid #d126ab;
+  color: #198932; }
+  .basecolor-light:before {
+    content: "#e676cd"; }
+  .basecolor-light:after {
+    content: "$basecolor-light"; }
+
+.secondary {
+  background-color: #dbd879;
+  border: 1px solid #bcb732;
+  color: #242786; }
+  .secondary:before {
+    content: "#dbd879"; }
+  .secondary:after {
+    content: "$secondary"; }
+
+.bordercolor {
+  background-color: #f1efc9;
+  border: 1px solid #dbd879;
+  color: #0e1036; }
+  .bordercolor:before {
+    content: "#f1efc9"; }
+  .bordercolor:after {
+    content: "$bordercolor"; }
+
+.compcolor {
+  background-color: #d8f0e3;
+  border: 1px solid #8ed4ae;
+  color: #270f1c; }
+  .compcolor:before {
+    content: "#d8f0e3"; }
+  .compcolor:after {
+    content: "$compcolor"; }
+
+.white {
+  background-color: white;
+  border: 1px solid #cccccc;
+  color: black; }
+  .white:before {
+    content: "white"; }
+  .white:after {
+    content: "$white"; }
+
+.lightergrey {
+  background-color: #e6e6e6;
+  border: 1px solid #b3b3b3;
+  color: #191919; }
+  .lightergrey:before {
+    content: "#e6e6e6"; }
+  .lightergrey:after {
+    content: "$lightergrey"; }
+
+.lightgrey {
+  background-color: #bfbfbf;
+  border: 1px solid #8c8c8c;
+  color: #404040; }
+  .lightgrey:before {
+    content: "#bfbfbf"; }
+  .lightgrey:after {
+    content: "$lightgrey"; }
+
+.grey {
+  background-color: #737373;
+  border: 1px solid #404040;
+  color: #8c8c8c; }
+  .grey:before {
+    content: "#737373"; }
+  .grey:after {
+    content: "$grey"; }
+
+.darkgrey {
+  background-color: #4d4d4d;
+  border: 1px solid #1a1a1a;
+  color: #b2b2b2; }
+  .darkgrey:before {
+    content: "#4d4d4d"; }
+  .darkgrey:after {
+    content: "$darkgrey"; }
+
+.darkergrey {
+  background-color: #333333;
+  border: 1px solid black;
+  color: #cccccc; }
+  .darkergrey:before {
+    content: "#333333"; }
+  .darkergrey:after {
+    content: "$darkergrey"; }
+
+.black {
+  background-color: black;
+  border: 1px solid black;
+  color: white; }
+  .black:before {
+    content: "black"; }
+  .black:after {
+    content: "$black"; }
+
+.color-alert {
+  background-color: #fce4cf;
+  border: 1px solid #f6ae6f;
+  color: #031b30; }
+  .color-alert:before {
+    content: "#fce4cf"; }
+  .color-alert:after {
+    content: "$color-alert"; }
+
+.color-error {
+  background-color: #da4f49;
+  border: 1px solid #9d2520;
+  color: #25b0b6; }
+  .color-error:before {
+    content: "#da4f49"; }
+  .color-error:after {
+    content: "$color-error"; }
+
+.color-info {
+  background-color: #42b8dd;
+  border: 1px solid #1c7e9d;
+  color: #bd4722; }
+  .color-info:before {
+    content: "#42b8dd"; }
+  .color-info:after {
+    content: "$color-info"; }
+
+.color-success {
+  background-color: #5bb75b;
+  border: 1px solid #347834;
+  color: #a448a4; }
+  .color-success:before {
+    content: "#5bb75b"; }
+  .color-success:after {
+    content: "$color-success"; }
+
+.color-warning {
+  background-color: #e78730;
+  border: 1px solid #9f5512;
+  color: #1878cf; }
+  .color-warning:before {
+    content: "#e78730"; }
+  .color-warning:after {
+    content: "$color-warning"; }
+
+.sttitlebag:before {
+  content: attr(data-header);
+  display: inline-block;
+  font-size: 0.6rem;
+  margin-right: 1em;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  line-height: 1.6;
+  width: 1.6em;
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #e6e6e6;
+  color: #737373;
+  vertical-align: middle; }
+
+.basefont {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .basefont:after {
+    content: " Helvetica Neue, Helvetica, Arial, sans-serif"; }
+
+.altfont {
+  font-family: Georgia, Times, "Times New Roman"; }
+  .altfont:after {
+    content: " Georgia, Times, Times New Roman"; }
+
+.codefont {
+  font-family: "Courier New", monospace; }
+  .codefont:after {
+    content: " Courier New, monospace"; }
+
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc; }
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #b3d4fc; }
+
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none; } }
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0 24px;
+  overflow: auto; }
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #f5f2f0; }
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal; }
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray; }
+
+.token.punctuation {
+  color: #999; }
+
+.namespace {
+  opacity: .7; }
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #905; }
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #690; }
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5); }
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a; }
+
+.token.function {
+  color: #DD4A68; }
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e90; }
+
+.token.important,
+.token.bold {
+  font-weight: bold; }
+
+.token.italic {
+  font-style: italic; }
+
+.token.entity {
+  cursor: help; }
+
+/*# sourceMappingURL=styleguide.css.map */

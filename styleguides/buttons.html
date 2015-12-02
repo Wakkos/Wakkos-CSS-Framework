@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="/styleguides/css/styleguide.css">
+  <script src="js/prism.js"></script>
+</head>
+<body>
+  <div class="topbar"><img src="/styleguides/img/wakkos.jpg" alt=""><small><a href="https://github.com/Wakkos/Wakkos-CSS-Framework">Wakkos CSS Framework</a></small></div>
+  <main>
+    <input type="checkbox" id="checkbox__hack" class="checkbox__hack">
+    <label for="checkbox__hack" class="checkbox-hack__label"></label>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="/styleguides/index.html">index</a></li>
+        <li class="nav__item"><a href="/styleguides/typography.html">typography</a></li>
+        <li class="nav__item"><a href="/styleguides/form.html">form</a></li>
+        <li class="nav__item"><a href="/styleguides/buttons.html">buttons</a></li>
+        <li class="nav__item"><a href="/styleguides/textures.html">textures</a></li>
+        <li class="nav__item"><a href="/styleguides/tables.html">tables</a></li>
+      </ul>
+    </nav>
+    <section>
+      <div class="stcontainer"><span class="sttitle">Buttons</span>
+        <p>We have the component block into a <code>sass extend</code> and we extend it on the modifier.</p>
+        <pre><code class="language-css">%btn {
+   display: inline-block;
+   line-height: $baselineheight * 2;
+   color: $buttoncolor;
+   text-align: center;
+   vertical-align: middle;
+   font-size: fs(normal);
+   white-space: nowrap;
+   background-color: $buttonbackground;
+   border-top: $buttonborderwidth $buttonborderstyle $buttonbordercolor;
+   border-right: $buttonborderwidth $buttonborderstyle $buttonbordercolor;
+   border-bottom: ($buttonborderwidth * 2) $buttonborderstyle |$buttonbordercolor;
+   border-left: $buttonborderwidth $buttonborderstyle $buttonbordercolor;
+   cursor: pointer;
+   margin:0;
+   padding-top:   0;
+   padding-bottom:0;
+   padding-right:1em;
+   padding-left: 1em;
+   border-radius: $radius;
+   @include transition(all $hovertransition ease-in);
+   /**
+   * Nadie quiere un botón con texto subrayado cuando
+   * hacemos hover.
+   */
+   &:hover {
+       text-decoration: none;
+       color: $buttoncolor;
+   }
+   &:active,
+   &:focus{
+       outline:none;
+   }
+   &:visited {
+   color: $buttoncolor;
+   }
+}</code></pre>
+        <p>All buttons comes with the extend <code>%btn</code> block to look like a button, then, we add the modifier: <code>.btn--modifier</code>. You should extend the <code>extender</code> in every partial that uses the buttom.</p>
+        <p>All these <code>%extend</code> are made to simplify CSS as detailed in <a href="https://twitter.com/una">Una Kravets</a> method <a href="http://una.im/classy-css/#💁">Atomic OOBEMITSCSS</a>.</p>
+        <div><a href="#" class="btn--primary">Modifier: btn--primary</a></div>
+        <pre><code class="language-html">&lt;a class="btn--primary"&gt;Modifier: btn--primary&lt;/a&gt;</code></pre>
+        <div><a href="#" class="btn--disabled">Modifier: btn--disabled</a></div>
+        <pre><code class="language-html">&lt;a class="btn--disabled"&gt;Modifier: btn--disabled&lt;/a&gt;</code></pre>
+        <div><a href="#" class="btn--info">Modifier: btn--info</a></div>
+        <pre><code class="language-html">&lt;a class="btn--info"&gt;Modifier: btn--info&lt;/a&gt;</code></pre>
+        <div><a href="#" class="btn--error">Modifier: btn--error</a></div>
+        <pre><code class="language-html">&lt;a class="btn--error"&gt;Modifier: btn--error&lt;/a&gt;</code></pre>
+        <div><a href="#" class="btn--warning">Modifier: btn--warning</a></div>
+        <pre><code class="language-html">&lt;a class="btn--warning"&gt;Modifier: btn--warning&lt;/a&gt;</code></pre>
+        <div><a href="#" class="btn--success">Modifier: btn--success</a></div>
+        <pre><code class="language-html">&lt;a class="btn--success"&gt;Modifier: btn--success&lt;/a&gt;</code></pre>
+      </div>
+      <div class="stcontainer"><span class="sttitle">Buttons size</span>
+        <div><a href="#" class="btn--primary btn--mini">Modifier: btn--mini</a></div>
+        <pre><code class="language-html">&lt;a class="btn--primary btn--mini"&gt;Modifier: .btn--mini&lt;/a&gt;</code></pre>
+        <div><a href="#" class="btn--primary btn--small">Modifier: btn--small</a></div>
+        <pre><code class="language-html">&lt;a class="btn--primary btn--small"&gt;Modifier: .btn--small&lt;/a&gt;</code></pre>
+        <div><a href="#" class="btn--primary btn--large">Modifier: btn--large</a></div>
+        <pre><code class="language-html">&lt;a class="btn--primary btn--large"&gt;Modifier: .btn--large&lt;/a&gt;</code></pre>
+      </div>
+      <div class="stcontainer"><span class="sttitle">Button groups</span>
+        <div class="btn-group"><a href="#" class="btn--primary">Link</a><a href="#" class="btn--success">Link</a><a href="#" class="btn--error">Link</a></div>
+        <pre><code class="language-html">&lt;div class="btn-group"&gt;
+&lt;a class="btn--primary"&gt;Link&lt;/a&gt;
+&lt;a class="btn--success"&gt;Link&lt;/a&gt;
+&lt;a class="btn--error"&gt;Link&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+  </main>
+  <footer class="main-footer"></footer>
+</body>

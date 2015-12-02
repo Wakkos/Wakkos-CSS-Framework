@@ -1,0 +1,25 @@
+include lib/globals.jade
+include lib/variables.jade
+doctype html
+
+html(lang="en")
+
+head
+    meta(charset="UTF-8")
+    title= currentpage
+    link(rel='stylesheet', href='/styleguides/css/styleguide.css')
+    script(src='js/prism.js')
+
+body
+    .topbar
+        img(src="/styleguides/img/wakkos.jpg", alt="")
+        small
+            a(href="https://github.com/Wakkos/Wakkos-CSS-Framework") Wakkos CSS Framework
+
+    main
+        block vars
+        block nav
+        section
+            block content
+
+    footer.main-footer

@@ -1,0 +1,102 @@
+extends ../template
+
+//- Page Variables
+block vars
+    - var currentpage = "Typography"
+
+block nav
+    include nav
+block content
+
+
+    //- Page Content
+    .stcontainer
+        span.sttitle Fonts
+        p
+            span.basefont Basefont ($basefont):
+        p
+            span.altfont Altfont ($altfont):
+        p
+            span.codefont Codefont ($codefont):
+    .stcontainer
+        span.sttitle Headers
+        h1.sttitlebag(data-header="h1") The quick, brown fox
+
+        h2.sttitlebag(data-header="h2") The quick, brown fox
+
+        h3.sttitlebag(data-header="h3") The quick, brown fox
+
+        h4.sttitlebag(data-header="h4") The quick, brown fox
+
+        h5.sttitlebag(data-header="h5") The quick, brown fox
+
+        h6.sttitlebag(data-header="h6") The quick, brown fox
+
+
+    .stcontainer
+        span.sttitle Paragraph
+
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam eos laudantium, quaerat neque tenetur, reiciendis molestiae hic laboriosam maxime quia, repellendus. At incidunt neque accusantium beatae, nam fuga repellat laudantium!
+
+    .stcontainer
+        span.sttitle Inline elements
+
+        p
+            a(href="#") This is a text link
+
+        p
+            strong Strong is used to indicate strong importance
+
+        p
+            em This text has added emphasis
+
+        p The #[b element] is stylistically different text from normal text, without any special importance
+
+        p The #[i element] is text that is set off from the normal text
+
+        p The #[u element] is text with an unarticulated, though explicitly rendered, non-textual annotation
+
+        p #[del This text is deleted] and #[This text is inserted]
+
+        p #[s This text has a strikethrough]
+
+        p Superscript #[sup ®]
+
+        p Subscript for things like H#[sub 2]O
+
+        p
+            small This small text is small for for fine print, etc.
+
+        p Abbreviation:
+            abbr(title="HyperText Markup Language")  HTML
+
+        p Keybord input: #[kbd Cmd]
+
+        p
+            q(cite="https://developer.mozilla.org/en-US/docs/HTML/Element") This text is a short inline quotation
+
+        p
+            cite This is a citation
+
+        p The #[def dfn element] indicates a definition.
+
+        p The #[mark mark element] indicates a highlight
+
+        p
+            code This is what inline code looks like.
+
+        p
+            samp This is sample output from a computer program
+
+        p
+            The #[var variarble element], such as #[var x] = #[var y]
+
+    .stcontainer
+        span.sttitle HR
+        hr
+
+    .stcontainer
+        span.sttitle BlockQuote
+        blockquote
+            p A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text, and typically distinguished visually using indentation and a different typeface or smaller size quotation.
+

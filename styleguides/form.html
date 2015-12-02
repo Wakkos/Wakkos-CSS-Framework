@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="/styleguides/css/styleguide.css">
+  <script src="js/prism.js"></script>
+</head>
+<body>
+  <div class="topbar"><img src="/styleguides/img/wakkos.jpg" alt=""><small><a href="https://github.com/Wakkos/Wakkos-CSS-Framework">Wakkos CSS Framework</a></small></div>
+  <main>
+    <input type="checkbox" id="checkbox__hack" class="checkbox__hack">
+    <label for="checkbox__hack" class="checkbox-hack__label"></label>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="/styleguides/index.html">index</a></li>
+        <li class="nav__item"><a href="/styleguides/typography.html">typography</a></li>
+        <li class="nav__item"><a href="/styleguides/form.html">form</a></li>
+        <li class="nav__item"><a href="/styleguides/buttons.html">buttons</a></li>
+        <li class="nav__item"><a href="/styleguides/textures.html">textures</a></li>
+        <li class="nav__item"><a href="/styleguides/tables.html">tables</a></li>
+      </ul>
+    </nav>
+    <section>
+      <div class="stcontainer"><span class="sttitle">Basic Form</span>
+        <form>
+          <fieldset>
+            <legend>Legend</legend>
+            <label for="text">Input type=text</label>
+            <input type="text" id="text" required>
+            <label for="email">Input type=email</label>
+            <input type="email" id="email" required>
+            <label for="url">Input type=url</label>
+            <input type="url" id="url" required>
+            <label for="tel">Input type=tel</label>
+            <input type="tel" id="tel" required>
+            <label for="select">Input type=tel</label>
+            <select>
+              <option value="">Option 1</option>
+              <option value="">Option 2</option>
+              <option value="">Option 3</option>
+              <option value="">Option 4</option>
+              <option value="">Option 5</option>
+            </select>
+            <textarea></textarea>
+          </fieldset>
+          <input type="submit" value="Test me">
+        </form><small>The visual validation is created through CSS and it depends on the field type to <i>validate</i>. It's is only for a VISUAL INFORMATION to the user, don't relay your form interaction on CSS.</small>
+      </div>
+      <div class="stcontainer"><span class="sttitle">Input width variation</span>
+        <label for=""><i>.input-small</i>
+          <input type="text" id="input-small" class="input-small">
+        </label>
+        <label for=""><i>.input-medium</i>
+          <input type="text" id="input-medium" class="input-medium">
+        </label>
+        <label for=""><i>.input-big</i>
+          <input type="text" id="input-big" class="input-big">
+        </label>
+      </div>
+      <div class="stcontainer"><span class="sttitle">Checkbox and Radio input</span>
+        <input id="checkbox1" type="checkbox">
+        <label for="checkbox1">Checkbox 1</label>
+        <input id="checkbox2" type="checkbox">
+        <label for="checkbox2">Checkbox 2</label>
+        <input id="checkbox3" type="checkbox">
+        <label for="checkbox3">Checkbox 3</label>
+        <input id="checkbox4" type="checkbox">
+        <label for="checkbox4">Checkbox 4</label>
+        <div>
+          <input id="radio1" type="radio" name="styleradio">
+          <label for="radio1">Radio 1</label>
+          <input id="radio2" type="radio" name="styleradio">
+          <label for="radio2">Radio 2</label>
+          <input id="radio3" type="radio" name="styleradio">
+          <label for="radio3">Radio 3</label>
+          <input id="radio4" type="radio" name="styleradio">
+          <label for="radio4">Radio 4</label>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="main-footer"></footer>
+</body>

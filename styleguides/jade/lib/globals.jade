@@ -1,0 +1,9 @@
+//- Navigation sections:
+
+mixin nav(navItem)
+    if currentpage == navItem
+        li.nav__item.current-nav
+            a(href="current")= navItem
+    else
+        li.nav__item
+            a(href="/styleguides/" + navItem + ".html")= navItem

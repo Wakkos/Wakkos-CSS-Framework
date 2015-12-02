@@ -1,0 +1,4 @@
+# Ignorar el cache de sass
+.sass-cache
+# Ignorar directorio de dependencias
+node_modules
