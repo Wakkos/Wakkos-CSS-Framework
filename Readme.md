@@ -114,6 +114,27 @@ Una vez instalados los requisitos anteriores se ejecuta:
 `npm install`
 en el raíz del proyecto. Esto instalará todas las dependencias para que Gulp pueda compilar Sass.
 
+#### Actualizar dependencias
+
+Las dependencias están continuamente actualizándose, una buen método para automatizar esta tarea es utilizar ```npm-check-updates```
+
+```sh
+npm install -g npm-check-updates
+```
+
+Ahora ejecutamos en el terminal el siguiente comando para actualizar todas las dependencias.
+
+```sh
+ncu
+```
+
+El terminal nos informará de las dependencias que se han actualizado.
+
+```sh
+autoprefixer     ^6.0.3  →  ^6.1.2
+gulp-minify-css  ^1.2.1  →  ^1.2.2
+```
+
 #### Configuración y uso
 Para configurar gulp podéis entrar a `gulpfile.js` y modificar el json de configuración (primeras líneas):
 ```
