@@ -1,18 +1,29 @@
 {
-  "name": "Wakkos-CSS-Framework",
-  "description": "Compilado de SASS con la ayuda de Gulp",
+  "name": "wakkos-css-framework",
   "version": "1.0.0",
-  "author": "@wakkos",
-  "contributors":[{
-    "name": "Hector"
-  }],
+  "description": "A CSS Freamework I use as startup for my projects",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wakkos/Wakkos-CSS-Framework.git"
+  },
+  "keywords": [
+    "CSS",
+    "SCSS"
+  ],
+  "author": "Wakkos and a lot of people",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Wakkos/Wakkos-CSS-Framework/issues"
+  },
+  "homepage": "https://github.com/Wakkos/Wakkos-CSS-Framework#readme",
   "dependencies": {
-    "gulp": "3.9.0",
-    "gulp-if": "2.0.0",
-    "gulp-sass": "2.1.0",
-    "gulp-autoprefixer": "3.0.2",
-    "gulp-minify-css": "1.2.1",
-    "gulp-merge-media-queries": "0.2.1",
-    "gulp-rename": "1.2.2"
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-sass": "^3.1.0"
   }
 }
