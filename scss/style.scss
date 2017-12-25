@@ -11,47 +11,56 @@
  */
 
 /**
-* Librerías
+* Scss Libraries, mixins, functions and any Scss focused logic
 **/
 @import "lib/settings.scss";
 @import "lib/mixins.scss";
-@import "lib/funciones.scss";
-@import "lib/flex.scss";
-@import "lib/placeholders.scss";
+@import "lib/functions.scss";
+@import "lib/debug.scss";
 
 
-/**
-* Bases
-**/
-@import "base/contenido.scss";
-@import "base/reset.scss";
-@import "base/debug.scss";
+
 
 
 /**
-* Selectores de elemento: un super "normalize":
+* Base
 **/
-@import "elementos/figure.scss";
-@import "elementos/formularios.scss";
-@import "elementos/imagenes.scss";
-@import "elementos/links.scss";
-@import "elementos/tipografia.scss";
-@import "elementos/tablas.scss";
+@import "lib/index.scss";
+@import "lib/reset.scss";
+@import "lib/debug.scss";
+
+
+
+
 
 /**
-* Layout del sitio
+* HTML elements
 **/
-@import "layout/sitio.scss";
-@import "layout/navegacion.scss";
+@import "base/figures.scss";
+@import "base/forms.scss";
+@import "base/buttons.scss";
+@import "base/images.scss";
+@import "base/links.scss";
+@import "base/typography.scss";
+@import "base/tables.scss";
+
+
+
+
 
 /**
-* Abstracciones y objetos
+* Layout and general styles
 **/
-@import "abstracciones/botones.scss";
-@import "abstracciones/fonticon.scss";
-@import "abstracciones/grid.scss";
-@import "abstracciones/paginacion.scss";
-@import "abstracciones/texturas.scss";
-@import "abstracciones/abstracciones.scss";
+@import "layout/site.scss";
+@import "layout/textures.scss";
 
 
+
+
+
+/**
+* Componets used for layouts, headers, articles, etc...
+**/
+@import "components/grid.scss";
+
+@import "components/utilities.scss"; // always last file to import
