@@ -1,4 +1,4 @@
-@if $incluir-texturas == true{
+@if $include-textures == true{
 
 
 
@@ -147,14 +147,14 @@
 
 // Web Colours
 ::-moz-selection {
-	background-color : lighten($basecolor, 65%);
-	color : $basecolor;
+	background-color : lighten($color-brand, 65%);
+	color : $color-brand;
 	text-shadow : none;
 }
 
 ::selection {
-	background-color : lighten($basecolor, 65%);
-	color : $basecolor;
+	background-color : lighten($color-brand, 65%);
+	color : $color-brand;
 	text-shadow : none;
 }
 

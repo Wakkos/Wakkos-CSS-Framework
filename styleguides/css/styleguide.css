@@ -148,7 +148,7 @@
 \*------------------------------------*/
 /*
  * Función para controlar el index
- 
+
  	.selector { z-index: z(goku);}
 
  * compila:
@@ -1304,7 +1304,7 @@ main {
   .stcolor:before {
     font-size: 0.6rem; }
   .stcolor:after {
-    content: "$basecolor";
+    content: "$color-brand";
     position: absolute;
     font-size: 0.6rem;
     color: black;
@@ -1319,7 +1319,7 @@ main {
   .basecolor:before {
     content: "#bb2299"; }
   .basecolor:after {
-    content: "$basecolor"; }
+    content: "$color-brand"; }
 
 .basecolor-light {
   background-color: #e676cd;
@@ -1328,7 +1328,7 @@ main {
   .basecolor-light:before {
     content: "#e676cd"; }
   .basecolor-light:after {
-    content: "$basecolor-light"; }
+    content: "$color-brand-light"; }
 
 .secondary {
   background-color: #dbd879;

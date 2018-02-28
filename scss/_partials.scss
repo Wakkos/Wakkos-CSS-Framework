@@ -1,0 +1,65 @@
+
+
+
+
+/*------------------------------------*\
+    $PARTIALS
+\*------------------------------------*/
+/**
+ * All files to be compiled
+ */
+
+/**
+* Scss Libraries, mixins, functions and any Scss focused logic
+**/
+@import "lib/settings";
+@import "lib/mixins";
+@import "lib/functions";
+@import "lib/debug";
+
+
+
+
+
+/**
+* Base
+**/
+@import "lib/index";
+@import "lib/reset";
+@import "lib/debug";
+
+
+
+
+
+/**
+* HTML elements
+**/
+@import "base/figures";
+@import "base/forms";
+@import "base/buttons";
+@import "base/images";
+@import "base/links";
+@import "base/typography";
+@import "base/tables";
+
+
+
+
+
+/**
+* Layout and general styles
+**/
+@import "layout/site";
+@import "layout/textures";
+
+
+
+
+
+/**
+* Componets used for layouts, headers, articles, etc...
+**/
+@import "components/grid";
+
+@import "components/utilities"; // always last file to import

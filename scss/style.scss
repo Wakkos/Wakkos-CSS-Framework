@@ -6,61 +6,7 @@
     $STYLE
 \*------------------------------------*/
 /**
- * Aquí incluímos todos los módulos (archivos .scss) que se van
- * a compilar en el CSS definitivo: /css/style.css.
+ * Let's define the settings file here, or the partials to be included.
+ * This way we can have different .css files compiled with different partials each.
  */
-
-/**
-* Scss Libraries, mixins, functions and any Scss focused logic
-**/
-@import "lib/settings.scss";
-@import "lib/mixins.scss";
-@import "lib/functions.scss";
-@import "lib/debug.scss";
-
-
-
-
-
-/**
-* Base
-**/
-@import "lib/index.scss";
-@import "lib/reset.scss";
-@import "lib/debug.scss";
-
-
-
-
-
-/**
-* HTML elements
-**/
-@import "base/figures.scss";
-@import "base/forms.scss";
-@import "base/buttons.scss";
-@import "base/images.scss";
-@import "base/links.scss";
-@import "base/typography.scss";
-@import "base/tables.scss";
-
-
-
-
-
-/**
-* Layout and general styles
-**/
-@import "layout/site.scss";
-@import "layout/textures.scss";
-
-
-
-
-
-/**
-* Componets used for layouts, headers, articles, etc...
-**/
-@import "components/grid.scss";
-
-@import "components/utilities.scss"; // always last file to import
+@import "partials";

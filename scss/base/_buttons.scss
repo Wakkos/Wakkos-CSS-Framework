@@ -1,4 +1,4 @@
-@if $incluir-botones == true{
+@if $include-buttons == true{
 
 
 
@@ -160,12 +160,12 @@ input[type="submit"].btn:hover {
 
 .btn--primary {
     @extend %btn;
-	color: $basecolor;
+	color: $color-brand;
 	&:hover {
-		color: $basecolor;
+		color: $color-brand;
 	}
 	&:visited {
-		color: $basecolor;
+		color: $color-brand;
 	}
 }
 

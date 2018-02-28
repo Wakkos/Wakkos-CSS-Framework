@@ -1,5 +1,5 @@
 .topbar {
-    background-color: darken($basecolor, 50);
+    background-color: darken($color-brand, 50);
     padding: $gutterwidth / 4;
     margin-bottom: $baseline;
     img {
@@ -13,7 +13,7 @@ main {
 }
 .stcontainer {
     background-color: $white;
-    padding: $baseline $gutterwidth;
+    padding: $baselineheight$gutterwidth;
     border: 1px solid $lightgrey;
     border-radius: $radius;
     margin-bottom: $baseline;
@@ -40,7 +40,7 @@ main {
             font-size: fs(x-small);
         }
         &:after {
-            content: "$basecolor";
+            content: "$color-brand";
             position: absolute;
             font-size: fs(x-small);
             color: $black;
@@ -52,25 +52,25 @@ main {
         // For the moment, I insert colors variables manually, until I find a way to make
         // a less painfull process
         .basecolor {
-            background-color: $basecolor;
-            border: 1px solid darken($basecolor, 20);
-            color: invert($basecolor);
+            background-color: $color-brand;
+            border: 1px solid darken($color-brand, 20);
+            color: invert($color-brand);
             &:before {
-                content: "#{$basecolor}";
+                content: "#{$color-brand}";
             }
             &:after {
-                content: "$basecolor";
+                content: "$color-brand";
             }
         }
         .basecolor-light {
-            background-color: $basecolor-light;
-            border: 1px solid darken($basecolor-light, 20);
-            color: invert($basecolor-light);
+            background-color: $color-brand-light;
+            border: 1px solid darken($color-brand-light, 20);
+            color: invert($color-brand-light);
             &:before {
-                content: "#{$basecolor-light}";
+                content: "#{$color-brand-light}";
             }
             &:after {
-                content: "$basecolor-light";
+                content: "$color-brand-light";
             }
         }
 

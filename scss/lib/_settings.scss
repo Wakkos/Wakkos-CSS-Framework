@@ -1,0 +1,319 @@
+/*------------------------------------*\
+    $SETTINGS
+\*------------------------------------*/
+/**
+ *
+ * Define all variables and values to use
+ *
+ */
+
+
+
+
+
+ /*------------------------------------*\
+    $INCLUDED-COMPONENTS
+\*------------------------------------*/
+/**
+ * We can tell the components to use here, `true` for used, `false` unused.
+ * Remember you can overwrite this value anywhere else by removing the `!default` property
+ */
+
+ // Base components: Usually we include all of this, except in small sites where,
+ // let's say, tables.scss won't be used.
+ $include-grid:                     true!default;
+ $include-debug:                    false!default;
+ $include-buttons:                  true!default;
+ $include-images:                   true!default;
+ $include-utilities:                true!default;
+ $include-tables:                   true!default;
+ $include-textures:                 true!default;
+
+
+
+
+
+ // Components used and created for the current project (or for many projects)
+$include-grids:                   	true!default;
+$include-utilities:                 true!default;
+
+
+
+
+// Partials used to create layout: headers, footers, articles, etc...
+$include-site:                   	true!default;
+$include-textures:   	            true!default;
+
+
+
+
+
+/*------------------------------------*\
+    $BREAKPOINTS
+\*------------------------------------*/
+/**
+ * "Start with the small screen first, then expand until it looks like shit. Time to insert a breakpoint!"
+ * Used with mixin `respond-to($breakpoint)`:
+
+.div {
+  color: pink;
+  @include respond-to(medium) {
+    color: maroon;
+  }
+}
+ *
+ */
+
+$breakpoints: (
+  'small': 			48em,
+  'medium': 		56.25em,
+  'large': 			68.75em,
+) !default;
+
+
+
+
+
+/*------------------------------------*\
+    $Z-INDEX
+\*------------------------------------*/
+/**
+ * We can have control over z-index and not ending up having 900 to infinite.
+ * To use this values, we use the `z($layers)` function:
+ .element {
+  z-index: z(goku);
+ }
+ *
+ */
+
+$z-layers: (
+  "modal":           9000,
+  "over":             900,
+  "default":            1,
+  "below":             -1,
+  "bottomless-pit": -9000
+);
+
+
+
+
+
+/*------------------------------------*\
+    $DIR
+\*------------------------------------*/
+/**
+ * Sometimes we change image dir from develop to production:
+ */
+$image-dir: "../img";
+
+ //Use: background-image:url("#{$image-dir}/btn.jpg");
+
+ /*
+  * In case we use local fonts (I use them fewer and fewer lately)
+  */
+
+$font-dir: "../fonts";
+
+
+
+
+
+
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+/**
+ * Constant layout values, apart from these we can also declare values
+ * for different blocks sizes and more.
+ */
+$baselineheight:     1.5;
+$gutterwidth:        24px;
+$padding:            $gutterwidth;
+$minigutter:         $gutterwidth / 2;
+$pagemaxwidth:       1024px;
+$radius:             3px;
+$hovertransition:    .3s;
+$animationtime:      .8s;
+
+
+
+
+/*------------------------------------*\
+    $GRID
+\*------------------------------------*/
+/**
+ * These are the variables we use for our Grid
+ */
+$gap : $minigutter;
+$grid-size: 12;
+
+
+
+
+/*------------------------------------*\
+    $FONT-FACE
+\*------------------------------------*/
+/**
+ * Fonts definitions
+ */
+$basefont : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$altfont : Georgia, Times, "Times New Roman";
+$codefont : "Courier New", monospace;
+$baseheadingfont : $altfont;
+
+$baseheadingfontweight : normal;
+$baseheadingfontcolor : inherit;
+
+$basefontsize   :   16;
+
+
+/*
+ * Font Size variables are defined in a Scss MAP, this MAP will create
+ * a class (in `utilities.scss`) for every size with the value in REM units, you can check
+ * `utilities.scss` if you need to change the loop:
+
+  .x-small { font-size: .8rem}
+
+ * We also have a function to assign font sizes, call `fs`:
+
+    .selector { font-size: fs(x-small);}
+
+ *
+ */
+$size-vars: (
+  "x-small"  :    .6,
+  "small"    :    .8,
+  "normal"   :    1,
+  "big"      :    1.5,
+  "huge"     :    2
+);
+
+
+
+
+/*------------------------------------*\
+    $COLORS
+\*------------------------------------*/
+/**
+ * Brand colors
+ */
+    $color-brand:          rgb(187, 34, 153);
+    $color-secondary:      rgb(219,216,121);
+    /**
+    * Grey Scale
+    * This is mainly to hold back designers from adding 200 different greys ;)
+    */
+    $black:                rgb(0,0,0);
+    $darkergrey:             lighten(black, 20%);
+    $darkgrey:               lighten(black, 30%);
+    $grey:                   lighten(black, 45%);
+    $lightgrey:              lighten(black, 75%);
+    $lightergrey:            lighten(black, 90%);
+    $white:                  rgb(255,255,255);
+
+
+
+
+// Atmosphere
+$background: 		color-grey(lightgrey);
+$textcolor: 		color-grey(lightgrey);
+$textcolor-strong:	color-grey(lightgrey);
+$bordercolor    :   color-grey(lightgrey);
+// Links  //////////////////////
+$linkcolor 		    : color-brand(color-brand);
+$linkcolorhover 	: $linkcolor;
+$linkcolorvisited   : $linkcolor;
+$linkcolorfocus 	: $linkcolor;
+
+
+
+
+
+
+/*------------------------------------*\
+    $TEXTURAS
+\*------------------------------------*/
+/**
+ * Definimos Colores y elementos de popups, mensajes de alerta, etc...
+ */
+$color-alert 	: rgb(252,228,207);
+$color-error 	: rgb(218,79,73);
+$color-info 	: rgb(66, 184, 221);
+$color-success 	: rgb(91,183,91);
+$color-warning 	: rgb(231,135,48);
+
+
+// Texturas de popups
+$alertbordercolor	: darken($color-alert, 20%);
+$alertborderwidth 	: 1px;
+$alertborderstyle 	: solid;
+$alerttext			: darken($color-alert, 60%);
+
+// Error
+$alerterrorcolor 	: lighten($color-error, 30%);
+$alerterrorborder  	: lighten($color-error, 20%);
+$alerterrortext 	: $color-error;
+
+// Info
+$alertinfocolor 	: lighten($color-info, 10%);
+$alertinfoborder  	: darken($color-info, 10%);
+$alertinfotext 		: darken($color-info, 50%);
+
+
+// Success
+$alertsuccesscolor 	: lighten($color-success, 30%);
+$alertsuccessborder : lighten($color-success, 20%);
+$alertsuccesstext 	: darken($color-success, 20%);
+
+// Advertencia
+$alertwarningcolor 	: lighten($color-warning, 30%);
+$alertwarningborder : lighten($color-warning, 20%);
+$alertwarningtext 	: darken($color-warning, 20%);
+
+
+
+// badges
+$badgebackground    : transparent;
+$badgecolor         : $textcolor;
+
+// botones
+$buttonbackground   : transparent;
+$buttonbordercolor  : currentcolor;
+$buttoncolor        : $textcolor;
+$buttonborderwidth  : 1px;
+$buttonborderstyle  : solid;
+
+// boxes (well)
+$wellbackground     : red;
+$wellbordercolor    : darken($wellbackground, 20%);
+$wellborderwidth    : 1px;
+$wellborderstyle    : solid;
+$wellshadow         : darken($wellbackground, 10%);
+$wellshadowblur     : 10px;
+
+// tablas
+$tablebackground    : transparent;
+$tablestripe        : $lightergrey;
+$tablehover         : $lightergrey;
+$tableborder        : $grey;
+$tableborderwidth   : 1px;
+$tableborderstyle   : solid;
+
+// formularios
+$inputbackground    : $white;
+$inputborder        : $lightgrey;
+$inputborderwidth   : 1px;
+$inputborderstyle   : solid;
+$inputhover         : lighten($black, 50%);
+$inputfocus         : $color-brand, 40%;
+$placeholdercolor   : $lightergrey;
+
+
+// Navegación
+$nav-width:               42px;
+$nav-height:              $nav-width;
+$nav-icon-size:           16px;
+$nav-color:               $color-brand;
+$nav-background:          $white;
+$nav-borders:             lighten($nav-background, 10%);
+$nav-lists-background:    $color-brand;

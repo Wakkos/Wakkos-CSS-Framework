@@ -147,7 +147,7 @@ dfn {
 }
 
 ins {
-	background-color : lighten($basecolor, 75%);
+	background-color : lighten($color-brand, 75%);
 	color : $textcolor;
 	text-decoration : none;
 }

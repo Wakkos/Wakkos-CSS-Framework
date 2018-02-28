@@ -2,31 +2,37 @@
 /*------------------------------------*    $STYLE
 \*------------------------------------*/
 /**
- * Aquí incluímos todos los módulos (archivos .scss) que se van
- * a compilar en el CSS definitivo: /css/style.css.
+ * Let's define the settings file here, or the partials to be included.
+ * This way we can have different .css files compiled with different partials each.
+ */
+/*------------------------------------*    $PARTIALS
+\*------------------------------------*/
+/**
+ * All files to be compiled
  */
 /**
 * Scss Libraries, mixins, functions and any Scss focused logic
 **/
 /*------------------------------------*    $SETTINGS
 \*------------------------------------*/
-/*------------------------------------*    $OBJETOS Y ABSTRACCIONES
+/**
+ *
+ * Define all variables and values to use
+ *
+ */
+/*------------------------------------*    $INCLUDED-COMPONENTS
 \*------------------------------------*/
 /**
- * Qué objetos y abstracciones vamos a usar? (true: se usa, false: no se usa)
- */
-/**
- *
- * Definimos y configuramos las variables CSS que vamos a utilizar
- *
+ * We can tell the components to use here, `true` for used, `false` unused.
+ * Remember you can overwrite this value anywhere else by removing the `!default` property
  */
 /*------------------------------------*    $BREAKPOINTS
 \*------------------------------------*/
 /**
  * "Start with the small screen first, then expand until it looks like shit. Time to insert a breakpoint!"
- * Lo usamos con el mixin respond-to($breakpoint):
+ * Used with mixin `respond-to($breakpoint)`:
 
-.text {
+.div {
   color: pink;
   @include respond-to(medium) {
     color: maroon;
@@ -37,8 +43,8 @@
 /*------------------------------------*    $Z-INDEX
 \*------------------------------------*/
 /**
- * Podemos controlar los z-index con variables más reconocibles.
- * Para usarlo, implementamos la función z($layers):
+ * We can have control over z-index and not ending up having 900 to infinite.
+ * To use this values, we use the `z($layers)` function:
  .element {
   z-index: z(goku);
  }
@@ -47,46 +53,35 @@
 /*------------------------------------*    $DIR
 \*------------------------------------*/
 /**
- * Con agregar esta variable a las imágenes declaradas en CSS apañamos:
+ * Sometimes we change image dir from develop to production:
  */
 /*
-  * Igual para las fuentes
+  * In case we use local fonts (I use them fewer and fewer lately)
   */
-/*
- *   src:url('../fonts/icomoon.eot');
- *   src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
- *   url('../fonts/icomoon.woff') format('woff'),
- *   url('../fonts/icomoon.ttf') format('truetype'),
- *   url('../fonts/icomoon.svg#icomoon') format('svg');
-*/
 /*------------------------------------*    $LAYOUT
 \*------------------------------------*/
 /**
- * Definimos elementos constantes del layout
+ * Constant layout values, apart from these we can also declare values
+ * for different blocks sizes and more.
  */
-/*------------------------------------*    $grid
+/*------------------------------------*    $GRID
 \*------------------------------------*/
+/**
+ * These are the variables we use for our Grid
+ */
 /*------------------------------------*    $FONT-FACE
 \*------------------------------------*/
 /**
- * Definimos las fuentes a utilizar:
- * $basefont para todos los textos inline
- * $altfont para textos alternativos, como citas, intro, etc...
- * $codefont para código
- */
-/*------------------------------------*    $TAMAÑOS
-\*------------------------------------*/
-/**
- * Definimos los tamaños de fuentes:
-
+ * Fonts definitions
  */
 /*
- * Las variables de tamaño las definimos en un MAP, puedes añadir, quitar o cambiarlas.
- * Vienen dadas en REM. Esto creará una clase con el mismo nombre de la variable:
+ * Font Size variables are defined in a Scss MAP, this MAP will create
+ * a class (in `utilities.scss`) for every size with the value in REM units, you can check
+ * `utilities.scss` if you need to change the loop:
 
   .x-small { font-size: .8rem}
 
- * También podemos asignar tamaños con un función llamada fs:
+ * We also have a function to assign font sizes, call `fs`:
 
     .selector { font-size: fs(x-small);}
 
@@ -95,19 +90,16 @@
 /*------------------------------------*    $COLORS
 \*------------------------------------*/
 /**
- * Brand stuff
+ * Brand colors
  */
 /**
- * Escala de grises
- * A veces no queremos que el negro sea "negro" o el blanco "blanco", puedes cambiarlos.
- */
+    * Grey Scale
+    * This is mainly to hold back designers from adding 200 different greys ;)
+    */
 /*------------------------------------*    $TEXTURAS
 \*------------------------------------*/
 /**
  * Definimos Colores y elementos de popups, mensajes de alerta, etc...
- */
-/* Colores sociales -> son los colores corporativos, pero cambiadlos
- * si hace falta. (también podéis añadir más)  ///////////////////////
  */
 /*------------------------------------*    $MIXINS
 \*------------------------------------*/
@@ -134,7 +126,7 @@
 \*------------------------------------*/
 /*
  * Función para controlar el index
- 
+
  	.selector { z-index: z(goku);}
 
  * compila:
@@ -236,9 +228,9 @@ img {
 /*------------------------------------*    $ELEMENTOS-FIGURE
 \*------------------------------------*/
 figure {
-  margin-bottom: 1em; }
+  margin-bottom: 1.5; }
   figure img {
-    margin-bottom: 0.25em; }
+    margin-bottom: 0.375; }
   figure figcaption {
     display: block;
     font-weight: normal;
@@ -249,17 +241,17 @@ figure {
 /*------------------------------------*    $FORMULARIOS
 \*------------------------------------*/
 form {
-  margin: 0 0 1em 0; }
+  margin: 0 0 1.5 0; }
   form fieldset {
-    margin-bottom: 1em;
+    margin-bottom: 1.5;
     padding: 0;
     border-width: 0; }
   form legend {
     display: block;
     width: 100%;
-    margin-bottom: 2em;
+    margin-bottom: 3;
     padding: 0;
-    color: #494949;
+    color: color-grey(lightgrey);
     border: 0;
     border-bottom: 1px solid #bfbfbf;
     white-space: normal; }
@@ -267,10 +259,10 @@ form {
       font-size: 0.6rem;
       color: #bfbfbf; }
   form p {
-    margin-bottom: 0.5em; }
+    margin-bottom: 0.75; }
   form ul {
     list-style-type: none;
-    margin: 0 0 1em 0;
+    margin: 0 0 1.5 0;
     padding: 0; }
   form br {
     display: none; }
@@ -296,10 +288,10 @@ textarea {
 
 label {
   display: inline-block;
-  margin-bottom: 0.125em;
+  margin-bottom: 0.1875;
   font-family: 0.6rem;
   font-weight: bold;
-  color: #494949;
+  color: color-grey(lightgrey);
   cursor: pointer; }
 
 input,
@@ -309,10 +301,10 @@ select {
   vertical-align: middle;
   width: 100%;
   padding: 4px;
-  margin-bottom: 1em;
+  margin-bottom: 1.5;
   background-color: white;
   border: 1px solid #bfbfbf;
-  color: #494949;
+  color: color-grey(lightgrey);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; }
@@ -352,6 +344,7 @@ input[type="radio"] {
     background-color: #bfbfbf;
     border-color: white;
     border-width: 1px;
+    -webkit-box-shadow: 0 0 0 1px #bfbfbf;
     box-shadow: 0 0 0 1px #bfbfbf; }
   input[type="checkbox"] + label,
   input[type="radio"] + label {
@@ -411,6 +404,7 @@ textarea[readonly] {
 input:focus,
 textarea:focus {
   border-color: #bb2299, 40%;
+  -webkit-box-shadow: 0 0 1px 1px #bfbfbf;
   box-shadow: 0 0 1px 1px #bfbfbf;
   outline: none; }
 
@@ -442,8 +436,8 @@ input:required:focus:valid {
  */
 .btn--disabled, .btn--info, .btn--error, .btn--warning, .btn--success, .btn--primary {
   display: inline-block;
-  line-height: 2em;
-  color: #494949;
+  line-height: 3;
+  color: color-grey(lightgrey);
   text-align: center;
   vertical-align: middle;
   font-size: 1rem;
@@ -471,11 +465,11 @@ input:required:focus:valid {
  	*/ }
   .btn--disabled:hover, .btn--info:hover, .btn--error:hover, .btn--warning:hover, .btn--success:hover, .btn--primary:hover {
     text-decoration: none;
-    color: #494949; }
+    color: color-grey(lightgrey); }
   .btn--disabled:active, .btn--info:active, .btn--error:active, .btn--warning:active, .btn--success:active, .btn--primary:active, .btn--disabled:focus, .btn--info:focus, .btn--error:focus, .btn--warning:focus, .btn--success:focus, .btn--primary:focus {
     outline: none; }
   .btn--disabled:visited, .btn--info:visited, .btn--error:visited, .btn--warning:visited, .btn--success:visited, .btn--primary:visited {
-    color: #494949; }
+    color: color-grey(lightgrey); }
 
 /*------------------------------------*    $BOTONES-VARIANTES
 \*------------------------------------*/
@@ -623,19 +617,32 @@ input[type="submit"].btn:hover {
 
 /*------------------------------------*    $IMÁGENES
 \*------------------------------------*/
+.img--rounded {
+  border-radius: 12px; }
+
+.img--polaroid {
+  padding: 12px;
+  background-color: white;
+  border: 1px solid color-grey(lightgrey);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
+
+.img--circle {
+  border-radius: 100%; }
+
 /*------------------------------------*    $LINKS
 \*------------------------------------*/
 a {
   text-decoration: none;
-  color: #bb2299; }
+  color: color-brand(color-brand); }
   a:visited {
-    color: #bb2299; }
+    color: color-brand(color-brand); }
   a:hover {
     text-decoration: underline;
-    color: #bb2299; }
+    color: color-brand(color-brand); }
   a:focus {
     outline: thin dotted;
-    color: #bb2299; }
+    color: color-brand(color-brand); }
   a:hover, a:active {
     outline: 0; }
 
@@ -697,8 +704,8 @@ ol,
 ul,
 dl,
 address {
-  margin-bottom: 1em;
-  line-height: 1em; }
+  margin-bottom: 1.5;
+  line-height: 1.5; }
 
 small {
   font-size: 0.6rem;
@@ -706,7 +713,7 @@ small {
 
 ul,
 ol {
-  margin: 0 0 1em 0;
+  margin: 0 0 1.5 0;
   padding: 0 0 0 24px; }
 
 li ul,
@@ -714,9 +721,9 @@ li ol {
   margin: 0; }
 
 blockquote {
-  margin: 0 0 1em 0;
+  margin: 0 0 1.5 0;
   padding-left: 24px;
-  border-left: 2px solid #f1efc9;
+  border-left: 2px solid color-grey(lightgrey);
   font-family: Georgia, Times, "Times New Roman";
   font-style: normal; }
   blockquote p {
@@ -740,7 +747,7 @@ cite {
 
 dl,
 dd {
-  margin-bottom: 1em; }
+  margin-bottom: 1.5; }
 
 dt {
   font-weight: bold; }
@@ -755,7 +762,7 @@ dt {
   margin-left: 22.78%; }
 
 abbr[title] {
-  border-bottom: 1px dotted #f1efc9;
+  border-bottom: 1px dotted color-grey(lightgrey);
   cursor: help; }
 
 b, strong {
@@ -766,12 +773,12 @@ dfn {
 
 ins {
   background-color: white;
-  color: #494949;
+  color: color-grey(lightgrey);
   text-decoration: none; }
 
 mark {
   background-color: yellow;
-  color: #494949; }
+  color: color-grey(lightgrey); }
 
 pre,
 code,
@@ -779,7 +786,7 @@ kbd,
 samp {
   font-family: "Courier New", monospace;
   font-size: 0.8rem;
-  line-height: 1em; }
+  line-height: 1.5; }
 
 code {
   background-color: #f5f2f0;
@@ -796,7 +803,7 @@ sup {
   position: relative;
   font-size: 0.6rem;
   line-height: 0;
-  vertical-align: 1em; }
+  vertical-align: 1.5; }
 
 sup {
   top: -.5em; }
@@ -807,11 +814,11 @@ sub {
 hr {
   clear: both;
   display: block;
-  margin: 1em 0;
+  margin: 1.5 0;
   padding: 0;
   height: 1px;
   border: 0;
-  border-top: 1px solid #f1efc9; }
+  border-top: 1px solid color-grey(lightgrey); }
 
 .intro {
   font-weight: bold; }
@@ -847,7 +854,7 @@ hr {
 table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 1.5;
   border-collapse: collapse;
   border-spacing: 0;
   background-color: transparent; }
@@ -857,7 +864,7 @@ table {
     vertical-align: top;
     border-top: 1px solid #737373;
     font-size: 0.8rem;
-    line-height: 1em;
+    line-height: 1.5;
     text-align: left; }
   table th {
     font-weight: bold; }
@@ -923,7 +930,7 @@ table {
   width: device-width; }
 
 html {
-  background: #e6e6e6;
+  background: color-grey(lightgrey);
   font-size: 87.5%;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: transparent;
@@ -936,8 +943,8 @@ body {
   width: 100%;
   background-color: transparent;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1em;
-  color: #494949; }
+  line-height: 1.5;
+  color: color-grey(lightgrey); }
 
 /**
 * A partir de aquí es donde debes escribir los estilos de posicionamiento
@@ -946,7 +953,7 @@ body {
 /*------------------------------------*    $TEXTURAS
 \*------------------------------------*/
 .alert--success, .alert--warning, .alert--error, .alert--info, .alert--block {
-  margin-bottom: 1em;
+  margin-bottom: 1.5;
   padding: 8px 35px 8px 14px;
   background-color: #fce4cf;
   border: 1px solid #f6ae6f;
@@ -991,7 +998,7 @@ body {
   padding-top: 14px;
   padding-bottom: 14px; }
   .alert--block .alert--heading {
-    margin-bottom: 0.125em;
+    margin-bottom: 0.1875;
     font-size: inherit;
     font-weight: bold; }
   .alert--block > p,
@@ -1007,7 +1014,7 @@ body {
   white-space: nowrap;
   border: 1px solid currentcolor;
   border-radius: 3px;
-  color: #494949;
+  color: color-grey(lightgrey);
   background-color: transparent;
   -webkit-transition: background-color 0.25s 0 linear;
   -moz-transition: background-color 0.25s 0 linear;
@@ -1015,7 +1022,7 @@ body {
   -o-transition: background-color 0.25s 0 linear;
   transition: background-color 0.25s 0 linear; }
   .badge--primary:hover, .badge--error:hover, .badge--warning:hover, .badge--success:hover, .badge--info:hover {
-    color: #494949;
+    color: color-grey(lightgrey);
     text-decoration: none;
     cursor: pointer; }
 
@@ -1033,8 +1040,8 @@ body {
 
 .badge--icon {
   display: inline-block;
-  color: #494949;
-  border: 1px solid #f1efc9;
+  color: color-grey(lightgrey);
+  border: 1px solid color-grey(lightgrey);
   border-radius: 3px;
   padding: 12px;
   background-color: transparent;
@@ -1053,12 +1060,177 @@ body {
 /**
 * Componets used for layouts, headers, articles, etc...
 **/
+/*------------------------------------*    $grid
+\*------------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+[class^="item-"], [class*=" item-"] {
+  background-color: pink;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin: 6px;
+  padding: 5px;
+  min-height: 100px; }
+
+.item-1 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%; }
+  @media (min-width: 56.25em) {
+    .item-1 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(8.33333% - 12px);
+      flex: 0 0 calc(8.33333% - 12px); } }
+
+.item-2 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%; }
+  @media (min-width: 56.25em) {
+    .item-2 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(16.66667% - 12px);
+      flex: 0 0 calc(16.66667% - 12px); } }
+
+.item-3 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%; }
+  @media (min-width: 56.25em) {
+    .item-3 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(25% - 12px);
+      flex: 0 0 calc(25% - 12px); } }
+
+.item-4 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%; }
+  @media (min-width: 56.25em) {
+    .item-4 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(33.33333% - 12px);
+      flex: 0 0 calc(33.33333% - 12px); } }
+
+.item-5 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%; }
+  @media (min-width: 56.25em) {
+    .item-5 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(41.66667% - 12px);
+      flex: 0 0 calc(41.66667% - 12px); } }
+
+.item-6 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%; }
+  @media (min-width: 56.25em) {
+    .item-6 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(50% - 12px);
+      flex: 0 0 calc(50% - 12px); } }
+
+.item-7 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%; }
+  @media (min-width: 56.25em) {
+    .item-7 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(58.33333% - 12px);
+      flex: 0 0 calc(58.33333% - 12px); } }
+
+.item-8 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%; }
+  @media (min-width: 56.25em) {
+    .item-8 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(66.66667% - 12px);
+      flex: 0 0 calc(66.66667% - 12px); } }
+
+.item-9 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%; }
+  @media (min-width: 56.25em) {
+    .item-9 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(75% - 12px);
+      flex: 0 0 calc(75% - 12px); } }
+
+.item-10 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%; }
+  @media (min-width: 56.25em) {
+    .item-10 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(83.33333% - 12px);
+      flex: 0 0 calc(83.33333% - 12px); } }
+
+.item-11 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%; }
+  @media (min-width: 56.25em) {
+    .item-11 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(91.66667% - 12px);
+      flex: 0 0 calc(91.66667% - 12px); } }
+
+.item-12 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%; }
+  @media (min-width: 56.25em) {
+    .item-12 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% - 12px);
+      flex: 0 0 calc(100% - 12px); } }
+
 /*------------------------------------*    $UTILITIES
 \*------------------------------------*/
 /*
 *
 * Selectors repeated constantly
 */
+/*
+ * Classes for font- sizes, you can check them in Settings.scss
+ * Same name of the variables with the `font-` prefix
+
+		.font-x-small {
+			font-size: .9rem;
+		}
+
+
+ */
+.font-x-small {
+  font-size: 0.6rem;
+  line-height: 1.5; }
+
+.font-small {
+  font-size: 0.8rem;
+  line-height: 1.5; }
+
+.font-normal {
+  font-size: 1rem;
+  line-height: 1.5; }
+
+.font-big {
+  font-size: 1.5rem;
+  line-height: 1.5; }
+
+.font-huge {
+  font-size: 2rem;
+  line-height: 1.5; }
+
 .float-right {
   float: right; }
 
@@ -1069,7 +1241,7 @@ body {
   margin-bottom: 0; }
 
 .margin-bottom {
-  margin-bottom: 1em; }
+  margin-bottom: 24px; }
 
 /*------------------------------------*    $PLACEHOLDERS
 \*------------------------------------*/

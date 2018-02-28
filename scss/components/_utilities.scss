@@ -1,4 +1,4 @@
-@if $incluir-abstracciones == true{
+@if $include-utilities == true{
 
 /*------------------------------------*\
     $UTILITIES
@@ -8,7 +8,23 @@
 * Selectors repeated constantly
 */
 
+/*
+ * Classes for font- sizes, you can check them in Settings.scss
+ * Same name of the variables with the `font-` prefix
 
+		.font-x-small {
+			font-size: .9rem;
+		}
+
+
+ */
+
+@each $name, $value in $size-vars {
+    .font-#{$name} {
+        font-size: $value * 1rem;
+        line-height: 1.5;
+    }
+}
 
 
 
@@ -27,7 +43,7 @@
     margin-bottom: 0;
 }
 .margin-bottom {
-    margin-bottom: $baseline;
+    margin-bottom: $padding;
 }
 
 

@@ -7,7 +7,7 @@
 
 /*
  * Función para controlar el index
- 
+
  	.selector { z-index: z(goku);}
 
  * compila:
@@ -33,3 +33,11 @@
 @function fs($font-size) {
   @return map-get($size-vars, $font-size) * 1rem;
 }
+
+
+
+
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
