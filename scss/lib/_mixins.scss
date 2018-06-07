@@ -50,7 +50,7 @@
 
 
 // gradients
-@mixin horizontal($startColor : $white, $endColor : $lightergrey) {
+@mixin horizontal($startColor : $color-white, $endColor : $color-lightergrey) {
 	background-color: $endColor;
 	background-image  : -webkit-gradient(linear, 0 0, 100% 0, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
 	background-image  : -webkit-linear-gradient(left, $startColor, $endColor);                   // Safari 5.1+, Chrome 10+
@@ -61,7 +61,7 @@
 	background-repeat : repeat-x;
 }
 
-@mixin vertical($startColor : $white, $endColor:  $lightergrey) {
+@mixin vertical($startColor : $color-white, $endColor:  $color-lightergrey) {
 	background-image  : -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
 	background-image  : -webkit-linear-gradient(top, $startColor, $endColor);                    // Safari 5.1+, Chrome 10+
 	background-color  : $endColor;
@@ -72,7 +72,7 @@
 	background-repeat : repeat-x;
 }
 
-@mixin directional($startColor : $white, $endColor : $lightergrey, $deg : 45deg) {
+@mixin directional($startColor : $color-white, $endColor : $color-lightergrey, $deg : 45deg) {
 	background-color  : $endColor;
 	background-image  : -moz-linear-gradient($deg, $startColor, $endColor);                     // FF 3.6+
 	background-image  : -ms-linear-gradient($deg, $startColor, $endColor);                      // IE10
@@ -184,7 +184,7 @@
 
 
 // .background-alpha(VALUE VALUE);
-@mixin background-alpha($color: $white, $alpha: 1) {
+@mixin background-alpha($color: $color-white, $alpha: 1) {
 	background-color : hsla(hue($color), saturation($color), lightness($color), $alpha);
 }
 

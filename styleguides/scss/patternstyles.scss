@@ -12,19 +12,19 @@ main {
     @include max-width(600px);
 }
 .stcontainer {
-    background-color: $white;
+    background-color: $color-white;
     padding: $baselineheight$gutterwidth;
-    border: 1px solid $lightgrey;
+    border: 1px solid $color-lightgrey;
     border-radius: $radius;
     margin-bottom: $baseline;
 }
     .sttitle {
         display: block;
-        border-bottom: 1px solid $lightergrey;
+        border-bottom: 1px solid $color-lightergrey;
         margin-bottom: $baseline;
         font-size: fs(x-small);
         line-height: 2;
-        color: $grey;
+        color: $color-grey;
     }
 
     .stcolor {
@@ -43,7 +43,7 @@ main {
             content: "$color-brand";
             position: absolute;
             font-size: fs(x-small);
-            color: $black;
+            color: $color-black;
             text-align: center;
             bottom: -40px;
             left: 0;
@@ -110,80 +110,80 @@ main {
         }
 
         .white {
-            background-color: $white;
-            border: 1px solid darken($white, 20);
-            color: invert($white);
+            background-color: $color-white;
+            border: 1px solid darken($color-white, 20);
+            color: invert($color-white);
             &:before {
-                content: "#{$white}";
+                content: "#{$color-white}";
             }
             &:after {
-                content: "$white";
+                content: "$color-white";
             }
         }
         .lightergrey {
-            background-color: $lightergrey;
-            border: 1px solid darken($lightergrey, 20);
-            color: invert($lightergrey);
+            background-color: $color-lightergrey;
+            border: 1px solid darken($color-lightergrey, 20);
+            color: invert($color-lightergrey);
             &:before {
-                content: "#{$lightergrey}";
+                content: "#{$color-lightergrey}";
             }
             &:after {
-                content: "$lightergrey";
+                content: "$color-lightergrey";
             }
         }
         .lightgrey {
-            background-color: $lightgrey;
-            border: 1px solid darken($lightgrey, 20);
-            color: invert($lightgrey);
+            background-color: $color-lightgrey;
+            border: 1px solid darken($color-lightgrey, 20);
+            color: invert($color-lightgrey);
             &:before {
-                content: "#{$lightgrey}";
+                content: "#{$color-lightgrey}";
             }
             &:after {
-                content: "$lightgrey";
+                content: "$color-lightgrey";
             }
         }
         .grey {
-            background-color: $grey;
-            border: 1px solid darken($grey, 20);
-            color: invert($grey);
+            background-color: $color-grey;
+            border: 1px solid darken($color-grey, 20);
+            color: invert($color-grey);
             &:before {
-                content: "#{$grey}";
+                content: "#{$color-grey}";
             }
             &:after {
-                content: "$grey";
+                content: "$color-grey";
             }
         }
         .darkgrey {
-            background-color: $darkgrey;
-            border: 1px solid darken($darkgrey, 20);
-            color: invert($darkgrey);
+            background-color: $color-darkgrey;
+            border: 1px solid darken($color-darkgrey, 20);
+            color: invert($color-darkgrey);
             &:before {
-                content: "#{$darkgrey}";
+                content: "#{$color-darkgrey}";
             }
             &:after {
-                content: "$darkgrey";
+                content: "$color-darkgrey";
             }
         }
         .darkergrey {
-            background-color: $darkergrey;
-            border: 1px solid darken($darkergrey, 20);
-            color: invert($darkergrey);
+            background-color: $color-darkergrey;
+            border: 1px solid darken($color-darkergrey, 20);
+            color: invert($color-darkergrey);
             &:before {
-                content: "#{$darkergrey}";
+                content: "#{$color-darkergrey}";
             }
             &:after {
-                content: "$darkergrey";
+                content: "$color-darkergrey";
             }
         }
         .black {
-            background-color: $black;
-            border: 1px solid darken($black, 20);
-            color: invert($black);
+            background-color: $color-black;
+            border: 1px solid darken($color-black, 20);
+            color: invert($color-black);
             &:before {
-                content: "#{$black}";
+                content: "#{$color-black}";
             }
             &:after {
-                content: "$black";
+                content: "$color-black";
             }
         }
 
@@ -252,14 +252,14 @@ main {
         display: inline-block;
         font-size: fs(x-small);
         margin-right: 1em;
-        border: 1px solid darken($lightergrey, 10);
+        border: 1px solid darken($color-lightergrey, 10);
         border-radius: $radius;
         line-height: 1.6;
         width: 1.6em;
         text-align: center;
         font-family: $basefont;
-        background-color: $lightergrey;
-        color: $grey;
+        background-color: $color-lightergrey;
+        color: $color-grey;
         vertical-align: middle;
     }
 }

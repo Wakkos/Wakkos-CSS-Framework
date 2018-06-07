@@ -203,13 +203,13 @@ $size-vars: (
     * Grey Scale
     * This is mainly to hold back designers from adding 200 different greys ;)
     */
-    $black:                rgb(0,0,0);
-    $darkergrey:             lighten(black, 20%);
-    $darkgrey:               lighten(black, 30%);
-    $grey:                   lighten(black, 45%);
-    $lightgrey:              lighten(black, 75%);
-    $lightergrey:            lighten(black, 90%);
-    $white:                  rgb(255,255,255);
+    $color-black:                rgb(0,0,0);
+    $color-darkergrey:             lighten(black, 20%);
+    $color-darkgrey:               lighten(black, 30%);
+    $color-grey:                   lighten(black, 45%);
+    $color-lightgrey:              lighten(black, 75%);
+    $color-lightergrey:            lighten(black, 90%);
+    $color-white:                  rgb(255,255,255);
 
 
 
@@ -293,20 +293,20 @@ $wellshadowblur     : 10px;
 
 // tablas
 $tablebackground    : transparent;
-$tablestripe        : $lightergrey;
-$tablehover         : $lightergrey;
-$tableborder        : $grey;
+$tablestripe        : $color-lightergrey;
+$tablehover         : $color-lightergrey;
+$tableborder        : $color-grey;
 $tableborderwidth   : 1px;
 $tableborderstyle   : solid;
 
 // formularios
-$inputbackground    : $white;
-$inputborder        : $lightgrey;
+$inputbackground    : $color-white;
+$inputborder        : $color-lightgrey;
 $inputborderwidth   : 1px;
 $inputborderstyle   : solid;
-$inputhover         : lighten($black, 50%);
+$inputhover         : lighten($color-black, 50%);
 $inputfocus         : $color-brand, 40%;
-$placeholdercolor   : $lightergrey;
+$placeholdercolor   : $color-lightergrey;
 
 
 // Navegación
@@ -314,6 +314,6 @@ $nav-width:               42px;
 $nav-height:              $nav-width;
 $nav-icon-size:           16px;
 $nav-color:               $color-brand;
-$nav-background:          $white;
+$nav-background:          $color-white;
 $nav-borders:             lighten($nav-background, 10%);
 $nav-lists-background:    $color-brand;

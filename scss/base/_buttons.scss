@@ -79,7 +79,7 @@ input[type="submit"].btn:hover {
     @extend %btn;
     @include opacity(.5);
 	cursor: not-allowed;
-    background-color: $lightergrey;
+    background-color: $color-lightergrey;
 }
 
 

@@ -1364,7 +1364,7 @@ main {
   .white:before {
     content: "white"; }
   .white:after {
-    content: "$white"; }
+    content: "$color-white"; }
 
 .lightergrey {
   background-color: #e6e6e6;
@@ -1373,7 +1373,7 @@ main {
   .lightergrey:before {
     content: "#e6e6e6"; }
   .lightergrey:after {
-    content: "$lightergrey"; }
+    content: "$color-lightergrey"; }
 
 .lightgrey {
   background-color: #bfbfbf;
@@ -1382,7 +1382,7 @@ main {
   .lightgrey:before {
     content: "#bfbfbf"; }
   .lightgrey:after {
-    content: "$lightgrey"; }
+    content: "$color-lightgrey"; }
 
 .grey {
   background-color: #737373;
@@ -1391,7 +1391,7 @@ main {
   .grey:before {
     content: "#737373"; }
   .grey:after {
-    content: "$grey"; }
+    content: "$color-grey"; }
 
 .darkgrey {
   background-color: #4d4d4d;
@@ -1400,7 +1400,7 @@ main {
   .darkgrey:before {
     content: "#4d4d4d"; }
   .darkgrey:after {
-    content: "$darkgrey"; }
+    content: "$color-darkgrey"; }
 
 .darkergrey {
   background-color: #333333;
@@ -1409,7 +1409,7 @@ main {
   .darkergrey:before {
     content: "#333333"; }
   .darkergrey:after {
-    content: "$darkergrey"; }
+    content: "$color-darkergrey"; }
 
 .black {
   background-color: black;
@@ -1418,7 +1418,7 @@ main {
   .black:before {
     content: "black"; }
   .black:after {
-    content: "$black"; }
+    content: "$color-black"; }
 
 .color-alert {
   background-color: #fce4cf;

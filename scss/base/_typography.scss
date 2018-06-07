@@ -22,7 +22,7 @@ h6 {
 	color : $baseheadingfontcolor;
 	text-rendering : optimizelegibility;
 		&.altheader {
-			color:$grey;
+			color:$color-grey;
 			text-transform: uppercase;
             display: block;
 		}
@@ -60,7 +60,7 @@ address {
 
 small {
 	font-size: fs(x-small);
-	color: $grey;
+	color: $color-grey;
 }
 
 ul,
@@ -84,7 +84,7 @@ blockquote  {
 	font-style : normal;
 	p {
 		font-size: fs(small);
-		color:$grey;
+		color:$color-grey;
 		font-style: italic;
         line-height: 1.5;
 	}
