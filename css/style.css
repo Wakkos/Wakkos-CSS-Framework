@@ -93,9 +93,13 @@
  * Brand colors
  */
 /**
-    * Grey Scale
-    * This is mainly to hold back designers from adding 200 different greys ;)
-    */
+ * Grey Scale
+ * This is mainly to hold back designers from adding 200 different greys ;)
+ */
+/**
+ * Colors Map
+ * We may also need a map with all these colors, to create classes.
+ */
 /*------------------------------------*    $TEXTURAS
 \*------------------------------------*/
 /**
@@ -122,25 +126,32 @@
 /**
   * Centrar y dar un ancho máximo igual a $pagemaxwidth.
   */
-/*------------------------------------*    $FUNCIONES
+/*------------------------------------*    $FUNCTIONS
 \*------------------------------------*/
 /*
- * Función para controlar el index
+ * Function to control Index values
 
  	.selector { z-index: z(goku);}
 
- * compila:
+ * Compiles to:
 
 	.selector { z-index: 9001;}
 
- * Puedes ver las variables en el MAP en settings.scss
+ * You can see the current values and variables in settings.scss
  */
 /*
- * Función para mantener el tamaño de fuente consistente
+ * Function to keep font size consistent
 
  .selector { font-size: fs(x-small);}
 
- * Puedes ver en settings.scss las variables que se utilizan.
+ * You can see the current values and variables in settings.scss
+ */
+/*
+ * Function to use colors in our Scss
+
+ .selector { font-size: fs(x-small);}
+
+ * You can see the current values and variables in settings.scss
  */
 /**
 * Base
@@ -236,7 +247,7 @@ figure {
     font-weight: normal;
     font-size: 0.8rem;
     font-style: italic;
-    color: #737373; }
+    color: #4d4d4d; }
 
 /*------------------------------------*    $FORMULARIOS
 \*------------------------------------*/
@@ -251,7 +262,7 @@ form {
     width: 100%;
     margin-bottom: 3;
     padding: 0;
-    color: color-grey(lightgrey);
+    color: #4d4d4d;
     border: 0;
     border-bottom: 1px solid #bfbfbf;
     white-space: normal; }
@@ -291,7 +302,7 @@ label {
   margin-bottom: 0.1875;
   font-family: 0.6rem;
   font-weight: bold;
-  color: color-grey(lightgrey);
+  color: #4d4d4d;
   cursor: pointer; }
 
 input,
@@ -304,7 +315,7 @@ select {
   margin-bottom: 1.5;
   background-color: white;
   border: 1px solid #bfbfbf;
-  color: color-grey(lightgrey);
+  color: #4d4d4d;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; }
@@ -403,7 +414,7 @@ textarea[readonly] {
 
 input:focus,
 textarea:focus {
-  border-color: #bb2299, 40%;
+  border-color: #007EE5, 40%;
   -webkit-box-shadow: 0 0 1px 1px #bfbfbf;
   box-shadow: 0 0 1px 1px #bfbfbf;
   outline: none; }
@@ -437,7 +448,7 @@ input:required:focus:valid {
 .btn--disabled, .btn--info, .btn--error, .btn--warning, .btn--success, .btn--primary {
   display: inline-block;
   line-height: 3;
-  color: color-grey(lightgrey);
+  color: #4d4d4d;
   text-align: center;
   vertical-align: middle;
   font-size: 1rem;
@@ -465,11 +476,11 @@ input:required:focus:valid {
  	*/ }
   .btn--disabled:hover, .btn--info:hover, .btn--error:hover, .btn--warning:hover, .btn--success:hover, .btn--primary:hover {
     text-decoration: none;
-    color: color-grey(lightgrey); }
+    color: #4d4d4d; }
   .btn--disabled:active, .btn--info:active, .btn--error:active, .btn--warning:active, .btn--success:active, .btn--primary:active, .btn--disabled:focus, .btn--info:focus, .btn--error:focus, .btn--warning:focus, .btn--success:focus, .btn--primary:focus {
     outline: none; }
   .btn--disabled:visited, .btn--info:visited, .btn--error:visited, .btn--warning:visited, .btn--success:visited, .btn--primary:visited {
-    color: color-grey(lightgrey); }
+    color: #4d4d4d; }
 
 /*------------------------------------*    $BOTONES-VARIANTES
 \*------------------------------------*/
@@ -491,7 +502,7 @@ input[type="submit"].btn:hover {
   -moz-opacity: 0.5;
   opacity: 0.5;
   cursor: not-allowed;
-  background-color: #e6e6e6; }
+  background-color: #f2f2f2; }
 
 /**
 * Botón de Info
@@ -537,11 +548,11 @@ input[type="submit"].btn:hover {
 * Botón principal
 */
 .btn--primary {
-  color: #bb2299; }
+  color: #007EE5; }
   .btn--primary:hover {
-    color: #bb2299; }
+    color: #007EE5; }
   .btn--primary:visited {
-    color: #bb2299; }
+    color: #007EE5; }
 
 /*------------------------------------*    $BOTONES-TAMAÑOS
 \*------------------------------------*/
@@ -623,7 +634,7 @@ input[type="submit"].btn:hover {
 .img--polaroid {
   padding: 12px;
   background-color: white;
-  border: 1px solid color-grey(lightgrey);
+  border: 1px solid #f2f2f2;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
 
@@ -665,7 +676,7 @@ h6 {
   h4.altheader,
   h5.altheader,
   h6.altheader {
-    color: #737373;
+    color: #4d4d4d;
     text-transform: uppercase;
     display: block; }
 
@@ -709,7 +720,7 @@ address {
 
 small {
   font-size: 0.6rem;
-  color: #737373; }
+  color: #4d4d4d; }
 
 ul,
 ol {
@@ -723,12 +734,12 @@ li ol {
 blockquote {
   margin: 0 0 1.5 0;
   padding-left: 24px;
-  border-left: 2px solid color-grey(lightgrey);
+  border-left: 2px solid #f2f2f2;
   font-family: Georgia, Times, "Times New Roman";
   font-style: normal; }
   blockquote p {
     font-size: 0.8rem;
-    color: #737373;
+    color: #4d4d4d;
     font-style: italic;
     line-height: 1.5; }
 
@@ -762,7 +773,7 @@ dt {
   margin-left: 22.78%; }
 
 abbr[title] {
-  border-bottom: 1px dotted color-grey(lightgrey);
+  border-bottom: 1px dotted #f2f2f2;
   cursor: help; }
 
 b, strong {
@@ -773,12 +784,12 @@ dfn {
 
 ins {
   background-color: white;
-  color: color-grey(lightgrey);
+  color: #4d4d4d;
   text-decoration: none; }
 
 mark {
   background-color: yellow;
-  color: color-grey(lightgrey); }
+  color: #4d4d4d; }
 
 pre,
 code,
@@ -818,7 +829,7 @@ hr {
   padding: 0;
   height: 1px;
   border: 0;
-  border-top: 1px solid color-grey(lightgrey); }
+  border-top: 1px solid #f2f2f2; }
 
 .intro {
   font-weight: bold; }
@@ -862,7 +873,7 @@ table {
   table td {
     padding: 8px;
     vertical-align: top;
-    border-top: 1px solid #737373;
+    border-top: 1px solid #4d4d4d;
     font-size: 0.8rem;
     line-height: 1.5;
     text-align: left; }
@@ -876,7 +887,7 @@ table {
   table thead:first-child tr:first-child td {
     border-top: 0; }
   table tbody + tbody {
-    border-top: 2px solid #737373; }
+    border-top: 2px solid #4d4d4d; }
   table tbody tr td,
   table tbody tr th {
     -webkit-transition: background-color 0.25s 0 linear;
@@ -886,20 +897,20 @@ table {
     transition: background-color 0.25s 0 linear; }
   table tbody tr:hover td,
   table tbody tr:hover th {
-    background-color: #e6e6e6; }
+    background-color: #f2f2f2; }
 
 .table-condensed th,
 .table-condensed td {
   padding: 4px 5px; }
 
 .table-bordered {
-  border: 1px solid #737373;
+  border: 1px solid #4d4d4d;
   border-left: 0;
   border-collapse: separate;
   *border-collapse: collapsed; }
   .table-bordered th,
   .table-bordered td {
-    border-left: 1px solid #737373; }
+    border-left: 1px solid #4d4d4d; }
   .table-bordered thead:first-child tr:first-child th,
   .table-bordered tbody:first-child tr:first-child th,
   .table-bordered tbody:first-child tr:first-child td {
@@ -907,7 +918,7 @@ table {
 
 .table-striped tbody tr:nth-child(odd) td,
 .table-striped tbody tr:nth-child(odd) th {
-  background-color: #e6e6e6; }
+  background-color: #f2f2f2; }
 
 /**
 * Layout and general styles
@@ -930,7 +941,7 @@ table {
   width: device-width; }
 
 html {
-  background: color-grey(lightgrey);
+  background: white;
   font-size: 87.5%;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: transparent;
@@ -944,7 +955,7 @@ body {
   background-color: transparent;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  color: color-grey(lightgrey); }
+  color: #4d4d4d; }
 
 /**
 * A partir de aquí es donde debes escribir los estilos de posicionamiento
@@ -1014,7 +1025,7 @@ body {
   white-space: nowrap;
   border: 1px solid currentcolor;
   border-radius: 3px;
-  color: color-grey(lightgrey);
+  color: #4d4d4d;
   background-color: transparent;
   -webkit-transition: background-color 0.25s 0 linear;
   -moz-transition: background-color 0.25s 0 linear;
@@ -1022,7 +1033,7 @@ body {
   -o-transition: background-color 0.25s 0 linear;
   transition: background-color 0.25s 0 linear; }
   .badge--primary:hover, .badge--error:hover, .badge--warning:hover, .badge--success:hover, .badge--info:hover {
-    color: color-grey(lightgrey);
+    color: #4d4d4d;
     text-decoration: none;
     cursor: pointer; }
 
@@ -1040,8 +1051,8 @@ body {
 
 .badge--icon {
   display: inline-block;
-  color: color-grey(lightgrey);
-  border: 1px solid color-grey(lightgrey);
+  color: #4d4d4d;
+  border: 1px solid #f2f2f2;
   border-radius: 3px;
   padding: 12px;
   background-color: transparent;
@@ -1049,12 +1060,12 @@ body {
 
 ::-moz-selection {
   background-color: white;
-  color: #bb2299;
+  color: #007EE5;
   text-shadow: none; }
 
 ::selection {
   background-color: white;
-  color: #bb2299;
+  color: #007EE5;
   text-shadow: none; }
 
 /**

@@ -1346,7 +1346,7 @@ main {
   .bordercolor:before {
     content: "#f1efc9"; }
   .bordercolor:after {
-    content: "$bordercolor"; }
+    content: "$color-border"; }
 
 .compcolor {
   background-color: #d8f0e3;

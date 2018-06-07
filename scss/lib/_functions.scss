@@ -1,20 +1,20 @@
 /*------------------------------------*\
-    $FUNCIONES
+    $FUNCTIONS
 \*------------------------------------*/
 
 
 
 
 /*
- * Función para controlar el index
+ * Function to control Index values
 
  	.selector { z-index: z(goku);}
 
- * compila:
+ * Compiles to:
 
 	.selector { z-index: 9001;}
 
- * Puedes ver las variables en el MAP en settings.scss
+ * You can see the current values and variables in settings.scss
  */
 
 @function z($layer) {
@@ -23,11 +23,11 @@
 
 
 /*
- * Función para mantener el tamaño de fuente consistente
+ * Function to keep font size consistent
 
  .selector { font-size: fs(x-small);}
 
- * Puedes ver en settings.scss las variables que se utilizan.
+ * You can see the current values and variables in settings.scss
  */
 
 @function fs($font-size) {
@@ -36,8 +36,15 @@
 
 
 
+/*
+ * Function to use colors in our Scss
 
+ .selector { font-size: fs(x-small);}
+
+ * You can see the current values and variables in settings.scss
+ */
 @function color($color) {
   @return map-get($colors, $color);
 }
+
 

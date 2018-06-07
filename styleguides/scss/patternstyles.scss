@@ -87,14 +87,14 @@ main {
         }
 
         .bordercolor {
-            background-color: $bordercolor;
-            border: 1px solid darken($bordercolor, 20);
-            color: invert($bordercolor);
+            background-color: $color-border;
+            border: 1px solid darken($color-border, 20);
+            color: invert($color-border);
             &:before {
-                content: "#{$bordercolor}";
+                content: "#{$color-border}";
             }
             &:after {
-                content: "$bordercolor";
+                content: "$color-border";
             }
         }
         .compcolor {

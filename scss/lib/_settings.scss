@@ -197,29 +197,55 @@ $size-vars: (
 /**
  * Brand colors
  */
-    $color-brand:          rgb(187, 34, 153);
-    $color-secondary:      rgb(219,216,121);
-    /**
-    * Grey Scale
-    * This is mainly to hold back designers from adding 200 different greys ;)
-    */
-    $color-black:                rgb(0,0,0);
-    $color-darkergrey:             lighten(black, 20%);
-    $color-darkgrey:               lighten(black, 30%);
-    $color-grey:                   lighten(black, 45%);
-    $color-lightgrey:              lighten(black, 75%);
-    $color-lightergrey:            lighten(black, 90%);
-    $color-white:                  rgb(255,255,255);
+ $color-brand:          #007EE5;
+ $color-secondary:      #DACC3E;
+ $color-cta:             #7CB920;
 
 
+
+
+
+ /**
+ * Grey Scale
+ * This is mainly to hold back designers from adding 200 different greys ;)
+ */
+ $color-black:                rgb(0,0,0);
+ $color-darkergrey:             lighten(black, 10%);
+ $color-darkgrey:               lighten(black, 20%);
+ $color-grey:                   lighten(black, 30%);
+ $color-lightgrey:              lighten(black, 75%);
+ $color-lightergrey:            lighten(black, 95%);
+ $color-white:                  rgb(255,255,255);
+
+ /**
+ * Colors Map
+ * We may also need a map with all these colors, to create classes.
+ */
+ $colors-map: (
+     color-brand:          			$color-brand,
+     color-secondary:      			$color-secondary,
+     color-black:                	$color-black,
+     color-darkergrey:             	$color-darkergrey,
+     color-darkgrey:               $color-darkgrey,
+     color-grey:                   	$color-grey,
+     color-lightgrey:              	$color-lightgrey,
+     color-lightergrey:            	$color-lightergrey,
+     color-white:                  $color-white
+ );
 
 
 // Atmosphere
-$background: 		color-grey(lightgrey);
-$textcolor: 		color-grey(lightgrey);
-$textcolor-strong:	color-grey(lightgrey);
-$bordercolor    :   color-grey(lightgrey);
-// Links  //////////////////////
+$background: 		$color-white;
+$headingcolor:      lighten(black, 20%);
+$textcolor: 		lighten(black, 30%);
+$color-border    :   $color-lightergrey;
+
+
+
+
+
+
+// Links
 $linkcolor 		    : color-brand(color-brand);
 $linkcolorhover 	: $linkcolor;
 $linkcolorvisited   : $linkcolor;

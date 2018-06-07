@@ -79,7 +79,7 @@ li ol {
 blockquote  {
 	margin : 0 0 $baselineheight 0;
 	padding-left : $gutterwidth;
-	border-left : 2px solid $bordercolor;
+	border-left : 2px solid $color-border;
 	font-family : $altfont;
 	font-style : normal;
 	p {
@@ -134,7 +134,7 @@ dt {
 // text-level
 
 abbr[title] {
-	border-bottom : 1px dotted $bordercolor;
+	border-bottom : 1px dotted $color-border;
 	cursor : help;
 }
 
@@ -200,7 +200,7 @@ hr {
   padding : 0;
   height : 1px;
   border : 0;
-  border-top : 1px solid $bordercolor;
+  border-top : 1px solid $color-border;
 }
 
 // Especificidades de fuentes
